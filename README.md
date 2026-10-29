@@ -4,9 +4,9 @@
 
 > CLASS101 제품전략팀 Data Analyst 지원을 위해 만든 독립 프로젝트입니다. CLASS101 내부 데이터·실제 서비스 실험·매출 성과를 포함하지 않습니다.
 
-[공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md)
+[공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md)
 
-![데스크톱 판단 요약](reports/screenshots/local-desktop-cover.png)
+![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 
 ## 문제와 판단
 
@@ -37,15 +37,36 @@
 
 PC는 검토 목록과 선택 상세, 모바일은 목록→상세→복귀 구조입니다. 개설기·검토 항목·상세 탭·실습 단계를 URL에 보존해 같은 근거를 공유할 수 있습니다. [UI 재조사](docs/research/ui-audit-2026-10-29.md)를 바탕으로 소개형 긴 페이지를 개편했습니다.
 
-![처리 정책별 지표 영향](reports/screenshots/local-desktop-impact-cover.png)
+![처리 정책별 지표 영향](reports/screenshots/deployed-extension-desktop-impact-cover.png)
 
 <details><summary>모바일 화면</summary>
 
-<img src="reports/screenshots/local-mobile-cover.png" alt="모바일에서의 프로젝트 목적과 현재 판단" width="320">
+<img src="reports/screenshots/deployed-extension-mobile-cover.png" alt="모바일에서의 프로젝트 목적과 현재 판단" width="320">
 
 </details>
 
 정적 HTML/CSS/JS와 집계 JSON, 검증된 이슈·SQL·실행 기록을 제공합니다. 서버 분석 실행·실시간 로그 수집·알림 발송·로그인·LLM 호출은 없습니다. 화면의 버튼은 저장된 시나리오를 전환합니다.
+
+## 추가 실제 데이터와 실행 검증
+
+[EdNet 보조 분석 데모](https://learning-journey-lab.onrender.com/external.html) · [후보 조사](docs/data-sources.md) · [분석 정의·한계](docs/ednet-analysis.md)
+
+OULAD를 유지하고 Santa의 실제 학습·유료 이용권 기록을 별도 분석했습니다. 두 서비스 결과를 합산하지 않습니다.
+
+<!-- BEGIN EXTERNAL FINDINGS -->
+- EdNet-KT4: 사전 해시 표본 **2,048명 / 854,678행**, 사용자별 제공 파일 전체.
+- 문제 제출 ↔ 모든 이벤트(구매·환불 포함): 첫 주 **2일 이상 여부 23명**, 다음 주 기록 여부 **14명** 변경.
+- 문제 제출 기준 다음 주 기록: 1일군 **31/1,688 (1.8%)**, 2일+군 **135/342 (39.5%)**. 관찰 종료가 불명확해 서비스 유지율로 해석하지 않음.
+- 동일 값 반복 초과 **1,519행**, 동일 값 한 번 처리 시 활동 지표 변경 **0명**. 플랫폼 결측 **184행**은 구매·환불·쿠폰 기록에 집중.
+- 구매 **173행/164명**, 환불 **5행/5명**. 가격·거래 ID·갱신·권한 원장이 없어 매출과 갱신율은 산출하지 않음.
+- SQL과 독립 pandas 계산 **2,048명** 일치. 실제 파일 해시·ZIP CRC 검증, 동일 캐시 분석 2회 결과 일치.
+<!-- END EXTERNAL FINDINGS -->
+
+EdNet은 **CC BY-NC 4.0, 연구 목적**입니다. 원본 이력은 재배포하지 않으며 해당 집계에도 출처와 이용 조건을 표시합니다. OULAD 집계(CC BY 4.0) 및 코드(MIT)와 구분합니다.
+
+실험 입력 검사는 합성 배정·이벤트로 관찰 경계, 교차군 배정, 지연·watermark, SRM, 가드레일을 실행 검증합니다. **실제 실험 참여자 0명, 실제 효과 미측정**. [계약과 18개 모집 시나리오](docs/experiment-readiness.md)를 함께 제공합니다.
+
+[수작업·자동 채움 비교 화면](https://learning-journey-lab.onrender.com/operations-practice.html)은 같은 규칙 3개의 결과 기록·대조를 비교합니다. 실제 사람이 수행한 시간은 아직 없으며 자동 브라우저 테스트를 사람의 노동 시간으로 바꾸지 않았습니다. [비교 조건](docs/human-comparison-protocol.md) · [실제 사용성 과제](docs/novice-usability-protocol.md) · [지원자의 실제 참여 기록](docs/participation.md).
 
 ## 데이터와 분석 계약
 
@@ -101,6 +122,18 @@ python tests/accessibility_check.py --url http://localhost:8766
 
 스크린 리더 사용자 테스트나 모든 OS·브라우저 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
 
+### 추가 근거 재현
+
+```bash
+python scripts/download_ednet.py
+PYTHONPATH=src python -m journey.ednet
+python scripts/check_experiment.py
+python scripts/build.py
+python scripts/verify.py
+```
+
+EdNet 다운로드는 공식 ZIP의 색인과 선정 사용자 파일에 필요한 범위만 받습니다. 약 162MB 전송·40MB 사용자 CSV이며, 원본 ZIP 전체 해시를 검증했다고 주장하지 않습니다. 다운로드 서버 접근 실패 또는 스냅샷 불일치 시 종료합니다. 실제 수신·검사 범위는 [고정 스냅샷](data/ednet_snapshot.json)과 [검증 기록](reports/ednet_verification.json)을 참조하세요. `PYTHONPATH` 표기는 bash 기준이며 Windows PowerShell에서는 먼저 `$env:PYTHONPATH="src"`를 실행한 뒤 `python -m journey.ednet`을 실행합니다.
+
 ## 구조와 기술의 역할
 
 ```text
@@ -136,7 +169,7 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 - 손계산 사례·회귀 테스트와 실제 브라우저 검증의 최종 상태는 [검증 기록](docs/verification.md)에서 확인.
 <!-- END GENERATED VALIDATION -->
 
-검증 과정에서 발견한 차원 키 검사 누락, 잘못된 JSON 값 수용, 모바일 표의 키보드 접근과 작은 링크 영역, 6개 규칙의 잘못된 SQL 연결과 분석 범위 혼재을 회귀 사례로 추가하고 수정했습니다. 상세 수정 전후는 [학습 기록](docs/learning-log.md), 전체 증거는 [검증 기록](docs/verification.md), 이슈 상태는 [issues.json](reports/issues.json)에 있습니다.
+검증 과정에서 발견한 차원 키 검사 누락, 잘못된 JSON 값 수용, 모바일 표의 키보드 접근과 작은 링크 영역, 6개 규칙의 잘못된 SQL 연결과 분석 범위 혼재를 회귀 사례로 추가하고 수정했습니다. 상세 수정 전후는 [학습 기록](docs/learning-log.md), 전체 증거는 [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md), 이슈 상태는 [issues.json](reports/issues.json)에 있습니다.
 
 ## 결론의 경계와 후속 검증
 
@@ -156,3 +189,5 @@ README를 쓰기 전에 [Great Expectations](https://github.com/fivetran/great_e
 Codex가 조사·코드·테스트·문서 초안을 작성했습니다. 숫자는 실제 코드 실행과 독립 대조로 확인했으며, 지원자가 직접 수행한 경험으로 소급하지 않습니다. [직접 참여 체크리스트](docs/interview-guide.md#참여-구분-체크리스트)를 완료한 범위만 본인의 경험으로 설명하세요.
 
 코드: [MIT](LICENSE). OULAD와 그 변환·집계: CC BY 4.0. 생성 실습은 코드의 MIT 조건을 따릅니다.
+
+데이터별 라이선스와 생성 자료의 범위는 [DATA_LICENSES.md](DATA_LICENSES.md)를 따른다. 코드의 MIT 라이선스가 OULAD·EdNet 원자료 이용 조건을 바꾸지 않는다.

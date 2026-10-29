@@ -1,5 +1,9 @@
 {
   "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
   "operations_sha256": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
-  "source_type": "static evidence snapshot"
+  "source_type": "static evidence snapshot",
+  "extensions": {
+    "ednet_report.json": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+    "experiment-readiness.json": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673"
+  }
 }

@@ -1,0 +1,43 @@
+name: Additional public-data reproduction
+on:
+  push:
+    paths:
+      - 'src/journey/ednet*'
+      - 'src/journey/experiment_readiness.py'
+      - 'sql/ednet.sql'
+      - 'scripts/download_ednet.py'
+      - 'scripts/check_experiment.py'
+      - 'data/ednet_snapshot.json'
+      - '.github/workflows/additional-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scripts/download_ednet.py
+      - run: PYTHONPATH=src python -m journey.ednet --output work/ednet-first.json
+      - run: PYTHONPATH=src python -m journey.ednet --output work/ednet-second.json
+      - name: Compare both runs with published aggregate
+        run: |
+          cmp work/ednet-first.json work/ednet-second.json
+          cmp work/ednet-first.json reports/ednet_report.json
+      - run: python scripts/check_experiment.py
+      - run: python scripts/build.py
+      - run: python scripts/verify.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: additional-public-data-evidence
+          path: |
+            work/ednet-first.json
+            work/ednet-second.json
+            reports/experiment-readiness.json
+            data/raw/ednet/download_manifest.json

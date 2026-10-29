@@ -52,7 +52,7 @@ function impactHTML(rule){
  const id=rule.rule_id;
  if(['event_exact_repeat','event_daily_key_repeat'].includes(id)){
   const s=report.click_sensitivity[0];
-  return `<div class="impact-lead"><strong>${number(s.raw_vs_exact_changed)} 수강 건</strong><span>첫날 ${s.threshold}클릭 기준 · 원본 합산 ↔ 동일 값 한 번</span></div><p class="caption">분석 범위: 전체 첫 주 활성 수강 건. 세 정책 중 어느 것이 진실인지 원천 ID 없이 확정할 수 없습니다.</p>${table('반복 행 처리 정책별 대상 수강 건',['첫날 기준','원본 합산','동일 값 한 번','자료별 최대','분류 변경¹'],report.click_sensitivity.map(s=>[`${s.threshold}클릭`,number(s.raw_qualified),number(s.exact_qualified),number(s.max_qualified),number(s.raw_vs_exact_changed)]))}<p class="caption">¹ 원본 합산과 동일 값 한 번의 대상 분류 차이. 반복 규칙 간 행 수를 합산하지 않습니다.</p><div class="impact-result"><strong>활동일 지표 사용</strong><p>하루에 유효한 양수 클릭이 있었는지는 세 정책에서 같습니다. 클릭의 절대 횟수에 기대지 않는 지표로 재방문 근거를 확인합니다.</p><a href="?view=analysis&cohort=all" data-all-evidence>활동일별 재방문 근거 →</a></div>`;
+  return `<div class="impact-lead"><strong>${number(s.raw_vs_exact_changed)} 수강 건</strong><span>첫날 ${s.threshold}클릭 기준 · 원본 합산 ↔ 동일 값 한 번</span></div><p class="caption">분석 범위: 전체 첫 주 활성 수강 건. 세 정책 중 어느 것이 진실인지 원천 ID 없이 확정할 수 없습니다.</p><p id="policy-meaning">${number(s.raw_qualified)} − ${number(s.exact_qualified)} = ${number(s.raw_vs_exact_changed)}건. 처리 정책에 따라 10클릭 기준의 충족 여부가 달라진 수강 건입니다. 같은 사람이 여러 수강 건을 가질 수 있습니다.</p>${table('반복 행 처리 정책별 대상 수강 건',['첫날 기준','원본 합산','동일 값 한 번','자료별 최대','분류 변경¹'],report.click_sensitivity.map(s=>[`${s.threshold}클릭`,number(s.raw_qualified),number(s.exact_qualified),number(s.max_qualified),number(s.raw_vs_exact_changed)]))}<p class="caption">¹ 원본 합산과 동일 값 한 번의 대상 분류 차이. 반복 규칙 간 행 수를 합산하지 않습니다.</p><div class="impact-result"><strong>활동일 지표 사용</strong><p>하루에 유효한 양수 클릭이 있었는지는 세 정책에서 같습니다. 클릭의 절대 횟수에 기대지 않는 지표로 재방문 근거를 확인합니다.</p><a href="?view=analysis&cohort=all" data-all-evidence>활동일별 재방문 근거 →</a></div>`;
  }
  if(id==='event_after_withdrawal'){
   const s=report.strict_sensitivity,o=report.overall;
@@ -86,11 +86,13 @@ function renderScope(){
  const c=state.cohort==='all'?report.overall:report.cohorts.find(c=>scopeValue(c)===state.cohort);
  $('cohort').value=state.cohort;
  $('eligible').textContent=number(c.eligible);$('w1').textContent=number(c.w1_active);$('return-rate').textContent=percent(c.return_rate);$('return-fraction').textContent=`${number(c.w2_returned)} / ${number(c.w1_active)} 수강 건`;
+ $('return-definition').textContent=`재방문율: 분자 ${number(c.w2_returned)}건 ÷ 분모 ${number(c.w1_active)}건 × 100. 분모는 첫 주 활성 수강 건입니다. 분석 대상 ${number(c.eligible)}건 전체를 분모로 쓰는 비율과 구분합니다.`;
  const comp=c.repeat_comparison;
  $('comparison-bars').innerHTML=[['1일 활동',comp.control,'secondary'],['2일+ 활동',comp.exposed,'']].map(([label,g,cls])=>`<div class="bar-row"><span>${label}<small>n=${number(g.n)}</small></span><div class="bar-track" aria-hidden="true"><div class="bar-fill ${cls}" style="width:${g.rate==null?0:g.rate*100}%"></div></div><strong>${percent(g.rate)}</strong></div>`).join('');
  $('difference').textContent=pp(comp.difference);$('difference-ci').textContent=interval(comp);
  $('chart-scope').textContent=state.cohort==='all'?`전체 · ${report.cohorts.length}개 개설기`:state.cohort.replace('|',' · ');
  const content=c.content_comparison;$('content-diff').textContent=pp(content.difference);$('content-ci').textContent=interval(content);
+ $('content-reading').textContent=`콘텐츠 접촉군 − 미접촉군의 재방문율 차이 ${pp(content.difference)}. %p는 두 비율의 차이이며, 접촉이 원인이라는 뜻은 아닙니다.`;
  $('content-status').textContent=content.difference==null?'비교 불가':content.difference<0?'반대 방향':'인과 해석 보류';
  $('content-groups').innerHTML=[['미접촉',content.control],['접촉',content.exposed]].map(([name,g])=>`<div class="group-line"><span>${name} <small>n=${number(g.n)}</small></span><span>${percent(g.rate)} <small>(${number(g.returned)}건)</small></span></div>`).join('');
  $('day-bars').innerHTML=c.days.map(d=>`<div class="day-col"><strong>${percent(d.rate)}</strong><div class="day-rect" style="height:${d.rate==null?0:d.rate*135}px" aria-hidden="true"></div><span class="day-label">${d.days}일</span><small>n=${number(d.n)}</small></div>`).join('');
@@ -124,7 +126,7 @@ function initialize(){
  const checks=report.quality.checks;$('review-counts').textContent=`검토 필요 ${checks.filter(x=>x.count>0&&x.severity==='review').length} · 차단 ${checks.filter(x=>x.count>0&&x.severity==='block').length} · 규칙 ${checks.length}`;
  $('cohort').innerHTML='<option value="all">전체 · 22개 개설기</option>'+report.cohorts.map(c=>`<option value="${scopeValue(c)}">${esc(c.module)} · ${esc(c.term)}</option>`).join('');
  $('temporal-results').innerHTML=report.temporal.map(t=>`<div class="temporal-line"><span>${esc(t.label)}</span><strong>${pp(t.repeat_comparison.difference)}</strong><small>첫 주 활성 ${number(t.w1_active)}건 · ${interval(t.repeat_comparison)}</small></div>`).join('');
- $('counterevidence').textContent=`첫날 콘텐츠 접촉의 전체 차이는 ${pp(report.overall.content_comparison.difference)}. ${report.cohorts.length}개 개설기 중 ${report.cohorts.filter(c=>c.content_comparison.difference<0).length}개는 반대 방향이며, 2013 탐색 구간은 0을 포함합니다.`;
+ $('counterevidence').textContent=`첫날 콘텐츠 접촉의 전체 차이는 ${pp(report.overall.content_comparison.difference)}. ${report.cohorts.length}개 개설기 중 ${report.cohorts.filter(c=>c.content_comparison.difference<0).length}개는 반대 방향입니다. 그중 ${report.cohorts.filter(c=>c.content_comparison.difference<0&&c.content_comparison.ci&&c.content_comparison.ci[0]<=0&&c.content_comparison.ci[1]>=0).length}개는 95% 구간에 0을 포함합니다. 2013 탐색 구간도 0을 포함합니다. 이 비교는 활동일 횟수가 아닌 콘텐츠 접촉 여부입니다.`;
  $('start-strata').innerHTML=report.first_day_strata.map(s=>`<tr><th scope="row">D${s.first_day}</th><td>${number(s.comparison.control.n)}</td><td>${number(s.comparison.exposed.n)}</td><td>${pp(s.comparison.difference)}</td></tr>`).join('');
  const e=report.eligibility;$('exclusions').textContent=`전체 ${number(e.total)}건 → 등록일 결측 ${number(e.missing_registration)}건 → 개강 후 등록 ${number(e.late_registration)}건 → 개강 전 탈퇴 ${number(e.pre_start_withdrawal)}건 제외 → 분석 ${number(report.overall.eligible)}건. 각 단계는 중복 없이 적용합니다. 이후 탈퇴자로 분모를 줄이지 않습니다.`;
  const b=operations.benchmark;$('run-summary').textContent=`결과 해시 동일 · 전체 실행 중앙값 ${b.median_seconds.toFixed(2)}초`;

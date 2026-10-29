@@ -1,0 +1,57 @@
+{
+  "verified_at_utc": "2026-10-29T16:54:27.549457+00:00",
+  "scope": "Supplementary EdNet pipeline in isolated staging, before repository integration. Does not certify final deployment/CI.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "duckdb": "1.4.3",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3"
+  },
+  "aggregate_runs": [
+    {
+      "run": 1,
+      "command": "PYTHONPATH=src python -m journey.ednet --raw data/raw/ednet --output reports/ednet_report.json",
+      "elapsed_seconds": 17.576791,
+      "returncode": 0,
+      "stdout": "Wrote /workspace/work/extension-research/reports/ednet_report.json: 2,048 users, 854,678 rows; SQL/pandas and repeat features match",
+      "sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2"
+    },
+    {
+      "run": 2,
+      "command": "PYTHONPATH=src python -m journey.ednet --raw <temporary cache with same source bytes, changed audit timestamp/transfer count> --output reports/ednet_report.repeat.json",
+      "elapsed_seconds": 14.200643,
+      "returncode": 0,
+      "stdout": "Wrote /workspace/work/extension-research/reports/ednet_report.repeat.json: 2,048 users, 854,678 rows; SQL/pandas and repeat features match",
+      "sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2"
+    }
+  ],
+  "repeat_aggregate_sha256_equal": true,
+  "changed_audit_timestamp_aggregate_equal": true,
+  "fresh_network_redownload_performed": false,
+  "cache_reused_without_network": true,
+  "snapshot_pin": "data/ednet_snapshot.json",
+  "tests": {
+    "command": "python -m pytest -q",
+    "scope": "staging contains only EdNet tests",
+    "returncode": 0,
+    "output": ".........................                                                [100%]\n25 passed in 0.98s",
+    "elapsed_seconds": 1.331974
+  },
+  "existing_project_test_run": {
+    "command": "python -m pytest -q",
+    "scope": "existing /workspace/learning-journey-lab before EdNet integration",
+    "result": "29 passed in 1.16s",
+    "returncode": 0
+  },
+  "code_sha256": {
+    "src/journey/ednet.py": "7b7c2c3fe5e85e47f73601620b16939064a8acec8e5500c479447bd842ff378b",
+    "src/journey/ednet_integrity.py": "ac3feb77cccba7f7622dbd4cce056926cd9f4c18893d8b338884db55b58aec14",
+    "sql/ednet.sql": "209fc7a452b8f95eb82825f7cf7b83c16eb095ff2143f07919c177871b62b519",
+    "scripts/download_ednet.py": "bd6191339174476a91ab47715acb750bd725e261fda77c7ba8e577b2591006c6",
+    "tests/test_ednet.py": "04c21bef886bd80fc5a244a9c2048fb11e3db6e1de94891c93badbbf6d72febc",
+    "tests/test_ednet_download.py": "c0bccbc17bdfe5ce35c02ac2ff2cc349dedc6b3961721a6da99b7a9bd270447c",
+    "data/ednet_snapshot.json": "7e8cad4bd12c84c32a955b15464cb8604c162aa3abecbbe0cd6fedf42cde487f"
+  },
+  "measurement_note": "Elapsed values are machine execution wall time, not human manual work or saved time."
+}

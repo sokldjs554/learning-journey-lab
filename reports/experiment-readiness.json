@@ -1,0 +1,313 @@
+{
+  "type": "synthetic_engineering_validation_not_live_experiment",
+  "actual_participants": 0,
+  "actual_service_effect": null,
+  "actual_service_baseline": null,
+  "actual_daily_eligible": null,
+  "hypothetical_thresholds": {
+    "srm_alpha": 0.001,
+    "guardrail_max_increase": 0.01,
+    "late_buffer_days": 1
+  },
+  "window": "elapsed UTC [T0+7d, T0+14d)",
+  "synthetic_cases": {
+    "clean": {
+      "status": "ready_for_review",
+      "reasons": [],
+      "arms": {
+        "control": {
+          "assigned": 10,
+          "matured": 10,
+          "returned": 3,
+          "rate": 0.3
+        },
+        "treatment": {
+          "assigned": 10,
+          "matured": 10,
+          "returned": 3,
+          "rate": 0.3
+        }
+      },
+      "difference": 0.0,
+      "srm_p": 1.0,
+      "srm_method": "Pearson chi-square df=1; 1:1; one final checkpoint",
+      "guardrails": {
+        "playback_error": {
+          "rates": {
+            "control": 0.0,
+            "treatment": 0.0
+          },
+          "increase": 0.0,
+          "max_increase": 0.01
+        },
+        "refund": {
+          "rates": {
+            "control": 0.0,
+            "treatment": 0.0
+          },
+          "increase": 0.0,
+          "max_increase": 0.01
+        }
+      },
+      "duplicate_events": 0,
+      "interpretation": "Readiness/descriptive check only; not evidence of product impact"
+    },
+    "cross_variant": {
+      "status": "hold",
+      "reasons": [
+        "duplicate_or_cross_variant_assignment"
+      ],
+      "arms": null,
+      "difference": null,
+      "srm_p": null,
+      "srm_method": "Pearson chi-square df=1; 1:1; one final checkpoint",
+      "guardrails": {},
+      "duplicate_events": 0,
+      "interpretation": "Readiness/descriptive check only; not evidence of product impact"
+    },
+    "late_arrival": {
+      "status": "hold",
+      "reasons": [
+        "late_arrival"
+      ],
+      "arms": {
+        "control": {
+          "assigned": 10,
+          "matured": 10,
+          "returned": 1,
+          "rate": 0.1
+        },
+        "treatment": {
+          "assigned": 10,
+          "matured": 10,
+          "returned": 0,
+          "rate": 0.0
+        }
+      },
+      "difference": null,
+      "srm_p": 1.0,
+      "srm_method": "Pearson chi-square df=1; 1:1; one final checkpoint",
+      "guardrails": {
+        "playback_error": {
+          "rates": {
+            "control": 0.0,
+            "treatment": 0.0
+          },
+          "increase": 0.0,
+          "max_increase": 0.01
+        },
+        "refund": {
+          "rates": {
+            "control": 0.0,
+            "treatment": 0.0
+          },
+          "increase": 0.0,
+          "max_increase": 0.01
+        }
+      },
+      "duplicate_events": 0,
+      "interpretation": "Readiness/descriptive check only; not evidence of product impact"
+    }
+  },
+  "sample_size_crosscheck": "all existing rows match independent NormalDist calculation",
+  "recruitment_scenarios": [
+    {
+      "baseline": 0.3,
+      "mde": 0.03,
+      "per_arm": 3763,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 151,
+      "recruitment_days": 154,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 169
+    },
+    {
+      "baseline": 0.3,
+      "mde": 0.03,
+      "per_arm": 3763,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 76,
+      "recruitment_days": 77,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 92
+    },
+    {
+      "baseline": 0.3,
+      "mde": 0.03,
+      "per_arm": 3763,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 16,
+      "recruitment_days": 21,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 36
+    },
+    {
+      "baseline": 0.3,
+      "mde": 0.05,
+      "per_arm": 1377,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 56,
+      "recruitment_days": 56,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 71
+    },
+    {
+      "baseline": 0.3,
+      "mde": 0.05,
+      "per_arm": 1377,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 28,
+      "recruitment_days": 28,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 43
+    },
+    {
+      "baseline": 0.3,
+      "mde": 0.05,
+      "per_arm": 1377,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 6,
+      "recruitment_days": 7,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 22
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.03,
+      "per_arm": 4356,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 175,
+      "recruitment_days": 175,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 190
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.03,
+      "per_arm": 4356,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 88,
+      "recruitment_days": 91,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 106
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.03,
+      "per_arm": 4356,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 18,
+      "recruitment_days": 21,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 36
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.05,
+      "per_arm": 1565,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 63,
+      "recruitment_days": 63,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 78
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.05,
+      "per_arm": 1565,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 32,
+      "recruitment_days": 35,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 50
+    },
+    {
+      "baseline": 0.5,
+      "mde": 0.05,
+      "per_arm": 1565,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 7,
+      "recruitment_days": 7,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 22
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.03,
+      "per_arm": 3554,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 143,
+      "recruitment_days": 147,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 162
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.03,
+      "per_arm": 3554,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 72,
+      "recruitment_days": 77,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 92
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.03,
+      "per_arm": 3554,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 15,
+      "recruitment_days": 21,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 36
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.05,
+      "per_arm": 1251,
+      "hypothetical_daily_eligible": 50,
+      "raw_recruitment_days": 51,
+      "recruitment_days": 56,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 71
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.05,
+      "per_arm": 1251,
+      "hypothetical_daily_eligible": 100,
+      "raw_recruitment_days": 26,
+      "recruitment_days": 28,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 43
+    },
+    {
+      "baseline": 0.7,
+      "mde": 0.05,
+      "per_arm": 1251,
+      "hypothetical_daily_eligible": 500,
+      "raw_recruitment_days": 6,
+      "recruitment_days": 7,
+      "maturation_days": 14,
+      "late_buffer_days": 1,
+      "total_days_upper_bound": 22
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "engine": "axe-core 4.11.0 + Chromium",
+  "scope": "27 viewport/view combinations; automated A/AA only, not full accessibility certification",
+  "results": [
+    {
+      "width": 1440,
+      "view": "view=review",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=runs",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26
+    },
+    {
+      "width": 1440,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 1440,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 23
+    },
+    {
+      "width": 1440,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21
+    },
+    {
+      "width": 390,
+      "view": "view=review",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 390,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 390,
+      "view": "view=runs",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 390,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28
+    },
+    {
+      "width": 390,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24
+    },
+    {
+      "width": 390,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    },
+    {
+      "width": 320,
+      "view": "view=review",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 320,
+      "view": "view=runs",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28
+    },
+    {
+      "width": 320,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24
+    },
+    {
+      "width": 320,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    }
+  ]
+}

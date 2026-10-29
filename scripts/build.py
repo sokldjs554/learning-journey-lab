@@ -1,7 +1,9 @@
 """Validate the evidence contract before publishing static assets. stdlib only."""
 from pathlib import Path
-import json,shutil,hashlib,re
+import json,shutil,hashlib,re,sys
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from scripts.evidence_extensions import publish
 
 def build_operations(root, report):
     """Join only matching measured records; resolve SQL locations from actual sources."""
@@ -52,7 +54,7 @@ def build():
     ops.write_text(json.dumps(operations,ensure_ascii=False,indent=2)+'\n')
     release={'report_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),
              'operations_sha256':hashlib.sha256(ops.read_bytes()).hexdigest(),
-             'source_type':'static evidence snapshot'}
+             'source_type':'static evidence snapshot','extensions':publish(ROOT)}
     (ROOT/'web/data/release.json').write_text(json.dumps(release,indent=2)+'\n')
     print('Static evidence ready:',release['report_sha256'])
 if __name__=='__main__':build()

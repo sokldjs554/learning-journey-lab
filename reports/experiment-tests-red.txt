@@ -1,0 +1,530 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                                     [100%]
+=================================== FAILURES ===================================
+__________ test_itt_keeps_unexposed_and_deduplicates_learning_events ___________
+
+    def test_itt_keeps_unexposed_and_deduplicates_learning_events():
+        a=[assignment(0), assignment(1), assignment(2,'treatment'), assignment(3,'treatment')]
+        e=event(0,a[0])
+        result=run(a,[e,e,event(1,a[2])])
+>       assert result['status']=='ready_for_review'
+               ^^^^^^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:33: KeyError
+_____________ test_elapsed_window_boundaries[6.999988425925926-0] ______________
+
+day = 6.999988425925926, expected = 0
+
+    @pytest.mark.parametrize('day,expected', [(7-1/86400,0),(7,1),(14-1/86400,1),(14,0)])
+    def test_elapsed_window_boundaries(day,expected):
+        a=assignment(0)
+>       assert run(events=[event(0,a,day)])['arms']['control']['returned']==expected
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:41: KeyError
+_____________________ test_elapsed_window_boundaries[7-1] ______________________
+
+day = 7, expected = 1
+
+    @pytest.mark.parametrize('day,expected', [(7-1/86400,0),(7,1),(14-1/86400,1),(14,0)])
+    def test_elapsed_window_boundaries(day,expected):
+        a=assignment(0)
+>       assert run(events=[event(0,a,day)])['arms']['control']['returned']==expected
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:41: KeyError
+_____________ test_elapsed_window_boundaries[13.999988425925926-1] _____________
+
+day = 13.999988425925926, expected = 1
+
+    @pytest.mark.parametrize('day,expected', [(7-1/86400,0),(7,1),(14-1/86400,1),(14,0)])
+    def test_elapsed_window_boundaries(day,expected):
+        a=assignment(0)
+>       assert run(events=[event(0,a,day)])['arms']['control']['returned']==expected
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:41: KeyError
+_____________________ test_elapsed_window_boundaries[14-0] _____________________
+
+day = 14, expected = 0
+
+    @pytest.mark.parametrize('day,expected', [(7-1/86400,0),(7,1),(14-1/86400,1),(14,0)])
+    def test_elapsed_window_boundaries(day,expected):
+        a=assignment(0)
+>       assert run(events=[event(0,a,day)])['arms']['control']['returned']==expected
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:41: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>0] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d580>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>1] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d620>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>2] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d6c0>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>3] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d760>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>4] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d800>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>5] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d8a0>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+___________ test_bad_assignment_blocks_effect_and_counts[<lambda>6] ____________
+
+mutate = <function <lambda> at 0x7f84aec5d940>
+
+    @pytest.mark.parametrize('mutate', [
+        lambda a: a+[a[0]],
+        lambda a: a+[assignment(0,'treatment')|{'assignment_id':'other'}],
+        lambda a: [a[0]|{'user_id':None},a[1]],
+        lambda a: [a[0]|{'experiment_id':'wrong'},a[1]],
+        lambda a: [a[0]|{'variant':'other'},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0.replace(tzinfo=None)},a[1]],
+        lambda a: [a[0]|{'assigned_at':T0+timedelta(days=7)},a[1]],
+    ])
+    def test_bad_assignment_blocks_effect_and_counts(mutate):
+        r=run(mutate([assignment(0),assignment(1,'treatment')]))
+>       assert r['status']=='hold' and r['difference'] is None and r['arms'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:54: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes0] ________________
+
+changes = {'assignment_id': 'unknown'}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes1] ________________
+
+changes = {'user_id': 'wrong'}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes2] ________________
+
+changes = {'experiment_id': 'wrong'}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes3] ________________
+
+changes = {'variant': 'treatment'}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes4] ________________
+
+changes = {'event_id': None}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes5] ________________
+
+changes = {'occurred_at': None}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes6] ________________
+
+changes = {'kind': 'uncontracted'}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________ test_wrong_event_keys_and_nulls_hold[changes7] ________________
+
+changes = {'ingested_at': datetime.datetime(2026, 1, 1, 12, 0, tzinfo=datetime.timezone.utc)}
+
+    @pytest.mark.parametrize('changes', [{'assignment_id':'unknown'},{'user_id':'wrong'},
+        {'experiment_id':'wrong'},{'variant':'treatment'},{'event_id':None},
+        {'occurred_at':None},{'kind':'uncontracted'}, {'ingested_at':T0}])
+    def test_wrong_event_keys_and_nulls_hold(changes):
+        r=run(events=[event(0,assignment(0),**changes)])
+>       assert r['status']=='hold' and r['difference'] is None
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:61: KeyError
+________________________ test_conflicting_replay_holds _________________________
+
+    def test_conflicting_replay_holds():
+        e=event(0,assignment(0))
+        r=run(events=[e,e|{'occurred_at':T0+timedelta(days=8)}])
+>       assert 'conflicting_event_id' in r['reasons']
+                                         ^^^^^^^^^^^^
+E       KeyError: 'reasons'
+
+work/experiment-extension/tests/test_experiment_readiness.py:66: KeyError
+______________ test_nonmatured_assignments_never_become_failures _______________
+
+    def test_nonmatured_assignments_never_become_failures():
+        r=run([assignment(0),assignment(1,'treatment',6)],watermark=T0+timedelta(days=19))
+>       assert r['arms']['treatment']==dict(assigned=1,matured=0,returned=0,rate=None)
+               ^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:70: KeyError
+__________________ test_maturation_exact_boundary_and_buffer ___________________
+
+    def test_maturation_exact_boundary_and_buffer():
+        r=run(watermark=T0+timedelta(days=14))
+>       assert r['arms']['control']['matured']==1
+               ^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:75: KeyError
+________________________ test_late_observed_event_holds ________________________
+
+    def test_late_observed_event_holds():
+        e=event(0,assignment(0),ingested_at=T0+timedelta(days=10))
+>       assert 'late_arrival' in run(events=[e])['reasons']
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'reasons'
+
+work/experiment-extension/tests/test_experiment_readiness.py:83: KeyError
+__ test_future_ingestion_does_not_change_numerator_but_contradicts_watermark ___
+
+    def test_future_ingestion_does_not_change_numerator_but_contradicts_watermark():
+        e=event(0,assignment(0),ingested_at=T0+timedelta(days=24))
+        r=run(events=[e])
+>       assert r['arms']['control']['returned']==0
+               ^^^^^^^^^
+E       KeyError: 'arms'
+
+work/experiment-extension/tests/test_experiment_readiness.py:88: KeyError
+__________________ test_interim_never_computes_srm_or_effect ___________________
+
+    def test_interim_never_computes_srm_or_effect():
+        r=run(checkpoint='interim')
+>       assert r['srm_p'] is None and r['difference'] is None
+               ^^^^^^^^^^
+E       KeyError: 'srm_p'
+
+work/experiment-extension/tests/test_experiment_readiness.py:93: KeyError
+____________________ test_srm_all_assigned_fixed_checkpoint ____________________
+
+    def test_srm_all_assigned_fixed_checkpoint():
+        a=[assignment(i) for i in range(99)]+[assignment(99,'treatment')]
+        r=run(a)
+>       assert r['srm_p']<.001 and 'srm' in r['reasons'] and r['difference'] is None
+               ^^^^^^^^^^
+E       KeyError: 'srm_p'
+
+work/experiment-extension/tests/test_experiment_readiness.py:98: KeyError
+_____________ test_missing_arm_empty_and_insufficient_sample_hold ______________
+
+    def test_missing_arm_empty_and_insufficient_sample_hold():
+        for r in [run([]),run([assignment(0)]),run(target_per_arm=2)]:
+>           assert r['difference'] is None and r['status']=='hold'
+                   ^^^^^^^^^^^^^^^
+E           KeyError: 'difference'
+
+work/experiment-extension/tests/test_experiment_readiness.py:102: KeyError
+______________ test_guardrail_at_threshold_passes_and_over_holds _______________
+
+    def test_guardrail_at_threshold_passes_and_over_holds():
+        e=event(0,assignment(1,'treatment'),day=2,kind='refund')
+        r=run(events=[e],guardrail_max_increase={'refund':1.0})
+>       assert r['status']=='ready_for_review'
+               ^^^^^^^^^^^
+E       KeyError: 'status'
+
+work/experiment-extension/tests/test_experiment_readiness.py:107: KeyError
+___________________ test_invalid_config_is_explicit[kwargs0] ___________________
+
+kwargs = {'srm_alpha': 0}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+___________________ test_invalid_config_is_explicit[kwargs1] ___________________
+
+kwargs = {'target_per_arm': 0}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+___________________ test_invalid_config_is_explicit[kwargs2] ___________________
+
+kwargs = {'late_buffer': datetime.timedelta(days=-1)}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+___________________ test_invalid_config_is_explicit[kwargs3] ___________________
+
+kwargs = {'guardrail_max_increase': {}}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+___________________ test_invalid_config_is_explicit[kwargs4] ___________________
+
+kwargs = {'watermark': datetime.datetime(2026, 4, 10, 12, 0, tzinfo=datetime.timezone.utc)}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+___________________ test_invalid_config_is_explicit[kwargs5] ___________________
+
+kwargs = {'checkpoint': 'daily'}
+
+    @pytest.mark.parametrize('kwargs',[{'srm_alpha':0},{'target_per_arm':0},
+        {'late_buffer':timedelta(days=-1)}, {'guardrail_max_increase':{}},
+        {'watermark':T0+timedelta(days=99)},{'checkpoint':'daily'}])
+    def test_invalid_config_is_explicit(kwargs):
+>       with pytest.raises(ValueError): run(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+work/experiment-extension/tests/test_experiment_readiness.py:116: Failed
+_______________ test_recruitment_weekly_rounding_and_maturation ________________
+
+    def test_recruitment_weekly_rounding_and_maturation():
+>       assert recruitment_days(4356,100,1)==dict(raw_recruitment_days=88,recruitment_days=91,
+            maturation_days=14,late_buffer_days=1,total_days_upper_bound=106)
+E       AssertionError: assert {} == {'late_buffer...ays': 91, ...}
+E         
+E         Right contains 5 more items:
+E         {'late_buffer_days': 1,
+E          'maturation_days': 14,
+E          'raw_recruitment_days': 88,
+E          'recruitment_days': 91,
+E          'total_days_upper_bound': 106}
+E         Use -v to get more diff
+
+work/experiment-extension/tests/test_experiment_readiness.py:119: AssertionError
+=========================== short test summary info ============================
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_itt_keeps_unexposed_and_deduplicates_learning_events
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_elapsed_window_boundaries[6.999988425925926-0]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_elapsed_window_boundaries[7-1]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_elapsed_window_boundaries[13.999988425925926-1]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_elapsed_window_boundaries[14-0]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>0]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>1]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>2]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>3]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>4]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>5]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_bad_assignment_blocks_effect_and_counts[<lambda>6]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes0]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes1]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes2]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes3]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes4]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes5]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes6]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_wrong_event_keys_and_nulls_hold[changes7]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_conflicting_replay_holds
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_nonmatured_assignments_never_become_failures
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_maturation_exact_boundary_and_buffer
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_late_observed_event_holds
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_future_ingestion_does_not_change_numerator_but_contradicts_watermark
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_interim_never_computes_srm_or_effect
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_srm_all_assigned_fixed_checkpoint
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_missing_arm_empty_and_insufficient_sample_hold
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_guardrail_at_threshold_passes_and_over_holds
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs0]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs1]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs2]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs3]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs4]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_invalid_config_is_explicit[kwargs5]
+FAILED work/experiment-extension/tests/test_experiment_readiness.py::test_recruitment_weekly_rounding_and_maturation
+36 failed in 0.15s

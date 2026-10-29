@@ -22,3 +22,16 @@
 3. 손계산 실습을 직접 하고 실행 로그와 본인 커밋을 남긴다.
 4. CLASS101에 옮기기 위해 무엇을 새로 관측해야 하는지 적는다.
 5. 지원자의 실제 참여로 채울 수 없는 문장은 사용하지 않는다.
+
+## 추가 실제 데이터·실행 검증
+
+| 활용 가능한 사실 | 근거 | 확대하면 안 되는 주장 |
+|---|---|---|
+| EdNet KT4 실제 2,048명·854,678행을 확보하고 SQL/pandas로 대조 | `docs/ednet-analysis.md`, `reports/ednet_report.json`, `data/ednet_snapshot.json` | CLASS101 로그를 분석했다; 신규 가입자 유지율을 확정했다 |
+| 이벤트 정의에 따라 첫 주 2일 이상 여부 23명, 다음 주 기록 여부 14명 변경 | `sql/ednet.sql`, 보고서 quality | 재방문을 개선했다 |
+| 실제 구매 173행·환불 5행 확인, 권한·매출·갱신은 판단 보류 | 보고서 payments | 173건의 구독 갱신·매출을 확인했다 |
+| 18개 가상 모집 시나리오와 합성 입력의 배정·지연·가드레일 검사 실행 | `reports/experiment-readiness.json`, `tests/test_experiment_readiness.py` | 실제 20명을 모집했다; A/B 효과 검증을 했다 |
+| 같은 3개 규칙의 수동/자동 기록 실측 도구 구현 | `docs/human-comparison-protocol.md`, `web/operations-practice.html` | 사용자의 시간이 특정 비율 절감됐다 |
+| 안내받은 사용자 실습 5개와 직접 Actions 실행 | `docs/participation.md` | 지원자가 분석·코드 전체를 독립 수행했다 |
+
+최종 캡처와 각 파일의 의미는 [포트폴리오 근거 모음](portfolio-evidence.md), 아직 사람의 확인이 필요한 항목은 [직접 참여 기록](participation.md)을 먼저 확인한다.

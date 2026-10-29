@@ -1,0 +1,115 @@
+{
+  "checked_on_utc": "2026-10-29",
+  "decision": "Keep OULAD and add actual EdNet-KT4 observational analysis; no replacement and no invented subscription fields.",
+  "candidates": [
+    {
+      "dataset": "EdNet-KT4",
+      "source": "https://github.com/riiid/ednet",
+      "readme_revision": "27db572eeaf4455a1f6c029ba27e34f78bb49d73",
+      "readme_sha256": "4230e5fbcc5bda373f315d9cbb4a9eb55e9088225fd1aa5d91b3f628359f923b",
+      "license": "CC BY-NC 4.0 for research purposes",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "period": "Fine-grained KT2-KT4 behavior recording since 2018-08-27. README gives no per-user coverage end and states timestamps are shifted.",
+      "actual_access": "Official bit.ly redirects resolved to Google Drive. HTTP 206 byte ranges; 2,048 complete user histories downloaded, CRC checked.",
+      "analyzed": true,
+      "payment_fields": [
+        "pay",
+        "refund",
+        "enroll_coupon",
+        "payment_item_id",
+        "type",
+        "duaration",
+        "number_of_questions"
+      ],
+      "absent": [
+        "price",
+        "currency",
+        "transaction_id",
+        "automatic_renewal_state",
+        "coverage_end"
+      ]
+    },
+    {
+      "dataset": "EdNet-KT1",
+      "source": "https://github.com/riiid/ednet#kt1",
+      "license": "CC BY-NC 4.0 for research purposes",
+      "period": "Question-response logs since 2017-04-18",
+      "actual_access": "Official redirect to public Google Drive verified; archive not downloaded.",
+      "analyzed": false,
+      "reason": "KT4 provides additional UI, lecture, payment actions; avoid redundant same-service analysis."
+    },
+    {
+      "dataset": "Junyi Academy 2018-2019",
+      "source": "https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy",
+      "metadata_api": "https://www.kaggle.com/api/v1/datasets/view/junyiacademy/learning-activity-public-dataset-by-junyi-academy",
+      "metadata_sha256": "ffba4001b1ea6066da3330e1a787bfe3f660a97282bff79961190c2ea878bc42",
+      "license": "CC BY-NC-SA 4.0",
+      "version": 9,
+      "period": "2018-08 through 2019-07",
+      "source_description_counts": {
+        "selected_students": 72630,
+        "problem_attempts": 16217311
+      },
+      "verified_headers": {
+        "Info_UserData.csv": {
+          "url": "https://www.kaggle.com/api/v1/datasets/download/junyiacademy/learning-activity-public-dataset-by-junyi-academy/Info_UserData.csv",
+          "status": 200,
+          "bytes_read": 65536,
+          "header": "uuid,gender,points,badges_cnt,first_login_date_TW,user_grade,user_city,has_teacher_cnt,is_self_coach,has_student_cnt,belongs_to_class_cnt,has_class_cnt",
+          "note": "Header-only verification; no full download or analysis."
+        },
+        "Log_Problem.csv": {
+          "url": "https://www.kaggle.com/api/v1/datasets/download/junyiacademy/learning-activity-public-dataset-by-junyi-academy/Log_Problem.csv",
+          "status": 200,
+          "bytes_read": 65536,
+          "header": "timestamp_TW,uuid,ucid,upid,problem_number,exercise_problem_repeat_session,is_correct,total_sec_taken,total_attempt_cnt,used_hint_cnt,is_hint_used,is_downgrade,is_upgrade,level",
+          "note": "Header-only verification; no full download or analysis."
+        }
+      },
+      "content_csv_header": "ucid,content_pretty_name,content_kind,difficulty,subject,learning_stage,level1_id,level2_id,level3_id,level4_id",
+      "actual_access": "HTTP 200 official file endpoints, header-only log/user verification and full 389397-byte content file. No full logs downloaded.",
+      "analyzed": false,
+      "reason": "Free K-12 platform; no subscription/payment fields, narrower additional value than KT4."
+    },
+    {
+      "dataset": "KKBox Churn Prediction Challenge",
+      "source": "https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge",
+      "license": "unverified this session",
+      "period": "not verified from accessible official schema this session",
+      "actual_access": [
+        {
+          "url": "https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/data",
+          "result": "HTML CSS chunk loading failure"
+        },
+        {
+          "url": "https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/rules",
+          "result": "HTML CSS chunk loading failure"
+        },
+        {
+          "url": "https://www.kaggle.com/api/v1/competitions/data/list/kkbox-churn-prediction-challenge",
+          "http_status": 401
+        }
+      ],
+      "analyzed": false,
+      "reason": "Could not verify official access, fields, and reuse conditions; no third-party mirror substitution."
+    },
+    {
+      "dataset": "HarvardX/MITx AY2013",
+      "source": "https://news.mit.edu/2014/mit-and-harvard-release-de-identified-learning-data-open-online-courses",
+      "period": "2012-2013, 16 courses (official MIT news)",
+      "license": "unverified this session",
+      "actual_access": [
+        {
+          "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/26147",
+          "result": "bot_blocked"
+        },
+        {
+          "url": "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/26147",
+          "http_status": 403
+        }
+      ],
+      "analyzed": false,
+      "reason": "No current file schema/license verification; university course-person summary less suitable for granular resumption events."
+    }
+  ]
+}

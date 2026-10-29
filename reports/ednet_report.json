@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "analysis_type": "observational_public_data",
+  "manifest": {
+    "dataset": "EdNet-KT4",
+    "seed": "learning-journey-lab-ednet-kt4-v1",
+    "sample_users": 2048,
+    "archive_bytes": 1169540359,
+    "population_user_files": 297915,
+    "zip_index_sha256": "a9929b2d54e957007fb2f292dde410bdca9fa2cb2e5c14f9ec182d77d28d5cdd",
+    "selected_members_sha256": "7171342decf5a0f0a0567e63e19543bd109919dfc26ab6750a40780ce7b5b958",
+    "sample_content_sha256": "ad82186e6bcd27a11f4533ff1b89e6b17a4beda1deb0b65ca88f6da324103007",
+    "sample_uncompressed_bytes": 39501752,
+    "contents_zip_bytes": 173976,
+    "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+    "source": "https://github.com/riiid/ednet",
+    "source_archive_url": "https://drive.usercontent.google.com/download?id=1HHZwpeqMSowWhgEu0URBQQ3FizR9o9mT&export=download&confirm=t",
+    "contents_archive_url": "https://drive.usercontent.google.com/download?id=117aYJAWG3GU48suS66NPaB82HwFj6xWS&export=download&confirm=t",
+    "license": "CC BY-NC 4.0; research purposes",
+    "archive_sha256": null,
+    "archive_sha256_note": "Full archive not downloaded. Each fetched range and extracted selected member hashed locally; ZIP CRC verified.",
+    "sampling": "Take n smallest SHA256(seed + colon + exact ZIP member name), complete histories. Selection uses only filenames, never behavior or future activity."
+  },
+  "definition": {
+    "anchor": "First recorded event per sampled user; not signup or first-ever learning.",
+    "first_window": "[0, 7 × 24 hours)",
+    "next_window": "[7 × 24 hours, 14 × 24 hours)",
+    "activity": "submit of a question bundle (item_id b + digits)",
+    "event_unit": "Bundle final-answer submission; not OULAD click sum, individual question, lesson completion, or payment.",
+    "active_day": "floor((timestamp − first recorded timestamp) / 86,400,000); elapsed 24-hour bin, not calendar day",
+    "denominator": "Sample users with ≥1 qualifying submission in the first window; split into exactly 1 vs ≥2 active bins.",
+    "outcome": "At least one recorded qualifying submission in the next window.",
+    "censoring": "Per-user observation-end/coverage metadata unavailable; shifted timestamps cannot establish shared calendar end. No recorded next-week action is not proven churn. No future-activity requirement in primary denominator.",
+    "ci_method": "Wilson 95% for group recorded-event proportions; 2,000 user bootstrap draws, seed 101, for difference. Does not cover censoring, confounding or service transfer."
+  },
+  "sample": {
+    "users": 2048,
+    "raw_rows": 854678,
+    "users_with_event_at_or_after_day14": 287,
+    "users_without_event_at_or_after_day14": 1761,
+    "histories_with_recorded_pay_fraction": 0.080078125
+  },
+  "primary": {
+    "definition": "submit",
+    "eligible_firstweek_users": 2030,
+    "excluded_zero_firstweek_users": 18,
+    "groups": [
+      {
+        "active_days": "1",
+        "n": 1688,
+        "recorded_nextweek": 31,
+        "rate": 0.018364928909952605,
+        "ci95": [
+          0.012967821744056127,
+          0.025949216538354337
+        ]
+      },
+      {
+        "active_days": "2+",
+        "n": 342,
+        "recorded_nextweek": 135,
+        "rate": 0.39473684210526316,
+        "ci95": [
+          0.3443775785167552,
+          0.44743454185332077
+        ]
+      }
+    ],
+    "difference": 0.37637191319531055,
+    "ci95": [
+      0.32125526008202465,
+      0.4285622764433022
+    ],
+    "bootstrap_draws": 2000,
+    "valid_draws": 2000,
+    "bootstrap_seed": 101
+  },
+  "event_definition_sensitivity": [
+    {
+      "definition": "entry",
+      "eligible_firstweek_users": 2037,
+      "excluded_zero_firstweek_users": 11,
+      "groups": [
+        {
+          "active_days": "1",
+          "n": 1683,
+          "recorded_nextweek": 36,
+          "rate": 0.0213903743315508,
+          "ci95": [
+            0.015490431979982781,
+            0.029470200463635514
+          ]
+        },
+        {
+          "active_days": "2+",
+          "n": 354,
+          "recorded_nextweek": 142,
+          "rate": 0.4011299435028249,
+          "ci95": [
+            0.35139802075936033,
+            0.45298462335713574
+          ]
+        }
+      ],
+      "difference": 0.3797395691712741,
+      "ci95": [
+        0.32749367661734863,
+        0.4314910524622043
+      ],
+      "bootstrap_draws": 2000,
+      "valid_draws": 2000,
+      "bootstrap_seed": 101
+    },
+    {
+      "definition": "ui",
+      "eligible_firstweek_users": 2048,
+      "excluded_zero_firstweek_users": 0,
+      "groups": [
+        {
+          "active_days": "1",
+          "n": 1683,
+          "recorded_nextweek": 35,
+          "rate": 0.020796197266785502,
+          "ci95": [
+            0.014990725484279368,
+            0.0287842590790703
+          ]
+        },
+        {
+          "active_days": "2+",
+          "n": 365,
+          "recorded_nextweek": 149,
+          "rate": 0.40821917808219177,
+          "ci95": [
+            0.359006210907132,
+            0.4593439273495033
+          ]
+        }
+      ],
+      "difference": 0.38742298081540627,
+      "ci95": [
+        0.33291737361894946,
+        0.4388553230593231
+      ],
+      "bootstrap_draws": 2000,
+      "valid_draws": 2000,
+      "bootstrap_seed": 101
+    }
+  ],
+  "censoring_sensitivity": {
+    "status": "not_identifiable",
+    "diagnostic_only_future_selected": {
+      "definition": "submit",
+      "eligible_firstweek_users": 275,
+      "excluded_zero_firstweek_users": 12,
+      "groups": [
+        {
+          "active_days": "1",
+          "n": 96,
+          "recorded_nextweek": 16,
+          "rate": 0.16666666666666666,
+          "ci95": [
+            0.10527382371950136,
+            0.2537099015189491
+          ]
+        },
+        {
+          "active_days": "2+",
+          "n": 179,
+          "recorded_nextweek": 111,
+          "rate": 0.6201117318435754,
+          "ci95": [
+            0.5471914163383039,
+            0.6879850052312072
+          ]
+        }
+      ],
+      "difference": 0.45344506517690875,
+      "ci95": [
+        0.34613167300818626,
+        0.5568591306132707
+      ],
+      "bootstrap_draws": 2000,
+      "valid_draws": 2000,
+      "bootstrap_seed": 101
+    },
+    "diagnostic_note": "Restricted to histories with some event at/after day 14. Selection uses future behavior and induces survivor bias; NOT a corrected retention estimate, NOT an eligibility rule."
+  },
+  "quality": {
+    "raw_rows": 854678,
+    "exact_duplicate_rows": 1519,
+    "deduplicated_rows": 853159,
+    "raw_vs_dedup_changed_users": 0,
+    "invalid_required_fields": 0,
+    "nonmonotonic_timestamp_users": 0,
+    "unknown_action_counts": {},
+    "unknown_platform_rows": 184,
+    "missing_platform_rows": 184,
+    "missing_platform_by_action": {
+      "enroll_coupon": 6,
+      "pay": 173,
+      "refund": 5
+    },
+    "unknown_nonempty_platform_rows": 0,
+    "missing_item_rows": 0,
+    "invalid_respond_answer_rows": 0,
+    "action_counts": {
+      "enroll_coupon": 6,
+      "enter": 222150,
+      "erase_choice": 33338,
+      "pause_audio": 103252,
+      "pause_video": 9993,
+      "pay": 173,
+      "play_audio": 101660,
+      "play_video": 10185,
+      "quit": 110391,
+      "refund": 5,
+      "respond": 150447,
+      "submit": 111759,
+      "undo_erase_choice": 1319
+    },
+    "firstweek_activity_group_changed_submit_vs_all_ui": 23,
+    "nextweek_flag_changed_submit_vs_all_ui": 14,
+    "exact_duplicate_policy": "Retained in primary. No unique event or transaction ID, so equality alone does not prove logging error. Deduplication is a sensitivity check."
+  },
+  "payments": {
+    "pay_events": 173,
+    "paying_users": 164,
+    "refund_events": 5,
+    "refunding_users": 5,
+    "coupon_events": 6,
+    "coupon_users": 5,
+    "unknown_payment_key_events": 0,
+    "by_type": [
+      {
+        "action_type": "pay",
+        "payment_type": "pass",
+        "events": 173
+      },
+      {
+        "action_type": "refund",
+        "payment_type": "pass",
+        "events": 5
+      }
+    ],
+    "catalog_rows": 190,
+    "catalog_types": [
+      "-1",
+      "pass",
+      "paygo"
+    ],
+    "catalog_unknown_type_rows": 14,
+    "catalog_fields": [
+      "payment_item_id",
+      "payment_type",
+      "duration",
+      "number_of_questions"
+    ],
+    "catalog_source_fields": [
+      "payment_item_id",
+      "type",
+      "duaration",
+      "number_of_questions"
+    ],
+    "catalog_normalization": {
+      "type": "payment_type",
+      "duaration": "duration"
+    },
+    "can_measure": [
+      "recorded purchases",
+      "recorded refunds",
+      "recorded coupon enrollment"
+    ],
+    "cannot_measure": [
+      "revenue",
+      "renewals",
+      "subscription churn",
+      "net revenue",
+      "causal conversion lift"
+    ],
+    "unit_note": "Event records across each sampled complete history; no transaction ID, price/currency or verified entitlement state. Repeated pay records are not assumed to be renewals."
+  },
+  "limitations": [
+    "Historical Santa TOEIC tutoring data, not CLASS101 internal data or current subscription behavior.",
+    "Additively shifted timestamps preserve within-user gaps; real calendar dates and cross-user cohorts are not established.",
+    "The first recorded event is not verified signup; left truncation and right censoring remain unresolved.",
+    "A hash-selected sample supports reproducible exploratory descriptions, not whole-service rate claims.",
+    "Observed activity association is not causal: motivation, prior skill, entitlement, recommendations and time availability are not randomized.",
+    "No screen treatment, assignment, real participant recruitment or CLASS101 production experiment was performed.",
+    "Payment/refund/coupon events exist, but price, currency, transaction identity, entitlement ledger and auto-renewal state do not."
+  ],
+  "decision": "Keep OULAD unchanged and add EdNet KT4 as supplementary evidence about event definitions and recorded learning activity. Use only to refine measurement and experiment hypotheses; hold causal retention/revenue claims.",
+  "validation": {
+    "sql_pandas_equal": true,
+    "repeat_feature_equal": true,
+    "compared_user_rows": 2048,
+    "compared_columns": [
+      "user_id",
+      "w1_submit_days",
+      "w2_submit",
+      "w1_entry_days",
+      "w2_entry",
+      "w1_ui_days",
+      "w2_ui",
+      "last_event_elapsed_day",
+      "rows"
+    ],
+    "raw_file_sha256_verified": true,
+    "download_member_crc_verified": true,
+    "contents_archive_sha256_verified": true,
+    "pinned_snapshot_verified": true,
+    "published_user_ids": false
+  }
+}

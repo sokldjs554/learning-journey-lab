@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-29",
+  "method": "TinyFish fetch_content, ttl=0; official public help pages, not paid product observation",
+  "pages": [
+    {
+      "url": "https://help.class101.tv/classmate/class101-plus-subscription-guide",
+      "title": "CLASS101+ Subscription Guide",
+      "translation_notice": "AIThis document was translated by AI and may contain mistakes.",
+      "claims": [
+        "Features like quizzes and streak goals help you stay consistent with your learning.",
+        "Classes included in Plus may become unavailable due to reasons such as the end of a Creator's contract."
+      ]
+    },
+    {
+      "url": "https://help.class101.tv/classmate/how-to-take-class",
+      "title": "How to Take a Class",
+      "translation_notice": "AIThis document was translated by AI and may contain mistakes.",
+      "claims": [
+        "PC**: [**Login** > **My Page**(click **profile** in upper right) > click [**My Classes**] button in upper right]",
+        "Mobile**: [**Login** > click [**My Classes**] button at bottom]"
+      ]
+    },
+    {
+      "url": "https://help.class101.tv/classmate/class101-group-plan",
+      "title": "CLASS101+ Group Subscription",
+      "translation_notice": "AIThis document was translated by AI and may contain mistakes.",
+      "claims": [
+        "accounts are divided into the **primary** account that registered the recurring payment, and **member** accounts that joined the group plan through the primary account's invitation.",
+        "Payments, cancellations, refunds, and payment method management for the Group Plan subscription can only be handled from the **primary** account."
+      ]
+    }
+  ],
+  "errors": [],
+  "checked_at_timezone": "UTC",
+  "checked_at_korea_date": "2026-10-30"
+}

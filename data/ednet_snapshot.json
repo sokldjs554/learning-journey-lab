@@ -1,0 +1,13 @@
+{
+  "dataset": "EdNet-KT4",
+  "seed": "learning-journey-lab-ednet-kt4-v1",
+  "sample_users": 2048,
+  "archive_bytes": 1169540359,
+  "population_user_files": 297915,
+  "selected_members_sha256": "7171342decf5a0f0a0567e63e19543bd109919dfc26ab6750a40780ce7b5b958",
+  "sample_content_sha256": "ad82186e6bcd27a11f4533ff1b89e6b17a4beda1deb0b65ca88f6da324103007",
+  "sample_uncompressed_bytes": 39501752,
+  "contents_zip_bytes": 173976,
+  "contents_zip_sha256": "aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7",
+  "zip_index_sha256": "a9929b2d54e957007fb2f292dde410bdca9fa2cb2e5c14f9ec182d77d28d5cdd"
+}
