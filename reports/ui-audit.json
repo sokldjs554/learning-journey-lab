@@ -1,0 +1,107 @@
+{
+  "checked_at_utc": "2026-10-29T06:38:37.330704+00:00",
+  "audited_commit": "26bbc67f54171f7fb12e53492341a1c3643b593c",
+  "url": "https://learning-journey-lab.onrender.com/",
+  "status": "research_findings_not_fixed",
+  "method": "Chromium rendered DOM + screenshot inspection + production source inspection; no user timing study",
+  "desktop_viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "geometry": {
+    "desktop": {
+      "height": 7072,
+      "viewport": 1000,
+      "sections": [
+        {
+          "id": "overview",
+          "y": 64.796875,
+          "height": 1103.90625
+        },
+        {
+          "id": "reliability",
+          "y": 1168.703125,
+          "height": 1767.703125
+        },
+        {
+          "id": "analysis",
+          "y": 2936.40625,
+          "height": 2359.328125
+        },
+        {
+          "id": "faults",
+          "y": 5295.734375,
+          "height": 639.296875
+        },
+        {
+          "id": "actions",
+          "y": 5935.03125,
+          "height": 958.859375
+        }
+      ]
+    },
+    "mobile": {
+      "height": 8169,
+      "viewport": 844,
+      "firstNumberY": 827.578125,
+      "qualityY": 1524.828125
+    }
+  },
+  "scope_probe": {
+    "selected": "AAA|2014J",
+    "chart_scope": "AAA · 2014J",
+    "after_reload": "all",
+    "url_after_selection": "https://learning-journey-lab.onrender.com/",
+    "counterevidence_unchanged": true,
+    "temporal_unchanged": true,
+    "note": "Whole-dataset labels exist; issue is mixed scope and navigation, not a demonstrated arithmetic error."
+  },
+  "quality": {
+    "rule_links": 20,
+    "incorrect_source_links": [
+      {
+        "rule": "course_invalid_length",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      },
+      {
+        "rule": "course_required_null",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      },
+      {
+        "rule": "registration_required_null",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      },
+      {
+        "rule": "registration_unknown_course",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      },
+      {
+        "rule": "site_required_null",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      },
+      {
+        "rule": "site_unknown_course",
+        "href": "https://github.com/sokldjs554/learning-journey-lab/blob/main/sql/quality.sql"
+      }
+    ],
+    "expected_source": "sql/dimensions.sql"
+  },
+  "navigation": {
+    "aria_current_count": 0
+  },
+  "visual_references_inspected": [
+    "Segment official violations list image",
+    "Statsig official experiment health check image",
+    "Metabase official drill-through image",
+    "Great Expectations official observed values image"
+  ],
+  "limitations": [
+    "No vendor account login or trial use",
+    "No CLASS101 internal UI access",
+    "No user study or task-time improvement measured"
+  ]
+}
