@@ -11,7 +11,7 @@
 | 생성 로그에서 누락·중복·지연·재수집을 재현 | `data/synthetic/`, `src/journey/faults.py`, `sql/faults.sql` | 실제 회사 장애를 복구했다 |
 | 반복 점검을 명령과 이슈 이력으로 자동화, 실행 시간 측정 | `scripts/analyze.py`, `src/journey/tracker.py`, `reports/benchmark.json` | 분석가 근무 시간을 특정 % 줄였다 |
 | 잘못된 입력·시간 경계·빈/오류 UI를 테스트하고 수정 | `tests/`, `docs/verification.md`, `docs/learning-log.md` | 실제 사용자 피드백을 받아 개선했다 |
-| 공개 정적 분석 도구를 배포하고 브라우저에서 확인 | 배포 URL, `reports/browser-deployed.json`, `reports/deployment.json` (생성 후 유효) | 실시간 분석 백엔드/프로덕션 로그 파이프라인을 운영한다 |
+| 공개 정적 분석 도구를 배포하고 브라우저에서 확인 | 배포 URL, `reports/browser-deployed.json`, `reports/deployment.json` | 실시간 분석 백엔드/프로덕션 로그 파이프라인을 운영한다 |
 | 서비스 맥락에 맞는 실험과 추가 계측을 설계 | `docs/experiment-plan.md`, JSON experiment | 실험으로 매출/연간 구독 효과를 검증했다 |
 | AI가 작성한 초안을 테스트·대조하는 개발 과정 | `docs/research/sources.md`, 테스트와 커밋 | 지원자가 코드와 조사 전체를 독립적으로 수행했다 |
 

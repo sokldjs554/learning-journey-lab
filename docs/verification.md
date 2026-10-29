@@ -42,7 +42,9 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 - HTML/CSS/JS/report/release 6개 경로 HTTP 200. 공개 report SHA256이 로컬과 정확히 일치. [HTTP 근거](../reports/deployment.json).
 - 실제 공개 주소의 PC/모바일 사용자 흐름을 [브라우저 결과](../reports/browser-deployed.json)와 [접근성 결과](../reports/accessibility-deployed.json)에 기록. 환경 프록시의 기존 CA 공개키만 신뢰하도록 Chromium QA를 설정했으며 전체 TLS 오류를 무시하는 옵션은 사용하지 않았다. Python HTTP 검증도 시스템 CA 체인을 검증했다.
 - 첫 원격 CI [40820849573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40820849573): 테스트·빌드·증거 일관성 단계 success.
-- 전체 원본 원격 재현은 수동 실행 또는 SQL/분석/manifest/workflow 변경 시 실행하도록 구성. 원격 실행 결과는 후속 검증 파일에서 확인.
+- 검증 소스 `9b863b5950ee630b84a95d9b935f4d6a610cdf91`: [품질 CI 40821666750](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40821666750), [전체 원본 재현 40821666614](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40821666614) 모두 success. 별도 GitHub runner에서 공식 다운로드→전체 분석→독립 pandas 대조→빌드→수치·해시 일치 검증→근거 artifact 업로드까지 통과. [기계 기록](../reports/ci.json).
+- 해당 소스의 후속 Render 배포 `dep-dbhd9knavr4c739mpbo0`도 live. 후속 문서·검증 기록 커밋은 분석 결과와 web 파일을 바꾸지 않는다. 완료 시점의 최종 커밋은 저장소 main과 별도 전달 기록에서 확인.
+- 전체 원본 재현은 수동 또는 SQL/분석/manifest/workflow 변경 시 실행. 주간 자동화는 소규모 테스트·정적 증거 검증이며, 원본 데이터가 실시간으로 갱신되는 서비스는 아니다.
 
 ## 코드 리뷰
 
