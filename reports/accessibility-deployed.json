@@ -1,16 +1,10 @@
 {
   "engine": "axe-core 4.11.0 + Chromium",
-  "scope": "automated WCAG A/AA checks; not full accessibility certification",
+  "scope": "27 viewport/view combinations; automated A/AA only, not full accessibility certification",
   "results": [
     {
       "width": 1440,
-      "violations": [],
-      "incomplete_checks": 0,
-      "incomplete_details": [],
-      "passed_rules": 31
-    },
-    {
-      "width": 390,
+      "view": "view=review",
       "violations": [],
       "incomplete_checks": 1,
       "incomplete_details": [
@@ -18,70 +12,501 @@
           "id": "color-contrast",
           "nodes": [
             [
-              "tr:nth-child(1) > .positive:nth-child(6)"
+              ".brand-mark"
             ],
             [
-              "tr:nth-child(2) > .negative"
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(3) > .negative"
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(4) > .positive:nth-child(6)"
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(5) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(6) > .negative"
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
             ],
             [
-              "tr:nth-child(7) > .positive:nth-child(6)"
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(8) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(9) > .negative"
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(10) > .negative"
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(11) > .negative"
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
             ],
             [
-              "tr:nth-child(12) > .positive:nth-child(6)"
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(13) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(14) > .positive:nth-child(6)"
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(15) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(16) > .negative"
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
             ],
             [
-              "tr:nth-child(17) > .positive:nth-child(6)"
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(18) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(19) > .positive:nth-child(6)"
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(20) > .positive:nth-child(6)"
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(21) > .negative"
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30
+    },
+    {
+      "width": 1440,
+      "view": "view=runs",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
             ],
             [
-              "tr:nth-child(22) > .negative"
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26
+    },
+    {
+      "width": 1440,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21
+    },
+    {
+      "width": 1440,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    },
+    {
+      "width": 1440,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21
+    },
+    {
+      "width": 390,
+      "view": "view=review",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26
+    },
+    {
+      "width": 390,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26
+    },
+    {
+      "width": 390,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 390,
+      "view": "view=runs",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 390,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21
+    },
+    {
+      "width": 390,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    },
+    {
+      "width": 390,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21
+    },
+    {
+      "width": 320,
+      "view": "view=review",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 23
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1&tab=impact",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=review&detail=1&tab=decision",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=analysis",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
             ]
           ]
         }
@@ -90,6 +515,7 @@
     },
     {
       "width": 320,
+      "view": "view=runs",
       "violations": [],
       "incomplete_checks": 1,
       "incomplete_details": [
@@ -97,156 +523,78 @@
           "id": "color-contrast",
           "nodes": [
             [
-              "nav > a[href$=\"#actions\"]"
+              ".brand-mark"
             ],
             [
-              "#sensitivity-table > tr:nth-child(1) > td:nth-child(5)"
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
             ],
             [
-              "#sensitivity-table > tr:nth-child(2) > td:nth-child(5)"
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
             ],
             [
-              "#sensitivity-table > tr:nth-child(3) > td:nth-child(5)"
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
             ],
             [
-              "div[aria-label=\"\uac1c\uc124\uae30\ubcc4 \ube44\uad50 \ud45c\"] > table > caption"
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
             ],
             [
-              "tr:nth-child(1) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(1) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(2) > .positive"
-            ],
-            [
-              "tr:nth-child(2) > .negative"
-            ],
-            [
-              "tr:nth-child(3) > .positive"
-            ],
-            [
-              "tr:nth-child(3) > .negative"
-            ],
-            [
-              "tr:nth-child(4) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(4) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(5) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(5) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(6) > .positive"
-            ],
-            [
-              "tr:nth-child(6) > .negative"
-            ],
-            [
-              "tr:nth-child(7) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(7) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(8) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(8) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(9) > .positive"
-            ],
-            [
-              "tr:nth-child(9) > .negative"
-            ],
-            [
-              "tr:nth-child(10) > .positive"
-            ],
-            [
-              "tr:nth-child(10) > .negative"
-            ],
-            [
-              "tr:nth-child(11) > .positive"
-            ],
-            [
-              "tr:nth-child(11) > .negative"
-            ],
-            [
-              "tr:nth-child(12) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(12) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(13) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(13) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(14) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(14) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(15) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(15) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(16) > .positive"
-            ],
-            [
-              "tr:nth-child(16) > .negative"
-            ],
-            [
-              "tr:nth-child(17) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(17) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(18) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(18) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(19) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(19) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(20) > .positive:nth-child(5)"
-            ],
-            [
-              "tr:nth-child(20) > .positive:nth-child(6)"
-            ],
-            [
-              "tr:nth-child(21) > .positive"
-            ],
-            [
-              "tr:nth-child(21) > .negative"
-            ],
-            [
-              "tr:nth-child(22) > .positive"
-            ],
-            [
-              "tr:nth-child(22) > .negative"
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
             ]
           ]
         }
       ],
-      "passed_rules": 31
+      "passed_rules": 27
+    },
+    {
+      "width": 320,
+      "view": "view=plan",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
+    },
+    {
+      "width": 320,
+      "view": "view=lab",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 23
+    },
+    {
+      "width": 320,
+      "view": "error",
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22
     }
   ]
 }

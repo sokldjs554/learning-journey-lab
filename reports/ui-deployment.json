@@ -1,0 +1,59 @@
+{
+  "url": "https://learning-journey-lab.onrender.com",
+  "service_id": "srv-dbhd5m88v5cc7385ips0",
+  "workspace_id": "tea-db9hb2dg1s2s738nd1a0",
+  "deploy_id": "dep-dbhf79dckfvc73fanc90",
+  "source_commit": "a9ba161d4c3a50548486ec60b72dd9d5f798d3cd",
+  "status": "live",
+  "checked_at": "2026-10-29T16:21:08.997042+09:00",
+  "responses": {
+    "/": {
+      "status": 200,
+      "bytes": 17291,
+      "sha256": "0c07c5b82938b789aa1a9f90a721c1e7f5138457aab711982ef4729a85bb2404",
+      "local_bytes_match": true
+    },
+    "/app.js": {
+      "status": 200,
+      "bytes": 24758,
+      "sha256": "5232bf525d323c64fedf5408ce5c53f504b64cf339c7b162d720a7b95d796d72",
+      "local_bytes_match": true
+    },
+    "/style.css": {
+      "status": 200,
+      "bytes": 21281,
+      "sha256": "602ee56b4b309ba53880619c1cdc9593e32336a74047f19bb4ec0e838754aa35",
+      "local_bytes_match": true
+    },
+    "/catalog.js": {
+      "status": 200,
+      "bytes": 6667,
+      "sha256": "79e872e4c38cd1a90af92192c1f75a92612a591d3baaed4cef8004fdb1736dff",
+      "local_bytes_match": true
+    },
+    "/report-contract.js": {
+      "status": 200,
+      "bytes": 4938,
+      "sha256": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+      "local_bytes_match": true
+    },
+    "/data/report.json": {
+      "status": 200,
+      "bytes": 66082,
+      "sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+      "local_bytes_match": true
+    },
+    "/data/operations.json": {
+      "status": 200,
+      "bytes": 14612,
+      "sha256": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+      "local_bytes_match": true
+    },
+    "/data/release.json": {
+      "status": 200,
+      "bytes": 226,
+      "sha256": "096cb49a63bd8b86409b96b8508d31d18687ff0d6bc50df4f7be36ed24efa53a",
+      "local_bytes_match": true
+    }
+  }
+}

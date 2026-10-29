@@ -1,0 +1,10 @@
+{
+  "before_ready": {
+    "hidden": true,
+    "focus": ""
+  },
+  "after_ready": {
+    "hidden": false,
+    "focus": "tab-impact"
+  }
+}

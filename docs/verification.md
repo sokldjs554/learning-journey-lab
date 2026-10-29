@@ -13,7 +13,11 @@
 - 접근성: 1440/390/320px × 기본 검토/상세 3탭/분석/실행/계획/실습/오류 = 27개 조합. 자동 위반 0. [기록](../reports/accessibility-local.json). 브랜드 장식·화살표 등 color-contrast 자동 판정 불완전은 남김. 고정색 계산과 위치 측정은 [ui-redesign.json](../reports/ui-redesign.json)에 별도 기록.
 - 별도 리뷰 4개 회귀: 실제 report 바이트 해시 결합, 모바일 브라우저 뒤로가기 초점, 개설기 설명의 전체 분모 분리, 0분모 비교 불가. [수정 전](../reports/review-regressions-before.json) 모두 실패 → [수정 후](../reports/review-regressions-local.json) 모두 통과. [리뷰와 판단](../reports/ui-review.json).
 - 개편은 분석 report의 내용·해시를 바꾸지 않는다. 화면용 operations.json은 기존 issues/benchmark/SQL에서 생성하고 build/verify로 대조한다.
-- 로컬 검증 후 공개 배포에서도 같은 테스트와 파일 일치를 재확인한다. 배포 완료 기록은 후속 항목에 추가한다.
+- 공개 소스 `a9ba161d4c3a50548486ec60b72dd9d5f798d3cd`, Render `dep-dbhf79dckfvc73fanc90` live. HTML/JS/CSS/데이터 8개가 HTTP 200이며 로컬 바이트와 일치한다. [배포 근거](../reports/ui-deployment.json).
+- 공개 주소에서도 [주요 흐름](../reports/browser-deployed.json), [검토 작업](../reports/workbench-deployed.json), [리뷰 회귀 4개](../reports/review-regressions-deployed.json), 변형 응답 12개, [접근성 27개 조합](../reports/accessibility-deployed.json)을 재실행해 통과했다. PC·모바일 공개 스크린샷을 직접 확인했다. 접근성 자동 판정 불완전 항목과 미수행 범위는 위와 같다.
+- 공개 환경 첫 키보드 검사에서 로딩 중 숨겨진 탭을 조작해 실패했다. 응답 0.8초 지연으로 재현: 준비 전 focus 없음, 준비 후 tab-impact. [원인 기록](../reports/browser-loading-diagnosis.json). 테스트에 화면 준비 조건을 추가하고 로컬·공개 전체 흐름을 재검사했다. 제품 결함으로 집계하지 않았다.
+- 개편 소스의 [원격 품질 CI 40834758383](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40834758383): pytest·build·verify 모두 success. [단계 기록](../reports/ui-ci.json). 원본 분석 SQL/Python은 변경하지 않아 전체 원본 분석은 이번 UI 변경에서 다시 실행하지 않았다. 기존 독립 재현 근거는 아래에 보존한다.
+- 이후 검증 기록·스크린샷·테스트 준비 조건의 커밋은 배포 web 파일과 분석 수치를 바꾸지 않는다.
 
 ## 초기 분석·코드 검증
 
@@ -48,12 +52,12 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 
 실제 스크린 리더 사용자 테스트, Safari/Firefox, 다양한 기기, 전체 WCAG 적합성 인증은 수행하지 않았다. 자동 검사 0건은 완전한 접근성 보장이 아니다.
 
-## 배포·원격 CI
+## 초기 배포·원격 CI 이력
 
 - 공개 URL: https://learning-journey-lab.onrender.com
 - Render 정적 사이트, 사용자 선택 `my2 workspace`. 최초 소스 커밋 `f3c5090499a67b6f267de4cadae4084dc2c240d7`, 배포 `dep-dbhd5mo8v5cc7385iqug`, 상태 live 확인.
 - HTML/CSS/JS/report/release 6개 경로 HTTP 200. 공개 report SHA256이 로컬과 정확히 일치. [HTTP 근거](../reports/deployment.json).
-- 실제 공개 주소의 PC/모바일 사용자 흐름을 [브라우저 결과](../reports/browser-deployed.json)와 [접근성 결과](../reports/accessibility-deployed.json)에 기록. 환경 프록시의 기존 CA 공개키만 신뢰하도록 Chromium QA를 설정했으며 전체 TLS 오류를 무시하는 옵션은 사용하지 않았다. Python HTTP 검증도 시스템 CA 체인을 검증했다.
+- 실제 공개 주소의 PC/모바일 사용자 흐름을 확인했다. 위의 브라우저·접근성 결과 파일은 현재 개편 버전의 재검증 결과로 갱신했다. 환경 프록시의 기존 CA 공개키만 신뢰하도록 Chromium QA를 설정했으며 전체 TLS 오류를 무시하는 옵션은 사용하지 않았다. Python HTTP 검증도 시스템 CA 체인을 검증했다.
 - 첫 원격 CI [40820849573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40820849573): 테스트·빌드·증거 일관성 단계 success.
 - 검증 소스 `9b863b5950ee630b84a95d9b935f4d6a610cdf91`: [품질 CI 40821666750](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40821666750), [전체 원본 재현 40821666614](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40821666614) 모두 success. 별도 GitHub runner에서 공식 다운로드→전체 분석→독립 pandas 대조→빌드→수치·해시 일치 검증→근거 artifact 업로드까지 통과. [기계 기록](../reports/ci.json).
 - 해당 소스의 후속 Render 배포 `dep-dbhd9knavr4c739mpbo0`도 live. 후속 문서·검증 기록 커밋은 분석 결과와 web 파일을 바꾸지 않는다. 완료 시점의 최종 커밋은 저장소 main과 별도 전달 기록에서 확인.

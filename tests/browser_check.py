@@ -53,7 +53,7 @@ def main():
             assert page.evaluate('document.documentElement.scrollWidth<=innerWidth');assert not errors,errors
             evidence.append({'viewport':[width,height],'checks':['first review entry','policy impact','20 exact SQL links (desktop)','22 scoped cohorts + content + chart/table values (desktop)','global isolation','empty search','5 synthetic stages','6 sample scenarios','no horizontal overflow or JS exception'],'status':'pass'});page.close()
         page=b.new_page();page.goto(a.url,wait_until='networkidle');page.keyboard.press('Tab');assert page.locator(':focus').get_attribute('href')=='#main';page.keyboard.press('Enter');assert page.evaluate('document.activeElement.id')=='main'
-        page.goto(a.url+'?view=review&detail=1');page.locator('#tab-evidence').focus();page.keyboard.press('ArrowRight');assert page.locator(':focus').get_attribute('id')=='tab-impact';page.keyboard.press('End');assert page.locator(':focus').get_attribute('id')=='tab-decision';page.close()
+        page.goto(a.url+'?view=review&detail=1');page.locator('#app:not([hidden])').wait_for();page.locator('#tab-evidence').focus();page.keyboard.press('ArrowRight');assert page.locator(':focus').get_attribute('id')=='tab-impact';page.keyboard.press('End');assert page.locator(':focus').get_attribute('id')=='tab-decision';page.close()
         evidence.append({'checks':['skip link','roving detail tabs arrows/end'],'status':'pass'})
         for asset in ['report','operations']:
             page=b.new_page();pattern=f'**/data/{asset}.json';page.route(pattern,lambda route:route.fulfill(status=500,body='unavailable'))

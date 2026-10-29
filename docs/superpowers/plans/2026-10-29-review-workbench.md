@@ -39,7 +39,7 @@ Interface: URL query view=review|analysis|runs|plan|lab, rule=<known rule>, tab=
 
 ### Task 3: Visual verification, review, deployment
 Files: tests/accessibility_check.py, reports/*, README.md, docs/verification.md, docs/learning-log.md.
-- [ ] Inspect desktop/mobile screenshots; axe every view 1440/390/320, keyboard/detail/back/empty/error.
-- [ ] Fresh whole-change review, classify/fix material findings with regression cases.
-- [ ] Update screenshots and README demo guide, record actual changes/limits.
-- [ ] Run final checks, publish, verify deployed UI/hash and CI, record completion evidence.
+- [x] Inspect desktop/mobile screenshots; axe every view 1440/390/320, keyboard/detail/back/empty/error.
+- [x] Fresh whole-change review, classify/fix material findings with regression cases.
+- [x] Update screenshots and README demo guide, record actual changes/limits.
+- [x] Run final checks, publish, verify deployed UI/hash and CI, record completion evidence.
