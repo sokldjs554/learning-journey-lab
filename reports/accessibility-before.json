@@ -1,0 +1,87 @@
+{
+  "engine": "axe-core 4.11.0 + Chromium",
+  "scope": "automated WCAG A/AA checks; not full accessibility certification",
+  "results": [
+    {
+      "width": 1440,
+      "violations": [
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "nodes": [
+            [
+              "div:nth-child(2) > a:nth-child(1)"
+            ],
+            [
+              "div:nth-child(2) > a:nth-child(5)"
+            ]
+          ]
+        }
+      ],
+      "incomplete_checks": 0,
+      "passed_rules": 31
+    },
+    {
+      "width": 390,
+      "violations": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "nodes": [
+            [
+              "#reliability > .table-wrap"
+            ],
+            [
+              "#analysis > .table-wrap"
+            ]
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "nodes": [
+            [
+              "div:nth-child(2) > a:nth-child(1)"
+            ],
+            [
+              "div:nth-child(2) > a:nth-child(5)"
+            ]
+          ]
+        }
+      ],
+      "incomplete_checks": 1,
+      "passed_rules": 30
+    },
+    {
+      "width": 320,
+      "violations": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "nodes": [
+            [
+              "#reliability > .table-wrap"
+            ],
+            [
+              "#analysis > .table-wrap"
+            ]
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "nodes": [
+            [
+              "div:nth-child(2) > a:nth-child(1)"
+            ],
+            [
+              "div:nth-child(2) > a:nth-child(5)"
+            ]
+          ]
+        }
+      ],
+      "incomplete_checks": 1,
+      "passed_rules": 31
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "method": "independent pandas chunked CSV \u2192 enrollment/day sets; no production SQL imports",
+  "enrollments_compared": 29671,
+  "fields_compared": [
+    "w1_days",
+    "w2_active",
+    "later_active"
+  ],
+  "mismatched_rows": 0
+}

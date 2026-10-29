@@ -1,0 +1,53 @@
+{
+  "url": "http://127.0.0.1:8765",
+  "engine": "Chromium 141 / Playwright 1.56",
+  "results": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "checks": [
+        "summary numbers",
+        "all 22 cohort numbers and day-chart labels (desktop)",
+        "cohort selection",
+        "empty search",
+        "fault stage changes",
+        "power scenario",
+        "no horizontal overflow",
+        "no JS exceptions"
+      ],
+      "status": "pass"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "summary numbers",
+        "all 22 cohort numbers and day-chart labels (desktop)",
+        "cohort selection",
+        "empty search",
+        "fault stage changes",
+        "power scenario",
+        "no horizontal overflow",
+        "no JS exceptions"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "skip link and focus transfer"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "HTTP failure state",
+        "retry recovery"
+      ],
+      "status": "pass"
+    }
+  ]
+}

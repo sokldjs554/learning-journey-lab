@@ -1,0 +1,48 @@
+{
+  "method": "3 serial final-code full pipeline runs; download excluded; source hash validation, load, SQL checks/marts, cluster bootstrap and exports included. Other QA may run concurrently; not an isolated performance benchmark.",
+  "runs": [
+    {
+      "python": "3.12.14",
+      "duckdb": "1.4.3",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "timings": {
+        "load_and_hash_seconds": 13.86178212599998,
+        "quality_seconds": 3.931524717000002,
+        "mart_and_sensitivity_seconds": 2.623332175000087,
+        "statistics_seconds": 4.388731280000002,
+        "total_seconds": 24.98617952099994
+      },
+      "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+    },
+    {
+      "python": "3.12.14",
+      "duckdb": "1.4.3",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "timings": {
+        "load_and_hash_seconds": 12.222467521999988,
+        "quality_seconds": 3.342509365000069,
+        "mart_and_sensitivity_seconds": 2.4024890109999433,
+        "statistics_seconds": 4.17975761799994,
+        "total_seconds": 22.31399946900001
+      },
+      "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+    },
+    {
+      "python": "3.12.14",
+      "duckdb": "1.4.3",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "timings": {
+        "load_and_hash_seconds": 12.153673045000005,
+        "quality_seconds": 3.320009250000112,
+        "mart_and_sensitivity_seconds": 2.6677206399999704,
+        "statistics_seconds": 4.434638823000114,
+        "total_seconds": 22.74334918799991
+      },
+      "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+    }
+  ],
+  "median_seconds": 22.74334918799991,
+  "reproducible_report": true,
+  "human_baseline_seconds": null,
+  "time_saved_claim": null
+}

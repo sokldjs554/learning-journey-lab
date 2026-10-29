@@ -1,0 +1,2981 @@
+{
+  "schema_version": 1,
+  "title": "Learning Journey Lab",
+  "as_of": "2026-10-29",
+  "source_type": "public",
+  "source": {
+    "name": "OULAD",
+    "authors": "Jakub Kuzilek, Martin Hlosta, Zdenek Zdrahal",
+    "years": [
+      2013,
+      2014
+    ],
+    "url": "https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/",
+    "doi": "https://doi.org/10.1038/sdata.2017.171",
+    "license": "CC BY 4.0",
+    "archive_sha256": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4"
+  },
+  "inventory": {
+    "studentVle": 10655280,
+    "studentRegistration": 32593,
+    "studentInfo": 32593,
+    "vle": 6364,
+    "courses": 22,
+    "assessments": 206,
+    "studentAssessment": 173912
+  },
+  "unique_people": 28785,
+  "raw_clicks": 39605099,
+  "event_day_range": [
+    -25,
+    269
+  ],
+  "eligibility": {
+    "total": 32593,
+    "missing_registration": 45,
+    "late_registration": 234,
+    "pre_start_withdrawal": 2643
+  },
+  "quality": {
+    "gate": "REVIEW",
+    "checks": [
+      {
+        "rule_id": "course_invalid_length",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "course_key_repeat",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "course_required_null",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "event_after_course",
+        "severity": "review",
+        "count": 4374
+      },
+      {
+        "rule_id": "event_after_withdrawal",
+        "severity": "review",
+        "count": 29440
+      },
+      {
+        "rule_id": "event_before_registration",
+        "severity": "review",
+        "count": 0
+      },
+      {
+        "rule_id": "event_daily_key_repeat",
+        "severity": "review",
+        "count": 2195960
+      },
+      {
+        "rule_id": "event_exact_repeat",
+        "severity": "review",
+        "count": 787170
+      },
+      {
+        "rule_id": "event_nonpositive_click",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "event_required_null",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "event_unknown_site",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "event_unknown_student",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "registration_inverted_dates",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "registration_key_repeat",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "registration_missing_date",
+        "severity": "review",
+        "count": 45
+      },
+      {
+        "rule_id": "registration_required_null",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "registration_unknown_course",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "site_key_repeat",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "site_required_null",
+        "severity": "block",
+        "count": 0
+      },
+      {
+        "rule_id": "site_unknown_course",
+        "severity": "block",
+        "count": 0
+      }
+    ],
+    "unobservable": [
+      "원천 이벤트 누락",
+      "일내 발생 순서",
+      "영상 시청 시간",
+      "구독 결제·갱신"
+    ]
+  },
+  "overall": {
+    "eligible": 29671,
+    "w1_active": 23522,
+    "w2_returned": 20303,
+    "return_rate": 0.8631493920584984,
+    "unique_learners": 26540,
+    "days": [
+      {
+        "days": 0,
+        "n": 6149,
+        "returned": 2677,
+        "rate": 0.4353553423320865
+      },
+      {
+        "days": 1,
+        "n": 5565,
+        "returned": 3835,
+        "rate": 0.6891284815813118
+      },
+      {
+        "days": 2,
+        "n": 4803,
+        "returned": 3992,
+        "rate": 0.8311471996668749
+      },
+      {
+        "days": 3,
+        "n": 3940,
+        "returned": 3523,
+        "rate": 0.8941624365482234
+      },
+      {
+        "days": 4,
+        "n": 3121,
+        "returned": 2953,
+        "rate": 0.9461710990067286
+      },
+      {
+        "days": 5,
+        "n": 2550,
+        "returned": 2489,
+        "rate": 0.976078431372549
+      },
+      {
+        "days": 6,
+        "n": 1932,
+        "returned": 1905,
+        "rate": 0.9860248447204969
+      },
+      {
+        "days": 7,
+        "n": 1611,
+        "returned": 1606,
+        "rate": 0.9968963376784605
+      }
+    ],
+    "repeat_comparison": {
+      "control": {
+        "n": 5565,
+        "returned": 3835,
+        "rate": 0.6891284815813118
+      },
+      "exposed": {
+        "n": 17957,
+        "returned": 16468,
+        "rate": 0.9170796903714429
+      },
+      "difference": 0.2279512087901311,
+      "ci": [
+        0.2145358968639205,
+        0.24027130105130357
+      ],
+      "clusters": 21327,
+      "bootstrap_draws": 1000,
+      "valid_draws": 1000
+    },
+    "content_comparison": {
+      "control": {
+        "n": 6032,
+        "returned": 5137,
+        "rate": 0.8516246684350133
+      },
+      "exposed": {
+        "n": 17490,
+        "returned": 15166,
+        "rate": 0.8671240708976558
+      },
+      "difference": 0.015499402462642475,
+      "ci": [
+        0.005176572438958749,
+        0.025788995773120358
+      ],
+      "clusters": 21327,
+      "bootstrap_draws": 1000,
+      "valid_draws": 1000
+    }
+  },
+  "cohorts": [
+    {
+      "module": "AAA",
+      "term": "2013J",
+      "eligible": 372,
+      "w1_active": 337,
+      "w2_returned": 312,
+      "return_rate": 0.9258160237388724,
+      "unique_learners": 372,
+      "days": [
+        {
+          "days": 0,
+          "n": 35,
+          "returned": 28,
+          "rate": 0.8
+        },
+        {
+          "days": 1,
+          "n": 62,
+          "returned": 49,
+          "rate": 0.7903225806451613
+        },
+        {
+          "days": 2,
+          "n": 56,
+          "returned": 50,
+          "rate": 0.8928571428571429
+        },
+        {
+          "days": 3,
+          "n": 49,
+          "returned": 46,
+          "rate": 0.9387755102040817
+        },
+        {
+          "days": 4,
+          "n": 56,
+          "returned": 53,
+          "rate": 0.9464285714285714
+        },
+        {
+          "days": 5,
+          "n": 47,
+          "returned": 47,
+          "rate": 1.0
+        },
+        {
+          "days": 6,
+          "n": 36,
+          "returned": 36,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 31,
+          "returned": 31,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 62,
+          "returned": 49,
+          "rate": 0.7903225806451613
+        },
+        "exposed": {
+          "n": 275,
+          "returned": 263,
+          "rate": 0.9563636363636364
+        },
+        "difference": 0.16604105571847516,
+        "ci": [
+          0.06216877504220361,
+          0.2679090329929149
+        ],
+        "clusters": 337,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 73,
+          "returned": 66,
+          "rate": 0.9041095890410958
+        },
+        "exposed": {
+          "n": 264,
+          "returned": 246,
+          "rate": 0.9318181818181818
+        },
+        "difference": 0.027708592777085927,
+        "ci": [
+          -0.04496271920948136,
+          0.09873098120652697
+        ],
+        "clusters": 337,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "AAA",
+      "term": "2014J",
+      "eligible": 348,
+      "w1_active": 300,
+      "w2_returned": 274,
+      "return_rate": 0.9133333333333333,
+      "unique_learners": 348,
+      "days": [
+        {
+          "days": 0,
+          "n": 48,
+          "returned": 35,
+          "rate": 0.7291666666666666
+        },
+        {
+          "days": 1,
+          "n": 58,
+          "returned": 41,
+          "rate": 0.7068965517241379
+        },
+        {
+          "days": 2,
+          "n": 57,
+          "returned": 51,
+          "rate": 0.8947368421052632
+        },
+        {
+          "days": 3,
+          "n": 50,
+          "returned": 48,
+          "rate": 0.96
+        },
+        {
+          "days": 4,
+          "n": 41,
+          "returned": 40,
+          "rate": 0.975609756097561
+        },
+        {
+          "days": 5,
+          "n": 33,
+          "returned": 33,
+          "rate": 1.0
+        },
+        {
+          "days": 6,
+          "n": 30,
+          "returned": 30,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 31,
+          "returned": 31,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 58,
+          "returned": 41,
+          "rate": 0.7068965517241379
+        },
+        "exposed": {
+          "n": 242,
+          "returned": 233,
+          "rate": 0.9628099173553719
+        },
+        "difference": 0.255913365631234,
+        "ci": [
+          0.14673796248273116,
+          0.37651865840965193
+        ],
+        "clusters": 300,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 69,
+          "returned": 64,
+          "rate": 0.927536231884058
+        },
+        "exposed": {
+          "n": 231,
+          "returned": 210,
+          "rate": 0.9090909090909091
+        },
+        "difference": -0.01844532279314892,
+        "ci": [
+          -0.07999090281698976,
+          0.06465582097444725
+        ],
+        "clusters": 300,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "BBB",
+      "term": "2013B",
+      "eligible": 1635,
+      "w1_active": 1239,
+      "w2_returned": 1045,
+      "return_rate": 0.8434221146085553,
+      "unique_learners": 1635,
+      "days": [
+        {
+          "days": 0,
+          "n": 396,
+          "returned": 143,
+          "rate": 0.3611111111111111
+        },
+        {
+          "days": 1,
+          "n": 348,
+          "returned": 240,
+          "rate": 0.6896551724137931
+        },
+        {
+          "days": 2,
+          "n": 296,
+          "returned": 245,
+          "rate": 0.8277027027027027
+        },
+        {
+          "days": 3,
+          "n": 201,
+          "returned": 180,
+          "rate": 0.8955223880597015
+        },
+        {
+          "days": 4,
+          "n": 153,
+          "returned": 146,
+          "rate": 0.954248366013072
+        },
+        {
+          "days": 5,
+          "n": 109,
+          "returned": 103,
+          "rate": 0.944954128440367
+        },
+        {
+          "days": 6,
+          "n": 80,
+          "returned": 79,
+          "rate": 0.9875
+        },
+        {
+          "days": 7,
+          "n": 52,
+          "returned": 52,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 348,
+          "returned": 240,
+          "rate": 0.6896551724137931
+        },
+        "exposed": {
+          "n": 891,
+          "returned": 805,
+          "rate": 0.9034792368125701
+        },
+        "difference": 0.213824064398777,
+        "ci": [
+          0.16435124231138218,
+          0.2691366791142028
+        ],
+        "clusters": 1239,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 333,
+          "returned": 290,
+          "rate": 0.8708708708708709
+        },
+        "exposed": {
+          "n": 906,
+          "returned": 755,
+          "rate": 0.8333333333333334
+        },
+        "difference": -0.037537537537537524,
+        "ci": [
+          -0.07929396449137241,
+          0.009678121570202359
+        ],
+        "clusters": 1239,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "BBB",
+      "term": "2013J",
+      "eligible": 1985,
+      "w1_active": 1357,
+      "w2_returned": 1084,
+      "return_rate": 0.7988209285187915,
+      "unique_learners": 1985,
+      "days": [
+        {
+          "days": 0,
+          "n": 628,
+          "returned": 225,
+          "rate": 0.35828025477707004
+        },
+        {
+          "days": 1,
+          "n": 434,
+          "returned": 275,
+          "rate": 0.6336405529953917
+        },
+        {
+          "days": 2,
+          "n": 305,
+          "returned": 243,
+          "rate": 0.7967213114754098
+        },
+        {
+          "days": 3,
+          "n": 227,
+          "returned": 193,
+          "rate": 0.8502202643171806
+        },
+        {
+          "days": 4,
+          "n": 161,
+          "returned": 145,
+          "rate": 0.9006211180124224
+        },
+        {
+          "days": 5,
+          "n": 104,
+          "returned": 103,
+          "rate": 0.9903846153846154
+        },
+        {
+          "days": 6,
+          "n": 82,
+          "returned": 81,
+          "rate": 0.9878048780487805
+        },
+        {
+          "days": 7,
+          "n": 44,
+          "returned": 44,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 434,
+          "returned": 275,
+          "rate": 0.6336405529953917
+        },
+        "exposed": {
+          "n": 923,
+          "returned": 809,
+          "rate": 0.8764897074756229
+        },
+        "difference": 0.24284915448023126,
+        "ci": [
+          0.19341600447207355,
+          0.29353735855701557
+        ],
+        "clusters": 1357,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 446,
+          "returned": 347,
+          "rate": 0.7780269058295964
+        },
+        "exposed": {
+          "n": 911,
+          "returned": 737,
+          "rate": 0.8090010976948409
+        },
+        "difference": 0.030974191865244416,
+        "ci": [
+          -0.020059418863664216,
+          0.07413836599751432
+        ],
+        "clusters": 1357,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "BBB",
+      "term": "2014B",
+      "eligible": 1338,
+      "w1_active": 956,
+      "w2_returned": 827,
+      "return_rate": 0.8650627615062761,
+      "unique_learners": 1338,
+      "days": [
+        {
+          "days": 0,
+          "n": 382,
+          "returned": 189,
+          "rate": 0.49476439790575916
+        },
+        {
+          "days": 1,
+          "n": 319,
+          "returned": 239,
+          "rate": 0.7492163009404389
+        },
+        {
+          "days": 2,
+          "n": 223,
+          "returned": 191,
+          "rate": 0.8565022421524664
+        },
+        {
+          "days": 3,
+          "n": 151,
+          "returned": 139,
+          "rate": 0.9205298013245033
+        },
+        {
+          "days": 4,
+          "n": 111,
+          "returned": 108,
+          "rate": 0.972972972972973
+        },
+        {
+          "days": 5,
+          "n": 76,
+          "returned": 74,
+          "rate": 0.9736842105263158
+        },
+        {
+          "days": 6,
+          "n": 46,
+          "returned": 46,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 30,
+          "returned": 30,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 319,
+          "returned": 239,
+          "rate": 0.7492163009404389
+        },
+        "exposed": {
+          "n": 637,
+          "returned": 588,
+          "rate": 0.9230769230769231
+        },
+        "difference": 0.17386062213648423,
+        "ci": [
+          0.12106206336011079,
+          0.2278192424616838
+        ],
+        "clusters": 956,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 333,
+          "returned": 282,
+          "rate": 0.8468468468468469
+        },
+        "exposed": {
+          "n": 623,
+          "returned": 545,
+          "rate": 0.8747993579454254
+        },
+        "difference": 0.027952511098578547,
+        "ci": [
+          -0.01500169212348583,
+          0.07352752919700009
+        ],
+        "clusters": 956,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "BBB",
+      "term": "2014J",
+      "eligible": 1997,
+      "w1_active": 1470,
+      "w2_returned": 1164,
+      "return_rate": 0.7918367346938775,
+      "unique_learners": 1997,
+      "days": [
+        {
+          "days": 0,
+          "n": 527,
+          "returned": 207,
+          "rate": 0.3927893738140417
+        },
+        {
+          "days": 1,
+          "n": 484,
+          "returned": 330,
+          "rate": 0.6818181818181818
+        },
+        {
+          "days": 2,
+          "n": 435,
+          "returned": 340,
+          "rate": 0.7816091954022989
+        },
+        {
+          "days": 3,
+          "n": 250,
+          "returned": 210,
+          "rate": 0.84
+        },
+        {
+          "days": 4,
+          "n": 153,
+          "returned": 140,
+          "rate": 0.9150326797385621
+        },
+        {
+          "days": 5,
+          "n": 82,
+          "returned": 78,
+          "rate": 0.9512195121951219
+        },
+        {
+          "days": 6,
+          "n": 40,
+          "returned": 40,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 26,
+          "returned": 26,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 484,
+          "returned": 330,
+          "rate": 0.6818181818181818
+        },
+        "exposed": {
+          "n": 986,
+          "returned": 834,
+          "rate": 0.845841784989858
+        },
+        "difference": 0.1640236031716762,
+        "ci": [
+          0.11730704695294646,
+          0.21228079837562044
+        ],
+        "clusters": 1470,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 242,
+          "returned": 205,
+          "rate": 0.8471074380165289
+        },
+        "exposed": {
+          "n": 1228,
+          "returned": 959,
+          "rate": 0.7809446254071661
+        },
+        "difference": -0.06616281260936274,
+        "ci": [
+          -0.11646880895651708,
+          -0.017714904286783004
+        ],
+        "clusters": 1470,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "CCC",
+      "term": "2014B",
+      "eligible": 1682,
+      "w1_active": 1373,
+      "w2_returned": 1190,
+      "return_rate": 0.8667152221412965,
+      "unique_learners": 1682,
+      "days": [
+        {
+          "days": 0,
+          "n": 309,
+          "returned": 152,
+          "rate": 0.4919093851132686
+        },
+        {
+          "days": 1,
+          "n": 370,
+          "returned": 272,
+          "rate": 0.7351351351351352
+        },
+        {
+          "days": 2,
+          "n": 318,
+          "returned": 273,
+          "rate": 0.8584905660377359
+        },
+        {
+          "days": 3,
+          "n": 261,
+          "returned": 236,
+          "rate": 0.9042145593869731
+        },
+        {
+          "days": 4,
+          "n": 157,
+          "returned": 147,
+          "rate": 0.9363057324840764
+        },
+        {
+          "days": 5,
+          "n": 100,
+          "returned": 99,
+          "rate": 0.99
+        },
+        {
+          "days": 6,
+          "n": 88,
+          "returned": 85,
+          "rate": 0.9659090909090909
+        },
+        {
+          "days": 7,
+          "n": 79,
+          "returned": 78,
+          "rate": 0.9873417721518988
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 370,
+          "returned": 272,
+          "rate": 0.7351351351351352
+        },
+        "exposed": {
+          "n": 1003,
+          "returned": 918,
+          "rate": 0.9152542372881356
+        },
+        "difference": 0.18011910215300042,
+        "ci": [
+          0.13705070705685202,
+          0.22794802091722846
+        ],
+        "clusters": 1373,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 417,
+          "returned": 341,
+          "rate": 0.8177458033573142
+        },
+        "exposed": {
+          "n": 956,
+          "returned": 849,
+          "rate": 0.8880753138075314
+        },
+        "difference": 0.07032951045021718,
+        "ci": [
+          0.027112489262275666,
+          0.1138132748692257
+        ],
+        "clusters": 1373,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "CCC",
+      "term": "2014J",
+      "eligible": 2271,
+      "w1_active": 1795,
+      "w2_returned": 1546,
+      "return_rate": 0.8612813370473538,
+      "unique_learners": 2271,
+      "days": [
+        {
+          "days": 0,
+          "n": 476,
+          "returned": 255,
+          "rate": 0.5357142857142857
+        },
+        {
+          "days": 1,
+          "n": 468,
+          "returned": 335,
+          "rate": 0.7158119658119658
+        },
+        {
+          "days": 2,
+          "n": 414,
+          "returned": 357,
+          "rate": 0.8623188405797102
+        },
+        {
+          "days": 3,
+          "n": 328,
+          "returned": 290,
+          "rate": 0.8841463414634146
+        },
+        {
+          "days": 4,
+          "n": 236,
+          "returned": 222,
+          "rate": 0.940677966101695
+        },
+        {
+          "days": 5,
+          "n": 164,
+          "returned": 160,
+          "rate": 0.975609756097561
+        },
+        {
+          "days": 6,
+          "n": 100,
+          "returned": 97,
+          "rate": 0.97
+        },
+        {
+          "days": 7,
+          "n": 85,
+          "returned": 85,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 468,
+          "returned": 335,
+          "rate": 0.7158119658119658
+        },
+        "exposed": {
+          "n": 1327,
+          "returned": 1211,
+          "rate": 0.9125847776940467
+        },
+        "difference": 0.19677281188208084,
+        "ci": [
+          0.15359731791862885,
+          0.23877832595963083
+        ],
+        "clusters": 1795,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 608,
+          "returned": 499,
+          "rate": 0.8207236842105263
+        },
+        "exposed": {
+          "n": 1187,
+          "returned": 1047,
+          "rate": 0.8820556023588879
+        },
+        "difference": 0.061331918148361586,
+        "ci": [
+          0.027145027168195265,
+          0.09367367690266248
+        ],
+        "clusters": 1795,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "DDD",
+      "term": "2013B",
+      "eligible": 1211,
+      "w1_active": 1033,
+      "w2_returned": 906,
+      "return_rate": 0.8770571151984511,
+      "unique_learners": 1211,
+      "days": [
+        {
+          "days": 0,
+          "n": 178,
+          "returned": 72,
+          "rate": 0.4044943820224719
+        },
+        {
+          "days": 1,
+          "n": 186,
+          "returned": 124,
+          "rate": 0.6666666666666666
+        },
+        {
+          "days": 2,
+          "n": 178,
+          "returned": 142,
+          "rate": 0.797752808988764
+        },
+        {
+          "days": 3,
+          "n": 188,
+          "returned": 166,
+          "rate": 0.8829787234042553
+        },
+        {
+          "days": 4,
+          "n": 143,
+          "returned": 139,
+          "rate": 0.972027972027972
+        },
+        {
+          "days": 5,
+          "n": 131,
+          "returned": 128,
+          "rate": 0.9770992366412213
+        },
+        {
+          "days": 6,
+          "n": 104,
+          "returned": 104,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 103,
+          "returned": 103,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 186,
+          "returned": 124,
+          "rate": 0.6666666666666666
+        },
+        "exposed": {
+          "n": 847,
+          "returned": 782,
+          "rate": 0.9232585596221959
+        },
+        "difference": 0.2565918929555293,
+        "ci": [
+          0.19523806605329674,
+          0.31718165678085053
+        ],
+        "clusters": 1033,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 304,
+          "returned": 273,
+          "rate": 0.8980263157894737
+        },
+        "exposed": {
+          "n": 729,
+          "returned": 633,
+          "rate": 0.8683127572016461
+        },
+        "difference": -0.029713558587827538,
+        "ci": [
+          -0.0711251499340326,
+          0.011079917736176685
+        ],
+        "clusters": 1033,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "DDD",
+      "term": "2013J",
+      "eligible": 1742,
+      "w1_active": 1436,
+      "w2_returned": 1281,
+      "return_rate": 0.8920612813370473,
+      "unique_learners": 1742,
+      "days": [
+        {
+          "days": 0,
+          "n": 306,
+          "returned": 158,
+          "rate": 0.5163398692810458
+        },
+        {
+          "days": 1,
+          "n": 285,
+          "returned": 198,
+          "rate": 0.6947368421052632
+        },
+        {
+          "days": 2,
+          "n": 278,
+          "returned": 240,
+          "rate": 0.8633093525179856
+        },
+        {
+          "days": 3,
+          "n": 261,
+          "returned": 243,
+          "rate": 0.9310344827586207
+        },
+        {
+          "days": 4,
+          "n": 195,
+          "returned": 188,
+          "rate": 0.9641025641025641
+        },
+        {
+          "days": 5,
+          "n": 160,
+          "returned": 159,
+          "rate": 0.99375
+        },
+        {
+          "days": 6,
+          "n": 145,
+          "returned": 142,
+          "rate": 0.9793103448275862
+        },
+        {
+          "days": 7,
+          "n": 112,
+          "returned": 111,
+          "rate": 0.9910714285714286
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 285,
+          "returned": 198,
+          "rate": 0.6947368421052632
+        },
+        "exposed": {
+          "n": 1151,
+          "returned": 1083,
+          "rate": 0.9409209383145091
+        },
+        "difference": 0.24618409620924586,
+        "ci": [
+          0.1957237646434507,
+          0.3013886769386899
+        ],
+        "clusters": 1436,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 459,
+          "returned": 420,
+          "rate": 0.9150326797385621
+        },
+        "exposed": {
+          "n": 977,
+          "returned": 861,
+          "rate": 0.8812691914022518
+        },
+        "difference": -0.033763488336310266,
+        "ci": [
+          -0.0666039544393166,
+          0.00046761577461516807
+        ],
+        "clusters": 1436,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "DDD",
+      "term": "2014B",
+      "eligible": 1120,
+      "w1_active": 918,
+      "w2_returned": 814,
+      "return_rate": 0.8867102396514162,
+      "unique_learners": 1120,
+      "days": [
+        {
+          "days": 0,
+          "n": 202,
+          "returned": 99,
+          "rate": 0.4900990099009901
+        },
+        {
+          "days": 1,
+          "n": 182,
+          "returned": 125,
+          "rate": 0.6868131868131868
+        },
+        {
+          "days": 2,
+          "n": 171,
+          "returned": 146,
+          "rate": 0.8538011695906432
+        },
+        {
+          "days": 3,
+          "n": 150,
+          "returned": 137,
+          "rate": 0.9133333333333333
+        },
+        {
+          "days": 4,
+          "n": 136,
+          "returned": 129,
+          "rate": 0.9485294117647058
+        },
+        {
+          "days": 5,
+          "n": 106,
+          "returned": 105,
+          "rate": 0.9905660377358491
+        },
+        {
+          "days": 6,
+          "n": 97,
+          "returned": 96,
+          "rate": 0.9896907216494846
+        },
+        {
+          "days": 7,
+          "n": 76,
+          "returned": 76,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 182,
+          "returned": 125,
+          "rate": 0.6868131868131868
+        },
+        "exposed": {
+          "n": 736,
+          "returned": 689,
+          "rate": 0.936141304347826
+        },
+        "difference": 0.24932811753463924,
+        "ci": [
+          0.1791527391260812,
+          0.31724110496206936
+        ],
+        "clusters": 918,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 251,
+          "returned": 223,
+          "rate": 0.8884462151394422
+        },
+        "exposed": {
+          "n": 667,
+          "returned": 591,
+          "rate": 0.8860569715142429
+        },
+        "difference": -0.002389243625199322,
+        "ci": [
+          -0.044041631969250386,
+          0.04340454633125483
+        ],
+        "clusters": 918,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "DDD",
+      "term": "2014J",
+      "eligible": 1649,
+      "w1_active": 1409,
+      "w2_returned": 1218,
+      "return_rate": 0.8644428672817601,
+      "unique_learners": 1649,
+      "days": [
+        {
+          "days": 0,
+          "n": 240,
+          "returned": 101,
+          "rate": 0.42083333333333334
+        },
+        {
+          "days": 1,
+          "n": 261,
+          "returned": 177,
+          "rate": 0.6781609195402298
+        },
+        {
+          "days": 2,
+          "n": 275,
+          "returned": 224,
+          "rate": 0.8145454545454546
+        },
+        {
+          "days": 3,
+          "n": 254,
+          "returned": 222,
+          "rate": 0.8740157480314961
+        },
+        {
+          "days": 4,
+          "n": 198,
+          "returned": 186,
+          "rate": 0.9393939393939394
+        },
+        {
+          "days": 5,
+          "n": 190,
+          "returned": 182,
+          "rate": 0.9578947368421052
+        },
+        {
+          "days": 6,
+          "n": 134,
+          "returned": 130,
+          "rate": 0.9701492537313433
+        },
+        {
+          "days": 7,
+          "n": 97,
+          "returned": 97,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 261,
+          "returned": 177,
+          "rate": 0.6781609195402298
+        },
+        "exposed": {
+          "n": 1148,
+          "returned": 1041,
+          "rate": 0.9067944250871081
+        },
+        "difference": 0.22863350554687822,
+        "ci": [
+          0.16899745639462208,
+          0.28761651122862847
+        ],
+        "clusters": 1409,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 299,
+          "returned": 248,
+          "rate": 0.8294314381270903
+        },
+        "exposed": {
+          "n": 1110,
+          "returned": 970,
+          "rate": 0.8738738738738738
+        },
+        "difference": 0.044442435746783526,
+        "ci": [
+          0.002287743081655212,
+          0.09746959293693752
+        ],
+        "clusters": 1409,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "EEE",
+      "term": "2013J",
+      "eligible": 983,
+      "w1_active": 803,
+      "w2_returned": 711,
+      "return_rate": 0.8854296388542964,
+      "unique_learners": 983,
+      "days": [
+        {
+          "days": 0,
+          "n": 180,
+          "returned": 83,
+          "rate": 0.46111111111111114
+        },
+        {
+          "days": 1,
+          "n": 187,
+          "returned": 141,
+          "rate": 0.7540106951871658
+        },
+        {
+          "days": 2,
+          "n": 176,
+          "returned": 149,
+          "rate": 0.8465909090909091
+        },
+        {
+          "days": 3,
+          "n": 137,
+          "returned": 123,
+          "rate": 0.8978102189781022
+        },
+        {
+          "days": 4,
+          "n": 108,
+          "returned": 105,
+          "rate": 0.9722222222222222
+        },
+        {
+          "days": 5,
+          "n": 87,
+          "returned": 85,
+          "rate": 0.9770114942528736
+        },
+        {
+          "days": 6,
+          "n": 65,
+          "returned": 65,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 43,
+          "returned": 43,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 187,
+          "returned": 141,
+          "rate": 0.7540106951871658
+        },
+        "exposed": {
+          "n": 616,
+          "returned": 570,
+          "rate": 0.9253246753246753
+        },
+        "difference": 0.17131398013750954,
+        "ci": [
+          0.1029121916327182,
+          0.23675742681987708
+        ],
+        "clusters": 803,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 125,
+          "returned": 106,
+          "rate": 0.848
+        },
+        "exposed": {
+          "n": 678,
+          "returned": 605,
+          "rate": 0.8923303834808259
+        },
+        "difference": 0.04433038348082596,
+        "ci": [
+          -0.018889336477019125,
+          0.11231841812396717
+        ],
+        "clusters": 803,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "EEE",
+      "term": "2014B",
+      "eligible": 642,
+      "w1_active": 520,
+      "w2_returned": 448,
+      "return_rate": 0.8615384615384616,
+      "unique_learners": 642,
+      "days": [
+        {
+          "days": 0,
+          "n": 122,
+          "returned": 58,
+          "rate": 0.47540983606557374
+        },
+        {
+          "days": 1,
+          "n": 138,
+          "returned": 97,
+          "rate": 0.7028985507246377
+        },
+        {
+          "days": 2,
+          "n": 99,
+          "returned": 84,
+          "rate": 0.8484848484848485
+        },
+        {
+          "days": 3,
+          "n": 106,
+          "returned": 94,
+          "rate": 0.8867924528301887
+        },
+        {
+          "days": 4,
+          "n": 70,
+          "returned": 68,
+          "rate": 0.9714285714285714
+        },
+        {
+          "days": 5,
+          "n": 54,
+          "returned": 53,
+          "rate": 0.9814814814814815
+        },
+        {
+          "days": 6,
+          "n": 34,
+          "returned": 33,
+          "rate": 0.9705882352941176
+        },
+        {
+          "days": 7,
+          "n": 19,
+          "returned": 19,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 138,
+          "returned": 97,
+          "rate": 0.7028985507246377
+        },
+        "exposed": {
+          "n": 382,
+          "returned": 351,
+          "rate": 0.918848167539267
+        },
+        "difference": 0.21594961681462932,
+        "ci": [
+          0.13770316298477386,
+          0.29859377748944405
+        ],
+        "clusters": 520,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 126,
+          "returned": 102,
+          "rate": 0.8095238095238095
+        },
+        "exposed": {
+          "n": 394,
+          "returned": 346,
+          "rate": 0.8781725888324873
+        },
+        "difference": 0.06864877930867774,
+        "ci": [
+          -0.0030797627469202936,
+          0.1467144759303516
+        ],
+        "clusters": 520,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "EEE",
+      "term": "2014J",
+      "eligible": 1115,
+      "w1_active": 909,
+      "w2_returned": 796,
+      "return_rate": 0.8756875687568757,
+      "unique_learners": 1115,
+      "days": [
+        {
+          "days": 0,
+          "n": 206,
+          "returned": 98,
+          "rate": 0.47572815533980584
+        },
+        {
+          "days": 1,
+          "n": 212,
+          "returned": 144,
+          "rate": 0.6792452830188679
+        },
+        {
+          "days": 2,
+          "n": 183,
+          "returned": 158,
+          "rate": 0.8633879781420765
+        },
+        {
+          "days": 3,
+          "n": 150,
+          "returned": 137,
+          "rate": 0.9133333333333333
+        },
+        {
+          "days": 4,
+          "n": 123,
+          "returned": 119,
+          "rate": 0.967479674796748
+        },
+        {
+          "days": 5,
+          "n": 124,
+          "returned": 121,
+          "rate": 0.9758064516129032
+        },
+        {
+          "days": 6,
+          "n": 69,
+          "returned": 69,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 48,
+          "returned": 48,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 212,
+          "returned": 144,
+          "rate": 0.6792452830188679
+        },
+        "exposed": {
+          "n": 697,
+          "returned": 652,
+          "rate": 0.9354375896700143
+        },
+        "difference": 0.25619230665114645,
+        "ci": [
+          0.18446062461131038,
+          0.3230825634135977
+        ],
+        "clusters": 909,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 208,
+          "returned": 167,
+          "rate": 0.8028846153846154
+        },
+        "exposed": {
+          "n": 701,
+          "returned": 629,
+          "rate": 0.8972895863052782
+        },
+        "difference": 0.0944049709206628,
+        "ci": [
+          0.038763566148246914,
+          0.15491367746710144
+        ],
+        "clusters": 909,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "FFF",
+      "term": "2013B",
+      "eligible": 1522,
+      "w1_active": 1328,
+      "w2_returned": 1228,
+      "return_rate": 0.9246987951807228,
+      "unique_learners": 1522,
+      "days": [
+        {
+          "days": 0,
+          "n": 194,
+          "returned": 87,
+          "rate": 0.4484536082474227
+        },
+        {
+          "days": 1,
+          "n": 200,
+          "returned": 149,
+          "rate": 0.745
+        },
+        {
+          "days": 2,
+          "n": 208,
+          "returned": 179,
+          "rate": 0.8605769230769231
+        },
+        {
+          "days": 3,
+          "n": 210,
+          "returned": 199,
+          "rate": 0.9476190476190476
+        },
+        {
+          "days": 4,
+          "n": 202,
+          "returned": 196,
+          "rate": 0.9702970297029703
+        },
+        {
+          "days": 5,
+          "n": 201,
+          "returned": 198,
+          "rate": 0.9850746268656716
+        },
+        {
+          "days": 6,
+          "n": 146,
+          "returned": 146,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 161,
+          "returned": 161,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 200,
+          "returned": 149,
+          "rate": 0.745
+        },
+        "exposed": {
+          "n": 1128,
+          "returned": 1079,
+          "rate": 0.9565602836879432
+        },
+        "difference": 0.21156028368794322,
+        "ci": [
+          0.14958513547729735,
+          0.27386281228847376
+        ],
+        "clusters": 1328,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 298,
+          "returned": 278,
+          "rate": 0.9328859060402684
+        },
+        "exposed": {
+          "n": 1030,
+          "returned": 950,
+          "rate": 0.9223300970873787
+        },
+        "difference": -0.010555808952889767,
+        "ci": [
+          -0.043446334663531205,
+          0.022325027377341346
+        ],
+        "clusters": 1328,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "FFF",
+      "term": "2013J",
+      "eligible": 2108,
+      "w1_active": 1834,
+      "w2_returned": 1679,
+      "return_rate": 0.9154852780806979,
+      "unique_learners": 2108,
+      "days": [
+        {
+          "days": 0,
+          "n": 274,
+          "returned": 124,
+          "rate": 0.45255474452554745
+        },
+        {
+          "days": 1,
+          "n": 264,
+          "returned": 193,
+          "rate": 0.7310606060606061
+        },
+        {
+          "days": 2,
+          "n": 296,
+          "returned": 262,
+          "rate": 0.8851351351351351
+        },
+        {
+          "days": 3,
+          "n": 300,
+          "returned": 271,
+          "rate": 0.9033333333333333
+        },
+        {
+          "days": 4,
+          "n": 261,
+          "returned": 250,
+          "rate": 0.9578544061302682
+        },
+        {
+          "days": 5,
+          "n": 284,
+          "returned": 276,
+          "rate": 0.971830985915493
+        },
+        {
+          "days": 6,
+          "n": 240,
+          "returned": 239,
+          "rate": 0.9958333333333333
+        },
+        {
+          "days": 7,
+          "n": 189,
+          "returned": 188,
+          "rate": 0.9947089947089947
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 264,
+          "returned": 193,
+          "rate": 0.7310606060606061
+        },
+        "exposed": {
+          "n": 1570,
+          "returned": 1486,
+          "rate": 0.9464968152866242
+        },
+        "difference": 0.21543620922601814,
+        "ci": [
+          0.15983756326582704,
+          0.2725840133600669
+        ],
+        "clusters": 1834,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 468,
+          "returned": 415,
+          "rate": 0.8867521367521367
+        },
+        "exposed": {
+          "n": 1366,
+          "returned": 1264,
+          "rate": 0.9253294289897511
+        },
+        "difference": 0.03857729223761441,
+        "ci": [
+          0.01019236172286776,
+          0.07174710289998903
+        ],
+        "clusters": 1834,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "FFF",
+      "term": "2014B",
+      "eligible": 1364,
+      "w1_active": 1165,
+      "w2_returned": 1041,
+      "return_rate": 0.8935622317596567,
+      "unique_learners": 1364,
+      "days": [
+        {
+          "days": 0,
+          "n": 199,
+          "returned": 88,
+          "rate": 0.44221105527638194
+        },
+        {
+          "days": 1,
+          "n": 201,
+          "returned": 142,
+          "rate": 0.7064676616915423
+        },
+        {
+          "days": 2,
+          "n": 189,
+          "returned": 158,
+          "rate": 0.8359788359788359
+        },
+        {
+          "days": 3,
+          "n": 172,
+          "returned": 154,
+          "rate": 0.8953488372093024
+        },
+        {
+          "days": 4,
+          "n": 184,
+          "returned": 175,
+          "rate": 0.9510869565217391
+        },
+        {
+          "days": 5,
+          "n": 155,
+          "returned": 149,
+          "rate": 0.9612903225806452
+        },
+        {
+          "days": 6,
+          "n": 125,
+          "returned": 124,
+          "rate": 0.992
+        },
+        {
+          "days": 7,
+          "n": 139,
+          "returned": 139,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 201,
+          "returned": 142,
+          "rate": 0.7064676616915423
+        },
+        "exposed": {
+          "n": 964,
+          "returned": 899,
+          "rate": 0.9325726141078838
+        },
+        "difference": 0.22610495241634154,
+        "ci": [
+          0.1648440302931512,
+          0.29227429978740116
+        ],
+        "clusters": 1165,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 271,
+          "returned": 239,
+          "rate": 0.8819188191881919
+        },
+        "exposed": {
+          "n": 894,
+          "returned": 802,
+          "rate": 0.8970917225950783
+        },
+        "difference": 0.015172903406886373,
+        "ci": [
+          -0.02409936172808228,
+          0.06229438453459879
+        ],
+        "clusters": 1165,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "FFF",
+      "term": "2014J",
+      "eligible": 2164,
+      "w1_active": 1827,
+      "w2_returned": 1636,
+      "return_rate": 0.8954570333880679,
+      "unique_learners": 2164,
+      "days": [
+        {
+          "days": 0,
+          "n": 337,
+          "returned": 133,
+          "rate": 0.39465875370919884
+        },
+        {
+          "days": 1,
+          "n": 272,
+          "returned": 188,
+          "rate": 0.6911764705882353
+        },
+        {
+          "days": 2,
+          "n": 248,
+          "returned": 199,
+          "rate": 0.8024193548387096
+        },
+        {
+          "days": 3,
+          "n": 295,
+          "returned": 265,
+          "rate": 0.8983050847457628
+        },
+        {
+          "days": 4,
+          "n": 285,
+          "returned": 267,
+          "rate": 0.9368421052631579
+        },
+        {
+          "days": 5,
+          "n": 266,
+          "returned": 261,
+          "rate": 0.981203007518797
+        },
+        {
+          "days": 6,
+          "n": 234,
+          "returned": 230,
+          "rate": 0.9829059829059829
+        },
+        {
+          "days": 7,
+          "n": 227,
+          "returned": 226,
+          "rate": 0.9955947136563876
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 272,
+          "returned": 188,
+          "rate": 0.6911764705882353
+        },
+        "exposed": {
+          "n": 1555,
+          "returned": 1448,
+          "rate": 0.9311897106109325
+        },
+        "difference": 0.2400132400226972,
+        "ci": [
+          0.18814240567822282,
+          0.29420001094077536
+        ],
+        "clusters": 1827,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 469,
+          "returned": 403,
+          "rate": 0.8592750533049041
+        },
+        "exposed": {
+          "n": 1358,
+          "returned": 1233,
+          "rate": 0.9079528718703976
+        },
+        "difference": 0.04867781856549358,
+        "ci": [
+          0.01427801869392544,
+          0.08383399326823222
+        ],
+        "clusters": 1827,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "GGG",
+      "term": "2013J",
+      "eligible": 929,
+      "w1_active": 535,
+      "w2_returned": 384,
+      "return_rate": 0.7177570093457943,
+      "unique_learners": 929,
+      "days": [
+        {
+          "days": 0,
+          "n": 394,
+          "returned": 135,
+          "rate": 0.3426395939086294
+        },
+        {
+          "days": 1,
+          "n": 254,
+          "returned": 150,
+          "rate": 0.5905511811023622
+        },
+        {
+          "days": 2,
+          "n": 142,
+          "returned": 108,
+          "rate": 0.7605633802816901
+        },
+        {
+          "days": 3,
+          "n": 67,
+          "returned": 57,
+          "rate": 0.8507462686567164
+        },
+        {
+          "days": 4,
+          "n": 42,
+          "returned": 39,
+          "rate": 0.9285714285714286
+        },
+        {
+          "days": 5,
+          "n": 18,
+          "returned": 18,
+          "rate": 1.0
+        },
+        {
+          "days": 6,
+          "n": 9,
+          "returned": 9,
+          "rate": 1.0
+        },
+        {
+          "days": 7,
+          "n": 3,
+          "returned": 3,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 254,
+          "returned": 150,
+          "rate": 0.5905511811023622
+        },
+        "exposed": {
+          "n": 281,
+          "returned": 234,
+          "rate": 0.8327402135231317
+        },
+        "difference": 0.2421890324207695,
+        "ci": [
+          0.17313694343388464,
+          0.3201378876507172
+        ],
+        "clusters": 535,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 92,
+          "returned": 62,
+          "rate": 0.6739130434782609
+        },
+        "exposed": {
+          "n": 443,
+          "returned": 322,
+          "rate": 0.7268623024830699
+        },
+        "difference": 0.05294925900480907,
+        "ci": [
+          -0.04211510090378,
+          0.16438892251972773
+        ],
+        "clusters": 535,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "GGG",
+      "term": "2014B",
+      "eligible": 808,
+      "w1_active": 528,
+      "w2_returned": 373,
+      "return_rate": 0.7064393939393939,
+      "unique_learners": 808,
+      "days": [
+        {
+          "days": 0,
+          "n": 280,
+          "returned": 118,
+          "rate": 0.42142857142857143
+        },
+        {
+          "days": 1,
+          "n": 232,
+          "returned": 134,
+          "rate": 0.5775862068965517
+        },
+        {
+          "days": 2,
+          "n": 134,
+          "returned": 99,
+          "rate": 0.7388059701492538
+        },
+        {
+          "days": 3,
+          "n": 69,
+          "returned": 55,
+          "rate": 0.7971014492753623
+        },
+        {
+          "days": 4,
+          "n": 47,
+          "returned": 42,
+          "rate": 0.8936170212765957
+        },
+        {
+          "days": 5,
+          "n": 27,
+          "returned": 26,
+          "rate": 0.9629629629629629
+        },
+        {
+          "days": 6,
+          "n": 13,
+          "returned": 12,
+          "rate": 0.9230769230769231
+        },
+        {
+          "days": 7,
+          "n": 6,
+          "returned": 5,
+          "rate": 0.8333333333333334
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 232,
+          "returned": 134,
+          "rate": 0.5775862068965517
+        },
+        "exposed": {
+          "n": 296,
+          "returned": 239,
+          "rate": 0.8074324324324325
+        },
+        "difference": 0.22984622553588074,
+        "ci": [
+          0.15051858487096242,
+          0.3073529339472544
+        ],
+        "clusters": 528,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 76,
+          "returned": 55,
+          "rate": 0.7236842105263158
+        },
+        "exposed": {
+          "n": 452,
+          "returned": 318,
+          "rate": 0.7035398230088495
+        },
+        "difference": -0.020144387517466278,
+        "ci": [
+          -0.1265260249244482,
+          0.08332283510316085
+        ],
+        "clusters": 528,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "module": "GGG",
+      "term": "2014J",
+      "eligible": 686,
+      "w1_active": 450,
+      "w2_returned": 346,
+      "return_rate": 0.7688888888888888,
+      "unique_learners": 686,
+      "days": [
+        {
+          "days": 0,
+          "n": 236,
+          "returned": 89,
+          "rate": 0.3771186440677966
+        },
+        {
+          "days": 1,
+          "n": 148,
+          "returned": 92,
+          "rate": 0.6216216216216216
+        },
+        {
+          "days": 2,
+          "n": 122,
+          "returned": 94,
+          "rate": 0.7704918032786885
+        },
+        {
+          "days": 3,
+          "n": 64,
+          "returned": 58,
+          "rate": 0.90625
+        },
+        {
+          "days": 4,
+          "n": 59,
+          "returned": 49,
+          "rate": 0.8305084745762712
+        },
+        {
+          "days": 5,
+          "n": 32,
+          "returned": 31,
+          "rate": 0.96875
+        },
+        {
+          "days": 6,
+          "n": 15,
+          "returned": 12,
+          "rate": 0.8
+        },
+        {
+          "days": 7,
+          "n": 10,
+          "returned": 10,
+          "rate": 1.0
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 148,
+          "returned": 92,
+          "rate": 0.6216216216216216
+        },
+        "exposed": {
+          "n": 302,
+          "returned": 254,
+          "rate": 0.8410596026490066
+        },
+        "difference": 0.219437981027385,
+        "ci": [
+          0.12375408496732027,
+          0.30278766642195437
+        ],
+        "clusters": 450,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      },
+      "content_comparison": {
+        "control": {
+          "n": 65,
+          "returned": 52,
+          "rate": 0.8
+        },
+        "exposed": {
+          "n": 385,
+          "returned": 294,
+          "rate": 0.7636363636363637
+        },
+        "difference": -0.036363636363636376,
+        "ci": [
+          -0.138923536643799,
+          0.07761926005858474
+        ],
+        "clusters": 450,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    }
+  ],
+  "temporal": [
+    {
+      "label": "2013 탐색",
+      "id": "discovery",
+      "eligible": 12487,
+      "w1_active": 9902,
+      "w2_returned": 8630,
+      "return_rate": 0.8715411028075136,
+      "unique_learners": 12354,
+      "days": [
+        {
+          "days": 0,
+          "n": 2585,
+          "returned": 1055,
+          "rate": 0.4081237911025145
+        },
+        {
+          "days": 1,
+          "n": 2220,
+          "returned": 1519,
+          "rate": 0.6842342342342342
+        },
+        {
+          "days": 2,
+          "n": 1935,
+          "returned": 1618,
+          "rate": 0.8361757105943153
+        },
+        {
+          "days": 3,
+          "n": 1640,
+          "returned": 1478,
+          "rate": 0.901219512195122
+        },
+        {
+          "days": 4,
+          "n": 1321,
+          "returned": 1261,
+          "rate": 0.9545798637395913
+        },
+        {
+          "days": 5,
+          "n": 1141,
+          "returned": 1117,
+          "rate": 0.978965819456617
+        },
+        {
+          "days": 6,
+          "n": 907,
+          "returned": 901,
+          "rate": 0.9933847850055126
+        },
+        {
+          "days": 7,
+          "n": 738,
+          "returned": 736,
+          "rate": 0.997289972899729
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 2220,
+          "returned": 1519,
+          "rate": 0.6842342342342342
+        },
+        "exposed": {
+          "n": 7682,
+          "returned": 7111,
+          "rate": 0.9256703983337673
+        },
+        "difference": 0.24143616409953306,
+        "ci": [
+          0.22154009488067947,
+          0.26256267022416774
+        ],
+        "clusters": 9820,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      },
+      "content_comparison": {
+        "control": {
+          "n": 2598,
+          "returned": 2257,
+          "rate": 0.8687451886066204
+        },
+        "exposed": {
+          "n": 7304,
+          "returned": 6373,
+          "rate": 0.8725355969331873
+        },
+        "difference": 0.003790408326566852,
+        "ci": [
+          -0.010506600130901026,
+          0.01934867969292891
+        ],
+        "clusters": 9820,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      }
+    },
+    {
+      "label": "2014 신규 학습자 재확인",
+      "id": "holdout",
+      "eligible": 15435,
+      "w1_active": 12285,
+      "w2_returned": 10568,
+      "return_rate": 0.8602360602360603,
+      "unique_learners": 14095,
+      "days": [
+        {
+          "days": 0,
+          "n": 3150,
+          "returned": 1438,
+          "rate": 0.45650793650793653
+        },
+        {
+          "days": 1,
+          "n": 2956,
+          "returned": 2061,
+          "rate": 0.6972259810554804
+        },
+        {
+          "days": 2,
+          "n": 2559,
+          "returned": 2116,
+          "rate": 0.826885502149277
+        },
+        {
+          "days": 3,
+          "n": 2063,
+          "returned": 1839,
+          "rate": 0.8914202617547261
+        },
+        {
+          "days": 4,
+          "n": 1659,
+          "returned": 1561,
+          "rate": 0.9409282700421941
+        },
+        {
+          "days": 5,
+          "n": 1294,
+          "returned": 1259,
+          "rate": 0.972952086553323
+        },
+        {
+          "days": 6,
+          "n": 950,
+          "returned": 931,
+          "rate": 0.98
+        },
+        {
+          "days": 7,
+          "n": 804,
+          "returned": 801,
+          "rate": 0.996268656716418
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 2956,
+          "returned": 2061,
+          "rate": 0.6972259810554804
+        },
+        "exposed": {
+          "n": 9329,
+          "returned": 8507,
+          "rate": 0.9118876621288455
+        },
+        "difference": 0.21466168107336514,
+        "ci": [
+          0.19551488568076839,
+          0.23215420113445143
+        ],
+        "clusters": 11339,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      },
+      "content_comparison": {
+        "control": {
+          "n": 2914,
+          "returned": 2472,
+          "rate": 0.848318462594372
+        },
+        "exposed": {
+          "n": 9371,
+          "returned": 8096,
+          "rate": 0.863941948564721
+        },
+        "difference": 0.015623485970348905,
+        "ci": [
+          0.00053760974976905,
+          0.02945514637647186
+        ],
+        "clusters": 11339,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      }
+    }
+  ],
+  "first_day_strata": [
+    {
+      "first_day": 0,
+      "comparison": {
+        "control": {
+          "n": 688,
+          "returned": 453,
+          "rate": 0.6584302325581395
+        },
+        "exposed": {
+          "n": 8740,
+          "returned": 8204,
+          "rate": 0.9386727688787185
+        },
+        "difference": 0.28024253632057905,
+        "ci": [
+          0.24686435417019323,
+          0.3211585021103377
+        ],
+        "clusters": 8911,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 1,
+      "comparison": {
+        "control": {
+          "n": 731,
+          "returned": 524,
+          "rate": 0.7168262653898769
+        },
+        "exposed": {
+          "n": 3821,
+          "returned": 3499,
+          "rate": 0.9157288667887987
+        },
+        "difference": 0.1989026013989218,
+        "ci": [
+          0.1664139233330319,
+          0.23419642488882347
+        ],
+        "clusters": 4410,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 2,
+      "comparison": {
+        "control": {
+          "n": 1152,
+          "returned": 774,
+          "rate": 0.671875
+        },
+        "exposed": {
+          "n": 3297,
+          "returned": 2947,
+          "rate": 0.8938428874734607
+        },
+        "difference": 0.22196788747346075,
+        "ci": [
+          0.1937301346689334,
+          0.2521008798924294
+        ],
+        "clusters": 4311,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 3,
+      "comparison": {
+        "control": {
+          "n": 917,
+          "returned": 623,
+          "rate": 0.6793893129770993
+        },
+        "exposed": {
+          "n": 1274,
+          "returned": 1112,
+          "rate": 0.8728414442700158
+        },
+        "difference": 0.1934521312929165,
+        "ci": [
+          0.15919198291114128,
+          0.2285585590824008
+        ],
+        "clusters": 2149,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 4,
+      "comparison": {
+        "control": {
+          "n": 805,
+          "returned": 543,
+          "rate": 0.6745341614906832
+        },
+        "exposed": {
+          "n": 575,
+          "returned": 485,
+          "rate": 0.8434782608695652
+        },
+        "difference": 0.168944099378882,
+        "ci": [
+          0.12585604452309793,
+          0.21760566601384812
+        ],
+        "clusters": 1359,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 5,
+      "comparison": {
+        "control": {
+          "n": 697,
+          "returned": 496,
+          "rate": 0.7116212338593975
+        },
+        "exposed": {
+          "n": 250,
+          "returned": 221,
+          "rate": 0.884
+        },
+        "difference": 0.17237876614060255,
+        "ci": [
+          0.11814022982562085,
+          0.22456532180595576
+        ],
+        "clusters": 931,
+        "bootstrap_draws": 500,
+        "valid_draws": 500
+      }
+    },
+    {
+      "first_day": 6,
+      "comparison": {
+        "control": {
+          "n": 575,
+          "returned": 422,
+          "rate": 0.7339130434782609
+        },
+        "exposed": {
+          "n": 0,
+          "returned": 0,
+          "rate": null
+        },
+        "difference": null,
+        "ci": null,
+        "clusters": 568,
+        "bootstrap_draws": 500,
+        "valid_draws": 0
+      }
+    }
+  ],
+  "transition": [
+    {
+      "w1": 0,
+      "w2": 0,
+      "n": 3472,
+      "later_active": 1390
+    },
+    {
+      "w1": 0,
+      "w2": 1,
+      "n": 2677,
+      "later_active": 2199
+    },
+    {
+      "w1": 1,
+      "w2": 0,
+      "n": 3219,
+      "later_active": 2366
+    },
+    {
+      "w1": 1,
+      "w2": 1,
+      "n": 20303,
+      "later_active": 19547
+    }
+  ],
+  "click_sensitivity": [
+    {
+      "threshold": 10,
+      "raw_qualified": 14637,
+      "exact_qualified": 14268,
+      "max_qualified": 13599,
+      "raw_vs_exact_changed": 369,
+      "raw_vs_max_changed": 1038
+    },
+    {
+      "threshold": 20,
+      "raw_qualified": 9516,
+      "exact_qualified": 9160,
+      "max_qualified": 8224,
+      "raw_vs_exact_changed": 356,
+      "raw_vs_max_changed": 1292
+    },
+    {
+      "threshold": 50,
+      "raw_qualified": 3222,
+      "exact_qualified": 3084,
+      "max_qualified": 2438,
+      "raw_vs_exact_changed": 138,
+      "raw_vs_max_changed": 784
+    }
+  ],
+  "strict_sensitivity": {
+    "w1_active": 23430,
+    "w2_returned": 20210,
+    "changed_w1_enrollments": 127,
+    "changed_w2_enrollments": 134
+  },
+  "fault_lab": {
+    "source_type": "synthetic",
+    "seed": "deterministic-v1-no-randomness",
+    "enrolled": 12,
+    "stages": [
+      {
+        "id": "truth",
+        "label": "정상 기준",
+        "w1": 10,
+        "w2": 6,
+        "rate": 0.6,
+        "naive_rate": 0.6,
+        "missing_events": 0,
+        "gate": "PASS"
+      },
+      {
+        "id": "observed",
+        "label": "장애 수신",
+        "w1": 10,
+        "w2": 4,
+        "rate": 0.4,
+        "naive_rate": 0.6,
+        "missing_events": 4,
+        "gate": "BLOCK"
+      },
+      {
+        "id": "clean",
+        "label": "중복·키 정리",
+        "w1": 10,
+        "w2": 4,
+        "rate": 0.4,
+        "naive_rate": 0.4,
+        "missing_events": 4,
+        "gate": "BLOCK"
+      },
+      {
+        "id": "late",
+        "label": "지연 수신 반영",
+        "w1": 10,
+        "w2": 5,
+        "rate": 0.5,
+        "naive_rate": 0.5,
+        "missing_events": 2,
+        "gate": "BLOCK"
+      },
+      {
+        "id": "replay",
+        "label": "원천 재수집",
+        "w1": 10,
+        "w2": 6,
+        "rate": 0.6,
+        "naive_rate": 0.6,
+        "missing_events": 0,
+        "gate": "PASS"
+      }
+    ],
+    "issues": [
+      {
+        "rule_id": "duplicate_id",
+        "count": 2,
+        "action": "같은 event_id 재수신; 최초 수신 보존",
+        "query": "SELECT count(*)-count(distinct event_id) FROM received"
+      },
+      {
+        "rule_id": "null_user",
+        "count": 1,
+        "action": "사용자 키 결측; 격리",
+        "query": "SELECT count(*) FROM received WHERE user_id IS NULL"
+      },
+      {
+        "rule_id": "unknown_user",
+        "count": 1,
+        "action": "등록 키 불일치; 격리",
+        "query": "SELECT count(*) FROM received WHERE user_id IS NOT NULL AND user_id NOT IN(SELECT user_id FROM learners)"
+      },
+      {
+        "rule_id": "semantic_order",
+        "count": 1,
+        "action": "완료 시각이 시작보다 빠름; 세션 격리",
+        "query": "SELECT count(*) FROM bad_sessions"
+      },
+      {
+        "rule_id": "arrival_order",
+        "count": 1,
+        "action": "수신 순서 역전; 발생 시각으로 정렬",
+        "query": "SELECT count(*) FROM unique_received f JOIN unique_received s USING(session_id) WHERE f.event_type='complete' AND s.event_type='start' AND f.occurred_at>s.occurred_at AND f.ingested_at<s.ingested_at"
+      },
+      {
+        "rule_id": "missing_manifest_events",
+        "count": 4,
+        "action": "별도 원천 전송 명세 대조; 재수집 필요",
+        "query": "SELECT count(*) FROM source_ledger s WHERE NOT EXISTS(SELECT 1 FROM received r WHERE s.event_id=r.event_id)"
+      }
+    ],
+    "truth_sha256": "5828fd8362494e6f9c0aaa42e62613f961c12d7e1878c6f56ca9c7f6d3099dfd",
+    "delivery_sha256": "b98367126f40c56f7a5c6cceb2b18f41e419708d9b93dc7e232967d119f32337",
+    "assumption": "원천 전송 명세는 이 생성 실습에서만 존재. OULAD의 누락 건수를 알아낸 것이 아님."
+  },
+  "experiment": {
+    "type": "design_only",
+    "alpha": 0.05,
+    "power": 0.8,
+    "allocation": "1:1",
+    "samples": [
+      {
+        "baseline": 0.3,
+        "mde": 0.03,
+        "per_arm": 3763
+      },
+      {
+        "baseline": 0.3,
+        "mde": 0.05,
+        "per_arm": 1377
+      },
+      {
+        "baseline": 0.5,
+        "mde": 0.03,
+        "per_arm": 4356
+      },
+      {
+        "baseline": 0.5,
+        "mde": 0.05,
+        "per_arm": 1565
+      },
+      {
+        "baseline": 0.7,
+        "mde": 0.03,
+        "per_arm": 3554
+      },
+      {
+        "baseline": 0.7,
+        "mde": 0.05,
+        "per_arm": 1251
+      }
+    ]
+  }
+}

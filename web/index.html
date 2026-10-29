@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="첫 주 학습 신호의 신뢰성을 점검하고 다음 주 재방문 실험의 근거를 검토하는 공개 데이터 분석 도구.">
+<meta name="theme-color" content="#142c37"><title>Learning Journey Lab · 첫 주 학습 신호</title>
+<link rel="stylesheet" href="style.css"><script src="report-contract.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<aside class="sidebar">
+ <a class="brand" href="#overview" aria-label="Learning Journey Lab 요약"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 24V8h7v9h8V5h7v22H5" fill="none" stroke="currentColor" stroke-width="3"/></svg><span>JOURNEY<span class="brand-small">LEARNING SIGNAL LAB</span></span></a>
+ <div class="nav-caption">분석 워크스페이스</div>
+ <nav aria-label="주요 메뉴"><a href="#overview"><span>01</span> 판단 요약</a><a href="#reliability"><span>02</span> 데이터 신뢰성</a><a href="#analysis"><span>03</span> 재방문 근거</a><a href="#faults"><span>04</span> 로그 장애 실습</a><a href="#actions"><span>05</span> 다음 액션</a></nav>
+ <div class="sidebar-bottom"><span class="status-dot"></span> 공개 분석 스냅샷<br><small>OULAD · 2013–2014<br>실시간 서비스 연동 없음</small><a href="https://github.com/sokldjs554/learning-journey-lab" target="_blank" rel="noopener">코드·검증 기록 ↗</a></div>
+</aside>
+<main id="main" tabindex="-1">
+ <header class="topbar"><span>제품 분석 / 학습 여정</span><div><span class="mono">RESEARCH 01</span><a href="data/report.json" download>근거 JSON ↓</a></div></header>
+ <div id="loading" class="state" role="status">분석 결과 불러오는 중…</div>
+ <div id="error" class="state" role="alert" hidden><h1>분석 파일 로드 실패</h1><p>연결 상태 또는 배포 파일을 확인해 주세요. 불완전한 결과는 표시하지 않습니다.</p><button id="retry" type="button">다시 불러오기</button></div>
+ <noscript><p class="state">이 분석 도구는 JavaScript가 필요합니다. <a href="https://github.com/sokldjs554/learning-journey-lab">저장소의 분석 보고서</a>에서도 같은 결과를 확인할 수 있습니다.</p></noscript>
+ <div id="app" hidden>
+ <section id="overview" class="section overview">
+  <div class="eyebrow"><span id="real-source" class="tag">공개 데이터 · OULAD</span><span>CLASS101 내부 데이터 아님</span></div>
+  <h1>첫 주 학습,<br>두 번째 방문</h1>
+  <p class="intro">제품팀의 재방문 실험을 위한 신호 점검.<br>클릭 수의 모호함을 확인하고, 활동한 날짜로 다음 판단을 좁힙니다.</p>
+  <div class="decision"><span class="decision-label">현재 판단</span><h2>활동일 지표 사용 · 클릭 임계값 판단 보류</h2><p>반복 행을 오류로 단정할 근거가 부족합니다. 다음 방문을 돕는 실험을 제안하되, 관찰된 차이를 개선 효과로 약속하지 않습니다.</p></div>
+  <div class="scope"><div><label for="cohort">분석 범위</label><select id="cohort"><option value="all">전체 · 22개 개설기</option></select></div><p>분석 단위: 학습자 × 모듈 × 개설기<br>첫 주 D0–6 → 다음 주 D7–13</p></div>
+  <div class="kpis" aria-live="polite"><div><span>분석 대상 수강 건</span><strong id="eligible">—</strong><small>개강일까지 등록 · 사전 탈퇴 제외</small></div><div><span>첫 주 활성 수강 건</span><strong id="w1">—</strong><small>양수 클릭이 있는 날 ≥ 1일</small></div><div><span>다음 주 재방문</span><strong id="return-rate">—</strong><small id="return-fraction">—</small></div></div>
+  <div class="finding-grid"><div class="finding"><span class="eyebrow">핵심 연관성</span><h2>두 번째 활동일과 재방문</h2><div class="bars" id="comparison-bars"></div><p class="comparison-note"><strong id="difference">—</strong> <span id="difference-ci">—</span></p><p class="caption">1일 활동 대비 2일 이상 활동 그룹의 차이. 학습 의지·일정·강좌 구조의 영향을 분리한 인과 효과가 아닙니다.</p></div><aside class="reading"><span class="eyebrow">판단 순서</span><ol><li><a href="#reliability">집계 단위와 반복 행 확인</a><small>클릭 임계값 분류의 민감도</small></li><li><a href="#analysis">개설기·시점별 반대 근거 확인</a><small>연관성의 일관성과 관측 한계</small></li><li><a href="#actions">계측 보완 후 실험 설계</a><small>실제 성과는 아직 미측정</small></li></ol></aside></div>
+ </section>
+ <section id="reliability" class="section">
+  <div class="section-heading"><div><span class="eyebrow">02 / DATA RELIABILITY</span><h2>신뢰성 점검</h2></div><span class="tag amber" id="quality-gate">REVIEW</span></div>
+  <p class="section-lead">원본 전체에 대한 점검. 반복 행의 발생 원인은 미확정이며, 일 단위 자료로 원천 이벤트 누락과 일내 순서를 검증할 수 없습니다.</p>
+  <div class="quality-summary"><div><strong id="raw-rows">—</strong><span>원본 활동 행</span></div><div><strong id="exact-repeats">—</strong><span>완전 동일 값 반복 초과 행</span></div><div><strong id="click-changes">—</strong><span>첫날 10클릭 기준 분류 변경 수강 건</span></div></div>
+  <div class="notice"><strong>중복 제거 ≠ 진실 복원</strong><p>같은 날 같은 자료에 접근한 여러 기록일 수도 있습니다. 원본 합산·동일 값 한 번·자료별 최대값을 나란히 비교합니다. 활동일 유무는 이 세 방식에서 같습니다.</p></div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="클릭 민감도 표"><table><caption>반복 행 처리 방식별 첫날 클릭 기준 민감도 · 전체 첫 주 활성 대상</caption><thead><tr><th scope="col">임계값</th><th scope="col">원본 합산</th><th scope="col">동일 값 한 번</th><th scope="col">자료별 최대</th><th scope="col">원본 ↔ 동일 값 분류 변경</th></tr></thead><tbody id="sensitivity-table"></tbody></table></div>
+  <div id="quality-rules" class="rules"></div>
+  <details class="method"><summary>관측 범위와 제외 기준</summary><p>등록일 결측, 개강 후 등록, 개강 전 탈퇴를 순서대로 제외합니다. 개강 이후 탈퇴자를 미래 정보로 분모에서 제거하지 않습니다. 클릭이 없는 날은 활동 미관측이며, 학습하지 않았다는 증거가 아닙니다. 개강 전 음수 날짜는 정상 범위입니다.</p><p id="exclusions"></p><p>이벤트 ID, 수신 시각, 영상 길이, 기기, 구독 결제 정보가 없습니다. 이 화면의 재방문은 VLE 활동의 대리지표이며 영상 수강·연간 구독 유지와 다릅니다.</p></details>
+ </section>
+ <section id="analysis" class="section">
+  <div class="section-heading"><div><span class="eyebrow">03 / PRODUCT EVIDENCE</span><h2>재방문의 근거와 반례</h2></div><span class="tag">관찰 분석</span></div>
+  <figure class="day-chart"><figcaption>첫 주 활동일별 다음 주 활동 비율 <small id="chart-scope">전체</small></figcaption><div id="day-bars" class="day-bars"></div><p class="caption">0일 그룹은 첫 주 비활성자의 다음 주 활동률입니다. 핵심 재방문 지표의 분모에는 포함하지 않습니다. 막대 위 비율과 표본 수를 함께 확인하세요.</p></figure>
+  <div class="evidence-columns"><article><span class="tag">시간 순서 재확인</span><h3>다음 해 신규 학습자</h3><div id="temporal-results"></div><p class="caption">2013년 등록 이력이 있는 사람을 2014년 재확인에서 제외. 진정한 미관측 미래 검증이나 무작위 실험은 아닙니다.</p></article><article><span class="tag amber">반대 근거</span><h3>첫날 콘텐츠 접촉</h3><p id="counterevidence"></p><p>전체의 작은 양의 차이만으로 콘텐츠 노출 확대를 우선하지 않습니다. 콘텐츠 유형 분류도 영상 시청을 뜻하지 않습니다.</p></article></div>
+  <div class="notice"><strong>활동 기회의 차이</strong><p>첫 활동이 D6인 사람은 같은 첫 주에 두 번째 활동일을 만들 수 없습니다. 최초 활동일별 비교를 별도로 확인했습니다. D6에서는 두 그룹 비교 자체가 불가능합니다.</p><details><summary>최초 활동일별 비교</summary><div class="table-wrap" tabindex="0" role="region" aria-label="최초 활동일별 비교 표"><table><caption>같은 날짜에 시작한 그룹 안의 2일 이상 − 1일 활동 차이</caption><thead><tr><th>최초 활동일</th><th>1일 그룹</th><th>2일+ 그룹</th><th>차이</th></tr></thead><tbody id="start-strata"></tbody></table></div></details></div>
+  <div class="table-toolbar"><h3>개설기별 비교</h3><label>개설기 검색 <input id="cohort-search" type="search" placeholder="예: AAA, 2014J" autocomplete="off"></label></div>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="개설기별 비교 표"><table><caption>개설기별 연관성 · B: 2월 개강 / J: 10월 개강 · 서로 다른 강좌의 단순 순위 아님</caption><thead><tr><th scope="col">개설기</th><th scope="col">첫 주 활성</th><th scope="col">1일 활동 재방문</th><th scope="col">2일+ 재방문</th><th scope="col">차이</th><th scope="col">콘텐츠 접촉 차이</th></tr></thead><tbody id="cohort-table"></tbody></table></div>
+  <p id="cohort-empty" class="state" role="status" hidden>검색 결과 없음 · 모듈 코드 또는 개설기를 다시 입력해 주세요.</p>
+  <details class="method"><summary>방법 선택과 해석 한계</summary><p>반복 수강은 같은 사람 안에서 관련되므로 학습자 단위로 묶어 재추출하는 부트스트랩을 사용했습니다. 전체 1,000회, 개설기·최초 활동일 500회, seed 101. 구간은 이 표본 내 불확실성만 표현하며 다른 서비스로의 일반화나 교란을 해결하지 않습니다.</p><p>처리 시점과 비교 집단이 없어 DiD를, 관측되지 않은 학습 의지와 교란을 해결할 수 없어 DoubleML을 채택하지 않았습니다. 예측 모델이 없으므로 SHAP도 필요하지 않습니다. 일별 집계와 시간에 따라 달라지는 수강 일정에서 정상성 가정이 불명확하므로 Markov 예측을 추가하지 않았습니다.</p><p id="strict-result"></p></details>
+ </section>
+ <section id="faults" class="section lab">
+  <div class="section-heading"><div><span class="eyebrow">04 / OPERATIONS LAB</span><h2>로그 장애 재현</h2></div><span class="tag synthetic">100% 생성 데이터</span></div>
+  <p class="section-lead">12명의 가상 학습자와 별도 원천 전송 명세. 중복이 누락을 가리는 상황을 직접 비교합니다. 위 공개 데이터 분석과 합치지 않습니다.</p>
+  <div class="stage-tabs" role="group" aria-label="로그 처리 단계"><button data-stage="truth" type="button">정상 기준</button><button data-stage="observed" type="button" aria-pressed="true">장애 수신</button><button data-stage="clean" type="button">중복·키 정리</button><button data-stage="late" type="button">지연 수신</button><button data-stage="replay" type="button">원천 재수집</button></div>
+  <div class="lab-results" aria-live="polite"><div><span>행 수로 잘못 센 비율</span><strong id="lab-naive">—</strong><small>W2 시작 행 / W1 활성 학습자</small></div><div><span>학습자 기준 재방문</span><strong id="lab-rate">—</strong><small id="lab-fraction">—</small></div><div><span>판단 게이트</span><strong id="lab-gate">—</strong><small id="lab-missing">—</small></div></div>
+  <p id="lab-explanation" class="lab-explanation"></p>
+  <details><summary>탐지 규칙과 SQL</summary><div id="fault-rules"></div></details>
+  <p class="caption">재수집은 생성된 원천 장부에서 실제 이벤트를 다시 받는 실습입니다. 누락값을 추정해서 채우지 않습니다. OULAD에는 이 전송 명세가 없어 같은 완전성 검증을 할 수 없습니다.</p>
+ </section>
+ <section id="actions" class="section">
+  <div class="section-heading"><div><span class="eyebrow">05 / DECISION & VALIDATION</span><h2>다음 액션</h2></div><span class="tag amber">설계 · 미실행</span></div>
+  <div class="action-row"><span class="priority">P0</span><div><h3>계측 계약과 수신 대조</h3><p>event_id·발생/수신 시각·세션 키·전송 명세를 정의하고 대조. 실패 시 실험 지표 배포 보류.</p><small>제안 담당: 분석가 + 클라이언트/데이터 개발자 · 기대: 결측을 학습 이탈로 오판할 위험 감소 · 크기 미측정</small></div></div>
+  <div class="action-row"><span class="priority">P1</span><div><h3>다음 학습 진입점 실험</h3><p>첫 학습 종료 후 다음 학습 구간과 재개 동선을 명확히 보여주는 안을 현재 경험과 비교. 기존 퀴즈·연속 수강 목표와의 중복은 현행 화면 조사 후 조정.</p><small>제안 담당: PM + 디자이너 + 분석가 · 기대: D7–13 재방문 증가 · 방향 가설, 효과 미측정</small></div></div>
+  <div class="action-row"><span class="priority muted">P2</span><div><h3>콘텐츠 접촉 확대 판단 보류</h3><p>개설기에 따라 관계가 반대. 콘텐츠 유형·학습 목적·유입 경로를 추가로 확인한 뒤 우선순위 재평가.</p><small>제안 담당: PM + 콘텐츠 운영 · 추가 증거: 인터뷰, 탐색/재생 로그, 권한·콘텐츠 종료 이력</small></div></div>
+  <div class="experiment"><div><span class="eyebrow">가상 실험 계획</span><h3>필요 표본 시나리오</h3><p>개별 구독의 신규 첫 학습자, 계정 단위 1:1 무작위 배정. 주요 지표 D7–13 재방문, ITT 분석. 그룹 구독은 간섭·결제 주체가 달라 초기 실험에서 제외하고 별도 설계.</p><p class="caption">양측 α=0.05 · 검정력 80% · 고정 표본 2비율 정규근사. 기준율은 가정값이며 OULAD 수치를 서비스에 이식하지 않습니다.</p></div><div class="sample-controls"><label for="baseline">가정 기준 재방문율<select id="baseline"><option value="0.3">30%</option><option value="0.5" selected>50%</option><option value="0.7">70%</option></select></label><label for="mde">최소 탐지 차이<select id="mde"><option value="0.03" selected>+3%p</option><option value="0.05">+5%p</option></select></label><strong id="sample-size">—</strong><small>각 그룹의 필요 계정 수 · 실제 효과 예측 아님</small></div></div>
+  <details class="method"><summary>실행 전 확인과 중단 기준</summary><p>사전 A/A 점검, 배정 비율 이상(SRM), 양 군 로그 누락률, 기기별 오류를 확인합니다. 재생 오류·불만·알림 해제·환불을 가드레일로 관찰합니다. 로그 누락 또는 배정 오염이면 해석을 보류합니다. 전원 13일 관찰 완료 후 고정 분석하며 중간 유의성에 따라 조기 종료하지 않습니다.</p><p>대상 유입량으로 모집 기간을 산정하고 학습 일정의 주간 주기를 포함합니다. 연간 구독 유지 효과는 별도의 장기 추적이 필요합니다. 실험 노출·결제·구독 권한·콘텐츠 종료·재생 오류 로그와 실제 사용자 관찰이 추가로 필요합니다.</p></details>
+ </section>
+ <footer><div><strong>Learning Journey Lab</strong><p>정적 분석 데모 · 서버 점검, 로그 수집, 알림 발송 기능 없음</p></div><div><a href="https://doi.org/10.1038/sdata.2017.171">OULAD · Kuzilek et al.</a><br><a href="https://creativecommons.org/licenses/by/4.0/">데이터 CC BY 4.0</a> · 집계·변환 적용<br><a href="https://github.com/sokldjs554/learning-journey-lab/blob/main/docs/interview-guide.md">면접 설명·재현 안내 ↗</a></div></footer>
+ </div>
+</main>
+</body></html>

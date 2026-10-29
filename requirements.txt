@@ -1,0 +1,5 @@
+duckdb==1.4.3
+numpy==2.5.4
+pandas==2.3.3
+scipy==1.16.3
+pytest==8.4.2

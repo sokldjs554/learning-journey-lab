@@ -1,0 +1,152 @@
+# Learning Journey Lab
+
+**첫 주 학습 신호의 신뢰성을 점검하고, 다음 주 재방문 실험의 판단 근거를 만드는 분석·운영 도구.**
+
+> CLASS101 제품전략팀 Data Analyst 지원을 위해 만든 독립 프로젝트입니다. CLASS101 내부 데이터·실제 서비스 실험·매출 성과를 포함하지 않습니다.
+
+공개 데모: 배포 준비 중 · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md)
+
+![데스크톱 판단 요약](reports/screenshots/local-desktop-cover.png)
+
+## 문제와 판단
+
+제품팀이 첫 학습 이후의 재방문을 개선하려면, 먼저 '학습했다'는 지표가 무엇을 의미하는지 확인해야 합니다. OULAD의 일별 활동 행에는 동일 키·동일 값 반복이 있으며, 이벤트 ID가 없어 모두 수집 오류라고 단정할 수 없습니다.
+
+**클릭 수로 첫 학습 성공을 판정하는 안은 보류하고, 반복 행에 덜 민감한 활동일 지표로 재방문 실험 후보를 좁혔습니다.** 첫날 콘텐츠 접촉의 반대 근거와 판단할 수 없는 조건도 공개합니다.
+
+<!-- BEGIN GENERATED FINDINGS -->
+| 실제 측정 결과 | 의미 |
+|---|---|
+| 10,655,280 활동 행 / 28,785 고유 학습자 | 공개 원본 전체. 수강 등록은 32,593건 |
+| 29,671 분석 수강 건 → 23,522 첫 주 활성 → 20,303 다음 주 재방문 | 재방문율 86.3% |
+| 1일 활동 68.9% vs 2일+ 91.7% | 차이 +22.8%p, 95% 군집 구간 +21.5%p~+24.0%p |
+| 동일 값 반복 초과 행 787,170개 | 오류 확정 아님. 첫날 10클릭 기준은 처리에 따라 369 수강 건 분류 변경 |
+| 첫날 콘텐츠 접촉: 22개 개설기 중 9개가 반대 방향 | 전체 평균만으로 노출 확대 결론 보류 |
+| 생성 실습: 60%처럼 보이는 행 지표, 실제 수신 학습자는 40% | 중복이 누락을 가림. 원천 재수집 뒤 기준 60% 복원 |
+<!-- END GENERATED FINDINGS -->
+
+숫자의 단위는 특별한 표시가 없는 한 **학습자×모듈×개설기의 수강 건**입니다. 같은 사람이 여러 건을 가질 수 있습니다. 관찰적 차이는 기능 개선의 인과 효과가 아닙니다.
+
+## 3분 데모 경로
+
+1. **판단 요약**: 분석 범위와 분모, 1일/2일 이상 활동의 재방문 관계.
+2. **데이터 신뢰성**: 반복 행을 다르게 처리했을 때 클릭 임계값 대상이 바뀌는 정도, 규칙별 SQL.
+3. **재방문 근거**: 개설기·시점·최초 활동일별 비교, 첫날 콘텐츠 접촉의 반례.
+4. **로그 장애 실습**: 생성된 12명 장부에서 중복이 누락을 가리는 상황과 원천 재수집.
+5. **다음 액션**: 계측 계약→재개 진입점 실험→콘텐츠 노출 판단 보류. 표본은 가상 설계 시나리오.
+
+<details><summary>모바일 화면</summary>
+
+<img src="reports/screenshots/local-mobile-cover.png" alt="모바일에서의 프로젝트 목적과 현재 판단" width="320">
+
+</details>
+
+정적 HTML/CSS/JS와 집계 JSON을 제공합니다. 서버 분석 실행·실시간 로그 수집·알림 발송·로그인·LLM 호출은 없습니다. 화면의 버튼은 저장된 시나리오를 전환합니다.
+
+## 데이터와 분석 계약
+
+| 자료 | 출처·라이선스 | 사용 범위 |
+|---|---|---|
+| 실제 공개 자료 | [OULAD / Open University](https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/), [UCI](https://doi.org/10.24432/C5KK69), CC BY 4.0 | 2013–2014 일별 VLE 클릭·등록·콘텐츠 키. 7 CSV의 해시를 고정 |
+| 완전 생성 자료 | `src/journey/faults.py`, [생성 장부](data/synthetic/) | 중복·누락·지연·잘못된 키·시점 역전 재현. 실제 데이터와 결합하지 않음 |
+
+인용: Kuzilek J., Hlosta M., Zdrahal Z. (2017). *Open University Learning Analytics dataset*. [doi:10.1038/sdata.2017.171](https://doi.org/10.1038/sdata.2017.171). 공개 결과에는 집계·변환이 적용됐습니다. 원본 익명 사용자 행은 저장소에 재배포하지 않습니다.
+
+- D0는 **개강일**. W1=D0–6, W2=D7–13, 후속=D14–27. 서비스 가입/결제일이나 첫 재생일이 아닙니다.
+- 등록일 결측·개강 후 등록·개강 전 탈퇴를 순차 제외. 사후 탈퇴자로 분모를 줄이지 않습니다.
+- 유효 양수 클릭의 고유 활동일로 활성 여부 계산. 결측을 0일로 임의 보정하지 않습니다.
+- 2013 탐색과 2014 재확인 분리. 2013 원본 등록 이력이 있는 학습자를 재확인에서 제외합니다.
+- 반복 수강의 의존성을 반영해 **학습자 단위 군집 부트스트랩** 사용. 개설기·시작일·클릭 처리·등록 기간 정책을 민감도로 비교합니다.
+- DiD/DoubleML은 필요한 인과 가정과 처치 정보가 없고, SHAP은 설명할 예측 모델이 없으며, Markov는 전이 가정이 뒷받침되지 않아 사용하지 않았습니다.
+
+상세 분자·분모·SQL 정책·편향: [데이터 계약](docs/data-contract.md). 대안 데이터·서비스·경쟁 프로젝트 조사: [조사 기록](docs/research/sources.md).
+
+## 재현
+
+Python **3.12**, Git, 약 1GB 디스크와 2GB 이상 여유 메모리를 권장합니다. 원본 ZIP은 약 47MB이고 CSV는 약 443MB입니다. 다운로드와 의존성 설치 뒤 핵심 분석은 오프라인으로 실행됩니다.
+
+```bash
+git clone https://github.com/sokldjs554/learning-journey-lab.git
+cd learning-journey-lab
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m pytest -q
+python scripts/download.py
+python scripts/analyze.py
+python scripts/crosscheck.py
+python scripts/build.py
+python scripts/document.py
+python scripts/verify.py
+python -m http.server 8765 --directory web
+```
+
+Windows에서는 가상환경 활성화를 `.venv\Scripts\Activate.ps1`로 바꾸면 됩니다. 브라우저에서 `http://localhost:8765`를 엽니다. 다운로드에 실패하면 원본 없이 분석할 수 없으며 생성 자료로 자동 대체하지 않습니다. 캐시된 원본이 다르면 덮어쓰지 않고 종료합니다.
+
+```bash
+# 브라우저 검증 (서버가 실행 중인 별도 터미널)
+pip install -r requirements-browser.txt
+python -m playwright install chromium
+python tests/browser_check.py --url http://localhost:8765
+python tests/report_contract_check.py --url http://localhost:8765
+npm install --prefix work/a11y axe-core@4.11.0
+python tests/accessibility_check.py --url http://localhost:8765
+```
+
+스크린 리더 사용자 테스트나 모든 OS·브라우저 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
+
+## 구조와 기술의 역할
+
+```text
+data/manifest.json       원본 URL·라이선스·파일 해시
+data/synthetic/          고정 규칙으로 만든 원천/수신 장부
+sql/                    차원 계약, 품질 규칙, 활동일 마트, 장애 규칙
+src/journey/            실행, 통계, 생성 실습, 이슈 상태 추적
+scripts/                다운로드·전체 분석·독립 대조·문서·빌드·검증
+tests/                  손계산 사례·회귀 테스트·브라우저/접근성
+reports/                집계 JSON, 발견 사항, 벤치마크, QA 증거
+web/                    정적 분석 도구
+docs/                  데이터 계약·의사결정·실험·학습·면접 설명
+.github/workflows/      소규모 CI와 수동 전체 재현
+```
+
+| 기술 | 해결하는 문제 |
+|---|---|
+| DuckDB + SQL | 서버 설치 없이 1천만 행의 복합키·관계·시간 창·집계 검증 |
+| Python | 다운로드 해시, 반복 실행, 이슈 이력, 결과 파일 생성 |
+| NumPy / SciPy | 학습자 군집 재추출과 실험 표본 수 시나리오 |
+| pandas | 운영 SQL과 별개 계산으로 전체 마트 대조 |
+| pytest | 날짜 경계·잘못된 키·누락·중복·통계 빈 그룹의 회귀 방지 |
+| Vanilla JS / CSS | 집계 파일만으로 즉시 탐색 가능한 데모, 숫자 계약 검증 |
+| Playwright / axe-core | 실제 PC·모바일 흐름, 오류·빈 상태, 접근성 자동 검사 |
+| GitHub Actions / Render | 재현 절차 자동 점검과 정적 결과 공개 |
+
+## 검증과 개선
+
+<!-- BEGIN GENERATED VALIDATION -->
+- 독립 pandas 집계와 **29,671개 수강 건 × 3개 활동 지표** 대조: 불일치 0.
+- 최종 코드 전체 파이프라인 3회 실행, 결과 JSON SHA256 동일. 실행 중앙값 **22.74초** (원본 다운로드 제외, 로컬 환경). 사람의 시간 절감률은 미측정.
+- 측정 대상 결과 해시: `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`.
+- 손계산 사례·회귀 테스트와 실제 브라우저 검증의 최종 상태는 [검증 기록](docs/verification.md)에서 확인.
+<!-- END GENERATED VALIDATION -->
+
+검증 과정에서 발견한 차원 키 검사 누락, 잘못된 JSON 값 수용, 모바일 표의 키보드 접근과 작은 링크 영역을 회귀 사례로 추가하고 수정했습니다. 상세 수정 전후는 [학습 기록](docs/learning-log.md), 전체 증거는 [검증 기록](docs/verification.md), 이슈 상태는 [issues.json](reports/issues.json)에 있습니다.
+
+## 결론의 경계와 후속 검증
+
+- 영국 대학의 과거 자료로 CLASS101의 구독 갱신·영상 수강률·매출을 추정하지 않습니다.
+- 공개 자료에는 원천 이벤트 ID·수신 시각·결제·재생 시간이 없습니다. 완전성·일내 순서는 미검증입니다.
+- 활동 빈도와 재방문은 상관관계입니다. 학습 의지·과제 일정·생존/선택 효과가 남습니다.
+- 원천 반복 행·탈퇴 후 활동의 이유는 미확정입니다. 실제 서비스 계측 담당자나 원저자에게 확인하지 않았습니다.
+- 실제 사용자 실험·인터뷰·수작업 시간 비교는 수행하지 않았습니다. 효과 크기와 자동화 절감률을 주장하지 않습니다.
+- 실행 전 필요한 데이터와 무작위 실험 계획: [experiment-plan.md](docs/experiment-plan.md).
+
+## 설명 자료와 참고
+
+[직무 연결·리서치](docs/research/sources.md) · [반복 업무 운영](docs/operations.md) · [면접 설명·실습](docs/interview-guide.md) · [주장과 증거](docs/evidence-map.md).
+
+README를 쓰기 전에 [Great Expectations](https://github.com/fivetran/great_expectations), [Evidently](https://github.com/evidentlyai/evidently), [Jaffle Shop DuckDB](https://github.com/dbt-labs/jaffle_shop_duckdb), [Student Cohort Retention](https://github.com/zakiyyah-ai/student_cohort_retention)의 실제 README를 읽었습니다. 문제·빠른 실행·화면·데이터 조건·검증 증거의 구성을 참고했습니다. `sk family`는 정확한 주소를 확인하지 못해 사용하지 않았습니다.
+
+Codex가 조사·코드·테스트·문서 초안을 작성했습니다. 숫자는 실제 코드 실행과 독립 대조로 확인했으며, 지원자가 직접 수행한 경험으로 소급하지 않습니다. [직접 참여 체크리스트](docs/interview-guide.md#참여-구분-체크리스트)를 완료한 범위만 본인의 경험으로 설명하세요.
+
+코드: [MIT](LICENSE). OULAD와 그 변환·집계: CC BY 4.0. 생성 실습은 코드의 MIT 조건을 따릅니다.

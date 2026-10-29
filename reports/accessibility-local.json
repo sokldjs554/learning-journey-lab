@@ -1,0 +1,252 @@
+{
+  "engine": "axe-core 4.11.0 + Chromium",
+  "scope": "automated WCAG A/AA checks; not full accessibility certification",
+  "results": [
+    {
+      "width": 1440,
+      "violations": [],
+      "incomplete_checks": 0,
+      "incomplete_details": [],
+      "passed_rules": 31
+    },
+    {
+      "width": 390,
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "tr:nth-child(1) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > .negative"
+            ],
+            [
+              "tr:nth-child(3) > .negative"
+            ],
+            [
+              "tr:nth-child(4) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > .negative"
+            ],
+            [
+              "tr:nth-child(7) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(8) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(9) > .negative"
+            ],
+            [
+              "tr:nth-child(10) > .negative"
+            ],
+            [
+              "tr:nth-child(11) > .negative"
+            ],
+            [
+              "tr:nth-child(12) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(13) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(14) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(15) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(16) > .negative"
+            ],
+            [
+              "tr:nth-child(17) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(18) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(19) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(20) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(21) > .negative"
+            ],
+            [
+              "tr:nth-child(22) > .negative"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    },
+    {
+      "width": 320,
+      "violations": [],
+      "incomplete_checks": 1,
+      "incomplete_details": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "nav > a[href$=\"#actions\"]"
+            ],
+            [
+              "#sensitivity-table > tr:nth-child(1) > td:nth-child(5)"
+            ],
+            [
+              "#sensitivity-table > tr:nth-child(2) > td:nth-child(5)"
+            ],
+            [
+              "#sensitivity-table > tr:nth-child(3) > td:nth-child(5)"
+            ],
+            [
+              "div[aria-label=\"\uac1c\uc124\uae30\ubcc4 \ube44\uad50 \ud45c\"] > table > caption"
+            ],
+            [
+              "tr:nth-child(1) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > .positive"
+            ],
+            [
+              "tr:nth-child(2) > .negative"
+            ],
+            [
+              "tr:nth-child(3) > .positive"
+            ],
+            [
+              "tr:nth-child(3) > .negative"
+            ],
+            [
+              "tr:nth-child(4) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(4) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(5) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > .positive"
+            ],
+            [
+              "tr:nth-child(6) > .negative"
+            ],
+            [
+              "tr:nth-child(7) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(7) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(8) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(8) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(9) > .positive"
+            ],
+            [
+              "tr:nth-child(9) > .negative"
+            ],
+            [
+              "tr:nth-child(10) > .positive"
+            ],
+            [
+              "tr:nth-child(10) > .negative"
+            ],
+            [
+              "tr:nth-child(11) > .positive"
+            ],
+            [
+              "tr:nth-child(11) > .negative"
+            ],
+            [
+              "tr:nth-child(12) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(12) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(13) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(13) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(14) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(14) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(15) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(15) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(16) > .positive"
+            ],
+            [
+              "tr:nth-child(16) > .negative"
+            ],
+            [
+              "tr:nth-child(17) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(17) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(18) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(18) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(19) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(19) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(20) > .positive:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(20) > .positive:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(21) > .positive"
+            ],
+            [
+              "tr:nth-child(21) > .negative"
+            ],
+            [
+              "tr:nth-child(22) > .positive"
+            ],
+            [
+              "tr:nth-child(22) > .negative"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31
+    }
+  ]
+}

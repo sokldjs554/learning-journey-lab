@@ -1,0 +1,282 @@
+[
+  {
+    "rule_id": "course_invalid_length",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-course_invalid_length",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "course_key_repeat",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-course_key_repeat",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "course_required_null",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-course_required_null",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "event_after_course",
+    "severity": "review",
+    "count": 4374,
+    "issue_id": "OULAD-event_after_course",
+    "status": "open",
+    "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 4374
+      }
+    ]
+  },
+  {
+    "rule_id": "event_after_withdrawal",
+    "severity": "review",
+    "count": 29440,
+    "issue_id": "OULAD-event_after_withdrawal",
+    "status": "open",
+    "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 29440
+      }
+    ]
+  },
+  {
+    "rule_id": "event_before_registration",
+    "severity": "review",
+    "count": 0,
+    "issue_id": "OULAD-event_before_registration",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "event_daily_key_repeat",
+    "severity": "review",
+    "count": 2195960,
+    "issue_id": "OULAD-event_daily_key_repeat",
+    "status": "open",
+    "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 2195960
+      }
+    ]
+  },
+  {
+    "rule_id": "event_exact_repeat",
+    "severity": "review",
+    "count": 787170,
+    "issue_id": "OULAD-event_exact_repeat",
+    "status": "open",
+    "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 787170
+      }
+    ]
+  },
+  {
+    "rule_id": "event_nonpositive_click",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-event_nonpositive_click",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "event_required_null",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-event_required_null",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "event_unknown_site",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-event_unknown_site",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "event_unknown_student",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-event_unknown_student",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "registration_inverted_dates",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-registration_inverted_dates",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "registration_key_repeat",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-registration_key_repeat",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "registration_missing_date",
+    "severity": "review",
+    "count": 45,
+    "issue_id": "OULAD-registration_missing_date",
+    "status": "open",
+    "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 45
+      }
+    ]
+  },
+  {
+    "rule_id": "registration_required_null",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-registration_required_null",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "registration_unknown_course",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-registration_unknown_course",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "site_key_repeat",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-site_key_repeat",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "site_required_null",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-site_required_null",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "rule_id": "site_unknown_course",
+    "severity": "block",
+    "count": 0,
+    "issue_id": "OULAD-site_unknown_course",
+    "status": "clear",
+    "first_seen": null,
+    "history": [
+      {
+        "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+        "count": 0
+      }
+    ]
+  }
+]

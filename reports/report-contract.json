@@ -1,0 +1,26 @@
+[
+  {
+    "case": "invalid_rate",
+    "passed": true
+  },
+  {
+    "case": "wrong_fraction",
+    "passed": true
+  },
+  {
+    "case": "wrong_provenance",
+    "passed": true
+  },
+  {
+    "case": "blocked",
+    "passed": true
+  },
+  {
+    "case": "empty_cohorts",
+    "passed": true
+  },
+  {
+    "case": "unavailable_interval",
+    "passed": true
+  }
+]
