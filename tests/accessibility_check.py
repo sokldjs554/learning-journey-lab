@@ -2,13 +2,14 @@
 import argparse,json
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_support import browser_args
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--url',default='http://127.0.0.1:8765');ap.add_argument('--axe',type=Path,default=ROOT/'work/a11y/node_modules/axe-core/axe.min.js');ap.add_argument('--label',default='local');a=ap.parse_args()
     results=[]
     with sync_playwright() as p:
-        b=p.chromium.launch(args=['--no-sandbox'])
+        b=p.chromium.launch(args=browser_args())
         for width in [1440,390,320]:
             page=b.new_page(viewport={'width':width,'height':900},reduced_motion='reduce')
             page.goto(a.url,wait_until='networkidle');page.locator('#app:not([hidden])').wait_for()

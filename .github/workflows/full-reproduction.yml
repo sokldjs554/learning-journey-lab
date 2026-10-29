@@ -1,5 +1,12 @@
 name: Full public-data reproduction
 on:
+  push:
+    paths:
+      - 'sql/**'
+      - 'src/**'
+      - 'scripts/analyze.py'
+      - 'data/manifest.json'
+      - '.github/workflows/full-reproduction.yml'
   workflow_dispatch:
 permissions:
   contents: read

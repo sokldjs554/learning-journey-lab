@@ -2,6 +2,7 @@
 import argparse,json,os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_support import browser_args
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
@@ -9,7 +10,7 @@ def main():
     expected=json.loads((ROOT/'reports/report.json').read_text())
     evidence=[];out=ROOT/'reports/screenshots';out.mkdir(parents=True,exist_ok=True)
     with sync_playwright() as p:
-        browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
+        browser=p.chromium.launch(headless=True,args=browser_args())
         for width,height,name in [(1440,1000,'desktop'),(390,844,'mobile')]:
             page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1,reduced_motion='reduce')
             errors=[];page.on('pageerror',lambda e:errors.append(str(e)))

@@ -4,7 +4,7 @@
 
 > CLASS101 제품전략팀 Data Analyst 지원을 위해 만든 독립 프로젝트입니다. CLASS101 내부 데이터·실제 서비스 실험·매출 성과를 포함하지 않습니다.
 
-공개 데모: 배포 준비 중 · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md)
+[공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md)
 
 ![데스크톱 판단 요약](reports/screenshots/local-desktop-cover.png)
 
@@ -107,7 +107,7 @@ tests/                  손계산 사례·회귀 테스트·브라우저/접근�
 reports/                집계 JSON, 발견 사항, 벤치마크, QA 증거
 web/                    정적 분석 도구
 docs/                  데이터 계약·의사결정·실험·학습·면접 설명
-.github/workflows/      소규모 CI와 수동 전체 재현
+.github/workflows/      소규모 CI와 분석 변경 시 전체 재현
 ```
 
 | 기술 | 해결하는 문제 |

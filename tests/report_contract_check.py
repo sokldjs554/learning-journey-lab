@@ -2,6 +2,7 @@
 import argparse,json,copy
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+from browser_support import browser_args
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
@@ -18,7 +19,7 @@ def main():
     cases.append(('unavailable_interval',payload,True))
     results=[]
     with sync_playwright() as p:
-        b=p.chromium.launch(args=['--no-sandbox'])
+        b=p.chromium.launch(args=browser_args())
         for label,payload,visible in cases:
             page=b.new_page();page.route('**/data/report.json',lambda route,request,payload=payload:route.fulfill(status=200,content_type='application/json',body=json.dumps(payload)))
             if a.baseline_js:page.route('**/app.js',lambda route:route.fulfill(status=200,content_type='application/javascript',body=a.baseline_js.read_text()))

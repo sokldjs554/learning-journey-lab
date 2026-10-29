@@ -37,7 +37,12 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 
 ## 배포·원격 CI
 
-배포 후 실제 URL, 원격 커밋, HTTP/데이터 해시·PC/모바일·접근성 결과를 이 절에 추가한다. 이 문장 자체는 배포 성공의 증거가 아니다.
+- 공개 URL: https://learning-journey-lab.onrender.com
+- Render 정적 사이트, 사용자 선택 `my2 workspace`. 최초 소스 커밋 `f3c5090499a67b6f267de4cadae4084dc2c240d7`, 배포 `dep-dbhd5mo8v5cc7385iqug`, 상태 live 확인.
+- HTML/CSS/JS/report/release 6개 경로 HTTP 200. 공개 report SHA256이 로컬과 정확히 일치. [HTTP 근거](../reports/deployment.json).
+- 실제 공개 주소의 PC/모바일 사용자 흐름을 [브라우저 결과](../reports/browser-deployed.json)와 [접근성 결과](../reports/accessibility-deployed.json)에 기록. 환경 프록시의 기존 CA 공개키만 신뢰하도록 Chromium QA를 설정했으며 전체 TLS 오류를 무시하는 옵션은 사용하지 않았다. Python HTTP 검증도 시스템 CA 체인을 검증했다.
+- 첫 원격 CI [40820849573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40820849573): 테스트·빌드·증거 일관성 단계 success.
+- 전체 원본 원격 재현은 수동 실행 또는 SQL/분석/manifest/workflow 변경 시 실행하도록 구성. 원격 실행 결과는 후속 검증 파일에서 확인.
 
 ## 코드 리뷰
 
