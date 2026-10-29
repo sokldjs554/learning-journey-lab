@@ -1,0 +1,41 @@
+{
+  "reviewed_base": "370dcc4b3f56a8532be1d3d3988abc8d411177dc",
+  "reviewed_head": "3610cd477660d310703c1bfb6a73a93784dfc813",
+  "reviewer": "Independent fresh-context agent /root/ui_review",
+  "critical": [],
+  "findings": [
+    {
+      "issue": "Actual report bytes were not bound to declared benchmark hash",
+      "severity": "important",
+      "fix": "SHA256 of fetched ArrayBuffer checked before rendering",
+      "regression": "report_bytes_bound_to_benchmark"
+    },
+    {
+      "issue": "Mobile browser Back left focus inside hidden detail",
+      "severity": "important",
+      "fix": "popstate restores visible originating rule with search fallback",
+      "regression": "mobile_history_focus"
+    },
+    {
+      "issue": "Global exclusion numbers leaked into selected-cohort methods",
+      "severity": "important",
+      "fix": "hide global numeric chain; explain unavailable per-cohort exclusions",
+      "regression": "no_global_exclusions_in_scoped_view"
+    },
+    {
+      "issue": "Strict-policy zero denominator displayed NaN",
+      "reviewer_severity": "minor",
+      "final_severity": "important (accepted empty-state requirement)",
+      "fix": "nonfinite rate displayed as comparison unavailable",
+      "regression": "empty_strict_denominator"
+    }
+  ],
+  "verification": "All four reproduced as failures before changes and passed after fixes. No second independent review claimed.",
+  "declined_and_rulings": {
+    "deployment": "Root verifies after publishing",
+    "analytics": "No statistical/SQL computation changed; existing whole-data evidence retained",
+    "user_study": "Not performed; no task-time gain claimed",
+    "history": "Only supplied measured registry represented; no added historical events"
+  },
+  "deferred_minors": []
+}

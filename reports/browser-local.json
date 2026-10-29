@@ -1,21 +1,22 @@
 {
-  "url": "http://127.0.0.1:8765",
+  "url": "http://127.0.0.1:8766",
   "engine": "Chromium 141 / Playwright 1.56",
   "results": [
     {
       "viewport": [
         1440,
-        1000
+        900
       ],
       "checks": [
-        "summary numbers",
-        "all 22 cohort numbers and day-chart labels (desktop)",
-        "cohort selection",
+        "first review entry",
+        "policy impact",
+        "20 exact SQL links (desktop)",
+        "22 scoped cohorts + content + chart/table values (desktop)",
+        "global isolation",
         "empty search",
-        "fault stage changes",
-        "power scenario",
-        "no horizontal overflow",
-        "no JS exceptions"
+        "5 synthetic stages",
+        "6 sample scenarios",
+        "no horizontal overflow or JS exception"
       ],
       "status": "pass"
     },
@@ -25,27 +26,34 @@
         844
       ],
       "checks": [
-        "summary numbers",
-        "all 22 cohort numbers and day-chart labels (desktop)",
-        "cohort selection",
+        "first review entry",
+        "policy impact",
+        "20 exact SQL links (desktop)",
+        "22 scoped cohorts + content + chart/table values (desktop)",
+        "global isolation",
         "empty search",
-        "fault stage changes",
-        "power scenario",
-        "no horizontal overflow",
-        "no JS exceptions"
+        "5 synthetic stages",
+        "6 sample scenarios",
+        "no horizontal overflow or JS exception"
       ],
       "status": "pass"
     },
     {
       "checks": [
-        "skip link and focus transfer"
+        "skip link",
+        "roving detail tabs arrows/end"
       ],
       "status": "pass"
     },
     {
       "checks": [
-        "HTTP failure state",
-        "retry recovery"
+        "report HTTP failure and retry"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "operations HTTP failure and retry"
       ],
       "status": "pass"
     }

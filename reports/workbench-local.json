@@ -1,0 +1,38 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "status": "pass",
+    "checks": [
+      "task entry",
+      "impact and history",
+      "exact dimension SQL",
+      "URL reload/back/fallback",
+      "scoped content + global isolation",
+      "run records",
+      "empty search",
+      "mobile focus return",
+      "overflow and JS errors"
+    ]
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "status": "pass",
+    "checks": [
+      "task entry",
+      "impact and history",
+      "exact dimension SQL",
+      "URL reload/back/fallback",
+      "scoped content + global isolation",
+      "run records",
+      "empty search",
+      "mobile focus return",
+      "overflow and JS errors"
+    ]
+  }
+]

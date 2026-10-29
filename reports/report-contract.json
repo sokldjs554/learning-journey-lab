@@ -20,7 +20,31 @@
     "passed": true
   },
   {
+    "case": "not_run",
+    "passed": true
+  },
+  {
     "case": "unavailable_interval",
+    "passed": true
+  },
+  {
+    "case": "stale_issue_count",
+    "passed": true
+  },
+  {
+    "case": "wrong_sql_source",
+    "passed": true
+  },
+  {
+    "case": "stale_snapshot",
+    "passed": true
+  },
+  {
+    "case": "duplicate_issue",
+    "passed": true
+  },
+  {
+    "case": "wrong_benchmark_hash",
     "passed": true
   }
 ]

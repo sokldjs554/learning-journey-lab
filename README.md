@@ -29,11 +29,15 @@
 
 ## 3분 데모 경로
 
-1. **판단 요약**: 분석 범위와 분모, 1일/2일 이상 활동의 재방문 관계.
-2. **데이터 신뢰성**: 반복 행을 다르게 처리했을 때 클릭 임계값 대상이 바뀌는 정도, 규칙별 SQL.
-3. **재방문 근거**: 개설기·시점·최초 활동일별 비교, 첫날 콘텐츠 접촉의 반례.
-4. **로그 장애 실습**: 생성된 12명 장부에서 중복이 누락을 가리는 상황과 원천 재수집.
-5. **다음 액션**: 계측 계약→재개 진입점 실험→콘텐츠 노출 판단 보류. 표본은 가상 설계 시나리오.
+1. **지표 검토 → 동일 값 반복**: 관측 근거, 정확한 SQL 위치, 정책별 369건의 차이, 판단 기록을 연결합니다.
+2. **재방문 근거**: 개설기를 선택하면 활동일·콘텐츠 접촉·표·차트에 같은 범위를 적용합니다. 전체 시점 재확인은 전체 범위에서만 표시합니다.
+3. **실행 기록**: 실제 3회 실행 시간, 동일 결과 해시, 원본 스냅샷별 열린 이슈를 확인합니다.
+4. **검증 계획**: 계측 조건→재개 진입점 실험→콘텐츠 확대 보류. 표본 계산은 미실행 설계의 보조 자료입니다.
+5. **생성 로그 실습**: 공개 분석과 별도 화면에서 12명 장부의 중복·누락·재수집을 비교합니다.
+
+PC는 검토 목록과 선택 상세, 모바일은 목록→상세→복귀 구조입니다. 개설기·검토 항목·상세 탭·실습 단계를 URL에 보존해 같은 근거를 공유할 수 있습니다. [UI 재조사](docs/research/ui-audit-2026-10-29.md)를 바탕으로 소개형 긴 페이지를 개편했습니다.
+
+![처리 정책별 지표 영향](reports/screenshots/local-desktop-impact-cover.png)
 
 <details><summary>모바일 화면</summary>
 
@@ -41,7 +45,7 @@
 
 </details>
 
-정적 HTML/CSS/JS와 집계 JSON을 제공합니다. 서버 분석 실행·실시간 로그 수집·알림 발송·로그인·LLM 호출은 없습니다. 화면의 버튼은 저장된 시나리오를 전환합니다.
+정적 HTML/CSS/JS와 집계 JSON, 검증된 이슈·SQL·실행 기록을 제공합니다. 서버 분석 실행·실시간 로그 수집·알림 발송·로그인·LLM 호출은 없습니다. 화면의 버튼은 저장된 시나리오를 전환합니다.
 
 ## 데이터와 분석 계약
 
@@ -78,19 +82,21 @@ python scripts/crosscheck.py
 python scripts/build.py
 python scripts/document.py
 python scripts/verify.py
-python -m http.server 8765 --directory web
+python -m http.server 8766 --directory web
 ```
 
-Windows에서는 가상환경 활성화를 `.venv\Scripts\Activate.ps1`로 바꾸면 됩니다. 브라우저에서 `http://localhost:8765`를 엽니다. 다운로드에 실패하면 원본 없이 분석할 수 없으며 생성 자료로 자동 대체하지 않습니다. 캐시된 원본이 다르면 덮어쓰지 않고 종료합니다.
+Windows에서는 가상환경 활성화를 `.venv\Scripts\Activate.ps1`로 바꾸면 됩니다. 브라우저에서 `http://localhost:8766`를 엽니다. 다운로드에 실패하면 원본 없이 분석할 수 없으며 생성 자료로 자동 대체하지 않습니다. 캐시된 원본이 다르면 덮어쓰지 않고 종료합니다.
 
 ```bash
 # 브라우저 검증 (서버가 실행 중인 별도 터미널)
 pip install -r requirements-browser.txt
 python -m playwright install chromium
-python tests/browser_check.py --url http://localhost:8765
-python tests/report_contract_check.py --url http://localhost:8765
+python tests/browser_check.py --url http://localhost:8766
+python tests/workbench_check.py --url http://localhost:8766
+python tests/report_contract_check.py --url http://localhost:8766
+python tests/review_regressions.py --url http://localhost:8766
 npm install --prefix work/a11y axe-core@4.11.0
-python tests/accessibility_check.py --url http://localhost:8765
+python tests/accessibility_check.py --url http://localhost:8766
 ```
 
 스크린 리더 사용자 테스트나 모든 OS·브라우저 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
@@ -130,7 +136,7 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 - 손계산 사례·회귀 테스트와 실제 브라우저 검증의 최종 상태는 [검증 기록](docs/verification.md)에서 확인.
 <!-- END GENERATED VALIDATION -->
 
-검증 과정에서 발견한 차원 키 검사 누락, 잘못된 JSON 값 수용, 모바일 표의 키보드 접근과 작은 링크 영역을 회귀 사례로 추가하고 수정했습니다. 상세 수정 전후는 [학습 기록](docs/learning-log.md), 전체 증거는 [검증 기록](docs/verification.md), 이슈 상태는 [issues.json](reports/issues.json)에 있습니다.
+검증 과정에서 발견한 차원 키 검사 누락, 잘못된 JSON 값 수용, 모바일 표의 키보드 접근과 작은 링크 영역, 6개 규칙의 잘못된 SQL 연결과 분석 범위 혼재을 회귀 사례로 추가하고 수정했습니다. 상세 수정 전후는 [학습 기록](docs/learning-log.md), 전체 증거는 [검증 기록](docs/verification.md), 이슈 상태는 [issues.json](reports/issues.json)에 있습니다.
 
 ## 결론의 경계와 후속 검증
 

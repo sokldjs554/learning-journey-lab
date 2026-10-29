@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+  "snapshot_id": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+  "rules": [
+    {
+      "rule_id": "course_invalid_length",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-course_invalid_length",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 8
+    },
+    {
+      "rule_id": "course_key_repeat",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-course_key_repeat",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 15
+    },
+    {
+      "rule_id": "course_required_null",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-course_required_null",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 6
+    },
+    {
+      "rule_id": "event_after_course",
+      "severity": "review",
+      "count": 4374,
+      "issue_id": "OULAD-event_after_course",
+      "status": "open",
+      "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 4374
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 18
+    },
+    {
+      "rule_id": "event_after_withdrawal",
+      "severity": "review",
+      "count": 29440,
+      "issue_id": "OULAD-event_after_withdrawal",
+      "status": "open",
+      "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 29440
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 17
+    },
+    {
+      "rule_id": "event_before_registration",
+      "severity": "review",
+      "count": 0,
+      "issue_id": "OULAD-event_before_registration",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 16
+    },
+    {
+      "rule_id": "event_daily_key_repeat",
+      "severity": "review",
+      "count": 2195960,
+      "issue_id": "OULAD-event_daily_key_repeat",
+      "status": "open",
+      "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 2195960
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 6
+    },
+    {
+      "rule_id": "event_exact_repeat",
+      "severity": "review",
+      "count": 787170,
+      "issue_id": "OULAD-event_exact_repeat",
+      "status": "open",
+      "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 787170
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 5
+    },
+    {
+      "rule_id": "event_nonpositive_click",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-event_nonpositive_click",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 4
+    },
+    {
+      "rule_id": "event_required_null",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-event_required_null",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 2
+    },
+    {
+      "rule_id": "event_unknown_site",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-event_unknown_site",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 9
+    },
+    {
+      "rule_id": "event_unknown_student",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-event_unknown_student",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 7
+    },
+    {
+      "rule_id": "registration_inverted_dates",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-registration_inverted_dates",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 12
+    },
+    {
+      "rule_id": "registration_key_repeat",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-registration_key_repeat",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 13
+    },
+    {
+      "rule_id": "registration_missing_date",
+      "severity": "review",
+      "count": 45,
+      "issue_id": "OULAD-registration_missing_date",
+      "status": "open",
+      "first_seen": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 45
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 11
+    },
+    {
+      "rule_id": "registration_required_null",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-registration_required_null",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 2
+    },
+    {
+      "rule_id": "registration_unknown_course",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-registration_unknown_course",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 10
+    },
+    {
+      "rule_id": "site_key_repeat",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-site_key_repeat",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/quality.sql",
+      "sql_line": 14
+    },
+    {
+      "rule_id": "site_required_null",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-site_required_null",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 4
+    },
+    {
+      "rule_id": "site_unknown_course",
+      "severity": "block",
+      "count": 0,
+      "issue_id": "OULAD-site_unknown_course",
+      "status": "clear",
+      "first_seen": null,
+      "history": [
+        {
+          "snapshot": "f2ed1902616c1fe8d2824d872c0b7d2d72be435bf0124d077044fe4be2c6d3e4",
+          "count": 0
+        }
+      ],
+      "sql_file": "sql/dimensions.sql",
+      "sql_line": 13
+    }
+  ],
+  "sql_files": {
+    "sql/dimensions.sql": "-- Small dimension contract: must run before any INNER JOIN can hide missing keys.\nSELECT 'registration_required_null' rule_id,'block' severity,count(*) count FROM studentRegistration\nWHERE code_module IS NULL OR code_presentation IS NULL OR id_student IS NULL\nUNION ALL SELECT 'site_required_null','block',count(*) FROM vle\nWHERE code_module IS NULL OR code_presentation IS NULL OR id_site IS NULL OR activity_type IS NULL\nUNION ALL SELECT 'course_required_null','block',count(*) FROM courses\nWHERE code_module IS NULL OR code_presentation IS NULL\nUNION ALL SELECT 'course_invalid_length','block',count(*) FROM courses\nWHERE module_presentation_length IS NULL OR module_presentation_length<=0\nUNION ALL SELECT 'registration_unknown_course','block',count(*) FROM studentRegistration r\nWHERE r.code_module IS NOT NULL AND r.code_presentation IS NOT NULL\nAND NOT EXISTS(SELECT 1 FROM courses c WHERE r.code_module=c.code_module AND r.code_presentation=c.code_presentation)\nUNION ALL SELECT 'site_unknown_course','block',count(*) FROM vle v\nWHERE v.code_module IS NOT NULL AND v.code_presentation IS NOT NULL\nAND NOT EXISTS(SELECT 1 FROM courses c WHERE v.code_module=c.code_module AND v.code_presentation=c.code_presentation);\n",
+    "sql/quality.sql": "-- Counts are affected rows, except *_repeat / *_key_repeat: excess rows beyond first.\nSELECT 'event_required_null' rule_id, 'block' severity, count(*) count FROM studentVle\nWHERE code_module IS NULL OR code_presentation IS NULL OR id_student IS NULL OR id_site IS NULL OR date IS NULL OR sum_click IS NULL\nUNION ALL SELECT 'event_nonpositive_click','block',count(*) FROM studentVle WHERE sum_click<=0\nUNION ALL SELECT 'event_exact_repeat','review',count(*)-count(DISTINCT (code_module,code_presentation,id_student,id_site,date,sum_click)) FROM studentVle\nUNION ALL SELECT 'event_daily_key_repeat','review',count(*)-count(DISTINCT (code_module,code_presentation,id_student,id_site,date)) FROM studentVle\nUNION ALL SELECT 'event_unknown_student','block',count(*) FROM studentVle e\nWHERE e.id_student IS NOT NULL AND NOT EXISTS(SELECT 1 FROM studentRegistration r WHERE (e.code_module,e.code_presentation,e.id_student)=(r.code_module,r.code_presentation,r.id_student))\nUNION ALL SELECT 'event_unknown_site','block',count(*) FROM studentVle e\nWHERE e.id_site IS NOT NULL AND NOT EXISTS(SELECT 1 FROM vle v WHERE (e.code_module,e.code_presentation,e.id_site)=(v.code_module,v.code_presentation,v.id_site))\nUNION ALL SELECT 'registration_missing_date','review',count(*) FROM studentRegistration WHERE date_registration IS NULL\nUNION ALL SELECT 'registration_inverted_dates','block',count(*) FROM studentRegistration WHERE date_registration>date_unregistration\nUNION ALL SELECT 'registration_key_repeat','block',count(*)-count(DISTINCT(code_module,code_presentation,id_student)) FROM studentRegistration\nUNION ALL SELECT 'site_key_repeat','block',count(*)-count(DISTINCT(code_module,code_presentation,id_site)) FROM vle\nUNION ALL SELECT 'course_key_repeat','block',count(*)-count(DISTINCT(code_module,code_presentation)) FROM courses\nUNION ALL SELECT 'event_before_registration','review',count(*) FROM studentVle e JOIN studentRegistration r USING(code_module,code_presentation,id_student) WHERE e.date<r.date_registration\nUNION ALL SELECT 'event_after_withdrawal','review',count(*) FROM studentVle e JOIN studentRegistration r USING(code_module,code_presentation,id_student) WHERE e.date>r.date_unregistration\nUNION ALL SELECT 'event_after_course','review',count(*) FROM studentVle e JOIN courses c USING(code_module,code_presentation) WHERE e.date>=c.module_presentation_length\nORDER BY rule_id;\n"
+  },
+  "benchmark": {
+    "method": "3 serial final-code full pipeline runs; download excluded; source hash validation, load, SQL checks/marts, cluster bootstrap and exports included. Other QA may run concurrently; not an isolated performance benchmark.",
+    "runs": [
+      {
+        "python": "3.12.14",
+        "duckdb": "1.4.3",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+        "timings": {
+          "load_and_hash_seconds": 13.86178212599998,
+          "quality_seconds": 3.931524717000002,
+          "mart_and_sensitivity_seconds": 2.623332175000087,
+          "statistics_seconds": 4.388731280000002,
+          "total_seconds": 24.98617952099994
+        },
+        "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+      },
+      {
+        "python": "3.12.14",
+        "duckdb": "1.4.3",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+        "timings": {
+          "load_and_hash_seconds": 12.222467521999988,
+          "quality_seconds": 3.342509365000069,
+          "mart_and_sensitivity_seconds": 2.4024890109999433,
+          "statistics_seconds": 4.17975761799994,
+          "total_seconds": 22.31399946900001
+        },
+        "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+      },
+      {
+        "python": "3.12.14",
+        "duckdb": "1.4.3",
+        "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+        "timings": {
+          "load_and_hash_seconds": 12.153673045000005,
+          "quality_seconds": 3.320009250000112,
+          "mart_and_sensitivity_seconds": 2.6677206399999704,
+          "statistics_seconds": 4.434638823000114,
+          "total_seconds": 22.74334918799991
+        },
+        "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+      }
+    ],
+    "median_seconds": 22.74334918799991,
+    "reproducible_report": true,
+    "human_baseline_seconds": null,
+    "time_saved_claim": null
+  }
+}

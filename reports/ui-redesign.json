@@ -1,0 +1,37 @@
+{
+  "scope": "Rendered geometry and computed solid-color contrast; no user task-time measurement",
+  "viewports": {
+    "1440": {
+      "height": 1060,
+      "firstTaskY": 424,
+      "titleY": 161.140625,
+      "purpose": "첫 주 학습 신호를 재방문 실험에 사용할 수 있는지 검토합니다.",
+      "brand": {
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(35, 56, 62)",
+        "contrast_ratio": 12.304487369796288
+      },
+      "arrow": {
+        "fg": "rgb(36, 89, 105)",
+        "bg": "rgb(241, 244, 243)",
+        "contrast_ratio": 7.007015077765608
+      }
+    },
+    "390": {
+      "height": 1076,
+      "firstTaskY": 413.71875,
+      "titleY": 139.84375,
+      "purpose": "첫 주 학습 신호를 재방문 실험에 사용할 수 있는지 검토합니다.",
+      "brand": {
+        "fg": "rgb(255, 255, 255)",
+        "bg": "rgb(35, 56, 62)",
+        "contrast_ratio": 12.304487369796288
+      },
+      "arrow": {
+        "fg": "rgb(36, 89, 105)",
+        "bg": "rgb(241, 244, 243)",
+        "contrast_ratio": 7.007015077765608
+      }
+    }
+  }
+}

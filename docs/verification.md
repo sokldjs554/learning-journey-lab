@@ -2,7 +2,20 @@
 
 확인일: 2026-10-29 (Asia/Seoul). 실행 결과를 근거로 작성. 로컬 성공과 배포 성공을 구분한다.
 
-## 분석·코드
+## UI 개편 검증
+
+사용자 승인한 [UI 재조사](research/ui-audit-2026-10-29.md)를 기준으로 검토 목록/상세, 독립 작업 화면, URL 상태, 같은 범위의 분석, 운영 기록을 구현했다. 아래는 개편 버전의 기록이며 이전 섹션은 최초 분석·개발 이력이다.
+
+- `pytest`: **29 passed**. 기존 24개 + 운영 근거 묶음 5개. 잘못된 count·snapshot·중복 issue·benchmark hash 차단, 실제 SQL 20개 위치 확인. 6개 차원 규칙은 dimensions.sql로 연결.
+- [업무 흐름 검사](../reports/workbench-local.json): 첫 검토 진입, 영향·이력 상세, URL 새로고침/뒤로가기, 잘못된 URL 기본값, 모바일 목록 복귀 초점.
+- [브라우저 검사](../reports/browser-local.json): PC 전체 22개 개설기의 활성·재방문·콘텐츠 차이·활동일 차트/표, 20개 SQL 링크, 생성 5단계, 표본 6시나리오. report/operations 각각의 HTTP 실패→재시도 복구.
+- [변형 응답 검사](../reports/report-contract.json): 숫자·분수·출처·BLOCK·미검증·빈 개설기·null 구간·오래된 이슈·잘못된 SQL·스냅샷·중복 이슈·실행 해시. BLOCK은 공개 보류, 미검증은 상태 미확인으로 구분.
+- 접근성: 1440/390/320px × 기본 검토/상세 3탭/분석/실행/계획/실습/오류 = 27개 조합. 자동 위반 0. [기록](../reports/accessibility-local.json). 브랜드 장식·화살표 등 color-contrast 자동 판정 불완전은 남김. 고정색 계산과 위치 측정은 [ui-redesign.json](../reports/ui-redesign.json)에 별도 기록.
+- 별도 리뷰 4개 회귀: 실제 report 바이트 해시 결합, 모바일 브라우저 뒤로가기 초점, 개설기 설명의 전체 분모 분리, 0분모 비교 불가. [수정 전](../reports/review-regressions-before.json) 모두 실패 → [수정 후](../reports/review-regressions-local.json) 모두 통과. [리뷰와 판단](../reports/ui-review.json).
+- 개편은 분석 report의 내용·해시를 바꾸지 않는다. 화면용 operations.json은 기존 issues/benchmark/SQL에서 생성하고 build/verify로 대조한다.
+- 로컬 검증 후 공개 배포에서도 같은 테스트와 파일 일치를 재확인한다. 배포 완료 기록은 후속 항목에 추가한다.
+
+## 초기 분석·코드 검증
 
 - Python 3.12.14 / DuckDB 1.4.3. `python -m pytest -q`: **24 passed**.
 - 손계산 기준: 등록 6명 중 적격 1/2/6, D0/6/7/13/14 경계, 양수 클릭, 동일 행, 고아 키, null, 탈퇴 이후 활동.

@@ -35,3 +35,27 @@ function validateReport(r){
  if(!Array.isArray(r.experiment?.samples)||r.experiment.samples.some(s=>!rate(s.baseline)||!rate(s.mde)||!count(s.per_arm)||s.per_arm===0))fail();
  return r;
 }
+
+function validateOperations(o,r){
+ const fail=()=>{throw new Error('Operating evidence mismatch');};
+ const hash=s=>typeof s==='string'&&/^[0-9a-f]{64}$/.test(s);
+ const count=n=>Number.isInteger(n)&&n>=0;
+ if(!o||o.schema_version!==1||!hash(o.report_sha256)||o.snapshot_id!==r.source?.archive_sha256||!hash(o.snapshot_id))fail();
+ if(!Array.isArray(o.rules)||o.rules.length!==r.quality.checks.length||new Set(o.rules.map(x=>x.rule_id)).size!==o.rules.length)fail();
+ for(const x of o.rules){
+  const c=r.quality.checks.find(c=>c.rule_id===x.rule_id);
+  if(!c||c.count!==x.count||c.severity!==x.severity||!['open','clear','resolved'].includes(x.status)||(x.count>0)!==(x.status==='open'))fail();
+  if(!['sql/dimensions.sql','sql/quality.sql'].includes(x.sql_file)||!Number.isInteger(x.sql_line)||x.sql_line<1)fail();
+  const source=o.sql_files?.[x.sql_file];if(typeof source!=='string'||!source.split('\n')[x.sql_line-1]?.includes("'"+x.rule_id+"'"))fail();
+  if(!Array.isArray(x.history)||!x.history.length||x.history.some(h=>!hash(h.snapshot)||!count(h.count)))fail();
+  const last=x.history[x.history.length-1];if(last.snapshot!==o.snapshot_id||last.count!==x.count)fail();
+  if(x.first_seen!==null&&!hash(x.first_seen))fail();
+ }
+ const b=o.benchmark;
+ if(!Array.isArray(b?.runs)||!b.runs.length)fail();
+ for(const run of b.runs){if(run.report_sha256!==o.report_sha256||!run.timings||['load_and_hash_seconds','quality_seconds','mart_and_sensitivity_seconds','statistics_seconds','total_seconds'].some(k=>typeof run.timings[k]!=='number'||!Number.isFinite(run.timings[k])||run.timings[k]<0))fail();}
+ const times=b.runs.map(x=>x.timings.total_seconds).sort((a,b)=>a-b),n=times.length;
+ const median=n%2?times[(n-1)/2]:(times[n/2-1]+times[n/2])/2;
+ if(typeof b.median_seconds!=='number'||Math.abs(b.median_seconds-median)>1e-9)fail();
+ return o;
+}

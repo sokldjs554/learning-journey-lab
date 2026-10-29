@@ -1,0 +1,18 @@
+[
+  {
+    "case": "report_bytes_bound_to_benchmark",
+    "passed": false
+  },
+  {
+    "case": "mobile_history_focus",
+    "passed": false
+  },
+  {
+    "case": "no_global_exclusions_in_scoped_view",
+    "passed": false
+  },
+  {
+    "case": "empty_strict_denominator",
+    "passed": false
+  }
+]

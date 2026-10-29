@@ -3,12 +3,16 @@ from pathlib import Path
 import json,hashlib,sys
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.document import generated_blocks
+from scripts.build import build_operations
 
 def main():
     data=(ROOT/'reports/report.json').read_bytes();r=json.loads(data)
     assert data==(ROOT/'web/data/report.json').read_bytes(),'UI data drift'
     h=hashlib.sha256(data).hexdigest()
     assert json.loads((ROOT/'web/data/release.json').read_text())['report_sha256']==h
+    ops=(ROOT/'web/data/operations.json').read_bytes()
+    assert json.loads(ops)==build_operations(ROOT,r),'Operating evidence drift'
+    assert json.loads((ROOT/'web/data/release.json').read_text())['operations_sha256']==hashlib.sha256(ops).hexdigest()
     b=json.loads((ROOT/'reports/benchmark.json').read_text())
     assert len(b['runs'])==3 and all(run['report_sha256']==h for run in b['runs']),'benchmark is from a different report'
     readme=(ROOT/'README.md').read_text();findings=(ROOT/'reports/findings.md').read_text()
