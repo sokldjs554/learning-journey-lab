@@ -22,10 +22,10 @@ Tech: existing Python/DuckDB/pandas/pytest, static HTML/JS/CSS, Playwright/axe.
 - Different source report failure cannot silently contaminate original OULAD UI; mobile/keyboard/errors and report validation.
 
 ## Tasks
-- [ ] Baseline job/readme/code/CI/deployed flows, document gaps.
-- [ ] Research >=4 real datasets; source metadata + observed download; choose additional actual analysis, tests + independent crosscheck + reproducibility, aggregate only.
-- [ ] Implement/test experiment readiness and recruitment scenarios; official service evidence, no claimed human experiment.
-- [ ] Prepare tiny manual/automatic review task, timing export + comparable outputs + pending human results, user-authored SQL regression instructions.
-- [ ] Integrate additional evidence into existing tool and clarify denominator/%p/directions using actual guided-learning confusion as session evidence, not naive-user study.
-- [ ] Browser local/deployed PC/mobile/error/keyboard/empty; fresh review and fixes; README/evidence/screenshots; CI and final deployment.
+- [x] Baseline job/readme/code/CI/deployed flows, document gaps.
+- [x] Research >=4 real datasets; source metadata + observed download; choose additional actual analysis, tests + independent crosscheck + reproducibility, aggregate only.
+- [x] Implement/test experiment readiness and recruitment scenarios; official service evidence, no claimed human experiment.
+- [x] Prepare tiny manual/automatic review task, timing export + comparable outputs + pending human results, user-authored SQL regression instructions.
+- [x] Integrate additional evidence into existing tool and clarify denominator/%p/directions using actual guided-learning confusion as session evidence, not naive-user study.
+- [x] Browser local/deployed PC/mobile/error/keyboard/empty; fresh review and fixes; README/evidence/screenshots; CI and final deployment.
 - [ ] On applicant response verify branch/run/measurements; preserve pending if absent.

@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-29",
+  "scope": "integrated code before publication; browser checks are developer automation, not human feedback",
+  "tests": {
+    "command": "python -m pytest -q",
+    "passed": 114
+  },
+  "original_analysis": {
+    "reruns": 2,
+    "machine_seconds": [
+      27.424,
+      22.07
+    ],
+    "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+    "pandas_enrollments": 29671,
+    "pandas_fields": 3,
+    "mismatched_rows": 0
+  },
+  "additional_analysis": {
+    "integrated_reruns": 2,
+    "report_sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+    "sql_pandas_users": 2048,
+    "fields": 9,
+    "repeat_bytes_equal": true
+  },
+  "review": {
+    "independent_reviewer_tests": 109,
+    "actual_ednet_recomputed": true,
+    "fixed_contract_regressions": 5,
+    "red_before_fix": true
+  },
+  "human_manual_measurement": null,
+  "human_code_submission": null,
+  "naive_usability_participants": 0,
+  "actual_service_experiments": 0
+}

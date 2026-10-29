@@ -20,7 +20,7 @@
 
 ## 계산과 검증 원본
 
-- 기존 OULAD: [집계](../reports/report.json), [SQL 품질 규칙](../sql/quality.sql), [독립 pandas 대조](../reports/crosscheck.json), [지표 정의](metrics.md).
+- 기존 OULAD: [집계](../reports/report.json), [SQL 품질 규칙](../sql/quality.sql), [독립 pandas 대조](../reports/crosscheck.json), [지표 정의](data-contract.md).
 - 추가 EdNet: [분석·분모·제외·한계](ednet-analysis.md), [실제 집계](../reports/ednet_report.json), [추출 기준 해시](../data/ednet_snapshot.json), [계산 SQL](../sql/ednet.sql), [실제 반복 실행 기록](../reports/ednet_verification.json).
 - 실제 데이터 조사: [선택·제외 근거와 라이선스](data-sources.md), [출처 점검 JSON](../reports/external_source_review.json), [데이터 권리 구분](../DATA_LICENSES.md).
 - 실험: [계획](experiment-plan.md), [구현한 입력 검사](experiment-readiness.md), [합성 결과·18개 가상 시나리오](../reports/experiment-readiness.json). 실제 리텐션 실험 성과가 아니다.

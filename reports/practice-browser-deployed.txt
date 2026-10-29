@@ -1,0 +1,1 @@
+PASS: desktop full synthetic flow + export validation, omissions/review gate, pause/visibility simulation, keyboard, mobile, bad/empty-load recovery

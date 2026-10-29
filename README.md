@@ -4,7 +4,7 @@
 
 > CLASS101 제품전략팀 Data Analyst 지원을 위해 만든 독립 프로젝트입니다. CLASS101 내부 데이터·실제 서비스 실험·매출 성과를 포함하지 않습니다.
 
-[공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md)
+[공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md) · [보완 결과와 남은 확인](docs/extension-summary.md)
 
 ![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 
@@ -164,7 +164,7 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 
 <!-- BEGIN GENERATED VALIDATION -->
 - 독립 pandas 집계와 **29,671개 수강 건 × 3개 활동 지표** 대조: 불일치 0.
-- 최종 코드 전체 파이프라인 3회 실행, 결과 JSON SHA256 동일. 실행 중앙값 **22.74초** (원본 다운로드 제외, 로컬 환경). 사람의 시간 절감률은 미측정.
+- 기존 OULAD 파이프라인 3회 실행, 결과 JSON SHA256 동일. 실행 중앙값 **22.74초** (원본 다운로드 제외, 로컬 환경). 사람의 시간 절감률은 미측정.
 - 측정 대상 결과 해시: `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`.
 - 손계산 사례·회귀 테스트와 실제 브라우저 검증의 최종 상태는 [검증 기록](docs/verification.md)에서 확인.
 <!-- END GENERATED VALIDATION -->

@@ -3,7 +3,7 @@
 ## 2026-10-30 KST: 실제 자료·실행 조건 보완
 
 - 출발점: `main` c70ecd45d21633ac042e0936bd674290678b2971, 미커밋 변경 없음. 별도 `feat/evidence-extension` 작업 트리에서 수행했다. 공고 전문과 기존 공개 배포·Actions·원본 코드를 재확인했다.
-- 통합 pytest **109개 통과**. 기존 OULAD 29개를 유지하고 EdNet 표본/해시/다운로드 25개, 실험 입력 38개, 사람 실측 가져오기 6개, 보고서 계약 11개를 검증했다. 독립 리뷰 후 그룹 이름·행동 정의·음수/소수/초과 인원 5개 회귀를 추가하여 최종 **114개**를 검증한다. 원격 상태는 아래 최종 기록을 따른다.
+- 통합 pytest **109개 통과**. 기존 OULAD 29개를 유지하고 EdNet 표본/해시/다운로드 25개, 실험 입력 38개, 사람 실측 가져오기 6개, 보고서 계약 11개를 검증했다. 독립 리뷰 후 그룹 이름·행동 정의·음수/소수/초과 인원 5개 회귀를 추가하여 최종 **114개가 통과했다**. 원격 상태는 아래 최종 기록을 따른다.
 - 기존 OULAD 전체 분석 2회 재실행: 각각 27.424초·22.070초(이번 로컬 기계 시간; 기존 3회 benchmark와 별개). 결과 SHA `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db` 불변. 독립 pandas 29,671건×3필드 불일치 0.
 - EdNet 실제 2,048명×9필드 SQL/pandas 대조, 동일 파일 반복 집계, 감사 시각·전송량만 다른 캐시 재실행 일치. 고정 원본/선정 목록/색인/콘텐츠 ZIP을 검증한다. [staging 실제 실행 기록](../reports/ednet_verification.json)은 배포 검증과 구분했다.
 - 14일 경계·배정 중복/군 오염·이벤트 키·지연·관찰 성숙·SRM·가드레일을 합성 입력으로 확인. 실제 서비스 실험 0건.
@@ -83,3 +83,15 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 ## 이번 보완의 독립 리뷰와 수정
 
 새 리뷰어가 109개 테스트, 실제 EdNet 전체 재계산과 집계 바이트 일치, OULAD 보존 해시를 독립 확인했다. 현재 분석값 오류는 없었으나 잘못된 그룹 이름과 음수 인원이 보고서 계약을 통과하는 빈틈을 발견했다. 사용자에게 잘못된 근거를 표시할 수 있어 수정 대상으로 판단했다. 5개 Python 실패 사례와 실제 브라우저 실패를 먼저 확인하고, Python·JS 양쪽에서 이벤트 정의/그룹 순서/인원 정수·범위를 검사하도록 수정했다. 해당 회귀와 전체 테스트를 다시 실행했다. 라이선스 법률 해석·실제 사용자 참여·배포는 독립 리뷰어가 검증한 범위가 아니며 별도 근거와 미완료 표시를 따른다.
+
+## 이번 보완의 원격 재현·공개 배포
+
+소스 `a3a8ba78e5d6e0a679f6344c4fe291ea1f96c641` 기준:
+
+- [품질 CI 40918238570](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40918238570): 114개 테스트·build·verify 성공.
+- [OULAD 전체 재현 40918238321](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40918238321): 공식 다운로드→분석→독립 대조→정적 검증 성공.
+- [EdNet 추가 실제 자료 재현 40918238369](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40918238369): 빈 runner에서 공식 파일 새 다운로드→고정 해시 검사→전체 분석 2회→두 결과 및 저장소 집계 바이트 일치→실험 입력 검사·빌드·검증 성공. [단계별 기계 기록](../reports/extension-ci.json).
+- Render `dep-dbhnqg2vcj2c738demkg` live, 소스 SHA 일치. 공개 18개 자산 모두 HTTP 200 및 로컬 SHA 일치. [배포 기록](../reports/extension-deployment.json).
+- 공개 URL에서 기존 PC/모바일 경로, 모든 범위 분자/분모, 보조 자료·모집 계산·실측 도구의 개발자 합성 경로와 오류 복구를 다시 실행했다. [기존 흐름](../reports/browser-deployed-extension.json), [작업 동선](../reports/workbench-deployed-extension.json), [분모](../reports/reading-deployed-extension.json), [추가 화면](../reports/extension-browser-deployed-extension.json), [회귀](../reports/review-regressions-deployed-extension.json), [axe 27상태](../reports/accessibility-deployed-extension.json).
+- 공개 화면 PC·모바일 캡처를 실제 렌더링과 함께 확인했다. [화면 색인](portfolio-evidence.md). 공개 실측 페이지 검사는 자동 조작·합성 내보내기이며 실제 참여자 결과가 아니다.
+- 후속 문서·캡처·검증 스크립트 커밋은 분석 및 web 자산을 바꾸지 않는다. 최종 후속 커밋의 품질 CI와 Render live는 완료 전달 시 별도 재확인한다. 소스 검증과 문서 후속을 혼동하지 않는다.

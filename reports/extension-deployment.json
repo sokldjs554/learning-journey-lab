@@ -1,0 +1,136 @@
+{
+  "checked_at_utc": "2026-10-29T17:08:43.128104+00:00",
+  "url": "https://learning-journey-lab.onrender.com/",
+  "source_commit": "a3a8ba78e5d6e0a679f6344c4fe291ea1f96c641",
+  "deploy_id": "dep-dbhnqg2vcj2c738demkg",
+  "render_status": "live",
+  "transport": "HTTPS system CA verification",
+  "assets": [
+    {
+      "path": "report-contract.js",
+      "status": 200,
+      "sha256": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+      "local_sha256": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+      "matches": true
+    },
+    {
+      "path": "external.css",
+      "status": 200,
+      "sha256": "06d4edc50b54c36c6d7768601e4cb860ddb72d116b510316e5e6d05848ec43da",
+      "local_sha256": "06d4edc50b54c36c6d7768601e4cb860ddb72d116b510316e5e6d05848ec43da",
+      "matches": true
+    },
+    {
+      "path": "external.html",
+      "status": 200,
+      "sha256": "4f0b0aff4f3bea1d50541763f4b6a9c7559d4554179357f5aa8a975a19d87a69",
+      "local_sha256": "4f0b0aff4f3bea1d50541763f4b6a9c7559d4554179357f5aa8a975a19d87a69",
+      "matches": true
+    },
+    {
+      "path": "extension-contract.js",
+      "status": 200,
+      "sha256": "3067166bf5ceeee5fa4c6795b1d767333fbd49e92de06b739ba587aaf54f4e3b",
+      "local_sha256": "3067166bf5ceeee5fa4c6795b1d767333fbd49e92de06b739ba587aaf54f4e3b",
+      "matches": true
+    },
+    {
+      "path": "operations-practice.html",
+      "status": 200,
+      "sha256": "d686da2ee12e48a7f3615794a5e7d7176b01043d94d441ab99018bdf3a67149d",
+      "local_sha256": "d686da2ee12e48a7f3615794a5e7d7176b01043d94d441ab99018bdf3a67149d",
+      "matches": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "45c8924b24abef102c5e03f3f9ad9432af8122c0614b228fc0815f564e2509e9",
+      "local_sha256": "45c8924b24abef102c5e03f3f9ad9432af8122c0614b228fc0815f564e2509e9",
+      "matches": true
+    },
+    {
+      "path": "experiment-view.js",
+      "status": 200,
+      "sha256": "11c96b3eba50deb11b3512fa1a1effa20ec1430ab944b3cca88665e5d36f19f2",
+      "local_sha256": "11c96b3eba50deb11b3512fa1a1effa20ec1430ab944b3cca88665e5d36f19f2",
+      "matches": true
+    },
+    {
+      "path": "catalog.js",
+      "status": 200,
+      "sha256": "79e872e4c38cd1a90af92192c1f75a92612a591d3baaed4cef8004fdb1736dff",
+      "local_sha256": "79e872e4c38cd1a90af92192c1f75a92612a591d3baaed4cef8004fdb1736dff",
+      "matches": true
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "53da6817d31483d64a8fe434fdda9d1f2b7d0bf00019bbbf4c33003bb955c89b",
+      "local_sha256": "53da6817d31483d64a8fe434fdda9d1f2b7d0bf00019bbbf4c33003bb955c89b",
+      "matches": true
+    },
+    {
+      "path": "operations-practice.css",
+      "status": 200,
+      "sha256": "55e4aa9de5fc8d6db5f47ed5bd55c3d0f1373bd020fe3aa65d62ae651ae23519",
+      "local_sha256": "55e4aa9de5fc8d6db5f47ed5bd55c3d0f1373bd020fe3aa65d62ae651ae23519",
+      "matches": true
+    },
+    {
+      "path": "style.css",
+      "status": 200,
+      "sha256": "602ee56b4b309ba53880619c1cdc9593e32336a74047f19bb4ec0e838754aa35",
+      "local_sha256": "602ee56b4b309ba53880619c1cdc9593e32336a74047f19bb4ec0e838754aa35",
+      "matches": true
+    },
+    {
+      "path": "operations-practice.js",
+      "status": 200,
+      "sha256": "88f08063a19cb39d39e5c48f64db57e1d7d2d814f36a4233b8ae6e0c7faeca71",
+      "local_sha256": "88f08063a19cb39d39e5c48f64db57e1d7d2d814f36a4233b8ae6e0c7faeca71",
+      "matches": true
+    },
+    {
+      "path": "external.js",
+      "status": 200,
+      "sha256": "402f661447970cd2a35630d1fbe84b625594ed3a8bcd0e683aa5a18e6b8bfb0e",
+      "local_sha256": "402f661447970cd2a35630d1fbe84b625594ed3a8bcd0e683aa5a18e6b8bfb0e",
+      "matches": true
+    },
+    {
+      "path": "data/experiment-readiness.json",
+      "status": 200,
+      "sha256": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673",
+      "local_sha256": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673",
+      "matches": true
+    },
+    {
+      "path": "data/report.json",
+      "status": 200,
+      "sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+      "local_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+      "matches": true
+    },
+    {
+      "path": "data/ednet_report.json",
+      "status": 200,
+      "sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+      "local_sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+      "matches": true
+    },
+    {
+      "path": "data/operations.json",
+      "status": 200,
+      "sha256": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+      "local_sha256": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+      "matches": true
+    },
+    {
+      "path": "data/release.json",
+      "status": 200,
+      "sha256": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+      "local_sha256": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+      "matches": true
+    }
+  ]
+}
