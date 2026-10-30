@@ -24,12 +24,14 @@
 - 추가 EdNet: [분석·분모·제외·한계](ednet-analysis.md), [실제 집계](../reports/ednet_report.json), [추출 기준 해시](../data/ednet_snapshot.json), [계산 SQL](../sql/ednet.sql), [실제 반복 실행 기록](../reports/ednet_verification.json).
 - 실제 데이터 조사: [선택·제외 근거와 라이선스](data-sources.md), [출처 점검 JSON](../reports/external_source_review.json), [데이터 권리 구분](../DATA_LICENSES.md).
 - 실험: [계획](experiment-plan.md), [구현한 입력 검사](experiment-readiness.md), [합성 결과·18개 가상 시나리오](../reports/experiment-readiness.json). 실제 리텐션 실험 성과가 아니다.
-- 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). 사람의 제출 기록과 절감률은 아직 없다.
+- 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). 사용자 제공 측정 A·B 각 1회 표가 있으나 전체 JSON 검증·비교·절감률은 아직 없다.
 - 사용성: [실제 참여자용 과제](novice-usability-protocol.md). 미실시이며 개발자 자동 조작을 피드백으로 바꾸지 않는다.
 - 지원자: [완료한 실습·미완료 코드 작업](participation.md), [직접 실행한 Actions](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40879343617).
 - 주장 범위: [주장과 증거](evidence-map.md). 어떤 분석이 구현되어 있다는 사실과 지원자가 독립적으로 수행했다는 경험을 구분한다.
 
 ## 직접 코드 작성 안내
+
+진행 상태: 사용자가 아래 제공 예제를 추가한 [커밋 4996ef6](https://github.com/sokldjs554/learning-journey-lab/commit/4996ef674df442ccfe40e590fe94a024a6a1da3b)과 CI 성공을 Codex가 확인했다. 아래는 수행한 절차의 기록이며 다시 파일을 만들 필요는 없다.
 
 `practice/repeat-rule`의 [새 테스트 파일](https://github.com/sokldjs554/learning-journey-lab/new/practice/repeat-rule?filename=tests/test_user_repeat.py)을 연다. Codex가 제공한 아래 예제를 직접 입력하고, **이 브랜치에 커밋**한다. 이미 있는 테스트 fixture에는 같은 활동 행 2개가 있으므로 1개를 더 넣으면 총 3개, 서로 다른 행 1개, 초과 2개다.
 

@@ -1,0 +1,35 @@
+{
+  "as_of_kst": "2026-10-30",
+  "user_commit": "4996ef674df442ccfe40e590fe94a024a6a1da3b",
+  "actor": "sokldjs554",
+  "file": "tests/test_user_repeat.py",
+  "attribution": "Codex supplied example; applicant added and committed; Codex checked and integrated unchanged",
+  "branch_ci": 41011751113,
+  "branch_ci_conclusion": "success",
+  "integrated_local_tests": {
+    "targeted_passed": 1,
+    "suite_passed": 115
+  },
+  "user_confirmed_reading_ci": false,
+  "practice_evidence": {
+    "source": "user-pasted table in conversation; full exported JSON not received",
+    "practice_a": "valid",
+    "practice_b": "valid",
+    "practice_b_machine_ms_displayed": 0.2,
+    "measured_round": 1,
+    "mode": "A",
+    "active_seconds_displayed": 51.77,
+    "excluded_seconds_displayed": 378.02,
+    "verdict_displayed": "valid",
+    "full_json_validated": false,
+    "comparative_saving": null,
+    "round_2": {
+      "mode": "B",
+      "active_seconds_displayed": 14.2,
+      "excluded_seconds_displayed": 0.0,
+      "machine_ms_displayed": 0.2,
+      "verdict_displayed": "valid"
+    },
+    "context_note": "Conversation contains guided code exercise between reports of measured rounds 1 and 2; precise timing and excluded interval causes not verified."
+  }
+}

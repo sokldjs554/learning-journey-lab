@@ -95,3 +95,7 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 - 공개 URL에서 기존 PC/모바일 경로, 모든 범위 분자/분모, 보조 자료·모집 계산·실측 도구의 개발자 합성 경로와 오류 복구를 다시 실행했다. [기존 흐름](../reports/browser-deployed-extension.json), [작업 동선](../reports/workbench-deployed-extension.json), [분모](../reports/reading-deployed-extension.json), [추가 화면](../reports/extension-browser-deployed-extension.json), [회귀](../reports/review-regressions-deployed-extension.json), [axe 27상태](../reports/accessibility-deployed-extension.json).
 - 공개 화면 PC·모바일 캡처를 실제 렌더링과 함께 확인했다. [화면 색인](portfolio-evidence.md). 공개 실측 페이지 검사는 자동 조작·합성 내보내기이며 실제 참여자 결과가 아니다.
 - 후속 문서·캡처·검증 스크립트 커밋은 분석 및 web 자산을 바꾸지 않는다. 최종 후속 커밋의 품질 CI와 Render live는 완료 전달 시 별도 재확인한다. 소스 검증과 문서 후속을 혼동하지 않는다.
+
+## 지원자 테스트 통합 (2026-10-30 KST)
+
+사용자 커밋 [4996ef6](https://github.com/sokldjs554/learning-journey-lab/commit/4996ef674df442ccfe40e590fe94a024a6a1da3b)의 테스트를 수정 없이 통합했다. 실습 브랜치 [CI 41011751113](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41011751113) 성공. 최신 코드 통합에서 `python -m pytest tests/test_user_repeat.py -q`: 1 passed, 전체 115 passed. 테스트는 동일 행 3개 중 초과 2개를 검사한다. 원본 분석·web 자산은 바꾸지 않았다. Codex가 처음 로컬 명령을 기존 main 디렉터리에서 실행해 파일을 찾지 못했고, 통합 작업 트리로 경로를 바로잡아 검증했다. 사용자의 코드 오류가 아니었다.

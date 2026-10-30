@@ -66,7 +66,7 @@ EdNet은 **CC BY-NC 4.0, 연구 목적**입니다. 원본 이력은 재배포하
 
 실험 입력 검사는 합성 배정·이벤트로 관찰 경계, 교차군 배정, 지연·watermark, SRM, 가드레일을 실행 검증합니다. **실제 실험 참여자 0명, 실제 효과 미측정**. [계약과 18개 모집 시나리오](docs/experiment-readiness.md)를 함께 제공합니다.
 
-[수작업·자동 채움 비교 화면](https://learning-journey-lab.onrender.com/operations-practice.html)은 같은 규칙 3개의 결과 기록·대조를 비교합니다. 실제 사람이 수행한 시간은 아직 없으며 자동 브라우저 테스트를 사람의 노동 시간으로 바꾸지 않았습니다. [비교 조건](docs/human-comparison-protocol.md) · [실제 사용성 과제](docs/novice-usability-protocol.md) · [지원자의 실제 참여 기록](docs/participation.md).
+[수작업·자동 채움 비교 화면](https://learning-journey-lab.onrender.com/operations-practice.html)은 같은 규칙 3개의 결과 기록·대조를 비교합니다. 사용자가 A·B 연습과 측정 A·B 각 1회의 화면 표를 전달했습니다. 전체 JSON·나머지 4회 측정은 아직 없어 시간 절감률을 계산하지 않았으며, 자동 브라우저 테스트와 구분합니다. [비교 조건](docs/human-comparison-protocol.md) · [실제 사용성 과제](docs/novice-usability-protocol.md) · [지원자의 실제 참여 기록](docs/participation.md).
 
 ## 데이터와 분석 계약
 
