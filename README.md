@@ -183,6 +183,8 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 
 ## 설명 자료와 참고
 
+- [요청 사항 보완 현황과 남은 직접 검증](docs/closeout-status.md)
+
 [직무 연결·리서치](docs/research/sources.md) · [반복 업무 운영](docs/operations.md) · [면접 설명·실습](docs/interview-guide.md) · [주장과 증거](docs/evidence-map.md).
 
 README를 쓰기 전에 [Great Expectations](https://github.com/fivetran/great_expectations), [Evidently](https://github.com/evidentlyai/evidently), [Jaffle Shop DuckDB](https://github.com/dbt-labs/jaffle_shop_duckdb), [Student Cohort Retention](https://github.com/zakiyyah-ai/student_cohort_retention)의 실제 README를 읽었습니다. 문제·빠른 실행·화면·데이터 조건·검증 증거의 구성을 참고했습니다. `sk family`는 정확한 주소를 확인하지 못해 사용하지 않았습니다.

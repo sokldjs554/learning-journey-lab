@@ -5,7 +5,8 @@
 - README의 자료별 결제 필드, 면접 안내의 1인 실측, 참여 근거 링크, EdNet 초기 미선정/후속 선정 이력을 맞췄다. 전체 파이프라인 사람 기준선은 미측정으로 유지한다.
 - 공개 배포 b506a0a의 PC·모바일 폭 캡처를 갱신했다. 완료 전 문구가 남은 분석·검증 계획 4개 이미지를 교체했다. [캡처 출처·해시](../reports/closeout-screenshots.json). 모바일 전체 화면 캡처에 화면 밖 고정 바로가기 링크가 끼어드는 문제를 발견해, 촬영 전 스크롤을 처음으로 복귀시켰다. UI 데이터나 CSS는 바꾸지 않았다.
 - 로컬 pytest 115개 통과(1.96초), build/verify 및 diff 공백 검사 통과. OULAD 결과 해시 불변. 공개 Chromium 주요 흐름·22개 개설기·SQL 링크·오류 재시도, 보조 데이터 3개 정의·18개 모집 조합·3개 폭 검사를 통과했다. [기존 흐름](../reports/browser-closeout.json) · [추가 흐름](../reports/extension-browser-closeout.json).
-- 공개 자산 18개 바이트 대조와 폭 1440/390/320에서의 동일 과제·HTTP 실패 복구를 Chromium 141로 통과했다. [엔진 검사 로컬 결과](../reports/browser-engines-local-chromium.json). Firefox/WebKit은 로컬 sandbox/시스템 라이브러리 제약으로 실행이 완료되지 않아 별도 CI에서 검증하도록 추가했다. 아직 CI 결과를 확인하기 전에는 통과로 취급하지 않는다.
+- 공개 자산 18개 바이트 대조와 폭 1440/390/320에서의 동일 과제·HTTP 실패 복구를 Chromium 141로 통과했다. [엔진 검사 로컬 결과](../reports/browser-engines-local-chromium.json). Firefox/WebKit은 로컬 sandbox/시스템 라이브러리 제약으로 실행하지 못했으나, Ubuntu CI로 옮겨 Chromium 141.0.7390.37·Firefox 142.0.1·WebKit 26.0 모두 통과했다. 각 엔진은 공개 파일 18개 바이트 일치, 3개 폭의 분자/분모·반대 근거·빈 검색·실측 준비 조건, HTTP 실패 후 복구를 검증했다. [전체 JSON·실행 링크](../reports/browser-engines-ci.json). WebKit을 실제 Apple Safari나 물리 장치 검사로 표현하지 않는다.
+- 소스 `5d1d087489cf96bb3bdea941c20f0b169cad386b`의 [품질 CI 41023985573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41023985573)도 pytest·build·verify success. Render `dep-dbi4uva9lscs73fh3da0` live를 확인했다. 이번 변경은 공개 web 파일과 분석 결과를 바꾸지 않는다.
 - 처음 보는 참여자는 참여·익명 기록 동의가 진행자를 통해 확인됐으나 과제 답변은 아직 수신하지 않았다. 자동 검사를 실제 사람의 이해도 검토로 집계하지 않는다.
 
 ## 2026-10-30 KST: 실제 자료·실행 조건 보완
@@ -18,7 +19,7 @@
 - 기존 전체 사용자 경로·12개 데이터 계약 변형·4개 UI 회귀·23개 범위의 분자/분모·PC/모바일을 재확인했다. 추가 화면의 3개 이벤트 정의와 18개 가상 모집 조합, HTTP 실패와 재시도, 해시를 바꿔도 의미 오류 차단을 확인했다.
 - axe: 기존 9상태×3폭(1440/390/320)의 탐지 위반 0. 각 상태에 자동 판정 불완전 항목이 남아 있어 완전한 접근성 인증은 아니다. EdNet 3폭과 실측 페이지의 준비/수행/완료 상태도 별도 검사했다.
 - 실측 도구는 개발자 합성 조작으로 누락·검토·일시중지·탭 숨김·JSON 내보내기/검증·오류 복구를 확인했다. 합성 파일은 임시 디렉터리에서 삭제하고 실제 사람의 시간으로 기록하지 않았다.
-- 브라우저는 Playwright 1.56 / Chromium 141. Safari·Firefox·실제 모바일 기기·스크린 리더 사용자 검토는 미실시.
+- 브라우저는 Playwright 1.56 / Chromium 141. 당시 Safari·Firefox·실제 모바일 기기·스크린 리더 사용자 검토는 미실시였으며, 이후 Firefox/WebKit CI 보완은 문서 맨 위의 최신 기록을 따른다.
 
 
 최신 보완: 2026-10-30 (Asia/Seoul). 초기 검증 기록은 아래 날짜와 구분한다. 실행 결과를 근거로 작성. 로컬 성공과 배포 성공을 구분한다.
@@ -48,7 +49,7 @@
 - 다운로드: SHA256 불일치, archive 경로 탈출, 기존 다른 파일 덮어쓰기 방지 테스트.
 - 회귀: 차원 null/없는 개설기/잘못된 기간 6개, 독립 군집 1명, 상태 해결 이력과 동일 실행 중복 방지.
 - 독립 pandas: SQL/production helper를 import하지 않는 `scripts/crosscheck.py`로 **29,671 수강 건의 3개 활동 지표**를 대조, 불일치 **0**. [기계 결과](../reports/crosscheck.json).
-- 최종 결과 3회 재생성: JSON 해시 동일. 실제 실행 시간/포함 범위/환경은 [benchmark.json](../reports/benchmark.json). 수작업 기준선 없음.
+- 최종 결과 3회 재생성: JSON 해시 동일. 실제 실행 시간/포함 범위/환경은 [benchmark.json](../reports/benchmark.json). 이 전체 분석의 사람 수작업 기준선은 없다. 별도 3개 규칙 기록·대조 실측은 아래 후속 기록과 구분한다.
 - 전체 원본의 품질 규칙 20개. BLOCK 유형 14개 모두 0, REVIEW 유형 중 5개 비영. REVIEW를 통과로 바꾸거나 실제 오류라고 단정하지 않음.
 
 ## 브라우저
@@ -71,7 +72,7 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 수정 전: 하단 링크 target-size, 모바일 표 scrollable-region-focusable 위반. [수정 전 결과](../reports/accessibility-before.json).
 수정 후: 자동 탐지 위반 0. 모바일의 일부 color-contrast 항목은 자동 판정 불완전으로 남아 있어 별도 명시한다. [최종 로컬 결과](../reports/accessibility-local.json).
 
-실제 스크린 리더 사용자 테스트, Safari/Firefox, 다양한 기기, 전체 WCAG 적합성 인증은 수행하지 않았다. 자동 검사 0건은 완전한 접근성 보장이 아니다.
+실제 스크린 리더 사용자 테스트, Apple Safari, 다양한 물리 기기, 전체 WCAG 적합성 인증은 수행하지 않았다. Firefox와 WebKit의 이후 CI 검증은 문서 맨 위의 최신 기록을 따른다. 자동 검사 0건은 완전한 접근성 보장이 아니다.
 
 ## 초기 배포·원격 CI 이력
 
