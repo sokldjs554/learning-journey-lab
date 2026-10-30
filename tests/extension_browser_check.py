@@ -25,7 +25,7 @@ with sync_playwright() as p:
   page.locator('.sample-method summary').click()
   for s in e['recruitment_scenarios']:
    page.select_option('#baseline',str(s['baseline']));page.select_option('#mde',str(s['mde']));assert f"{s['total_days_upper_bound']}일" in page.locator('#recruitment-scenarios').inner_text()
-  page.select_option('#baseline','0.5');page.select_option('#mde','0.03');page.screenshot(path=str(out/f'{args.label}-plan-{width}.png'),full_page=True)
+  page.select_option('#baseline','0.5');page.select_option('#mde','0.03');page.evaluate('window.scrollTo(0,0)');page.screenshot(path=str(out/f'{args.label}-plan-{width}.png'),full_page=True)
   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth');assert not errors,errors
   results.append({'width':width,'event_definitions':3,'recruitment_scenarios':18,'status':'pass'});page.close()
  for asset,view,selector in [('ednet_report.json','/external.html','#external-error'),('experiment-readiness.json','/?view=plan','#experiment-checks')]:

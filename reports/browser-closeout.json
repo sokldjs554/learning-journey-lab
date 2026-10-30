@@ -1,0 +1,61 @@
+{
+  "url": "https://learning-journey-lab.onrender.com",
+  "engine": "Chromium 141 / Playwright 1.56",
+  "results": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "checks": [
+        "first review entry",
+        "policy impact",
+        "20 exact SQL links (desktop)",
+        "22 scoped cohorts + content + chart/table values (desktop)",
+        "global isolation",
+        "empty search",
+        "5 synthetic stages",
+        "6 sample scenarios",
+        "no horizontal overflow or JS exception"
+      ],
+      "status": "pass"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "first review entry",
+        "policy impact",
+        "20 exact SQL links (desktop)",
+        "22 scoped cohorts + content + chart/table values (desktop)",
+        "global isolation",
+        "empty search",
+        "5 synthetic stages",
+        "6 sample scenarios",
+        "no horizontal overflow or JS exception"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "skip link",
+        "roving detail tabs arrows/end"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "report HTTP failure and retry"
+      ],
+      "status": "pass"
+    },
+    {
+      "checks": [
+        "operations HTTP failure and retry"
+      ],
+      "status": "pass"
+    }
+  ]
+}

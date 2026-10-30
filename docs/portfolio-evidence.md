@@ -4,7 +4,7 @@
 
 ## 공개 배포 화면
 
-아래 `deployed-extension-*` 파일은 공개 Render URL을 Chromium으로 직접 열어 캡처한다. 브라우저·배포 결과는 [최종 검증 기록](verification.md)의 이번 보완 항목과 함께 확인한다.
+아래 `deployed-extension-*` 파일은 공개 Render URL을 Chromium으로 직접 열어 캡처한 자료다. 2026-10-30에 실측 완료 문구가 반영된 공개 화면으로 갱신했다. 캡처 시점의 소스·파일 해시는 `reports/closeout-screenshots.json`을 따른다. 브라우저·배포 결과는 [최종 검증 기록](verification.md)의 이번 보완 항목과 함께 확인한다.
 
 | 파일 | 보여 주는 내용 |
 |---|---|
@@ -26,7 +26,7 @@
 - 실험: [계획](experiment-plan.md), [구현한 입력 검사](experiment-readiness.md), [합성 결과·18개 가상 시나리오](../reports/experiment-readiness.json). 실제 리텐션 실험 성과가 아니다.
 - 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). [지원자 1명·각 3회 실제 측정 결과](human-comparison-results.md)와 [검증된 파생 JSON](../reports/human-comparison.json). 전체 분석·회사 생산성 효과로 확대하지 않는다.
 - 사용성: [실제 참여자용 과제](novice-usability-protocol.md). 미실시이며 개발자 자동 조작을 피드백으로 바꾸지 않는다.
-- 지원자: [완료한 실습·미완료 코드 작업](participation.md), [직접 실행한 Actions](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40879343617).
+- 지원자: [완료한 실습·테스트 추가·실측과 남은 확인](participation.md), [직접 실행한 Actions](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40879343617).
 - 주장 범위: [주장과 증거](evidence-map.md). 어떤 분석이 구현되어 있다는 사실과 지원자가 독립적으로 수행했다는 경험을 구분한다.
 
 ## 직접 코드 작성 안내

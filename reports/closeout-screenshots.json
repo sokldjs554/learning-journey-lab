@@ -1,0 +1,51 @@
+{
+  "captured_at_utc": "2026-10-30T07:52:39.240256+00:00",
+  "url": "https://learning-journey-lab.onrender.com",
+  "deployment_source_commit": "b506a0a6466acbaf8543ee6c839eb3b3d943ebbe",
+  "browser": "Playwright 1.56 / Chromium 141",
+  "scope": "Actual deployed pages after completed human measurement; desktop/mobile viewport emulation, not physical devices",
+  "screenshots": [
+    {
+      "path": "reports/screenshots/deployed-extension-desktop-cover.png",
+      "sha256": "da35e2eced71b1d7f813923e5ff3b649a23da1ce448f300c14a70a9e5668ca40"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-desktop-impact-cover.png",
+      "sha256": "9ff6a76a41f00153430f949221e0cf8f48f551fc42881576bdede69fe91d86e7"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-mobile-cover.png",
+      "sha256": "7026d050dd1bedde7b4b3b550e0f6e4465190c66e8b48560e283ba6a645bfc17"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-mobile-impact-cover.png",
+      "sha256": "0308744bf037c396a8695ac57f7df82d41b4131b5f8205ba9e1334d241052713"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-analysis-overall.png",
+      "sha256": "77632aefcc30897fd38eccbd549ee5c30f869399889dc37c5fbbf95ee4e40b3c"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-analysis-counter.png",
+      "sha256": "d452f5767bb849d110b558d16ff28ce524035d5a5c7ccd0309ed83819633c87d"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-external-1440.png",
+      "sha256": "5e0267a483d80a9c37145e80401e18f3c255f7fd27799906f80fe408e850486f"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-external-390.png",
+      "sha256": "5ebb7a411500f375552ebc449b312e64fc2e40a2a84ef389c8013504df2fe858"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-plan-1440.png",
+      "sha256": "acdd2f6c630818de1953050b50d7b6d7993b47f141bb8b897ec620187e30946b"
+    },
+    {
+      "path": "reports/screenshots/deployed-extension-plan-390.png",
+      "sha256": "d7f99c65610621a4f79ef04f789dbf5b0b94e9207d2965d2cba7f57c1045d6fe"
+    }
+  ],
+  "refreshed_plan_at_utc": "2026-10-30T08:01:13.435863+00:00",
+  "capture_note": "Plan captures reset scrolling to top to keep offscreen fixed skip link outside the full-page capture."
+}
