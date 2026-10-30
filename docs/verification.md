@@ -99,3 +99,7 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 ## 지원자 테스트 통합 (2026-10-30 KST)
 
 사용자 커밋 [4996ef6](https://github.com/sokldjs554/learning-journey-lab/commit/4996ef674df442ccfe40e590fe94a024a6a1da3b)의 테스트를 수정 없이 통합했다. 실습 브랜치 [CI 41011751113](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41011751113) 성공. 최신 코드 통합에서 `python -m pytest tests/test_user_repeat.py -q`: 1 passed, 전체 115 passed. 테스트는 동일 행 3개 중 초과 2개를 검사한다. 원본 분석·web 자산은 바꾸지 않았다. Codex가 처음 로컬 명령을 기존 main 디렉터리에서 실행해 파일을 찾지 못했고, 통합 작업 트리로 경로를 바로잡아 검증했다. 사용자의 코드 오류가 아니었다.
+
+## 지원자 실측 원본 검증 (2026-10-30 KST)
+
+업로드된 human_self_reported JSON을 `scripts/import_practice.py`로 검사했다. 2회 연습·6회 ABBAAB 순서·스냅샷·원문 기대값·누락/오류/대조·구간 연속성/합계·벽시계 허용 오차를 통과했다. 6회 모두 유효. 원본 해시와 상대 구간·결과는 `reports/human-comparison.json`, 해석은 `docs/human-comparison-results.md`에 있다. 원본 전체와 정확한 시각·원문 장치 식별 문자열은 공개하지 않았다. 중앙값은 statistics.median 및 정렬 후 가운데 값으로 각각 대조했다. 사용자 수행과 파일 일관성 검증은 주의 집중·생산성 개선의 인증이 아니다.

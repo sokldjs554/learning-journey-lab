@@ -12,24 +12,12 @@
   },
   "user_confirmed_reading_ci": false,
   "practice_evidence": {
-    "source": "user-pasted table in conversation; full exported JSON not received",
-    "practice_a": "valid",
-    "practice_b": "valid",
-    "practice_b_machine_ms_displayed": 0.2,
-    "measured_round": 1,
-    "mode": "A",
-    "active_seconds_displayed": 51.77,
-    "excluded_seconds_displayed": 378.02,
-    "verdict_displayed": "valid",
-    "full_json_validated": false,
-    "comparative_saving": null,
-    "round_2": {
-      "mode": "B",
-      "active_seconds_displayed": 14.2,
-      "excluded_seconds_displayed": 0.0,
-      "machine_ms_displayed": 0.2,
-      "verdict_displayed": "valid"
-    },
-    "context_note": "Conversation contains guided code exercise between reports of measured rounds 1 and 2; precise timing and excluded interval causes not verified."
+    "source": "user uploaded complete JSON; validated by scripts/import_practice.py",
+    "source_export_sha256": "28e191d96a7621c8d540491dde8d4884e5352f42ba61d78a90ea25d23cf517fc",
+    "full_json_validated": true,
+    "valid_measured_rounds": 6,
+    "summary_path": "reports/human-comparison.json",
+    "results_doc": "docs/human-comparison-results.md",
+    "scope": "One applicant, fixed task, 3 repetitions per mode, Codex guidance; descriptive task intervals, not company productivity"
   }
 }

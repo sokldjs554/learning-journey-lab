@@ -24,7 +24,7 @@
 - 추가 EdNet: [분석·분모·제외·한계](ednet-analysis.md), [실제 집계](../reports/ednet_report.json), [추출 기준 해시](../data/ednet_snapshot.json), [계산 SQL](../sql/ednet.sql), [실제 반복 실행 기록](../reports/ednet_verification.json).
 - 실제 데이터 조사: [선택·제외 근거와 라이선스](data-sources.md), [출처 점검 JSON](../reports/external_source_review.json), [데이터 권리 구분](../DATA_LICENSES.md).
 - 실험: [계획](experiment-plan.md), [구현한 입력 검사](experiment-readiness.md), [합성 결과·18개 가상 시나리오](../reports/experiment-readiness.json). 실제 리텐션 실험 성과가 아니다.
-- 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). 사용자 제공 측정 A·B 각 1회 표가 있으나 전체 JSON 검증·비교·절감률은 아직 없다.
+- 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). [지원자 1명·각 3회 실제 측정 결과](human-comparison-results.md)와 [검증된 파생 JSON](../reports/human-comparison.json). 전체 분석·회사 생산성 효과로 확대하지 않는다.
 - 사용성: [실제 참여자용 과제](novice-usability-protocol.md). 미실시이며 개발자 자동 조작을 피드백으로 바꾸지 않는다.
 - 지원자: [완료한 실습·미완료 코드 작업](participation.md), [직접 실행한 Actions](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40879343617).
 - 주장 범위: [주장과 증거](evidence-map.md). 어떤 분석이 구현되어 있다는 사실과 지원자가 독립적으로 수행했다는 경험을 구분한다.

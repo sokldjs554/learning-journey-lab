@@ -1,0 +1,331 @@
+{
+  "as_of_kst": "2026-10-30",
+  "source_type": "applicant_self_reported_human_export",
+  "participants": 1,
+  "protocol": "three-rule-transfer-v1",
+  "source_export_sha256": "28e191d96a7621c8d540491dde8d4884e5352f42ba61d78a90ea25d23cf517fc",
+  "snapshot_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+  "original_export_published": false,
+  "public_derivation": "Original time intervals and task outputs retained; exact wall timestamps and raw user agent/context string omitted. Source hash identifies private uploaded export.",
+  "environment": {
+    "device_self_report": "laptop",
+    "browser_user_agent_family": "Chrome 138 (reported by user agent; device not independently verified)",
+    "viewport": "1440x688",
+    "guidance": "Codex provided instructions through chat; participant reports no person beside them",
+    "warm_cache": true
+  },
+  "report_load_ms": 115.7000002861023,
+  "practice_rounds": 2,
+  "practice_timing_recorded": false,
+  "validation": {
+    "protocol": "three-rule-transfer-v1",
+    "origin": "human_self_reported",
+    "human_measurement": true,
+    "valid_measured_rounds": 6,
+    "all_measured_rounds_valid": true,
+    "comparison_ready": true,
+    "note": "Consistency validated only. Human identity/attention and clock authenticity are not verified. No productivity claim inferred."
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "mode": "A",
+      "task_interval_ms": 51768.7999997139,
+      "excluded_ms": 378023,
+      "elapsed_ms": 429791.7999997139,
+      "machine_generation_ms": 0,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 11002.099999904633
+        },
+        {
+          "kind": "hidden",
+          "start_ms": 11002.099999904633,
+          "end_ms": 359636.39999961853
+        },
+        {
+          "kind": "manual_pause",
+          "start_ms": 359636.39999961853,
+          "end_ms": 389025.09999990463
+        },
+        {
+          "kind": "active",
+          "start_ms": 389025.09999990463,
+          "end_ms": 429791.7999997139
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    },
+    {
+      "round": 2,
+      "mode": "B",
+      "task_interval_ms": 14204.5,
+      "excluded_ms": 0,
+      "elapsed_ms": 14204.5,
+      "machine_generation_ms": 0.19999980926513672,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 14204.5
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    },
+    {
+      "round": 3,
+      "mode": "B",
+      "task_interval_ms": 6814,
+      "excluded_ms": 0,
+      "elapsed_ms": 6814,
+      "machine_generation_ms": 0.2999997138977051,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 6814
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    },
+    {
+      "round": 4,
+      "mode": "A",
+      "task_interval_ms": 40265.2999997139,
+      "excluded_ms": 0,
+      "elapsed_ms": 40265.2999997139,
+      "machine_generation_ms": 0,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 40265.2999997139
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    },
+    {
+      "round": 5,
+      "mode": "A",
+      "task_interval_ms": 24654.800000190735,
+      "excluded_ms": 0,
+      "elapsed_ms": 24654.800000190735,
+      "machine_generation_ms": 0,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 24654.800000190735
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    },
+    {
+      "round": 6,
+      "mode": "B",
+      "task_interval_ms": 19776.700000286102,
+      "excluded_ms": 0,
+      "elapsed_ms": 19776.700000286102,
+      "machine_generation_ms": 0.10000038146972656,
+      "segments": [
+        {
+          "kind": "active",
+          "start_ms": 0,
+          "end_ms": 19776.700000286102
+        }
+      ],
+      "outputs": [
+        {
+          "rule_id": "event_exact_repeat",
+          "count": 787170,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "registration_missing_date",
+          "count": 45,
+          "severity": "review",
+          "status": "open",
+          "reviewed": true
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "count": 0,
+          "severity": "block",
+          "status": "clear",
+          "reviewed": true
+        }
+      ],
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0,
+      "valid": true
+    }
+  ],
+  "summary": {
+    "A": {
+      "n": 3,
+      "median_task_seconds": 40.265299999713896,
+      "mean_task_seconds": 38.896299999872845,
+      "min_task_seconds": 24.654800000190736,
+      "max_task_seconds": 51.7687999997139,
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0
+    },
+    "B": {
+      "n": 3,
+      "median_task_seconds": 14.2045,
+      "mean_task_seconds": 13.598400000095367,
+      "min_task_seconds": 6.814,
+      "max_task_seconds": 19.7767000002861,
+      "omissions": 0,
+      "errors": 0,
+      "unreviewed": 0
+    }
+  },
+  "median_task_difference_a_minus_b_seconds": 26.060799999713897,
+  "limitations": [
+    "One participant, one fixed three-rule task, three measured trials per mode. No independent participant replication.",
+    "ABBAAB fixed order is not randomized or fully balanced; memory and practice effects cannot be isolated.",
+    "Guided code exercise occurred between reports of trials 1 and 2. Trial 1 contains hidden and manual-pause intervals; their causes are not independently observed.",
+    "Active intervals are button-controlled time, not measured attention or labor. Excluded intervals are retained; no trial removed after seeing outcomes.",
+    "Machine generation is included in task intervals, not additional time; load time and untimed practice are separate.",
+    "Both modes have zero observed field errors/omissions/unreviewed rows; no error reduction is established.",
+    "No whole SQL pipeline, monthly labor saving, company productivity, retention or revenue effect identified.",
+    "Validation checks consistency, not identity, clock authenticity or actual attention."
+  ]
+}

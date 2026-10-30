@@ -55,7 +55,7 @@
    <div class="context-note">다운로드를 제외한 실제 로컬 전체 분석 3회. 웹에서는 분석을 실행하지 않습니다.</div>
    <div class="run-summary"><h2>반복 실행</h2><p id="run-summary"></p></div>
    <div class="table-wrap" tabindex="0" role="region" aria-label="실제 실행 시간"><table><caption>해시 확인·SQL·통계·결과 출력 포함 · 같은 최종 분석 코드, 순차 실행</caption><thead><tr><th>실행</th><th>적재·해시</th><th>품질 검사</th><th>지표 계산</th><th>통계</th><th>전체</th><th>결과</th></tr></thead><tbody id="run-table"></tbody></table></div>
-   <p class="caption">다른 QA 작업과 자원을 공유했을 수 있습니다. 사람의 수작업 시간 기준선과 절감률은 미측정입니다.</p>
+   <p class="caption">다른 QA 작업과 자원을 공유했을 수 있습니다. 이 전체 파이프라인의 사람 수작업 기준선과 절감률은 미측정입니다.</p>
    <div class="record-grid"><div><h3>재현 명령</h3><pre><code>python scripts/analyze.py
 python scripts/crosscheck.py
 python scripts/build.py
@@ -77,7 +77,7 @@ python scripts/verify.py</code></pre><a href="https://github.com/sokldjs554/lear
    <div class="lab-results" aria-live="polite"><div><span>행 수로 잘못 센 비율</span><strong id="lab-naive"></strong></div><div><span>학습자 기준 재방문</span><strong id="lab-rate"></strong><small id="lab-fraction"></small></div><div><span>판단 상태</span><strong id="lab-gate"></strong><small id="lab-missing"></small></div></div><p id="lab-explanation" class="lab-explanation"></p>
    <h2>탐지 규칙과 조치</h2><div id="fault-rules"></div><p class="caption">재수집은 생성 원천 장부의 실제 이벤트 재전송입니다. 추정으로 누락값을 채우지 않습니다. OULAD에는 전송 명세가 없어 같은 완전성 검증을 할 수 없습니다.</p>
   </section>
-  <div class="context-note"><a href="operations-practice.html">3개 규칙 기록 작업 비교 →</a> · 사람이 직접 수행한 측정은 아직 없습니다. 설치·학습과 반복 작업을 구분해 기록합니다.</div>
+  <div class="context-note"><a href="operations-practice.html">3개 규칙 기록 작업 비교 →</a> · 지원자 1명·각 3회 완료. 전체 분석·회사 생산성 효과로 일반화하지 않습니다. <a href="https://github.com/sokldjs554/learning-journey-lab/blob/main/docs/human-comparison-results.md">실측 결과와 한계 ↗</a></div>
   <footer><span>정적 분석 도구 · 서버 실행·실시간 수집 없음</span><span><a href="https://doi.org/10.1038/sdata.2017.171">OULAD</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="https://github.com/sokldjs554/learning-journey-lab/blob/main/docs/interview-guide.md">직접 실습 ↗</a></span></footer>
  </div>
 </main>
