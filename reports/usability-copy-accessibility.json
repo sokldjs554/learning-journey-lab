@@ -1,0 +1,68 @@
+{
+  "scope": "Automated local plan view; no participant or physical device retest",
+  "results": [
+    {
+      "width": 1440,
+      "headings": [
+        "학습 기록의 누락 확인",
+        "다음 학습 안내 비교",
+        "콘텐츠 노출 확대 보류"
+      ],
+      "violations": [],
+      "incomplete_checks": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "horizontal_overflow": false,
+      "participant_retest": false
+    },
+    {
+      "width": 390,
+      "headings": [
+        "학습 기록의 누락 확인",
+        "다음 학습 안내 비교",
+        "콘텐츠 노출 확대 보류"
+      ],
+      "violations": [],
+      "incomplete_checks": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "horizontal_overflow": false,
+      "participant_retest": false
+    },
+    {
+      "width": 320,
+      "headings": [
+        "학습 기록의 누락 확인",
+        "다음 학습 안내 비교",
+        "콘텐츠 노출 확대 보류"
+      ],
+      "violations": [],
+      "incomplete_checks": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "horizontal_overflow": false,
+      "participant_retest": false
+    }
+  ]
+}

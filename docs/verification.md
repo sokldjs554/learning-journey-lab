@@ -1,5 +1,12 @@
 # 검증 기록
 
+## 사용성 응답에 따른 문구 보완 (2026-10-30 KST)
+
+- 참여자 1명의 응답을 진행자를 통해 받았으며, 개인 식별 정보·직접 인용 없는 요약 공개 동의를 확인했다. [실제 응답 요약·판정 한계](usability-results.md). 수정 후 참여자 재검토는 아직 미실시다.
+- 검증 계획의 제목·목적·현재 상태와 생성 검사의 의미를 쉬운 표현으로 보완했다. 대상·배정·D7–13·ITT·해석 조건은 유지했다. SQL·집계·분석 수치는 바꾸지 않았다.
+- 로컬 Chromium에서 기존 주요 흐름·3개 폭·HTTP 오류 복구를 통과했다. [흐름 결과](../reports/usability-copy-local.json). 검증 계획의 1440/390/320px 가로 넘침 없음, axe 탐지 위반 0. 브랜드 색 대비의 자동 판정 불완전은 남는다. [접근성 결과](../reports/usability-copy-accessibility.json). 이 검사는 참여자 이해도 개선의 증거가 아니다.
+- build/verify와 diff 공백 검사 통과. 공개 배포와 CI 결과는 후속 실행 근거로 확인한다.
+
 ## 문서·화면 최신성 재검토 (2026-10-30 KST)
 
 - README의 자료별 결제 필드, 면접 안내의 1인 실측, 참여 근거 링크, EdNet 초기 미선정/후속 선정 이력을 맞췄다. 전체 파이프라인 사람 기준선은 미측정으로 유지한다.
@@ -7,7 +14,7 @@
 - 로컬 pytest 115개 통과(1.96초), build/verify 및 diff 공백 검사 통과. OULAD 결과 해시 불변. 공개 Chromium 주요 흐름·22개 개설기·SQL 링크·오류 재시도, 보조 데이터 3개 정의·18개 모집 조합·3개 폭 검사를 통과했다. [기존 흐름](../reports/browser-closeout.json) · [추가 흐름](../reports/extension-browser-closeout.json).
 - 공개 자산 18개 바이트 대조와 폭 1440/390/320에서의 동일 과제·HTTP 실패 복구를 Chromium 141로 통과했다. [엔진 검사 로컬 결과](../reports/browser-engines-local-chromium.json). Firefox/WebKit은 로컬 sandbox/시스템 라이브러리 제약으로 실행하지 못했으나, Ubuntu CI로 옮겨 Chromium 141.0.7390.37·Firefox 142.0.1·WebKit 26.0 모두 통과했다. 각 엔진은 공개 파일 18개 바이트 일치, 3개 폭의 분자/분모·반대 근거·빈 검색·실측 준비 조건, HTTP 실패 후 복구를 검증했다. [전체 JSON·실행 링크](../reports/browser-engines-ci.json). WebKit을 실제 Apple Safari나 물리 장치 검사로 표현하지 않는다.
 - 소스 `5d1d087489cf96bb3bdea941c20f0b169cad386b`의 [품질 CI 41023985573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41023985573)도 pytest·build·verify success. Render `dep-dbi4uva9lscs73fh3da0` live를 확인했다. 이번 변경은 공개 web 파일과 분석 결과를 바꾸지 않는다.
-- 처음 보는 참여자는 참여·익명 기록 동의가 진행자를 통해 확인됐으나 과제 답변은 아직 수신하지 않았다. 자동 검사를 실제 사람의 이해도 검토로 집계하지 않는다.
+- 이 보완 당시 참여 동의만 확인했던 별도 사용성 검토는 이후 네 과제 응답을 받았다. [후속 결과·문구 수정·재검토 대기](usability-results.md). 자동 검사를 실제 사람의 이해도 검토로 집계하지 않는다.
 
 ## 2026-10-30 KST: 실제 자료·실행 조건 보완
 

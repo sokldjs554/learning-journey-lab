@@ -10,7 +10,7 @@
 | 다음 주 활동과 첫 주 활동일 사이의 관계·반례를 분석 | `reports/findings.md`, temporal/cohorts/first_day_strata | 재방문을 22.8%p 개선했다 |
 | 생성 로그에서 누락·중복·지연·재수집을 재현 | `data/synthetic/`, `src/journey/faults.py`, `sql/faults.sql` | 실제 회사 장애를 복구했다 |
 | 반복 점검을 명령과 이슈 이력으로 자동화, 실행 시간 측정 | `scripts/analyze.py`, `src/journey/tracker.py`, `reports/benchmark.json` | 분석가 근무 시간을 특정 % 줄였다 |
-| 잘못된 입력·시간 경계·빈/오류 UI를 테스트하고 수정 | `tests/`, `docs/verification.md`, `docs/learning-log.md` | 실제 사용자 피드백을 받아 개선했다 |
+| 잘못된 입력·시간 경계·빈/오류 UI를 테스트하고 수정 | `tests/`, `docs/verification.md`, `docs/learning-log.md` | 자동 검사를 실제 사용자 피드백으로 표현한다 |
 | 공개 정적 분석 도구를 배포하고 브라우저에서 확인 | 배포 URL, `reports/browser-deployed.json`, `reports/deployment.json` | 실시간 분석 백엔드/프로덕션 로그 파이프라인을 운영한다 |
 | 서비스 맥락에 맞는 실험과 추가 계측을 설계 | `docs/experiment-plan.md`, JSON experiment | 실험으로 매출/연간 구독 효과를 검증했다 |
 | AI가 작성한 초안을 테스트·대조하는 개발 과정 | `docs/research/sources.md`, 테스트와 커밋 | 지원자가 코드와 조사 전체를 독립적으로 수행했다 |
@@ -35,3 +35,7 @@
 | 안내받은 실습·직접 Actions 실행·제공 테스트 추가 커밋·실측 JSON 제출 | `docs/participation.md` | 지원자가 분석·코드 전체를 독립 수행했다 |
 
 최종 캡처와 각 파일의 의미는 [포트폴리오 근거 모음](portfolio-evidence.md), 아직 사람의 확인이 필요한 항목은 [직접 참여 기록](participation.md)을 먼저 확인한다.
+
+## 실제 데모 사용성 검토의 범위
+
+지원자가 참여자 1명의 네 과제 응답·경로·도움 여부를 전달하고 익명 요약 공개 동의를 확인했다. 369건의 핵심 설명은 확인했으나, 검증 계획의 의미와 실행 여부 구분은 전달된 응답에서 완료 기준을 충족하지 못해 Codex가 문구를 수정했다. 근거는 [사용성 결과](usability-results.md)와 `web/index.html`, `web/catalog.js`다. 지원자가 진행한 실제 검토와 Codex가 작성한 UI 수정 코드를 구분한다. 수정 후 이해도 향상·신규 사용자 성공률·실제 서비스 효과는 아직 말할 수 없다.
