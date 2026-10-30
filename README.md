@@ -120,7 +120,7 @@ npm install --prefix work/a11y axe-core@4.11.0
 python tests/accessibility_check.py --url http://localhost:8766
 ```
 
-스크린 리더 사용자 테스트나 모든 OS·브라우저 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
+위 자동 검사는 실제 스크린 리더 사용을 대신하지 않습니다. 별도로 지원자가 Safari·Android·VoiceOver의 지정 과제를 직접 확인하고 결과를 전달했습니다([범위와 한계](docs/device-check-results.md)). 모든 OS·브라우저·접근성 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
 
 ### 추가 근거 재현
 

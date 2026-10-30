@@ -10,7 +10,7 @@
     "targeted_passed": 1,
     "suite_passed": 115
   },
-  "user_confirmed_reading_ci": false,
+  "user_confirmed_reading_ci": true,
   "practice_evidence": {
     "source": "user uploaded complete JSON; validated by scripts/import_practice.py",
     "source_export_sha256": "28e191d96a7621c8d540491dde8d4884e5352f42ba61d78a90ea25d23cf517fc",
@@ -19,5 +19,7 @@
     "summary_path": "reports/human-comparison.json",
     "results_doc": "docs/human-comparison-results.md",
     "scope": "One applicant, fixed task, 3 repetitions per mode, Codex guidance; descriptive task intervals, not company productivity"
-  }
+  },
+  "ci_reading_scope": "Guided reading of existing run 41011751113, step Run python -m pytest -q: 30 passed in 1.19s; user confirmed displayed result; not a new execution",
+  "physical_device_check_doc": "docs/device-check-results.md"
 }
