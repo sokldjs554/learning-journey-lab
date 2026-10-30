@@ -38,6 +38,12 @@
 - **참여자:** 네 과제에 응답하고 이해하기 어려운 부분을 전달한 것으로 진행자가 보고.
 - **Codex:** 과제 안내·기록 양식 제공, 전달된 응답의 판정과 한계 정리, 문구 수정·기술 검증·배포. 지원자가 UI 코드를 직접 고쳤다고 기록하지 않는다.
 
+## 기술 검증과 공개 화면
+
+문구 수정 소스: [79477e3](https://github.com/sokldjs554/learning-journey-lab/commit/79477e33c209590afc135989b9e5a563c5c10181). 공개 배포 파일 18개가 저장소와 일치하며, 검증 계획의 PC·모바일 폭에서 화면 넘침·JS 예외·axe 자동 탐지 위반이 없었다. 브랜드 색 대비의 자동 판정 불완전은 남는다. [공개 화면 검사](../reports/usability-copy-deployed.json) · [PC 캡처](../reports/screenshots/usability-plan-1440.png) · [모바일 캡처](../reports/screenshots/usability-plan-390.png).
+
+[품질 CI](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41029212940)에서 115개 테스트·build·verify 통과. 공개 데모의 Chromium 141·Firefox 142·WebKit 26에서 분모·반대 근거·빈 상태·오류 복구 등 기존 흐름을 통과했다. [브라우저별 근거](../reports/usability-browser-engines.json). 이는 코드·화면 검사이며 실제 사람이 내용을 이해했음을 증명하지 않는다.
+
 ## 남은 재검토
 
 수정된 공개 화면에서 같은 참여자에게 **다음에 무엇을 실험하려는지와 아직 실제로 검증하지 않은 것을 구분해 달라**는 기존 4번 과제를 다시 전달한다. 정답이나 변경한 문구를 먼저 설명하지 않는다. 본인 말로 설명한 내용·이동 경로·도움·남은 어려움을 기록한다.

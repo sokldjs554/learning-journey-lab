@@ -5,7 +5,7 @@
 - 참여자 1명의 응답을 진행자를 통해 받았으며, 개인 식별 정보·직접 인용 없는 요약 공개 동의를 확인했다. [실제 응답 요약·판정 한계](usability-results.md). 수정 후 참여자 재검토는 아직 미실시다.
 - 검증 계획의 제목·목적·현재 상태와 생성 검사의 의미를 쉬운 표현으로 보완했다. 대상·배정·D7–13·ITT·해석 조건은 유지했다. SQL·집계·분석 수치는 바꾸지 않았다.
 - 로컬 Chromium에서 기존 주요 흐름·3개 폭·HTTP 오류 복구를 통과했다. [흐름 결과](../reports/usability-copy-local.json). 검증 계획의 1440/390/320px 가로 넘침 없음, axe 탐지 위반 0. 브랜드 색 대비의 자동 판정 불완전은 남는다. [접근성 결과](../reports/usability-copy-accessibility.json). 이 검사는 참여자 이해도 개선의 증거가 아니다.
-- build/verify와 diff 공백 검사 통과. 공개 배포와 CI 결과는 후속 실행 근거로 확인한다.
+- 소스 `79477e33c209590afc135989b9e5a563c5c10181`, Render `dep-dbi5kro473hc73em8qo0` live. 공개 파일 18개 바이트 일치 및 수정 화면의 3개 폭·axe 검사를 통과했다. [공개 검사·캡처 해시](../reports/usability-copy-deployed.json). [품질 CI 41029212940](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41029212940)에서 115개 테스트(1.18초)·build·verify 통과. [브라우저 CI 41029212945](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41029212945)는 Chromium 141·Firefox 142·WebKit 26 모두 success. [엔진별 실행 근거](../reports/usability-browser-engines.json). 이후 근거 문서·캡처 추가는 web 파일을 바꾸지 않는다.
 
 ## 문서·화면 최신성 재검토 (2026-10-30 KST)
 

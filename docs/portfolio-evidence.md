@@ -4,7 +4,7 @@
 
 ## 공개 배포 화면
 
-아래 `deployed-extension-*` 파일은 공개 Render URL을 Chromium으로 직접 열어 캡처한 자료다. 2026-10-30에 실측 완료 문구가 반영된 공개 화면으로 갱신했다. 캡처 시점의 소스·파일 해시는 `reports/closeout-screenshots.json`을 따른다. 브라우저·배포 결과는 [최종 검증 기록](verification.md)의 이번 보완 항목과 함께 확인한다.
+아래 `deployed-extension-*` 파일은 공개 Render URL을 Chromium으로 직접 열어 캡처한 자료다. 2026-10-30에 실측 완료 문구가 반영된 공개 화면으로 갱신했다. 캡처 시점의 소스·파일 해시는 `reports/closeout-screenshots.json`을 따른다. 브라우저·배포 결과는 [최종 검증 기록](verification.md)의 이번 보완 항목과 함께 확인한다. 검증 계획은 후속 사용성 응답에 따라 문구를 고친 공개 배포의 `usability-plan-*` 캡처를 사용하며, [별도 출처·해시](../reports/usability-copy-deployed.json)를 따른다.
 
 | 파일 | 보여 주는 내용 |
 |---|---|
@@ -16,7 +16,7 @@
 | [BBB 2014J 반대 근거](../reports/screenshots/deployed-extension-analysis-counter.png) | 콘텐츠 접촉 −6.6%p와 범위 필터; 활동일 비교와 구분 |
 | [EdNet PC](../reports/screenshots/deployed-extension-external-1440.png) | 실제 보조 자료의 이벤트 정의·결제 관측·관측 종료 한계 |
 | [EdNet 모바일](../reports/screenshots/deployed-extension-external-390.png) | 같은 근거의 모바일 구성 |
-| [검증 계획](../reports/screenshots/deployed-extension-plan-1440.png) | 실제 참여자 0, 합성 입력 검사와 가상 모집 기간 |
+| [검증 계획 PC](../reports/screenshots/usability-plan-1440.png) · [모바일](../reports/screenshots/usability-plan-390.png) | 쉬운 제목·목적·현재 상태, 실제 서비스 실험 참여자 0명과 생성 검사의 구분 |
 
 ## 계산과 검증 원본
 
