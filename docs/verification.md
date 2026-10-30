@@ -2,7 +2,7 @@
 
 ## 사용성 응답에 따른 문구 보완 (2026-10-30 KST)
 
-- 참여자 1명의 응답을 진행자를 통해 받았으며, 개인 식별 정보·직접 인용 없는 요약 공개 동의를 확인했다. [실제 응답 요약·판정 한계](usability-results.md). 수정 후 참여자 재검토는 아직 미실시다.
+- 참여자 1명의 응답을 진행자를 통해 받았으며, 개인 식별 정보·직접 인용 없는 요약 공개 동의를 확인했다. [실제 응답 요약·판정 한계](usability-results.md). 수정 후 재검토 응답과 중립적 추가 질문 1회 뒤의 설명을 받았다. 목적 설명은 부분 확인했으나 실제 실험의 미실행 상태를 구분했는지는 미확인이다. 주관적 쉬움 평가·과제 설명·자동 검사 결과를 분리한다.
 - 검증 계획의 제목·목적·현재 상태와 생성 검사의 의미를 쉬운 표현으로 보완했다. 대상·배정·D7–13·ITT·해석 조건은 유지했다. SQL·집계·분석 수치는 바꾸지 않았다.
 - 로컬 Chromium에서 기존 주요 흐름·3개 폭·HTTP 오류 복구를 통과했다. [흐름 결과](../reports/usability-copy-local.json). 검증 계획의 1440/390/320px 가로 넘침 없음, axe 탐지 위반 0. 브랜드 색 대비의 자동 판정 불완전은 남는다. [접근성 결과](../reports/usability-copy-accessibility.json). 이 검사는 참여자 이해도 개선의 증거가 아니다.
 - 소스 `79477e33c209590afc135989b9e5a563c5c10181`, Render `dep-dbi5kro473hc73em8qo0` live. 공개 파일 18개 바이트 일치 및 수정 화면의 3개 폭·axe 검사를 통과했다. [공개 검사·캡처 해시](../reports/usability-copy-deployed.json). [품질 CI 41029212940](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41029212940)에서 115개 테스트(1.18초)·build·verify 통과. [브라우저 CI 41029212945](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41029212945)는 Chromium 141·Firefox 142·WebKit 26 모두 success. [엔진별 실행 근거](../reports/usability-browser-engines.json). 이후 근거 문서·캡처 추가는 web 파일을 바꾸지 않는다.
@@ -14,7 +14,7 @@
 - 로컬 pytest 115개 통과(1.96초), build/verify 및 diff 공백 검사 통과. OULAD 결과 해시 불변. 공개 Chromium 주요 흐름·22개 개설기·SQL 링크·오류 재시도, 보조 데이터 3개 정의·18개 모집 조합·3개 폭 검사를 통과했다. [기존 흐름](../reports/browser-closeout.json) · [추가 흐름](../reports/extension-browser-closeout.json).
 - 공개 자산 18개 바이트 대조와 폭 1440/390/320에서의 동일 과제·HTTP 실패 복구를 Chromium 141로 통과했다. [엔진 검사 로컬 결과](../reports/browser-engines-local-chromium.json). Firefox/WebKit은 로컬 sandbox/시스템 라이브러리 제약으로 실행하지 못했으나, Ubuntu CI로 옮겨 Chromium 141.0.7390.37·Firefox 142.0.1·WebKit 26.0 모두 통과했다. 각 엔진은 공개 파일 18개 바이트 일치, 3개 폭의 분자/분모·반대 근거·빈 검색·실측 준비 조건, HTTP 실패 후 복구를 검증했다. [전체 JSON·실행 링크](../reports/browser-engines-ci.json). WebKit을 실제 Apple Safari나 물리 장치 검사로 표현하지 않는다.
 - 소스 `5d1d087489cf96bb3bdea941c20f0b169cad386b`의 [품질 CI 41023985573](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41023985573)도 pytest·build·verify success. Render `dep-dbi4uva9lscs73fh3da0` live를 확인했다. 이번 변경은 공개 web 파일과 분석 결과를 바꾸지 않는다.
-- 이 보완 당시 참여 동의만 확인했던 별도 사용성 검토는 이후 네 과제 응답을 받았다. [후속 결과·문구 수정·재검토 대기](usability-results.md). 자동 검사를 실제 사람의 이해도 검토로 집계하지 않는다.
+- 이 보완 당시 참여 동의만 확인했던 별도 사용성 검토는 이후 네 과제 응답을 받았다. [후속 결과·문구 수정·재검토의 부분 확인](usability-results.md). 자동 검사를 실제 사람의 이해도 검토로 집계하지 않는다.
 
 ## 2026-10-30 KST: 실제 자료·실행 조건 보완
 
