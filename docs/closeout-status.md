@@ -14,7 +14,7 @@
 
 - 로컬 pytest 115개, build/verify 통과. [품질 CI](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41023985573)도 성공했다.
 - 공개 데모의 Chromium 141·Firefox 142·WebKit 26 실제 실행: 공개 자산 18개 바이트 일치, 1440/390/320px에서 분자·분모·반대 근거·빈 상태·준비 조건, HTTP 오류 후 재시도. [CI](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41023985544) · [엔진별 기록](../reports/browser-engines-ci.json).
-- 수정 전후 OULAD 집계 SHA256은 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`로 동일하다. 분석값이나 공개 web 파일은 이번 보완으로 바꾸지 않았다.
+- 수정 전후 OULAD 집계 SHA256은 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`로 동일하다. 문서 1~5번 보완 단계에서는 분석값과 공개 web 파일을 바꾸지 않았다. 이후 별도 사용성 응답에 따른 문구 수정은 [사용성 기록](usability-results.md)에 구분했다.
 - 초기 로컬 Firefox/WebKit 실행 실패와 CI로 옮긴 이유, 캡처 수정은 [검증 기록](verification.md)과 [학습 기록](learning-log.md)에 보존했다.
 
 ## 직접 수행 결과가 필요한 항목
