@@ -129,3 +129,14 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 ## 지원자 실측 원본 검증 (2026-10-30 KST)
 
 업로드된 human_self_reported JSON을 `scripts/import_practice.py`로 검사했다. 2회 연습·6회 ABBAAB 순서·스냅샷·원문 기대값·누락/오류/대조·구간 연속성/합계·벽시계 허용 오차를 통과했다. 6회 모두 유효. 원본 해시와 상대 구간·결과는 `reports/human-comparison.json`, 해석은 `docs/human-comparison-results.md`에 있다. 원본 전체와 정확한 시각·원문 장치 식별 문자열은 공개하지 않았다. 중앙값은 statistics.median 및 정렬 후 가운데 값으로 각각 대조했다. 사용자 수행과 파일 일관성 검증은 주의 집중·생산성 개선의 인증이 아니다.
+
+
+## 전체 운영 비교·접근성 확장 후속 (2026-10-31 KST)
+
+소스 `95e8c205deaba7868d56bfda6df2c6035ab8abe1`에서 전체 pytest139개, [품질 CI41159826990](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159826990), [공개 원본 전체 재현41159827011](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827011)이 통과했다. 전체 운영 비교 도구의 개발자 연습 A/B는12단계·84개 확인 항목·최종 결과 해시가 일치했다. [도구 검증](full-operations-validation.md). 사람의 새 연습·본 측정은 아직 대기다.
+
+접근성은 로컬168상태 조합과 공개 URL112상태 조합을 구분해 검사했다. [결함과 수정](accessibility-review-results.md), [공개 후속 기계 기록](../reports/accessibility-deployed-followup.json). 공개18개 파일과 저장소 바이트 일치, 세 브라우저 엔진의 주요 동선, 8개 초점·대비 회귀와32개 키보드 순회가 통과했다. Chromium141·Firefox142·WebKit26의 [CI41159827014](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827014)는3번째 실행에서 성공했다.
+
+실패 이력: 배포 직후 첫 CI는 이전 app.js, 두 번째 CI와 로컬 검사는 이전 external.js 때문에 실패했다. external.js의 응답 해시는 이전 커밋과 같았고, HTTP응답은 `s-maxage=300`, 이전 Last-Modified와 캐시 HIT를 보였다. 요청 no-cache와 쿼리 문자열만으로는 바뀌지 않았다. 캐시 갱신 후 코드 추가 변경 없이 최신18개 파일 일치와 같은 검사를 확인했다. 배포 live 표시만으로 공개 파일 전파 완료를 판단하지 않는다. 이 기록은 다음 배포에서 검사를 시작하기 전 파일 일치를 먼저 확인할 근거다.
+
+후속 문서 커밋은 코드·web·분석 결과를 바꾸지 않는다. 실제 Safari확대·VoiceOver새 과제 응답은 아직 없으며, 자동검사 성공을 전체 접근성 인증이나 사람의 수행으로 표현하지 않는다.

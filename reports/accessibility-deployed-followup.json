@@ -1,0 +1,840 @@
+{
+  "tested_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+  "first_local_deployed_check": {
+    "time": "2026-10-31T02:24:51.030584+00:00",
+    "status": "fail",
+    "error": "Deployed asset differs: external.js"
+  },
+  "old_external_js_sha256": "402f661447970cd2a35630d1fbe84b625594ed3a8bcd0e683aa5a18e6b8bfb0e",
+  "expected_external_js_sha256": "7f73515caaf63148ab67a677755fc0790139313485006e1f517567c1434fa697",
+  "diagnosis": "Deployed public path served previous commit file with cache age < 300 and old Last-Modified; query string and request no-cache did not change response.",
+  "response_sample": [
+    {
+      "url": "https://learning-journey-lab.onrender.com/external.js",
+      "matches": false,
+      "sha256": "402f661447970cd2a35630d1fbe84b625594ed3a8bcd0e683aa5a18e6b8bfb0e",
+      "cache_headers": {
+        "date": "Sat, 31 Oct 2026 02:28:18 GMT",
+        "cache-control": "public, max-age=0, s-maxage=300",
+        "age": "203",
+        "last-modified": "Sat, 31 Oct 2026 01:44:22 UTC",
+        "cf-cache-status": "HIT"
+      }
+    },
+    {
+      "url": "https://learning-journey-lab.onrender.com/external.js?revision=95e8c205",
+      "matches": false,
+      "sha256": "402f661447970cd2a35630d1fbe84b625594ed3a8bcd0e683aa5a18e6b8bfb0e",
+      "cache_headers": {
+        "date": "Sat, 31 Oct 2026 02:28:18 GMT",
+        "cache-control": "public, max-age=0, s-maxage=300",
+        "age": "203",
+        "last-modified": "Sat, 31 Oct 2026 01:44:22 UTC",
+        "cf-cache-status": "HIT"
+      }
+    }
+  ],
+  "developer_browser_after_cache_refresh": {
+    "checked_at_utc": "2026-10-31T02:30:04.204611+00:00",
+    "source_commit": null,
+    "browser": "chromium",
+    "url": "https://learning-journey-lab.onrender.com",
+    "actual_participant_test": false,
+    "scope": "Automated desktop/mobile viewport emulation. WebKit is not Apple Safari; no physical device or screen-reader participant test.",
+    "assets": [
+      {
+        "path": "app.js",
+        "sha256": "95c18c19fd2ff8ad45d617efd482ead636bbd6f573388afbdfe7d30569c8323e",
+        "matches": true
+      },
+      {
+        "path": "catalog.js",
+        "sha256": "af27646a1927307978079bddc41b0f18366dc6c69791f38a1d4feb70d138c93a",
+        "matches": true
+      },
+      {
+        "path": "data/ednet_report.json",
+        "sha256": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+        "matches": true
+      },
+      {
+        "path": "data/experiment-readiness.json",
+        "sha256": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673",
+        "matches": true
+      },
+      {
+        "path": "data/operations.json",
+        "sha256": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+        "matches": true
+      },
+      {
+        "path": "data/release.json",
+        "sha256": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+        "matches": true
+      },
+      {
+        "path": "data/report.json",
+        "sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+        "matches": true
+      },
+      {
+        "path": "experiment-view.js",
+        "sha256": "86bf657dfd19138f2b81b6d19cae2ec07e0f5fdf5000b318a3f4b37432902f6a",
+        "matches": true
+      },
+      {
+        "path": "extension-contract.js",
+        "sha256": "3067166bf5ceeee5fa4c6795b1d767333fbd49e92de06b739ba587aaf54f4e3b",
+        "matches": true
+      },
+      {
+        "path": "external.css",
+        "sha256": "d456ad8cf234f0250d04989d4c6092b365bdafb346dbc00f074d78448de79bf5",
+        "matches": true
+      },
+      {
+        "path": "external.html",
+        "sha256": "e2921569da97628b0e1a9cc2ffe867f945879f624a02a0741e4dd30049fc8c7b",
+        "matches": true
+      },
+      {
+        "path": "external.js",
+        "sha256": "7f73515caaf63148ab67a677755fc0790139313485006e1f517567c1434fa697",
+        "matches": true
+      },
+      {
+        "path": "index.html",
+        "sha256": "096ffe1ab642ac099e03c57b8604ab5845ae184796124ca6478d67876faa931a",
+        "matches": true
+      },
+      {
+        "path": "operations-practice.css",
+        "sha256": "ea17c25d35055dc6baefe35f1592923a70aac2a04c095ef271c19e2f50a48ee6",
+        "matches": true
+      },
+      {
+        "path": "operations-practice.html",
+        "sha256": "3872126eefb4ac3b4619444efdf8f17139ad43499c7ca902866b16df710134b8",
+        "matches": true
+      },
+      {
+        "path": "operations-practice.js",
+        "sha256": "b9baa30064d195dfb107d09a2a45e0ce63ea4c95a125f4d459702bda04a63f48",
+        "matches": true
+      },
+      {
+        "path": "report-contract.js",
+        "sha256": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+        "matches": true
+      },
+      {
+        "path": "style.css",
+        "sha256": "3a06fe8fa0e6d3d4159889e2222f0a7a0f988435b9491c13eceaf70a87ef52cb",
+        "matches": true
+      }
+    ],
+    "checks": [
+      {
+        "width": 1440,
+        "status": "pass",
+        "tasks": [
+          "369 policy meaning",
+          "keyboard detail tabs",
+          "23 scope formulas",
+          "negative content example",
+          "empty search",
+          "synthetic experiment provenance",
+          "3 external event definitions",
+          "practice preparation gate",
+          "overflow and page errors"
+        ]
+      },
+      {
+        "width": 390,
+        "status": "pass",
+        "tasks": [
+          "369 policy meaning",
+          "keyboard detail tabs",
+          "23 scope formulas",
+          "negative content example",
+          "empty search",
+          "synthetic experiment provenance",
+          "3 external event definitions",
+          "practice preparation gate",
+          "overflow and page errors"
+        ]
+      },
+      {
+        "width": 320,
+        "status": "pass",
+        "tasks": [
+          "369 policy meaning",
+          "keyboard detail tabs",
+          "23 scope formulas",
+          "negative content example",
+          "empty search",
+          "synthetic experiment provenance",
+          "3 external event definitions",
+          "practice preparation gate",
+          "overflow and page errors"
+        ]
+      },
+      {
+        "http_failure_and_retry": "pass"
+      }
+    ],
+    "status": "pass",
+    "version": "141.0.7390.37"
+  },
+  "focus_contrast_after_cache_refresh": {
+    "human_observation": false,
+    "results": [
+      {
+        "task": "retry_focus",
+        "path": "/",
+        "target": "page-title",
+        "focus": "page-title",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "retry_focus",
+        "path": "/external.html",
+        "target": "external-title",
+        "focus": "external-title",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "retry_focus",
+        "path": "/?view=plan",
+        "target": "experiment-checks",
+        "focus": "experiment-checks",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/?view=review",
+        "selector": "#rule-search",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/external.html",
+        "selector": "#event-definition",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/operations-practice.html",
+        "selector": "#context-notes",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "detail panel visible keyboard focus",
+        "observed": {
+          "id": "detail-content",
+          "outline": "solid",
+          "width": "3px"
+        },
+        "pass": true
+      },
+      {
+        "task": "named focusable SQL regions",
+        "count": 6,
+        "pass": true
+      }
+    ]
+  },
+  "keyboard_after_cache_refresh": {
+    "source": "developer keyboard automation",
+    "results": [
+      {
+        "path": "/?view=review",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 26,
+        "reached": 26,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 27,
+        "reached": 27,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review&detail=1",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 26,
+        "reached": 26,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review&detail=1",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 27,
+        "reached": 27,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=analysis",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 45,
+        "reached": 45,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=analysis",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 46,
+        "reached": 46,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=runs",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 24,
+        "reached": 24,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=runs",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 24,
+        "reached": 24,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=plan",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 19,
+        "reached": 19,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=plan",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 22,
+        "reached": 22,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=lab",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 25,
+        "reached": 25,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=lab",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 31,
+        "reached": 31,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/external.html",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/external.html",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/operations-practice.html",
+        "expanded_details": false,
+        "width": 1440,
+        "expected_controls": 7,
+        "reached": 7,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/operations-practice.html",
+        "expanded_details": true,
+        "width": 1440,
+        "expected_controls": 7,
+        "reached": 7,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review&detail=1",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 20,
+        "reached": 20,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=review&detail=1",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=analysis",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 45,
+        "reached": 45,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=analysis",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 46,
+        "reached": 46,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=runs",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 24,
+        "reached": 24,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=runs",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 24,
+        "reached": 24,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=plan",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 19,
+        "reached": 19,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=plan",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 22,
+        "reached": 22,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=lab",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 25,
+        "reached": 25,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/?view=lab",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 31,
+        "reached": 31,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/external.html",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/external.html",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 21,
+        "reached": 21,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/operations-practice.html",
+        "expanded_details": false,
+        "width": 320,
+        "expected_controls": 7,
+        "reached": 7,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      },
+      {
+        "path": "/operations-practice.html",
+        "expanded_details": true,
+        "width": 320,
+        "expected_controls": 7,
+        "reached": 7,
+        "missing": [],
+        "offscreen": [],
+        "no_indicator": []
+      }
+    ]
+  },
+  "cache_followup": [
+    {
+      "matches": false,
+      "age": "282",
+      "modified": "Sat, 31 Oct 2026 01:44:22 UTC"
+    },
+    {
+      "matches": false,
+      "age": "290",
+      "modified": "Sat, 31 Oct 2026 01:44:22 UTC"
+    },
+    {
+      "matches": false,
+      "age": "299",
+      "modified": "Sat, 31 Oct 2026 01:44:22 UTC"
+    },
+    {
+      "matches": true,
+      "age": "4",
+      "modified": "Sat, 31 Oct 2026 02:24:22 UTC"
+    }
+  ],
+  "actual_participant_test": false,
+  "limits": [
+    "Automated keyboard and browser checks are not actual VoiceOver audio or human usability evidence.",
+    "Native Safari 200/400 percent zoom and expanded human tasks remain pending.",
+    "The first two CI attempts failed on stale deployed asset checks; preserve those failures."
+  ],
+  "ci": {
+    "run_url": "https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827014",
+    "successful_attempt": 3,
+    "earlier_attempts": [
+      {
+        "attempt": 1,
+        "chromium_error": "Deployed asset differs: app.js"
+      },
+      {
+        "attempt": 2,
+        "chromium_error": "Deployed asset differs: external.js"
+      }
+    ],
+    "browsers": [
+      {
+        "job_id": 124416188267,
+        "browser": "webkit",
+        "version": "26.0",
+        "status": "pass",
+        "source_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+        "checked_at_utc": "2026-10-31T02:31:03.339045+00:00",
+        "assets_matched": 18,
+        "checks": [
+          {
+            "width": 1440,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 390,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 320,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "http_failure_and_retry": "pass"
+          }
+        ]
+      },
+      {
+        "job_id": 124416188320,
+        "browser": "chromium",
+        "version": "141.0.7390.37",
+        "status": "pass",
+        "source_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+        "checked_at_utc": "2026-10-31T02:30:51.486872+00:00",
+        "assets_matched": 18,
+        "checks": [
+          {
+            "width": 1440,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 390,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 320,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "http_failure_and_retry": "pass"
+          }
+        ]
+      },
+      {
+        "job_id": 124416188350,
+        "browser": "firefox",
+        "version": "142.0.1",
+        "status": "pass",
+        "source_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+        "checked_at_utc": "2026-10-31T02:30:53.629854+00:00",
+        "assets_matched": 18,
+        "checks": [
+          {
+            "width": 1440,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 390,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "width": 320,
+            "status": "pass",
+            "tasks": [
+              "369 policy meaning",
+              "keyboard detail tabs",
+              "23 scope formulas",
+              "negative content example",
+              "empty search",
+              "synthetic experiment provenance",
+              "3 external event definitions",
+              "practice preparation gate",
+              "overflow and page errors"
+            ]
+          },
+          {
+            "http_failure_and_retry": "pass"
+          }
+        ]
+      }
+    ],
+    "chromium_extended_accessibility": {
+      "states": 112,
+      "widths": [
+        1440,
+        320
+      ],
+      "status": "pass",
+      "problems": [],
+      "practice_regressions": 7,
+      "practice_regression_status": "pass",
+      "log_observed_at_utc": "2026-10-31T02:33:51Z"
+    },
+    "other_runs": [
+      {
+        "run_id": 41159826990,
+        "name": "Quality and static evidence",
+        "source_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "run_id": 41159827011,
+        "name": "Full public-data reproduction",
+        "source_commit": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  }
+}
+
