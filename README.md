@@ -122,6 +122,8 @@ python tests/accessibility_check.py --url http://localhost:8766
 
 위 자동 검사는 실제 스크린 리더 사용을 대신하지 않습니다. 별도로 지원자가 Safari·Android·VoiceOver의 지정 과제를 직접 확인하고 결과를 전달했습니다([범위와 한계](docs/device-check-results.md)). 모든 OS·브라우저·접근성 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
 
+[전체 OULAD 수동 운영·일괄 실행 비교 절차](docs/full-operations-protocol.md)도 준비했습니다. 두 방식은 같은 12단계를 계산하고 84개 항목과 통계 요약을 확인합니다. 개발자 동등성 검증은 완료했으며 실제 사람 측정은 아직 대기입니다. 기존 3개 규칙 실측·100초 재실행 기록과 구분합니다.
+
 ### 추가 근거 재현
 
 ```bash

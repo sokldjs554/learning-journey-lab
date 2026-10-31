@@ -46,7 +46,7 @@ function renderQueue(){
 function table(caption,headers,rows){return `<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(caption)}"><table><caption>${esc(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map((c,i)=>i?`<td>${c}</td>`:`<th scope="row">${c}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
 function sourceBlock(rule){
  const source=operations.sql_files[rule.sql_file];
- return `<div class="source-row"><span>실행에 사용한 SQL · ${rule.sql_line}행</span><a id="sql-link" href="${repo}${rule.sql_file}#L${rule.sql_line}" target="_blank" rel="noopener">${esc(rule.sql_file)} ↗</a></div><details class="sql-details"><summary>SQL 원문 펼치기</summary><pre tabindex="0" aria-label="SQL 원문"><code>${source.split('\n').map((line,i)=>`<span class="sql-line ${i+1===rule.sql_line?'current':''}"><span class="line-no">${i+1}</span>${esc(line)}</span>`).join('')}</code></pre></details>`;
+ return `<div class="source-row"><span>실행에 사용한 SQL · ${rule.sql_line}행</span><a id="sql-link" href="${repo}${rule.sql_file}#L${rule.sql_line}" target="_blank" rel="noopener">${esc(rule.sql_file)} ↗</a></div><details class="sql-details"><summary>SQL 원문 펼치기</summary><pre tabindex="0" role="region" aria-label="SQL 원문"><code>${source.split('\n').map((line,i)=>`<span class="sql-line ${i+1===rule.sql_line?'current':''}"><span class="line-no">${i+1}</span>${esc(line)}</span>`).join('')}</code></pre></details>`;
 }
 function impactHTML(rule){
  const id=rule.rule_id;
@@ -133,7 +133,7 @@ function initialize(){
  $('run-table').innerHTML=b.runs.map((run,i)=>`<tr><th scope="row">${i+1}회</th>${['load_and_hash_seconds','quality_seconds','mart_and_sensitivity_seconds','statistics_seconds','total_seconds'].map(k=>`<td>${run.timings[k].toFixed(2)}초</td>`).join('')}<td>동일 해시</td></tr>`).join('');
  $('snapshot-hash').textContent=operations.snapshot_id;$('report-hash').textContent=operations.report_sha256;
  $('issue-registry').innerHTML=operations.rules.filter(x=>x.status==='open').map(r=>`<a href="?view=review&rule=${r.rule_id}&tab=decision&detail=1" data-issue="${r.rule_id}"><span>${esc(ruleText[r.rule_id]?.[0]||r.rule_id)} <span aria-hidden="true">→</span></span><small>${number(r.count)} ${esc(ruleConfig(r).unit)} · 원본 스냅샷 ${r.history.length}개 · 원인 미확정/검토</small></a>`).join('');
- $('fault-rules').innerHTML=report.fault_lab.issues.map(r=>`<details><summary>${esc(r.rule_id)}<span>${r.count}건</span></summary><p>${esc(r.action)}</p><pre tabindex="0" aria-label="생성 로그 검증 SQL"><code>${esc(r.query)}</code></pre></details>`).join('');
+ $('fault-rules').innerHTML=report.fault_lab.issues.map(r=>`<details><summary>${esc(r.rule_id)}<span>${r.count}건</span></summary><p>${esc(r.action)}</p><pre tabindex="0" role="region" aria-label="생성 로그 검증 SQL"><code>${esc(r.query)}</code></pre></details>`).join('');
  renderSample();state=readState();history.replaceState({},'',stateURL(state));renderPage();
 }
 document.addEventListener('click',e=>{
@@ -170,6 +170,7 @@ window.addEventListener('popstate',()=>{
  else $('page-title').focus();
 });
 async function load(){
+ const restoreFocus=document.activeElement===$('retry');
  $('error').hidden=true;$('app').hidden=true;$('loading').hidden=false;
  let failure=['근거 파일 불러오기 실패','연결 상태 또는 배포 파일을 확인한 뒤 다시 불러와 주세요.'];
  try{
@@ -189,6 +190,6 @@ async function load(){
   if(digest!==o.report_sha256)throw new Error('Report bytes do not match operating evidence');
   validateReport(r);validateOperations(o,r);
   report=r;operations=o;initialize();$('app').hidden=false;
- }catch(error){report=null;operations=null;$('error-title').textContent=failure[0];$('error-description').textContent=failure[1];$('error').hidden=false;}finally{$('loading').hidden=true;}
+ }catch(error){report=null;operations=null;$('error-title').textContent=failure[0];$('error-description').textContent=failure[1];$('error').hidden=false;}finally{$('loading').hidden=true;if(restoreFocus)(report?$('page-title'):$('retry')).focus();}
 }
 $('retry').onclick=load;load();

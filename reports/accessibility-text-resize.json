@@ -1,0 +1,40 @@
+{
+  "method": "Computed text sizes doubled at 1280px; not browser UI zoom",
+  "results": [
+    {
+      "view": "review",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "analysis",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "runs",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "plan",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "lab",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "external",
+      "page_width": 1280,
+      "viewport": 1280
+    },
+    {
+      "view": "practice",
+      "page_width": 1280,
+      "viewport": 1280
+    }
+  ]
+}

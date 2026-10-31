@@ -1,0 +1,76 @@
+{
+  "human_observation": false,
+  "results": [
+    {
+      "task": "retry_focus",
+      "path": "/",
+      "target": "page-title",
+      "focus": "page-title",
+      "failure_retry_focus": true,
+      "pass": true
+    },
+    {
+      "task": "retry_focus",
+      "path": "/external.html",
+      "target": "external-title",
+      "focus": "external-title",
+      "failure_retry_focus": true,
+      "pass": true
+    },
+    {
+      "task": "retry_focus",
+      "path": "/?view=plan",
+      "target": "experiment-checks",
+      "focus": "experiment-checks",
+      "failure_retry_focus": true,
+      "pass": true
+    },
+    {
+      "task": "input boundary contrast",
+      "path": "/?view=review",
+      "selector": "#rule-search",
+      "colors": {
+        "border": "rgb(123, 139, 144)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "ratio": 3.536567166474101,
+      "pass": true
+    },
+    {
+      "task": "input boundary contrast",
+      "path": "/external.html",
+      "selector": "#event-definition",
+      "colors": {
+        "border": "rgb(123, 139, 144)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "ratio": 3.536567166474101,
+      "pass": true
+    },
+    {
+      "task": "input boundary contrast",
+      "path": "/operations-practice.html",
+      "selector": "#context-notes",
+      "colors": {
+        "border": "rgb(123, 139, 144)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "ratio": 3.536567166474101,
+      "pass": true
+    },
+    {
+      "task": "detail panel visible keyboard focus",
+      "observed": {
+        "id": "detail-content",
+        "outline": "solid",
+        "width": "3px"
+      },
+      "pass": true
+    },
+    {
+      "task": "named focusable SQL regions",
+      "count": 6,
+      "pass": true
+    }
+  ]
+}

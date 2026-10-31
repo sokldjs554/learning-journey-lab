@@ -1,0 +1,9 @@
+# Matched full OULAD operations comparison — implementation plan
+
+The approved contrast is A: execute existing calculations stage by stage and manually record results; B: batch the identical stages and review prefilled records. Neither condition writes SQL from scratch or does hand arithmetic. Both review the same stage artifacts and confirm the same fields. No AI calls are involved.
+
+Keep the production analysis calculations and order unchanged, exposing explicit checkpoints. Stages cover source hashing/loading; all 20 quality rules; base/strict marts; overall/bootstrap; 22 cohorts; temporal holdout; first-day/click/transition sensitivity; synthetic fault lab; report/mart and issue history; independent pandas crosscheck; static build; verification. Copy reference support evidence and issue history into a fresh run directory; never mutate source CSV or historical reports.
+
+Before timing, freeze source manifest, code/runtime versions, support evidence, and expected output hashes. Each attempt gets an exclusive directory and append-only event log. Practice A then B precedes six measured rounds ABBAAB. Aborted/invalid attempts remain and retries retain their scheduled condition. Timing separates total wall time, declared pauses, machine execution, and remaining interaction/idle time; none is inferred to be attention. Installation/download/setup/practice are excluded from measured rounds. No human results are fabricated, and development trials are labeled developer_synthetic.
+
+Implement tests first for state/order, invalid values including NaN, repeat continuation, mismatch rejection, and matched artifacts. Verify real OULAD against report SHA 675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db and independent 29,671-row crosscheck. Provide minimal Mac instructions preserving raw CSV and venv.

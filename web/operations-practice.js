@@ -24,7 +24,7 @@
       [row.rule_id,row.count.toLocaleString('en-US'),row.severity].forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td)});$('source-rows').append(tr);
       const div=document.createElement('div');div.className='output-row';
       // Rule IDs are fixed constants, not imported HTML.
-      div.innerHTML=`<strong>${IDS[i]}</strong><label for="count-${i}">건수<input id="count-${i}" type="number" min="0" step="1" inputmode="numeric"></label><label for="severity-${i}">심각도<select id="severity-${i}"><option value="">선택</option><option value="review">review</option><option value="block">block</option></select></label><label for="status-${i}">상태<select id="status-${i}"><option value="">선택</option><option value="open">open</option><option value="clear">clear</option></select></label><label class="check" for="reviewed-${i}"><input id="reviewed-${i}" type="checkbox">이 행의 세 필드를 원문 및 상태 규칙과 대조했습니다.</label>`;
+      div.innerHTML=`<strong id="rule-${i}">${IDS[i]}</strong><label for="count-${i}"><span id="count-label-${i}">건수</span><input id="count-${i}" aria-labelledby="rule-${i} count-label-${i}" type="number" min="0" step="1" inputmode="numeric"></label><label for="severity-${i}"><span id="severity-label-${i}">심각도</span><select id="severity-${i}" aria-labelledby="rule-${i} severity-label-${i}"><option value="">선택</option><option value="review">review</option><option value="block">block</option></select></label><label for="status-${i}"><span id="status-label-${i}">상태</span><select id="status-${i}" aria-labelledby="rule-${i} status-label-${i}"><option value="">선택</option><option value="open">open</option><option value="clear">clear</option></select></label><label class="check" for="reviewed-${i}"><input id="reviewed-${i}" aria-labelledby="rule-${i} reviewed-label-${i}" type="checkbox"><span id="reviewed-label-${i}">이 행의 세 필드를 원문 및 상태 규칙과 대조했습니다.</span></label>`;
       $('output-rows').append(div);
     });
   }
@@ -32,6 +32,31 @@
     let omissions=0,errors=0,unreviewed=0;
     outputs.forEach((r,i)=>{for(const field of ['count','severity','status']){const want=field==='status'?(source[i].count>0?'open':'clear'):source[i][field];if(r[field]===null || r[field]==='')omissions++;else if(r[field]!==want)errors++}if(!r.reviewed)unreviewed++});
     return {omissions,errors,unreviewed,valid:omissions+errors+unreviewed===0};
+  }
+  function showResult(){
+    const summary=document.createElement('p');
+    summary.textContent=`${current.valid?'유효':'무효'} · 누락 ${current.omissions}개 필드 · 기록 오류 ${current.errors}개 필드 · 대조 미확인 ${current.unreviewed}개 행`;
+    const details=document.createElement('ul');
+    function issue(i,field,message){
+      const item=document.createElement('li');item.id=`error-${field}-${i}`;item.textContent=`${source[i].rule_id} · ${message}`;details.append(item);
+      const control=$(`${field}-${i}`);control.setAttribute('aria-invalid','true');control.setAttribute('aria-describedby',item.id);
+    }
+    current.outputs.forEach((row,i)=>{
+      for(const [field,name] of [['count','건수'],['severity','심각도'],['status','상태']]){
+        const want=field==='status'?(source[i].count>0?'open':'clear'):source[i][field];
+        if(row[field]===null || row[field]==='')issue(i,field,`${name}: 누락. 기준값 ${want}.`);
+        else if(row[field]!==want)issue(i,field,`${name}: 기록 오류. 입력값 ${row[field]}, 기준값 ${want}.`);
+      }
+      if(!row.reviewed)issue(i,'reviewed','행 대조: 미확인. 세 필드의 원문 및 상태 규칙 대조 확인이 필요합니다.');
+    });
+    $('result').replaceChildren(summary);
+    if(!current.valid){
+      const note=document.createElement('p');note.textContent=measured()?'이 측정 결과는 고정되었습니다. 오류를 포함해 보존하며, 다음 단계는 다음 측정 회차입니다.':'이 연습 결과는 고정되었습니다. 같은 연습을 다시 할 수 있습니다.';
+      $('result').append(details,note);
+    }
+    for(const id of ['next','export']){
+      if(current.valid)$(id).removeAttribute('aria-describedby');else $(id).setAttribute('aria-describedby','result');
+    }
   }
   function start(){
     if(running || step>=8 || !ready())return;
@@ -66,7 +91,7 @@
     current.outputs=source.map((r,i)=>{const value=$(`count-${i}`).value;return {rule_id:r.rule_id,count:value===''?null:Number(value),severity:$(`severity-${i}`).value,status:$(`status-${i}`).value,reviewed:$(`reviewed-${i}`).checked}});
     Object.assign(current,score(current.outputs));rounds.push(current);running=false;
     $('output-fields').disabled=true;$('finish').disabled=true;$('pause').disabled=true;$('run-status').textContent='완료 시점의 입력을 고정했습니다.';
-    $('result').textContent=`${current.valid?'유효':'무효'} · 누락 ${current.omissions}개 필드 · 기록 오류 ${current.errors}개 필드 · 대조 미확인 ${current.unreviewed}개 행`;
+    showResult();
     const tr=document.createElement('tr');[measured()?`측정 ${step-1}`:'연습',mode(),current.timing?`${(current.timing.task_interval_ms/1000).toFixed(2)}초`:'시간 미기록',current.timing?`${(current.timing.excluded_ms/1000).toFixed(2)}초`:'—',mode()==='B'?`${current.machine_generation_ms.toFixed(2)}ms`:'—',current.valid?'유효':'무효'].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});$('history-rows').append(tr);$('history').hidden=false;
     if(step===7){step++;label();$('export').disabled=false;$('export').focus();$('export-note').textContent=`${origin==='developer_synthetic'?'개발자 테스트 기록입니다. 사람 측정으로 사용할 수 없습니다.':'참여자가 직접 수행했다고 선택한 기록입니다. 신원·주의 집중을 인증하지 않습니다.'} 파일을 내려받고 검증 스크립트로 일관성을 확인하세요.`;}
     else{$('next').hidden=false;$('next').textContent=!measured() && !current.valid?'같은 연습 다시':'다음 단계';$('next').focus();}
@@ -74,14 +99,14 @@
   function next(){
     if(running)return;
     if(measured() || current.valid)step++;
-    $('task').hidden=true;$('next').hidden=true;$('result').textContent='';$('start').disabled=false;$('run-status').textContent='준비되면 시작을 누르세요.';label();$('start').focus();
+    $('task').hidden=true;$('next').hidden=true;$('result').textContent='';$('next').removeAttribute('aria-describedby');$('export').removeAttribute('aria-describedby');$('start').disabled=false;$('run-status').textContent='준비되면 시작을 누르세요.';label();$('start').focus();
   }
   function exportJSON(){
     if(step!==8)return;
     const payload={schema_version:1,protocol:'three-rule-transfer-v1',snapshot_sha256:SHA,origin,environment,report_load_ms:loadMs,rounds};
     const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`operations-${origin}-${new Date().toISOString().replace(/[:.]/g,'-')}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
-  async function load(){
+  async function load(userRetry=false){
     source=null;$('loading').hidden=false;$('load-error').hidden=true;$('workspace').hidden=true;$('start').disabled=true;
     try{
       const started=performance.now(), response=await fetch('data/report.json');if(!response.ok)throw new Error(`HTTP ${response.status}`);
@@ -89,9 +114,9 @@
       const report=JSON.parse(new TextDecoder().decode(raw));const checks=report?.quality?.checks;if(!Array.isArray(checks))throw new Error('검사 결과 없음');
       source=IDS.map(id=>{const rows=checks.filter(r=>r.rule_id===id);if(rows.length!==1 || !Number.isSafeInteger(rows[0].count) || rows[0].count<0 || !['review','block'].includes(rows[0].severity))throw new Error('규칙 값 또는 키 오류');return rows[0]});
       loadMs=performance.now()-started;$('snapshot').textContent=`보고서 SHA256 ${SHA} · 최초 읽기·검증 ${loadMs.toFixed(2)}ms (반복 작업 구간과 별도)`;$('workspace').hidden=false;label();$('start').disabled=!ready();
-    }catch(error){source=null;$('error-detail').textContent=error.message;$('load-error').hidden=false;}finally{$('loading').hidden=true;}
+    }catch(error){source=null;$('error-detail').textContent=error.message;$('load-error').hidden=false;}finally{$('loading').hidden=true;if(userRetry)(source?$('session-title'):$('retry')).focus();}
   }
-  $('start').addEventListener('click',start);$('pause').addEventListener('click',()=>paused?resume():setPause());$('finish').addEventListener('click',finish);$('next').addEventListener('click',next);$('export').addEventListener('click',exportJSON);$('retry').addEventListener('click',load);
+  $('start').addEventListener('click',start);$('pause').addEventListener('click',()=>paused?resume():setPause());$('finish').addEventListener('click',finish);$('next').addEventListener('click',next);$('export').addEventListener('click',exportJSON);$('retry').addEventListener('click',()=>load(true));
   $('setup').addEventListener('input',()=>{$('start').disabled=!ready()});
   document.addEventListener('visibilitychange',()=>{if(!running || !measured())return;if(document.hidden)setPause(true);else if(paused && segmentKind==='hidden')closeSegment('manual_pause')});
   window.addEventListener('beforeunload',event=>{if(rounds.length || running){event.preventDefault();event.returnValue=''}});

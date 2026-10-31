@@ -1,0 +1,4316 @@
+{
+  "checked_at_utc": "2026-10-31T02:16:59.730721+00:00",
+  "url": "http://127.0.0.1:8780",
+  "scope": "All public page/state templates; developer automation, not actual screen-reader audio or WCAG certification",
+  "axe_version": "4.11.0",
+  "results": [
+    {
+      "state": "review-event_exact_repeat-evidence",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-impact",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-decision",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-evidence",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-impact",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-decision",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-evidence",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-impact",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-decision",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-registration_missing_date-evidence",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-registration_missing_date-impact",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-registration_missing_date-decision",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_unknown_site-evidence",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"course_invalid_length\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 32,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_unknown_site-impact",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"course_invalid_length\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_unknown_site-decision",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"course_invalid_length\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "analysis",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "runs",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "plan",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-empty",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "analysis-table",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "analysis-BBB",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "analysis-empty",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        },
+        {
+          "id": "th-has-data-cells",
+          "nodes": [
+            [
+              "div[aria-label=\"개설기별 비교\"] > table"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "analysis-methods",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "plan-details",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "runs-details",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab-truth",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab-observed",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab-clean",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab-late",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "lab-replay",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-submit",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-entry",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-ui",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-ready",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#context-notes"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-active-a",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-active-b",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-invalid",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-valid",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-paused",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-complete",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "main-http",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-http",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-http",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "plan-http",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "main-loading",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 19,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-loading",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 19,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-loading",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "plan-loading",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "main-bad-json",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "external-bad-json",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "practice-bad-json",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "plan-bad-json",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "main-BLOCK",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "main-UNKNOWN",
+      "width": 1440,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      },
+      "text_spacing_geometry": {
+        "page": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-evidence",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-impact",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-decision",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-evidence",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-impact",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-decision",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-evidence",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-impact",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-decision",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-registration_missing_date-evidence",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-registration_missing_date-impact",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-registration_missing_date-decision",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_unknown_site-evidence",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_unknown_site-impact",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_unknown_site-decision",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "analysis",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "runs",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "plan",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-empty",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "analysis-table",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "analysis-BBB",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "analysis-empty",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        },
+        {
+          "id": "th-has-data-cells",
+          "nodes": [
+            [
+              "div[aria-label=\"개설기별 비교\"] > table"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "analysis-methods",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "plan-details",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 32,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "runs-details",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab-truth",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab-observed",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab-clean",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab-late",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "lab-replay",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-submit",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-entry",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-ui",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-ready",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#context-notes"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-active-a",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-active-b",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-invalid",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-valid",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-paused",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-complete",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "main-http",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-http",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-http",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "plan-http",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "main-loading",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 20,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-loading",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 19,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-loading",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "plan-loading",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "main-bad-json",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "external-bad-json",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "practice-bad-json",
+      "width": 390,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "plan-bad-json",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "main-BLOCK",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "main-UNKNOWN",
+      "width": 390,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 390,
+        "viewport": 390
+      },
+      "text_spacing_geometry": {
+        "page": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-evidence",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-impact",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_exact_repeat-decision",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-evidence",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-impact",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_daily_key_repeat-decision",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-evidence",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-impact",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_after_withdrawal-decision",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-registration_missing_date-evidence",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-registration_missing_date-impact",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-registration_missing_date-decision",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_unknown_site-evidence",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_unknown_site-impact",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-event_unknown_site-decision",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "button[data-rule=\"event_exact_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_withdrawal\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"registration_missing_date\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_after_course\"] > .item-next > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-rule=\"event_daily_key_repeat\"] > .item-next > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "analysis",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "runs",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "plan",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "review-empty",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "analysis-table",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "analysis-BBB",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "analysis-empty",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        },
+        {
+          "id": "th-has-data-cells",
+          "nodes": [
+            [
+              "div[aria-label=\"개설기별 비교\"] > table"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 30,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "analysis-methods",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 31,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "plan-details",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 32,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "runs-details",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ],
+            [
+              "a[data-issue=\"event_after_course\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_after_withdrawal\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_daily_key_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"event_exact_repeat\"] > span > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "a[data-issue=\"registration_missing_date\"] > span > span[aria-hidden=\"true\"]"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab-truth",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab-observed",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab-clean",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab-late",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "lab-replay",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 24,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-submit",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-entry",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-ui",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 25,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-ready",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "#context-notes"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-active-a",
+      "width": 320,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 28,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-active-b",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "td:nth-child(6)"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-invalid",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "td:nth-child(6)"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-valid",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "td:nth-child(6)"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-paused",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-complete",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              "tr:nth-child(1) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(2) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(4) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(5) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(6) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(7) > td:nth-child(6)"
+            ],
+            [
+              "tr:nth-child(8) > td:nth-child(6)"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 29,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "main-http",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-http",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-http",
+      "width": 320,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "plan-http",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "main-loading",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 20,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-loading",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 19,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-loading",
+      "width": 320,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 21,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "plan-loading",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 26,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "main-bad-json",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "external-bad-json",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "practice-bad-json",
+      "width": 320,
+      "violations": [],
+      "incomplete": [],
+      "passed_rules": 23,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "plan-bad-json",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 27,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "main-BLOCK",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "state": "main-UNKNOWN",
+      "width": 320,
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": [
+            [
+              ".brand-mark"
+            ]
+          ]
+        }
+      ],
+      "passed_rules": 22,
+      "normal_geometry": {
+        "page": 320,
+        "viewport": 320
+      },
+      "text_spacing_geometry": {
+        "page": 320,
+        "viewport": 320
+      }
+    }
+  ],
+  "keyboard": [
+    {
+      "task": "20 rules x detail tabs keyboard navigation",
+      "rules": 20,
+      "status": "pass"
+    },
+    {
+      "task": "skip link across 3 page shells",
+      "status": "pass"
+    },
+    {
+      "task": "23 cohort render contracts, chart-to-table keyboard access",
+      "scopes": 23,
+      "status": "pass"
+    }
+  ],
+  "status": "pass",
+  "assets_sha256": {
+    "app.js": "95c18c19fd2ff8ad45d617efd482ead636bbd6f573388afbdfe7d30569c8323e",
+    "catalog.js": "af27646a1927307978079bddc41b0f18366dc6c69791f38a1d4feb70d138c93a",
+    "data/ednet_report.json": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+    "data/experiment-readiness.json": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673",
+    "data/operations.json": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+    "data/release.json": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+    "data/report.json": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+    "experiment-view.js": "86bf657dfd19138f2b81b6d19cae2ec07e0f5fdf5000b318a3f4b37432902f6a",
+    "extension-contract.js": "3067166bf5ceeee5fa4c6795b1d767333fbd49e92de06b739ba587aaf54f4e3b",
+    "external.css": "d456ad8cf234f0250d04989d4c6092b365bdafb346dbc00f074d78448de79bf5",
+    "external.html": "e2921569da97628b0e1a9cc2ffe867f945879f624a02a0741e4dd30049fc8c7b",
+    "external.js": "7f73515caaf63148ab67a677755fc0790139313485006e1f517567c1434fa697",
+    "index.html": "096ffe1ab642ac099e03c57b8604ab5845ae184796124ca6478d67876faa931a",
+    "operations-practice.css": "ea17c25d35055dc6baefe35f1592923a70aac2a04c095ef271c19e2f50a48ee6",
+    "operations-practice.html": "3872126eefb4ac3b4619444efdf8f17139ad43499c7ca902866b16df710134b8",
+    "operations-practice.js": "b9baa30064d195dfb107d09a2a45e0ce63ea4c95a125f4d459702bda04a63f48",
+    "report-contract.js": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+    "style.css": "3a06fe8fa0e6d3d4159889e2222f0a7a0f988435b9491c13eceaf70a87ef52cb"
+  },
+  "browser": "Chromium 141.0.7390.37",
+  "manual_incomplete_review": [
+    {
+      "rule": "color-contrast",
+      "target": "decorative brand and redundant aria-hidden arrows",
+      "assessment": "Brand foreground/background12.3045:1; logo/ornamental arrows do not convey unique meaning. Surrounding visible action names carry link purpose."
+    },
+    {
+      "rule": "color-contrast",
+      "target": "practice context textarea and history result cells",
+      "assessment": "Browser computed ready textarea black/white21:1; active history text#23383e on#f6f7f6=11.4570:1. Disabled fields separately inactive; horizontal table can scroll."
+    },
+    {
+      "rule": "th-has-data-cells",
+      "target": "empty cohort search table",
+      "assessment": "Empty search intentionally has no data rows; explicit role=status message. Not an unlabelled nonempty data table."
+    }
+  ],
+  "limits": [
+    "Axe and DOM/style/keyboard inspection do not certify WCAG conformity or actual screen-reader audio.",
+    "Human VoiceOver traversal, actual200%/400%browser zoom and physical rotation follow-up are pending.",
+    "Earlier human checks are limited to docs/device-check-results.md."
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "provenance": "developer_synthetic",
+  "meaning": "Automated operator inputs for developer validation; OULAD source data remains public, not synthetic.",
+  "human_measurements": 0,
+  "human_practice_rounds": 0,
+  "human_measured_rounds": 0,
+  "calculation_source": "real public OULAD CSV files verified against the original manifest",
+  "reference_report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+  "matched_conditions": {
+    "A": "stage-by-stage execution with automated test transcription",
+    "B": "batch execution with prefilled same fields"
+  },
+  "actual_cli_validation": {
+    "completed_developer_practice_conditions": [
+      "A",
+      "B"
+    ],
+    "stages_per_condition": 12,
+    "same_review_fields": 84,
+    "A_test_input_lines": 109,
+    "B_test_input_lines": 13,
+    "output_digests_equal": true,
+    "stage_digests_equal": true,
+    "review_fields_equal": true,
+    "audit": "PASS"
+  },
+  "crosscheck": {
+    "method": "independent pandas chunked CSV → enrollment/day sets; no production SQL imports",
+    "enrollments_compared": 29671,
+    "fields_compared": [
+      "w1_days",
+      "w2_active",
+      "later_active"
+    ],
+    "mismatched_rows": 0
+  },
+  "output_sha256": {
+    "data/synthetic/delivery.csv": "b98367126f40c56f7a5c6cceb2b18f41e419708d9b93dc7e232967d119f32337",
+    "data/synthetic/source_ledger.csv": "5828fd8362494e6f9c0aaa42e62613f961c12d7e1878c6f56ca9c7f6d3099dfd",
+    "reports/crosscheck.json": "2868b464b676eeb1edad834cb54e916812d582c258254ba66eaa5b2651063c61",
+    "reports/issues.json": "70e090553f1e7653156ce716c808a183a303671d6fa3d745bd1646700e7b7cf5",
+    "reports/report.json": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+    "web/data/operations.json": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+    "web/data/release.json": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+    "web/data/report.json": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+    "work/enrollment_mart.csv": "d5cee98deac510e2598c8fe0b0d9844d995a3798e95a17c05f868bf9821b5b8c"
+  },
+  "stage_sha256": {
+    "stages/01-source_load.json": "d55cd84d090bedca261417537d9fca1aa7a0309e7399b7b7143e555ebcc942f7",
+    "stages/02-quality.json": "8574946089964e06f789948a9d5103e58f1829f08236cd680260b5e917ed1849",
+    "stages/03-marts.json": "16452543d294d663854ee6d43339e1a642c11c1b308c4519561d5caa4f79528a",
+    "stages/04-overall.json": "45bf2e808179ad5013a73b651416fdb2ff3f4fabb8b0d4e299d668680ba0ddc5",
+    "stages/05-cohorts.json": "a2df0fc6ccc4e31f9776e0773fa56fa84fd3ccd8a1c53e49013c5085ae52b59f",
+    "stages/06-temporal.json": "22565d6496ce5ab78a990563890279e904a57a1c7b92ea8223ce440fd595a748",
+    "stages/07-sensitivity.json": "dfb56ad0fcb23db09704540c74a6ff942421ec62487420ebc26878afa12741e1",
+    "stages/08-fault_lab.json": "c81e0fd30cdac065f28399ea9be82cee01b9b01349597d194fe7860788b2caf7",
+    "stages/09-report_issues.json": "7e1c2f787b617f1944075b23eeb5716c48f54d7ef68552bc2e98daee60065447",
+    "stages/10-crosscheck.json": "2b11eb16892d65a9783310437e2ee3ca104768f5576a13fabcdf60418209bb7a",
+    "stages/11-build.json": "7139deaf59cf5342f2abe8f9b99a02c4ee03cc0fa9dfee2f408c4ebd1214630c",
+    "stages/12-verify.json": "713797a14344c8f6478a52dbe28a049e84d5bd6f9d3b8d6fb2c67cfa78ab2e4f"
+  },
+  "code_sha256": {
+    "requirements.txt": "e07eb61e2b1422c0c0018bb72ba3bc4eeec0623c53519df64aead329c68b0ae7",
+    "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/accessibility_preview.py": "0416c0593f3ce07b06db5320e3770afb8080cb5a2b2d378e62a134e5c3991444",
+    "scripts/analyze.py": "3d962aa24e5eaf908d8e59ca87a87d93af9f5c884a7abfd40a846ae601c7ba65",
+    "scripts/build.py": "bbb6240a1e6d43ed107d93f0f0c1208220bcd73d86143d4b280594583359fa4d",
+    "scripts/check_experiment.py": "a3901c4f77b3c2cb39f047ebc0794767a717b433e974b3adbd336f96f55fc9e2",
+    "scripts/crosscheck.py": "7ff6e9f9b81d5d6eede6fac4a06826c2ac9487110b1455f1ead391e45607d261",
+    "scripts/document.py": "752369f1f749bf0b2ba9043180150f399500e71669abf5ae4cd1633a169e6760",
+    "scripts/download.py": "6b54f9726fdbce4d511ae6c2c18e20731be64375b4f34de79dfc4ff1070a5293",
+    "scripts/download_ednet.py": "bd6191339174476a91ab47715acb750bd725e261fda77c7ba8e577b2591006c6",
+    "scripts/evidence_extensions.py": "3b6905339617e730b02ea7faa5db500b96164c2d954cba00e545ad7d0cd3f8e0",
+    "scripts/full_operations.py": "08eeb4f072bfabfe02d96bdaaae7d898521b2f21c0b4842b219656971fba829b",
+    "scripts/import_practice.py": "0f076aeacfd24f52b0cd585e0d092841e553196ffa1d768942cab47f39c227e6",
+    "scripts/verify.py": "d41a8543c583e00ab504e6721876ba20bd64db314633107fee3e0f4860d039a8",
+    "sql/dimensions.sql": "7c7bf82462217a3a481b8fd13f9af690170d3c16e6a7455175eb4f73d87ca1f8",
+    "sql/ednet.sql": "209fc7a452b8f95eb82825f7cf7b83c16eb095ff2143f07919c177871b62b519",
+    "sql/faults.sql": "4b1b09e318271e16687ebee8fc9499145c94ba3e86b1d04bfa24a3f1166dbeb5",
+    "sql/marts.sql": "b281dedf40b74797ece0ba7e59431317cad580f6b2ce3a1effeb682d92b48d10",
+    "sql/quality.sql": "0165f0d7062e79c1ca4b466eb8465623fefca8e9ed2b901504f42a586fa1c45c",
+    "src/journey/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/journey/ednet.py": "7b7c2c3fe5e85e47f73601620b16939064a8acec8e5500c479447bd842ff378b",
+    "src/journey/ednet_integrity.py": "ac3feb77cccba7f7622dbd4cce056926cd9f4c18893d8b338884db55b58aec14",
+    "src/journey/experiment_readiness.py": "a8fb17b1e1a2b7537ba7c1e482ecb976a2f809087c7f0e3b218964c8c66d1b45",
+    "src/journey/faults.py": "8459745be9b9823b93e01f30df9e4c8a7666a3758e7843818d890cc429ae2231",
+    "src/journey/pipeline.py": "f07df2a3be2621f17416d2cb6d051f785c0996ee7ebaa1051fa7138d1f1f67e2",
+    "src/journey/statistics.py": "df176e97853c778f8f5e1e8fca24739542e01f9d71759a93b103a4e9fe59e1f7",
+    "src/journey/tracker.py": "8d0b15fdbe28a58ddd0d391ca0d371dc330ab990ad8778c07265a6a246055bb3"
+  },
+  "python": "3.12.14",
+  "packages": {
+    "duckdb": "1.4.3",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3"
+  },
+  "tests": {
+    "operations_tests_passed": 23,
+    "full_pytest_passed": 139,
+    "diff_check": "PASS"
+  },
+  "limits": [
+    "No human timing, attention, savings, or productivity outcome is claimed.",
+    "Developer verification ran on Linux/Python 3.12; Mac/Python 3.14 must pass its own untimed calibration.",
+    "The user still needs practice A/B and six measured ABBAAB rounds in a new human_self_reported study.",
+    "All calculations run; human review is limited to predeclared fields and displayed comparison summaries."
+  ]
+}

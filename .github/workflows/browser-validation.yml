@@ -5,6 +5,8 @@ on:
     paths:
       - 'web/**'
       - 'tests/cross_browser_check.py'
+      - 'tests/accessibility_*_check.py'
+      - 'tests/practice_accessibility_check.py'
       - '.github/workflows/browser-validation.yml'
   workflow_dispatch:
 permissions:
@@ -25,8 +27,22 @@ jobs:
       - run: pip install playwright==1.56.0
       - run: python -m playwright install --with-deps ${{ matrix.browser }}
       - run: python tests/cross_browser_check.py --browser ${{ matrix.browser }} --output work/browser-${{ matrix.browser }}.json
+      - if: matrix.browser == 'chromium'
+        run: npm install --prefix work/a11y --no-save axe-core@4.11.0
+      - if: matrix.browser == 'chromium'
+        run: python tests/accessibility_flow_check.py --url https://learning-journey-lab.onrender.com --output work/accessibility-flows.json
+      - if: matrix.browser == 'chromium'
+        run: python tests/accessibility_keyboard_check.py --url https://learning-journey-lab.onrender.com --output work/accessibility-keyboard.json
+      - if: matrix.browser == 'chromium'
+        run: python tests/accessibility_inventory_check.py --url https://learning-journey-lab.onrender.com --axe work/a11y/node_modules/axe-core/axe.min.js --widths 1440,320 --output work/accessibility-inventory.json
+      - if: matrix.browser == 'chromium'
+        env:
+          AXE_SCRIPT: ${{ github.workspace }}/work/a11y/node_modules/axe-core/axe.min.js
+        run: python tests/practice_accessibility_check.py -q
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: browser-${{ matrix.browser }}
-          path: work/browser-${{ matrix.browser }}.json
+          path: |
+            work/browser-${{ matrix.browser }}.json
+            work/accessibility-*.json

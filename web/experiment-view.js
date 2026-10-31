@@ -8,11 +8,13 @@ function renderRecruitment(){
 }
 async function loadReadiness(){
  const box=document.getElementById('experiment-checks');
+ const restoreFocus=box.contains(document.activeElement);
  try{
   readiness=await EvidenceExtension.load('experiment-readiness.json','experiment');
   const labels={clean:'정상 계약',cross_variant:'동일 계정 교차군 배정',late_arrival:'유예 초과 지연 수신'};
   box.innerHTML=`<ul>${Object.entries(readiness.synthetic_cases).map(([key,c])=>`<li>${labels[key]||key}: <strong>${c.status==='hold'?'판정 보류 · 차이 숨김':'합성 입력 검사 통과'}</strong></li>`).join('')}</ul><p>실제 서비스 실험 참여자 0명 · 재방문 개선 효과 미측정. 위 통과는 배포 승인이나 실제 실험 성과를 의미하지 않습니다.</p>`;
   renderRecruitment();
  }catch(e){readiness=null;box.textContent='실험 검사 근거를 확인할 수 없습니다. 실제 실험 준비가 완료된 것으로 간주하지 않습니다.';const retry=document.createElement('button');retry.type='button';retry.textContent='검사 근거 다시 불러오기';retry.onclick=loadReadiness;box.append(retry);document.getElementById('recruitment-scenarios').textContent='모집 시나리오 확인 불가';}
+ finally{if(restoreFocus)(box.querySelector('button')||box).focus();}
 }
 document.getElementById('baseline').addEventListener('change',renderRecruitment);document.getElementById('mde').addEventListener('change',renderRecruitment);loadReadiness();

@@ -7,6 +7,7 @@ function draw(){
  byId('external-difference').textContent=`기록 비율 차이 ${diff(c.difference)} · 95% 사용자 재추출 구간 ${c.ci95.map(diff).join(' ~ ')}. 이 구간은 관찰 누락·교란·서비스 차이를 보정하지 않습니다.`;
 }
 async function load(){
+ const restoreFocus=document.activeElement===byId('external-retry');
  byId('external-app').hidden=true;byId('external-error').hidden=true;byId('external-loading').hidden=false;
  try{
   extra=await EvidenceExtension.load('ednet_report.json','external');const r=extra,q=r.quality,p=r.payments,m=r.manifest;
@@ -18,6 +19,6 @@ async function load(){
   byId('source-summary').textContent=`공식 ZIP의 ${num(m.population_user_files)}개 사용자 파일에서 행동을 보기 전에 고정한 해시로 ${num(m.sample_users)}명을 선정했습니다. 사용자별 일부 행이 아니라 해당 파일 전체를 확보했습니다. KT4 수집 시작은 공식 설명상 2018-08-27이며 공개 시각은 이동되어 실제 달력일·개인별 관찰 종료는 확인되지 않습니다.`;
   byId('external-validation').textContent=`SQL과 별도 pandas 계산으로 ${num(r.validation.compared_user_rows)}명 대조, 불일치 없음. 전체 보고서 반복 실행 일치. 선택된 파일의 SHA256과 ZIP CRC를 검사했으며 원본 ZIP 전체 SHA256을 확인했다고 주장하지 않습니다.`;
   draw();byId('external-app').hidden=false;
- }catch(e){extra=null;byId('external-error').hidden=false;}finally{byId('external-loading').hidden=true;}
+ }catch(e){extra=null;byId('external-error').hidden=false;}finally{byId('external-loading').hidden=true;if(restoreFocus)(extra?byId('external-title'):byId('external-retry')).focus();}
 }
 byId('event-definition').onchange=draw;byId('external-retry').onclick=load;load();

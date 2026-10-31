@@ -1,0 +1,325 @@
+{
+  "source": "developer keyboard automation",
+  "results": [
+    {
+      "path": "/?view=review",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 26,
+      "reached": 26,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 27,
+      "reached": 27,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review&detail=1",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 26,
+      "reached": 26,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review&detail=1",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 27,
+      "reached": 27,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=analysis",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 45,
+      "reached": 45,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=analysis",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 46,
+      "reached": 46,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=runs",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 24,
+      "reached": 24,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=runs",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 24,
+      "reached": 24,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=plan",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 19,
+      "reached": 19,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=plan",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 22,
+      "reached": 22,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=lab",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 25,
+      "reached": 25,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=lab",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 31,
+      "reached": 31,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/external.html",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/external.html",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/operations-practice.html",
+      "expanded_details": false,
+      "width": 1440,
+      "expected_controls": 7,
+      "reached": 7,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/operations-practice.html",
+      "expanded_details": true,
+      "width": 1440,
+      "expected_controls": 7,
+      "reached": 7,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review&detail=1",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 20,
+      "reached": 20,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=review&detail=1",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=analysis",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 45,
+      "reached": 45,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=analysis",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 46,
+      "reached": 46,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=runs",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 24,
+      "reached": 24,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=runs",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 24,
+      "reached": 24,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=plan",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 19,
+      "reached": 19,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=plan",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 22,
+      "reached": 22,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=lab",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 25,
+      "reached": 25,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/?view=lab",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 31,
+      "reached": 31,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/external.html",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/external.html",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 21,
+      "reached": 21,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/operations-practice.html",
+      "expanded_details": false,
+      "width": 320,
+      "expected_controls": 7,
+      "reached": 7,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    },
+    {
+      "path": "/operations-practice.html",
+      "expanded_details": true,
+      "width": 320,
+      "expected_controls": 7,
+      "reached": 7,
+      "missing": [],
+      "offscreen": [],
+      "no_indicator": []
+    }
+  ]
+}

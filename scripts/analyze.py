@@ -26,25 +26,43 @@ def sample_size(p,delta):
     return math.ceil(((norm.ppf(.975)*math.sqrt(2*bar*(1-bar))+norm.ppf(.8)*math.sqrt(p*(1-p)+p2*(1-p2)))/delta)**2)
 
 
-def main():
+def main(ROOT=ROOT, checkpoint=None):
+    """Run unchanged calculations; optional explicit before/after checkpoints."""
+    def before(name):
+        if checkpoint: checkpoint.before(name)
+    def after(name, payload):
+        if checkpoint: checkpoint.after(name, payload)
     started=time.perf_counter();times={}
     c=connect(ROOT/'work/analysis.duckdb')
+    before('source_load')
     t=time.perf_counter();load_sources(c,ROOT/'data/raw',ROOT/'data/manifest.json');times['load_and_hash_seconds']=time.perf_counter()-t
+    after('source_load', {'source_files':len(json.loads((ROOT/'data/manifest.json').read_text())['files']), 'archive_sha256':json.loads((ROOT/'data/manifest.json').read_text())['archive_sha256']})
+    before('quality')
     t=time.perf_counter();checks=quality(c);times['quality_seconds']=time.perf_counter()-t
+    after('quality', {'checks':checks})
     if any(x['count'] and x['severity']=='block' for x in checks):
         write_json(ROOT/'reports/quality-failure.json',{'checks':checks,'gate':'BLOCK'})
         c.close();raise SystemExit(2)
+    before('marts')
     t=time.perf_counter();mart=build_marts(c);strict=build_marts(c,strict=True);build_marts(c);times['mart_and_sensitivity_seconds']=time.perf_counter()-t
+    after('marts', {'eligible':len(mart), 'strict_w1_active':int((strict.w1_days>0).sum()), 'strict_w2_returned':int(strict.loc[strict.w1_days>0,'w2_active'].sum())})
+    before('overall')
     t=time.perf_counter();all_summary=summarize(mart)
+    after('overall', all_summary)
+    before('cohorts')
     cohorts=[]
     for (module,term),m in mart.groupby(['code_module','code_presentation'],sort=True):
         cohorts.append({'module':module,'term':term,**summarize(m,draws=500)})
+    after('cohorts', {'cohorts':cohorts})
+    before('temporal')
     train,holdout=temporal_split(mart)
     # Also exclude earlier registered learners who were ineligible in 2013.
     prior=set(c.sql("select distinct id_student from studentRegistration where code_presentation like '2013%'").df().id_student)
     holdout=holdout[~holdout.id_student.isin(prior)]
     temporal=[{'label':'2013 탐색','id':'discovery',**summarize(train)},
               {'label':'2014 신규 학습자 재확인','id':'holdout',**summarize(holdout)}]
+    after('temporal', {'temporal':temporal})
+    before('sensitivity')
     active=mart[mart.w1_days>0].copy();active['repeat']=(active.w1_days>=2).astype(int)
     by_start=[]
     for day,m in active.groupby('first_day',sort=True):
@@ -68,7 +86,11 @@ def main():
     total_clicks=int(c.sql('select sum(sum_click) from studentVle').fetchone()[0])
     event_range=list(c.sql('select min(date),max(date) from studentVle').fetchone())
     times['statistics_seconds']=time.perf_counter()-t
+    after('sensitivity', {'first_day_strata':by_start, 'click_sensitivity':click_sensitivity, 'transition':transition})
+    before('fault_lab')
     fault=fault_lab(ROOT/'data/synthetic')
+    after('fault_lab', fault)
+    before('report_issues')
     gate='BLOCK' if any(x['count'] and x['severity']=='block' for x in checks) else ('REVIEW' if any(x['count'] for x in checks) else 'PASS')
     report={'schema_version':1,'title':'Learning Journey Lab','as_of':'2026-10-29','source_type':'public',
       'source':{'name':'OULAD','authors':'Jakub Kuzilek, Martin Hlosta, Zdenek Zdrahal','years':[2013,2014],
@@ -93,6 +115,7 @@ def main():
     previous=[r for r in previous if 'history' in r]
     issue_records=update_issues(previous,checks,report['source']['archive_sha256'])
     write_json(issue_path,issue_records)
+    after('report_issues', {'report_sha256':hashlib.sha256((ROOT/'reports/report.json').read_bytes()).hexdigest(), 'mart_rows':len(mart), 'issue_records':len(issue_records), 'issue_history_entries':sum(len(x['history']) for x in issue_records)})
     times['total_seconds']=time.perf_counter()-started
     write_json(ROOT/'work/latest_run.json',{'python':platform.python_version(),'duckdb':__import__('duckdb').__version__,
         'platform':platform.platform(),'timings':times,'report_sha256':hashlib.sha256((ROOT/'reports/report.json').read_bytes()).hexdigest()})
