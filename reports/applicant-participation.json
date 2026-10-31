@@ -1,5 +1,5 @@
 {
-  "as_of_kst": "2026-10-30",
+  "as_of_kst": "2026-10-31",
   "user_commit": "4996ef674df442ccfe40e590fe94a024a6a1da3b",
   "actor": "sokldjs554",
   "file": "tests/test_user_repeat.py",
@@ -21,5 +21,43 @@
     "scope": "One applicant, fixed task, 3 repetitions per mode, Codex guidance; descriptive task intervals, not company productivity"
   },
   "ci_reading_scope": "Guided reading of existing run 41011751113, step Run python -m pytest -q: 30 passed in 1.19s; user confirmed displayed result; not a new execution",
-  "physical_device_check_doc": "docs/device-check-results.md"
+  "physical_device_check_doc": "docs/device-check-results.md",
+  "local_reproduction": {
+    "reported_on_kst": "2026-10-31",
+    "source": "Applicant-relayed terminal output during Codex-guided practice; not a session directly observed by Codex",
+    "environment": {
+      "device": "MacBook",
+      "python": "3.14 (user corrected earlier 3.13 report; patch version unknown)",
+      "repository": "Downloaded ZIP; exact source commit not captured"
+    },
+    "pytest": "User reported passed; exact count and full output not supplied",
+    "download": "Verified and extracted 7 CSV files",
+    "analysis": {
+      "gate": "REVIEW",
+      "eligible": 29671,
+      "w1": 23522,
+      "w2": 20303,
+      "seconds": 78.098
+    },
+    "crosscheck": {
+      "method": "independent pandas chunked CSV → enrollment/day sets; no production SQL imports",
+      "enrollments_compared": 29671,
+      "fields_compared": [
+        "w1_days",
+        "w2_active",
+        "later_active"
+      ],
+      "mismatched_rows": 0
+    },
+    "verify": {
+      "result": "Report, UI, README, findings, benchmark and crosscheck are consistent",
+      "report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+    },
+    "limits": [
+      "78.098 seconds is one analysis command runtime, not human work time or measured savings",
+      "Not independent analysis design or source-code authorship",
+      "Not a full human manual baseline or repeat-run benchmark",
+      "Python 3.14 compatibility is limited to this reported execution, not all platforms"
+    ]
+  }
 }
