@@ -59,5 +59,50 @@
       "Not a full human manual baseline or repeat-run benchmark",
       "Python 3.14 compatibility is limited to this reported execution, not all platforms"
     ]
+  },
+  "direct_sql_practice": {
+    "source": "Applicant reported executing Codex-provided read-only SQL",
+    "query": "SELECT COUNT(*) FROM studentRegistration WHERE date_registration IS NULL",
+    "result": 45,
+    "independent_query_authorship": false,
+    "understanding": "Applicant explained that assigning zero would represent an unconfirmed registration date as the course opening date; Codex explained the possible denominator change and the need to justify imputation"
+  },
+  "quality_review_output": {
+    "source": "Applicant-relayed output during practice, before timed run",
+    "nonzero_rules": {
+      "event_after_course": 4374,
+      "event_after_withdrawal": 29440,
+      "event_daily_key_repeat": 2195960,
+      "event_exact_repeat": 787170,
+      "registration_missing_date": 45
+    }
+  },
+  "scripted_rerun_timing": {
+    "reported_on_kst": "2026-10-31",
+    "source": "Applicant self-reported duration and checklist confirmation; no raw stopwatch export or timed-run terminal log received",
+    "environment_reference": "local_reproduction.environment",
+    "scope": "Sequential execution of existing automated analyze, crosscheck, build and verify commands plus three output checks",
+    "measured_rounds": 1,
+    "elapsed_seconds_reported": 100,
+    "includes_execution_wait": true,
+    "setup_download_and_practice_excluded_by_protocol": true,
+    "commands": [
+      "python scripts/analyze.py",
+      "python scripts/crosscheck.py",
+      "python scripts/build.py",
+      "python scripts/verify.py"
+    ],
+    "checklist": {
+      "analysis_REVIEW_29671_23522_20303": "confirmed by applicant",
+      "crosscheck_mismatched_rows_zero": "confirmed by applicant",
+      "verify_consistent_and_expected_hash": "confirmed by applicant"
+    },
+    "errors_reported": false,
+    "interruptions_reported": false,
+    "additional_help_during_run_reported": false,
+    "prior_guidance": "Codex supplied commands, expected results, rehearsal and timing instructions",
+    "manual_analysis_comparator": false,
+    "automation_savings_measured": false,
+    "results_doc": "docs/local-rerun-results.md"
   }
 }

@@ -1,6 +1,6 @@
 # 실제 화면과 근거 모음
 
-2026-10-30 KST 보완. 제출용 포트폴리오 문장이 아니라 사실 확인용 색인이다. 공개 화면은 정적 집계 자료이며, 실시간 분석 서버나 실제 CLASS101 계정 화면이 아니다.
+2026-10-31 KST 보완. 제출용 포트폴리오 문장이 아니라 사실 확인용 색인이다. 공개 화면은 정적 집계 자료이며, 실시간 분석 서버나 실제 CLASS101 계정 화면이 아니다.
 
 ## 공개 배포 화면
 
@@ -27,6 +27,7 @@
 - 자동화: [기존 기계 실행 시간](../reports/benchmark.json), [동일 작업 실측 절차](human-comparison-protocol.md). [지원자 1명·각 3회 실제 측정 결과](human-comparison-results.md)와 [검증된 파생 JSON](../reports/human-comparison.json). 전체 분석·회사 생산성 효과로 확대하지 않는다.
 - 사용성: [실제 참여자용 과제](novice-usability-protocol.md). 참여자 1명의 네 과제 응답을 진행자를 통해 받았고 익명 요약 공개 동의를 확인했다. [결과·문구 수정·재검토의 부분 확인](usability-results.md). 개발자 자동 조작과 실제 응답을 구분한다.
 - 지원자: [완료한 실습·테스트 추가·실측과 남은 확인](participation.md), [직접 실행한 Actions](https://github.com/sokldjs554/learning-journey-lab/actions/runs/40879343617).
+- 로컬 직접 재현: [SQL 결측 45행 확인·처리 이유 설명·Python 3.14 실행](participation.md), [기존 자동화 명령 재실행·결과 확인 1회 100초](local-rerun-results.md). 지원자 자기 보고이며 전체 분석 수작업·자동화 절감과 구분한다.
 - 주장 범위: [주장과 증거](evidence-map.md). 어떤 분석이 구현되어 있다는 사실과 지원자가 독립적으로 수행했다는 경험을 구분한다.
 
 ## 직접 코드 작성 안내
