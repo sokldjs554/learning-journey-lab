@@ -1,6 +1,6 @@
 # 전체 운영 비교 도구 — 개발 검증 결과
 
-**도구 검증 완료, 실제 사람의 A/B 측정은 아직 0회입니다.** [공개 검증 요약](../reports/full-operations-validation.json)과 [사용 절차](full-operations-protocol.md)를 구분합니다.
+**이 문서는 개발자 검증 당시 기록입니다. 이후 지원자가 본 측정 6회와 무효 시도 5회를 수행한 감사 출력을 전달했습니다.** [사람 실측 결과·별도 검증 범위](full-operations-human-results.md). [공개 검증 요약](../reports/full-operations-validation.json)과 [사용 절차](full-operations-protocol.md)를 구분합니다.
 
 실제 OULAD 원본 CSV의 해시를 확인한 뒤 사전 전체 계산을 실행했습니다. 이어서 개발자가 자동 생성한 입력을 사용해 CLI의 A 연습과 B 연습을 각각 실행했습니다. 두 실행 모두 `developer_synthetic`으로 표시했으며 사람의 수행시간·절감률로 발표하지 않습니다. 이 표시는 자동 입력의 출처이며 OULAD 자료를 가상 데이터로 바꿨다는 뜻이 아닙니다.
 
@@ -13,4 +13,4 @@
 
 코드와 결과 해시는 공개 요약에 보존합니다. 개인 로컬 경로, 학습자 ID, 개발자 입력의 수행시간은 공개 요약에 넣지 않았습니다. 테스트용 가상 회차도 실제 사람의 회차로 합치지 않았습니다.
 
-검증 환경은 Linux/Python 3.12입니다. 사용자의 Mac/Python 3.14를 직접 검증했다고 주장하지 않습니다. 기존 가상환경을 유지하고 새 코드 폴더에서 `init --provenance human_self_reported` 사전 검증을 통과한 다음, 실제 연습 A/B와 본 측정 ABBAAB를 진행해야 합니다. 과거 3규칙 UI 실습과 100초 재실행 기록은 변경하지 않았습니다.
+검증 환경은 Linux/Python 3.12입니다. 사용자의 Mac/Python 3.14를 직접 검증했다고 주장하지 않습니다. 기존 가상환경을 유지하고 새 코드 폴더에서 `init --provenance human_self_reported` 사전 검증을 통과한 다음, 실제 연습 A/B와 본 측정 ABBAAB를 진행하는 절차를 마련했습니다. 이후 전달받은 완료 출력은 위 실측 문서에 분리했습니다. 과거 3규칙 UI 실습과 100초 재실행 기록은 변경하지 않았습니다.

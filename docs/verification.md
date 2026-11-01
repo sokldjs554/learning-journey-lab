@@ -1,8 +1,14 @@
 # 검증 기록
 
+## 2026-11-01 지원자 전체 운영 실측 수신
+
+[실측 결과](full-operations-human-results.md)와 [구조화 기록](../reports/full-operations-human-results.json)을 추가했다. 지원자 감사 출력은 예정 본 측정6회 완료·무효5회·중단0회·next null이다. 요약의 순서·개수·시간 산술과 fsum/Decimal 독립 합계를 대조했고, README·결과 표와의 수치 일치를 검사했다. 원본 전체 로그·프로토콜의 독립 감사와 이해 수준 평가는 미실시다. 본 측정 중 기록 밖 휴식·중단·외부 도움 없음, B의 전체 읽기·확인은 지원자 자기 보고다.
+
+문서·근거 추가 후 build/verify와 전체 pytest139개를 통과했다. 분석·실측 도구 코드·공개 web 자산은 변경하지 않았고 OULAD 보고서 SHA675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db를 유지했다. 과거 개발 검증에서의 사람0회 기록은 당시 결과로 보존하고 현재 상태 문구를 별도 실측 근거로 연결했다. 실제 접근성 후속 과제는 아직 대기다.
+
 ## 2026-10-31 전체 운영 비교·접근성 확장
 
-- [전체 운영 비교 개발 검증](full-operations-validation.md): 기존 계산에 단계별 관측 지점만 추가. 실제 OULAD의 개발자 A/B실행12단계·84확인항목·결과 해시 일치, 독립 대조29,671×3불일치0. 실제 사람 측정0회.
+- [전체 운영 비교 개발 검증](full-operations-validation.md): 기존 계산에 단계별 관측 지점만 추가. 실제 OULAD의 개발자 A/B실행12단계·84확인항목·결과 해시 일치, 독립 대조29,671×3불일치0. 개발 검증 당시 사람 측정0회였으며 이후 결과는 [지원자 실측](full-operations-human-results.md)에 분리했다.
 - 전체 pytest139개, 운영 도구23개, 접근성 실습7개 회귀 통과. [확장 접근성168조합·32키보드순회·수정 전후](accessibility-review-results.md). 실제 VoiceOver·확대 후속 응답 대기.
 - 분석 결과 SHA675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db 유지. 이전3규칙 실제 실측과100초 자기보고 기록 유지.
 
@@ -133,7 +139,7 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 
 ## 전체 운영 비교·접근성 확장 후속 (2026-10-31 KST)
 
-소스 `95e8c205deaba7868d56bfda6df2c6035ab8abe1`에서 전체 pytest139개, [품질 CI41159826990](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159826990), [공개 원본 전체 재현41159827011](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827011)이 통과했다. 전체 운영 비교 도구의 개발자 연습 A/B는12단계·84개 확인 항목·최종 결과 해시가 일치했다. [도구 검증](full-operations-validation.md). 사람의 새 연습·본 측정은 아직 대기다.
+소스 `95e8c205deaba7868d56bfda6df2c6035ab8abe1`에서 전체 pytest139개, [품질 CI41159826990](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159826990), [공개 원본 전체 재현41159827011](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827011)이 통과했다. 전체 운영 비교 도구의 개발자 연습 A/B는12단계·84개 확인 항목·최종 결과 해시가 일치했다. [도구 검증](full-operations-validation.md). 당시에는 사람의 새 연습·본 측정이 대기였으며 이후 [완료 출력과 검증 범위](full-operations-human-results.md)를 별도로 기록했다.
 
 접근성은 로컬168상태 조합과 공개 URL112상태 조합을 구분해 검사했다. [결함과 수정](accessibility-review-results.md), [공개 후속 기계 기록](../reports/accessibility-deployed-followup.json). 공개18개 파일과 저장소 바이트 일치, 세 브라우저 엔진의 주요 동선, 8개 초점·대비 회귀와32개 키보드 순회가 통과했다. Chromium141·Firefox142·WebKit26의 [CI41159827014](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41159827014)는3번째 실행에서 성공했다.
 

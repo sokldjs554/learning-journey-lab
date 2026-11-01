@@ -46,3 +46,8 @@ def test_three_identical_rows_count_two_excess(db):
 ```
 
 커밋 후 Actions의 **Quality and static evidence**에서 해당 브랜치 결과를 확인한다. 설치된 로컬 환경이 있다면 `python -m pytest tests/test_user_repeat.py -q`로 1 passed를 확인할 수 있다. 환경이 없으면 설치하지 않고 Actions를 사용한다. 실패하면 오류 문구와 커밋 주소를 전달한다. Codex가 결과를 확인하고 반영하기 전에는 직접 작성 완료로 기록하지 않는다. 예제 설계는 Codex 도움을 받은 작업이며 독립 설계로 표현하지 않는다.
+
+
+## 전체 계산의 수동 운영·일괄 실행 실측
+
+[사람 실측 결과](full-operations-human-results.md) · [구조화 근거](../reports/full-operations-human-results.json). 지원자 1명, 완료 6회·무효 5회, 모든 관측 시도를 보존했다. 손계산·독립 개발 경험이나 일반적인 생산성 개선으로 바꾸어 쓰지 않는다. Codex의 도구 구현·진행 안내와 지원자의 실제 실행·출력 전달을 분리한다.

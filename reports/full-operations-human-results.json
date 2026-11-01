@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "provenance": "human_self_reported",
+  "received_date_kst": "2026-11-01",
+  "source": "Applicant uploaded final local audit output; reason strings separately reported in chat.",
+  "source_sha256": "76f1f63c509074fc8320b2a3229dbfbc80cccbc91bfe5bd4cdebaa10dd2f3021",
+  "tested_code_reference": "95e8c205deaba7868d56bfda6df2c6035ab8abe1",
+  "audit_verification_scope": "Summary structure, schedule, counters, timing arithmetic and two independent sums checked by Codex. Full protocol, event logs and measured-stage artifacts not supplied; local audit PASS is applicant-reported.",
+  "reported_audit": {
+    "schema_version": 1,
+    "provenance": "human_self_reported",
+    "audit": "PASS",
+    "completed_measured": 6,
+    "invalid_attempts": 5,
+    "aborted_attempts": 0,
+    "next": null,
+    "attempts": [
+      {
+        "attempt": 1,
+        "phase": "practice",
+        "slot": 1,
+        "condition": "A",
+        "status": "complete",
+        "elapsed_seconds": 4841.049547288101,
+        "pause_seconds": 0.0,
+        "machine_seconds": 130.87451288709417,
+        "unpaused_seconds": 4841.049547288101,
+        "non_machine_unpaused_seconds": 4710.175034401007,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 2,
+        "phase": "practice",
+        "slot": 2,
+        "condition": "B",
+        "status": "complete",
+        "elapsed_seconds": 954.30616931431,
+        "pause_seconds": 0.0,
+        "machine_seconds": 106.85962979961187,
+        "unpaused_seconds": 954.30616931431,
+        "non_machine_unpaused_seconds": 847.4465395146981,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 3,
+        "phase": "measured",
+        "slot": 1,
+        "condition": "A",
+        "status": "complete",
+        "elapsed_seconds": 1804.1114754239097,
+        "pause_seconds": 0.0,
+        "machine_seconds": 116.43266466585919,
+        "unpaused_seconds": 1804.1114754239097,
+        "non_machine_unpaused_seconds": 1687.6788107580505,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 4,
+        "phase": "measured",
+        "slot": 2,
+        "condition": "B",
+        "status": "complete",
+        "elapsed_seconds": 321.222806441132,
+        "pause_seconds": 0.0,
+        "machine_seconds": 115.38339017052203,
+        "unpaused_seconds": 321.222806441132,
+        "non_machine_unpaused_seconds": 205.83941627060995,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 5,
+        "phase": "measured",
+        "slot": 3,
+        "condition": "B",
+        "status": "complete",
+        "elapsed_seconds": 176.11659618467093,
+        "pause_seconds": 0.0,
+        "machine_seconds": 133.30935084726661,
+        "unpaused_seconds": 176.11659618467093,
+        "non_machine_unpaused_seconds": 42.80724533740431,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 6,
+        "phase": "measured",
+        "slot": 4,
+        "condition": "A",
+        "status": "invalid",
+        "elapsed_seconds": 142.391072595492,
+        "pause_seconds": 0.0,
+        "machine_seconds": 83.32599377073348,
+        "unpaused_seconds": 142.391072595492,
+        "non_machine_unpaused_seconds": 59.06507882475853,
+        "invalid_inputs": 1
+      },
+      {
+        "attempt": 7,
+        "phase": "measured",
+        "slot": 4,
+        "condition": "A",
+        "status": "complete",
+        "elapsed_seconds": 554.6249573994428,
+        "pause_seconds": 0.0,
+        "machine_seconds": 114.82870726287365,
+        "unpaused_seconds": 554.6249573994428,
+        "non_machine_unpaused_seconds": 439.79625013656914,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 8,
+        "phase": "measured",
+        "slot": 5,
+        "condition": "A",
+        "status": "invalid",
+        "elapsed_seconds": 605.4451442258433,
+        "pause_seconds": 0.0,
+        "machine_seconds": 108.02849219553173,
+        "unpaused_seconds": 605.4451442258433,
+        "non_machine_unpaused_seconds": 497.4166520303115,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 9,
+        "phase": "measured",
+        "slot": 5,
+        "condition": "A",
+        "status": "invalid",
+        "elapsed_seconds": 252.74640013463795,
+        "pause_seconds": 0.0,
+        "machine_seconds": 71.26167902350426,
+        "unpaused_seconds": 252.74640013463795,
+        "non_machine_unpaused_seconds": 181.4847211111337,
+        "invalid_inputs": 1
+      },
+      {
+        "attempt": 10,
+        "phase": "measured",
+        "slot": 5,
+        "condition": "A",
+        "status": "invalid",
+        "elapsed_seconds": 554.0069174757227,
+        "pause_seconds": 0.0,
+        "machine_seconds": 110.37697173561901,
+        "unpaused_seconds": 554.0069174757227,
+        "non_machine_unpaused_seconds": 443.6299457401037,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 11,
+        "phase": "measured",
+        "slot": 5,
+        "condition": "A",
+        "status": "invalid",
+        "elapsed_seconds": 500.5455706939101,
+        "pause_seconds": 0.0,
+        "machine_seconds": 103.17778368014842,
+        "unpaused_seconds": 500.5455706939101,
+        "non_machine_unpaused_seconds": 397.3677870137617,
+        "invalid_inputs": 1
+      },
+      {
+        "attempt": 12,
+        "phase": "measured",
+        "slot": 5,
+        "condition": "A",
+        "status": "complete",
+        "elapsed_seconds": 606.0502827083692,
+        "pause_seconds": 0.0,
+        "machine_seconds": 105.50623782724142,
+        "unpaused_seconds": 606.0502827083692,
+        "non_machine_unpaused_seconds": 500.5440448811278,
+        "invalid_inputs": 0
+      },
+      {
+        "attempt": 13,
+        "phase": "measured",
+        "slot": 6,
+        "condition": "B",
+        "status": "complete",
+        "elapsed_seconds": 119.14676726795733,
+        "pause_seconds": 0.0,
+        "machine_seconds": 91.43827583733946,
+        "unpaused_seconds": 119.14676726795733,
+        "non_machine_unpaused_seconds": 27.70849143061787,
+        "invalid_inputs": 0
+      }
+    ]
+  },
+  "invalid_reasons_reported": {
+    "6": "ValueError: 입력값이 표시된 결과와 다릅니다",
+    "8": "ValueError: 실행 문구 run이 입력되지 않았습니다",
+    "9": "ValueError: 입력값이 표시된 결과와 다릅니다",
+    "10": "ValueError: 실행 문구 run이 입력되지 않았습니다",
+    "11": "ValueError: 입력값이 표시된 결과와 다릅니다"
+  },
+  "condition_summary": [
+    {
+      "condition": "A",
+      "completed": 3,
+      "invalid": 5,
+      "aborted": 0,
+      "all_attempt_totals": {
+        "elapsed_seconds": 5019.921820657328,
+        "pause_seconds": 0.0,
+        "machine_seconds": 812.9385301615112,
+        "unpaused_seconds": 5019.921820657328,
+        "non_machine_unpaused_seconds": 4206.983290495817
+      }
+    },
+    {
+      "condition": "B",
+      "completed": 3,
+      "invalid": 0,
+      "aborted": 0,
+      "all_attempt_totals": {
+        "elapsed_seconds": 616.4861698937602,
+        "pause_seconds": 0.0,
+        "machine_seconds": 340.1310168551281,
+        "unpaused_seconds": 616.4861698937602,
+        "non_machine_unpaused_seconds": 276.3551530386321
+      }
+    }
+  ],
+  "slot_summary": [
+    {
+      "slot": 1,
+      "condition": "A",
+      "attempts": [
+        3
+      ],
+      "invalid": 0,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 1804.1114754239097,
+        "pause_seconds": 0.0,
+        "machine_seconds": 116.43266466585919,
+        "unpaused_seconds": 1804.1114754239097,
+        "non_machine_unpaused_seconds": 1687.6788107580505
+      }
+    },
+    {
+      "slot": 2,
+      "condition": "B",
+      "attempts": [
+        4
+      ],
+      "invalid": 0,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 321.222806441132,
+        "pause_seconds": 0.0,
+        "machine_seconds": 115.38339017052203,
+        "unpaused_seconds": 321.222806441132,
+        "non_machine_unpaused_seconds": 205.83941627060995
+      }
+    },
+    {
+      "slot": 3,
+      "condition": "B",
+      "attempts": [
+        5
+      ],
+      "invalid": 0,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 176.11659618467093,
+        "pause_seconds": 0.0,
+        "machine_seconds": 133.30935084726661,
+        "unpaused_seconds": 176.11659618467093,
+        "non_machine_unpaused_seconds": 42.80724533740431
+      }
+    },
+    {
+      "slot": 4,
+      "condition": "A",
+      "attempts": [
+        6,
+        7
+      ],
+      "invalid": 1,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 697.0160299949348,
+        "pause_seconds": 0.0,
+        "machine_seconds": 198.15470103360713,
+        "unpaused_seconds": 697.0160299949348,
+        "non_machine_unpaused_seconds": 498.8613289613277
+      }
+    },
+    {
+      "slot": 5,
+      "condition": "A",
+      "attempts": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "invalid": 4,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 2518.7943152384833,
+        "pause_seconds": 0.0,
+        "machine_seconds": 498.35116446204484,
+        "unpaused_seconds": 2518.7943152384833,
+        "non_machine_unpaused_seconds": 2020.4431507764384
+      }
+    },
+    {
+      "slot": 6,
+      "condition": "B",
+      "attempts": [
+        13
+      ],
+      "invalid": 0,
+      "observed_attempt_totals": {
+        "elapsed_seconds": 119.14676726795733,
+        "pause_seconds": 0.0,
+        "machine_seconds": 91.43827583733946,
+        "unpaused_seconds": 119.14676726795733,
+        "non_machine_unpaused_seconds": 27.70849143061787
+      }
+    }
+  ],
+  "measurement_scope": "Same OULAD calculations; A stage execution/transcription, B batch/prefilled review; not hand calculation or independent coding.",
+  "context": {
+    "guidance": "Codex setup, practice field-entry help and between-round instructions.",
+    "unlogged_interruptions_and_during_round_help": "Applicant explicitly reports none across measured rounds 1–6; Codex setup/practice and between-round instructions remain documented.",
+    "B_review_depth": "Applicant explicitly reports reading and checking all B prefilled values and comparison summaries. No independent observation or comprehension assessment; equal cognitive review depth remains unproven.",
+    "runtime": "MacBook user-reported. Earlier practice used Python 3.14, but setup error showed 3.11; measured runtime exact version not independently verified."
+  },
+  "limits": [
+    "One person; one fixed data set; fixed ABBAAB order; learning and repetition confounded.",
+    "A requires more commands/transcription and entire-attempt restart on invalid input, including a missing run command.",
+    "A and B verify the same displayed fields but equal cognitive review quality is unproven.",
+    "All invalid attempts retained; practice and untimed setup excluded.",
+    "Attempt timers exclude between-attempt gaps, preparation and assistance outside timed intervals.",
+    "Machine-subtracted time is not proven focused human work.",
+    "No causal productivity or company-wide savings claim.",
+    "Accessibility human follow-up remains a separate incomplete task."
+  ]
+}
