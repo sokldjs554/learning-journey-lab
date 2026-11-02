@@ -148,6 +148,108 @@ def test_wrong_manual_entry_preserved_and_next_attempt_same_slot(synthetic_study
     assert all((r['phase'],r['slot'],r['condition'])==('practice',1,'A') for r in rows)
 
 
+def use_v2(m, study):
+    config=json.loads((study/'protocol.json').read_text())
+    config['input_policy']='retry-input-v2'
+    m.write_json(study/'protocol.json',config)
+
+
+def test_v2_corrects_at_input_without_restarting_pipeline(synthetic_study,monkeypatch):
+    m,study=synthetic_study;use_v2(m,study)
+    monkeypatch.setattr(m,'STAGES',['source_load']);monkeypatch.setattr(m,'OUTPUTS',[])
+    m.write_json(study/'calibration/stages/01-source_load.json',{'source_files':7,'archive_sha256':'abc'})
+    answers=iter(['start','rnu','run','NaN','7','abc','yes','reviewed'])
+    monkeypatch.setattr('builtins.input',lambda _:next(answers))
+    m.run_round(study)
+    row=m.records(study)[0]
+    assert row['status']=='complete'
+    assert row['invalid_inputs']==1
+    assert len(row['input_corrections'])==3
+    assert row['review_records'][0]['entry_attempts']['source_files']==[
+        {'raw':'NaN','correct':False},{'raw':'7','correct':True}]
+    events=[json.loads(s) for s in next((study/'attempts').glob('*/events.jsonl')).read_text().splitlines()]
+    assert sum(e['event']=='machine_start' for e in events)==1
+    assert m.audit_study(study)['input_corrections']==3
+    assert m.next_slot(m.records(study))==('practice',2,'B')
+    row['input_corrections'].pop()
+    m.write_json(next((study/'attempts').glob('*/record.json')),row)
+    with pytest.raises(ValueError,match='correction'):m.audit_study(study)
+
+
+def test_v2_abort_during_correction_preserves_error(synthetic_study,monkeypatch):
+    m,study=synthetic_study;use_v2(m,study)
+    answers=iter(['start','run','wrong',':abort'])
+    monkeypatch.setattr('builtins.input',lambda _:next(answers))
+    m.run_round(study)
+    row=m.records(study)[0]
+    assert row['status']=='aborted'
+    assert row['invalid_inputs']==1 and len(row['input_corrections'])==1
+
+
+def test_v2_rejects_erased_corrections_even_when_record_count_matches(synthetic_study,monkeypatch):
+    m,study=synthetic_study;use_v2(m,study)
+    monkeypatch.setattr(m,'STAGES',['source_load']);monkeypatch.setattr(m,'OUTPUTS',[])
+    m.write_json(study/'calibration/stages/01-source_load.json',{'source_files':7,'archive_sha256':'abc'})
+    answers=iter(['start','run','bad','7','abc','reviewed'])
+    monkeypatch.setattr('builtins.input',lambda _:next(answers));m.run_round(study)
+    folder=next((study/'attempts').iterdir());row=json.loads((folder/'record.json').read_text())
+    row['input_corrections']=[];row['invalid_inputs']=0;m.write_json(folder/'record.json',row)
+    events=[json.loads(s) for s in (folder/'events.jsonl').read_text().splitlines()]
+    (folder/'events.jsonl').write_text(''.join(json.dumps(e)+'\n' for e in events if e['event']!='input_correction'))
+    with pytest.raises(ValueError,match='correction'):m.audit_study(study)
+
+
+def test_unknown_input_policy_rejected_before_attempt(synthetic_study):
+    m,study=synthetic_study
+    config=json.loads((study/'protocol.json').read_text());config['input_policy']='unknown'
+    m.write_json(study/'protocol.json',config)
+    with pytest.raises(ValueError,match='input policy'):m.run_round(study)
+    assert not (study/'attempts').exists()
+
+
+@pytest.mark.parametrize('after_bad_entry',[False,True])
+def test_v2_crash_before_record_flush_keeps_partial_evidence(synthetic_study,monkeypatch,after_bad_entry):
+    m,study=synthetic_study;use_v2(m,study)
+    monkeypatch.setattr(m,'STAGES',['source_load']);monkeypatch.setattr(m,'OUTPUTS',[])
+    m.write_json(study/'calibration/stages/01-source_load.json',{'source_files':7,'archive_sha256':'abc'})
+    answers=iter(['start','run',*(['bad'] if after_bad_entry else []),'7','abc','reviewed'])
+    monkeypatch.setattr('builtins.input',lambda _:next(answers));m.run_round(study)
+    folder=next((study/'attempts').iterdir());row=json.loads((folder/'record.json').read_text())
+    # Persisted crash state: manual event reached disk before the review record did.
+    row.update(status='running',review_records=[],input_corrections=[],invalid_inputs=0)
+    m.write_json(folder/'record.json',row)
+    events=[json.loads(s) for s in (folder/'events.jsonl').read_text().splitlines()]
+    end=next(i for i,e in enumerate(events) if e['event']=='manual_entry')
+    (folder/'events.jsonl').write_text(''.join(json.dumps(e)+'\n' for e in events[:end+1]))
+    m.recover_attempts(study,json.loads((study/'protocol.json').read_text()))
+    audit=m.audit_study(study)
+    assert audit['audit']=='PASS' and audit['aborted_attempts']==1
+    assert audit['input_corrections']==int(after_bad_entry)
+    recovered=m.records(study)[0]
+    assert recovered['elapsed_seconds'] is None and recovered['status']=='aborted'
+
+
+def test_v2_orphan_attempt_recovers_policy_without_inventing_time(synthetic_study,monkeypatch):
+    m,study=synthetic_study;use_v2(m,study)
+    monkeypatch.setattr(m,'STAGES',['source_load']);monkeypatch.setattr(m,'OUTPUTS',[])
+    m.write_json(study/'calibration/stages/01-source_load.json',{'source_files':7,'archive_sha256':'abc'})
+    (study/'attempts/001-practice-1-A').mkdir(parents=True)
+    m.recover_attempts(study,json.loads((study/'protocol.json').read_text()))
+    assert m.audit_study(study)['aborted_attempts']==1
+    assert m.records(study)[0]['elapsed_seconds'] is None
+
+
+def test_policy_edit_is_rejected_before_next_attempt(synthetic_study,monkeypatch):
+    m,study=synthetic_study;use_v2(m,study)
+    monkeypatch.setattr(m,'STAGES',['source_load']);monkeypatch.setattr(m,'OUTPUTS',[])
+    answers=iter(['start','run','7','abc','reviewed'])
+    monkeypatch.setattr('builtins.input',lambda _:next(answers));m.run_round(study)
+    config=json.loads((study/'protocol.json').read_text());config['input_policy']='legacy-v1'
+    m.write_json(study/'protocol.json',config)
+    with pytest.raises(ValueError,match='protocol'):m.run_round(study)
+    assert len(list((study/'attempts').iterdir()))==1
+
+
 def test_pause_before_start_excluded_from_measurement(synthetic_study,monkeypatch):
     m,study=synthetic_study
     answers=iter([':pause','','start',':abort']);monkeypatch.setattr('builtins.input',lambda _:next(answers))

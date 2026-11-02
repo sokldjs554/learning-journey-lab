@@ -25,6 +25,7 @@ STAGE_TITLES = dict(zip(STAGES, ['원본 해시·불러오기','품질 규칙 20
 FIELD_LABELS = {'registration_required_null': '등록 필수키 결측', 'site_required_null': '콘텐츠 필수값 결측', 'course_required_null': '개설기 필수키 결측', 'course_invalid_length': '개설 기간 유효성', 'registration_unknown_course': '등록→개설기 참조', 'site_unknown_course': '콘텐츠→개설기 참조', 'event_exact_repeat': '동일 값 반복', 'event_daily_key_repeat': '일별 복합키 반복', 'registration_missing_date': '등록일 결측', 'event_after_withdrawal': '탈퇴일 이후 활동', 'event_after_course': '개설 기간 이후 활동', 'event_before_registration': '등록일 이전 활동', 'event_required_null': '활동 필수값 결측', 'event_nonpositive_click': '0 이하 클릭', 'event_unknown_student': '미등록 학습자 키', 'event_unknown_site': '콘텐츠 키 불일치', 'registration_inverted_dates': '등록·탈퇴 시점 역전', 'registration_key_repeat': '등록 키 유일성', 'site_key_repeat': '콘텐츠 키 유일성', 'course_key_repeat': '개설기 키 유일성'}
 FIELD_LABELS.update({'source_files':'원본 파일 수','archive_sha256':'원본 압축파일 SHA-256','eligible':'분석 대상','w1_active':'첫 주 활동','w2_returned':'다음 주 재방문','strict_w1_active':'탈퇴 이후 제외: 첫 주 활동','strict_w2_returned':'탈퇴 이후 제외: 다음 주 재방문','repeat_bootstrap_draws':'반복 활동 비교: 유효 재표집 수','content_bootstrap_draws':'콘텐츠 비교: 유효 재표집 수','first_day_strata':'첫 활동일 집단 수','source_type':'자료 유형','report_sha256':'보고서 SHA-256','mart_rows':'분석표 행 수','issue_records':'이슈 수','issue_history_entries':'이슈 이력 수','enrollments_compared':'독립 대조 행 수','fields_compared':'독립 대조 항목 수','mismatched_rows':'불일치 행 수','release':'빌드 상태','consistency':'일관성 결과'})
 PROVENANCES = ['human_self_reported','developer_synthetic']
+INPUT_POLICIES = ['legacy-v1', 'retry-input-v2']
 OUTPUTS = ['reports/report.json','work/enrollment_mart.csv','reports/issues.json',
            'reports/crosscheck.json','web/data/report.json','web/data/operations.json',
            'web/data/release.json','data/synthetic/source_ledger.csv','data/synthetic/delivery.csv']
@@ -197,8 +198,9 @@ def prepare(root, snapshot, raw, create=True):
     (root/'data/raw').symlink_to(raw,target_is_directory=True)
 
 
-def initialize(study,raw,provenance):
+def initialize(study,raw,provenance,input_policy='legacy-v1'):
     if provenance not in PROVENANCES:raise ValueError('provenance: human_self_reported 또는 developer_synthetic을 지정하세요')
+    if input_policy not in INPUT_POLICIES:raise ValueError('Unsupported input policy')
     raw=raw.resolve()
     manifest=json.loads((ROOT/'data/manifest.json').read_text())
     assert_digests(raw,{n:m['sha256'] for n,m in manifest['files'].items()})
@@ -209,6 +211,7 @@ def initialize(study,raw,provenance):
     shutil.copy2(ROOT/'README.md',snapshot/'README.md')
     support=hashes(snapshot,[str(p.relative_to(snapshot)) for p in snapshot.rglob('*') if p.is_file()])
     config={'schema_version':1,'created_at':now(),'provenance':provenance,
+            'input_policy':input_policy,
             'schedule':{'practice':'AB','measured':'ABBAAB'},'raw_dir':str(raw),
             'fingerprint':fingerprint(),'snapshot_sha256':support,
             'source_sha256':{n:m['sha256'] for n,m in manifest['files'].items()},
@@ -267,6 +270,29 @@ def records(study):
     return rows
 
 
+def input_errors(folder,events):
+    """Derive errors from durable stage payloads, even if a review was not flushed."""
+    errors=[];fields={}
+    for e in events:
+        kind=e['event'];reason=None
+        if kind in ['stage_command','review_confirmation']:
+            expected='run' if kind=='stage_command' else 'reviewed'
+            if e['raw']!=expected:reason=f'실행/확인 문구 {expected}가 입력되지 않았습니다'
+        elif kind=='manual_entry':
+            stage=e['stage']
+            if stage not in STAGES:raise ValueError('Unknown correction stage')
+            if stage not in fields:
+                path=folder/'stages'/f'{STAGES.index(stage)+1:02d}-{stage}.json'
+                if not path.is_file():raise ValueError('Missing correction stage evidence')
+                fields[stage]=fields_for(stage,json.loads(path.read_text()))
+            if e['field'] not in fields[stage]:raise ValueError('Unknown correction field')
+            try:parse_field(e['raw'],fields[stage][e['field']])
+            except ValueError as error:reason=str(error)
+        if reason is not None:
+            errors.append({'kind':kind,'stage':e['stage'],'raw':e['raw'],'reason':reason,'field':e.get('field')})
+    return errors
+
+
 def recover_attempts(study,config):
     """Preserve incomplete setup/start records; never manufacture missing durations."""
     records(study)
@@ -283,6 +309,20 @@ def recover_attempts(study,config):
                  'review_records':[],'invalid_inputs':0}
         else:row=json.loads(path.read_text())
         if row['status']=='running':
+            if config.get('input_policy','legacy-v1')=='retry-input-v2':
+                log_path=folder/'events.jsonl'
+                events=[json.loads(s) for s in log_path.read_text().splitlines()] if log_path.exists() else []
+                logged=[{k:e.get(k) for k in ['kind','stage','raw','reason','field']}
+                        for e in events if e['event']=='input_correction']
+                derived=input_errors(folder,events)
+                if logged!=derived[:len(logged)]:raise ValueError('Interrupted correction evidence conflict')
+                # A crash may fall between the durable raw input and its error event.
+                # Reconstruct only from that raw input + saved stage, never a duration.
+                with log_path.open('a') as log:
+                    for detail in derived[len(logged):]:
+                        log.write(json.dumps({'at':now(),'event':'input_correction','recovered':True,**detail},ensure_ascii=False)+'\n')
+                row.update(input_policy='retry-input-v2',input_corrections=derived,
+                           invalid_inputs=sum(c['kind']=='manual_entry' for c in derived))
             row.update(status='aborted',reason='이전 실행 또는 폴더 준비가 종료 기록 없이 끝났습니다. 소요 시간은 알 수 없습니다',
                        recovered_at=now(),elapsed_seconds=None,pause_seconds=None,machine_seconds=None,
                        unpaused_seconds=None,non_machine_unpaused_seconds=None)
@@ -294,6 +334,9 @@ def recover_attempts(study,config):
 
 def run_round(study):
     config=json.loads((study/'protocol.json').read_text())
+    policy=config.get('input_policy','legacy-v1')
+    if policy not in INPUT_POLICIES:raise ValueError('Unsupported input policy')
+    retry=policy=='retry-input-v2'
     if config.get('provenance') not in PROVENANCES:raise ValueError('자료 유형(provenance)이 지정되지 않았습니다')
     if config.get('schema_version')!=1 or config.get('schedule')!={'practice':'AB','measured':'ABBAAB'}:
         raise ValueError('Unsupported protocol schema or schedule')
@@ -302,6 +345,9 @@ def run_round(study):
     assert_digests(study/'snapshot',config['snapshot_sha256'])
     # Preflight hashing is setup time; source_load repeats hashing inside both timed conditions.
     assert_digests(Path(config['raw_dir']),config['source_sha256'])
+    for existing in records(study):
+        if existing.get('protocol_sha256')!=digest(study/'protocol.json'):
+            raise ValueError('Existing record/protocol digest mismatch; do not edit a fixed study')
     recover_attempts(study,config)
     rows=records(study);slot=next_slot(rows)
     if slot is None:print('예정된 8회가 모두 완료되어 추가 회차를 만들지 않았습니다.');return
@@ -311,9 +357,10 @@ def run_round(study):
     row={'schema_version':1,'provenance':config['provenance'],'protocol_sha256':digest(study/'protocol.json'),'attempt':attempt,
          'phase':phase,'slot':number,'condition':condition,'status':'running','prepared_at':now(),
          'review_records':[],'invalid_inputs':0}
+    row.update(input_policy=policy,input_corrections=[])
     log=folder/'events.jsonl'
-    def event(kind,**kw):
-        with log.open('a') as f:f.write(json.dumps({'at':now(),'event':kind,**kw},ensure_ascii=False,allow_nan=False)+'\n')
+    def event(event_name,**kw):
+        with log.open('a') as f:f.write(json.dumps({'at':now(),'event':event_name,**kw},ensure_ascii=False,allow_nan=False)+'\n')
     paused=0.
     def prompt(message):
         nonlocal paused
@@ -327,40 +374,62 @@ def run_round(study):
                     duration=time.perf_counter()-start;paused+=duration;event('pause_finish',seconds=duration)
                 continue
             return answer
+    def correction(kind,stage,raw,reason,field=None):
+        detail={'kind':kind,'stage':stage,'raw':raw,'reason':reason,'field':field}
+        row['input_corrections'].append(detail)
+        event('input_correction',**detail)
+        write_json(folder/'record.json',row)
+        print(reason+' 같은 입력에서 다시 시도하세요. 오류와 소요 시간은 보존됩니다.')
+    def command(message,expected,kind,stage):
+        while True:
+            answer=prompt(message)
+            event(kind,stage=stage,raw=answer)
+            if answer==expected:return
+            reason=f'실행/확인 문구 {expected}가 입력되지 않았습니다'
+            if not retry:raise ValueError(reason)
+            correction(kind,stage,answer,reason)
     def review(stage,payload):
         show_review(stage,payload,folder/'stages'/f'{STAGES.index(stage)+1:02d}-{stage}.json')
         fields=fields_for(stage,payload)
         record={'stage':stage,'expected':fields,'entered':{},'confirmed':False}
+        if retry:record['entry_attempts']={}
         row['review_records'].append(record)
         for name,value in fields.items():
             if condition=='A':
-                raw=prompt(f'기록 {name} = ')
-                record['entered'][name]={'raw':raw,'correct':False}
-                event('manual_entry',stage=stage,field=name,raw=raw)
-                try:parsed=parse_field(raw,value)
-                except ValueError:
-                    row['invalid_inputs']+=1
-                    write_json(folder/'record.json',row)
-                    raise
-                record['entered'][name].update(value=parsed,correct=True)
+                if retry:record['entry_attempts'][name]=[]
+                while True:
+                    raw=prompt(f'기록 {name} = ')
+                    record['entered'][name]={'raw':raw,'correct':False}
+                    event('manual_entry',stage=stage,field=name,raw=raw)
+                    try:parsed=parse_field(raw,value)
+                    except ValueError as error:
+                        row['invalid_inputs']+=1
+                        if retry:
+                            record['entry_attempts'][name].append({'raw':raw,'correct':False})
+                            correction('manual_entry',stage,raw,str(error),name)
+                            continue
+                        write_json(folder/'record.json',row)
+                        raise
+                    if retry:record['entry_attempts'][name].append({'raw':raw,'correct':True})
+                    record['entered'][name].update(value=parsed,correct=True)
+                    break
             else:record['entered'][name]={'value':value,'prefilled':True}
         print('기록 완료. 위 결과와 방금 입력한 값 또는 자동 채움 값을 확인하세요.')
-        answer=prompt('A/B 공통 확인: 표시된 항목과 비교 요약을 확인했으면 reviewed 입력: ')
-        event('review_confirmation',stage=stage,raw=answer)
-        if answer!='reviewed':raise ValueError('확인 문구 reviewed가 입력되지 않았습니다')
+        command('A/B 공통 확인: 표시된 항목과 비교 요약을 확인했으면 reviewed 입력: ',
+                'reviewed','review_confirmation',stage)
         record['confirmed']=True
         write_json(folder/'record.json',row)
     def advance(stage):
-        answer=prompt(f'다음 단계 {stage} 실행: run 입력: ')
-        event('stage_command',stage=stage,raw=answer)
-        if answer!='run':raise ValueError('실행 문구 run이 입력되지 않았습니다')
+        command(f'다음 단계 {stage} 실행: run 입력: ','run','stage_command',stage)
     recorder=StageRecorder(folder,condition,event,review,advance,config['expected_stages'])
     write_json(folder/'record.json',row)
     log.touch(exist_ok=False)
     event('attempt_preparing')
     print(f'다음: {phase} {number}회, {condition} 방식. A=단계 실행·직접 기록, B=일괄 실행·자동 채움.')
     print(f"자료 유형: {config['provenance']} / 12단계 / 공통 확인 {config['review_fields_total']}항목")
-    print('확인 항목은 같습니다. :pause=일시정지, :abort=중단. 잘못 입력하면 이번 시도는 무효로 보존되고 같은 회차를 새로 시작합니다.')
+    print('확인 항목은 같습니다. :pause=일시정지, :abort=중단. '+
+          ('입력 오류는 같은 위치에서 수정하며 오류·시간을 보존합니다. 계산·해시 오류는 무효 처리합니다.' if retry else
+           '잘못 입력하면 이번 시도는 무효로 보존되고 같은 회차를 새로 시작합니다.'))
     print('설치·준비·아래 대기는 측정에서 제외합니다. start 입력 직후부터 시간을 잽니다.')
     started=None
     try:
@@ -402,6 +471,8 @@ def run_round(study):
 def audit_study(study):
     """Read-only validation before sharing; no timing or effectiveness inference."""
     config=json.loads((study/'protocol.json').read_text())
+    policy=config.get('input_policy','legacy-v1')
+    if policy not in INPUT_POLICIES:raise ValueError('Unsupported input policy')
     if config.get('provenance') not in PROVENANCES:raise ValueError('Invalid protocol provenance')
     if set(config['expected_outputs'])!=set(OUTPUTS):raise ValueError('Incomplete output digest contract')
     if config['fingerprint']!=fingerprint():raise ValueError('Code/runtime fingerprint mismatch')
@@ -418,6 +489,16 @@ def audit_study(study):
         prior.append(row)
         assert_digests(folder,row.get('output_sha256',{}))
         events=[json.loads(line) for line in (folder/'events.jsonl').read_text().splitlines()]
+        if policy=='retry-input-v2':
+            if row.get('input_policy')!=policy:raise ValueError('Input policy mismatch')
+            corrections=[{k:e.get(k) for k in ['kind','stage','raw','reason','field']}
+                         for e in events if e['event']=='input_correction']
+            if corrections!=row.get('input_corrections'):raise ValueError('Input correction events mismatch')
+            if row['invalid_inputs']!=sum(c['kind']=='manual_entry' for c in corrections):
+                raise ValueError('Input correction count mismatch')
+            observed_errors=[(e['kind'],e['stage'],e['field'],e['raw']) for e in input_errors(folder,events)]
+            if observed_errors!=[(c['kind'],c['stage'],c['field'],c['raw']) for c in corrections]:
+                raise ValueError('Input correction history mismatch')
         for event in events:
             datetime.fromisoformat(event['at'])
             for name in ['seconds','elapsed_seconds']:
@@ -453,10 +534,21 @@ def audit_study(study):
             if row['condition']=='A':
                 for name,expected in review['expected'].items():
                     raw=review['entered'][name]['raw'];parse_field(raw,expected)
-                    manual.append((review['stage'],name,raw))
+                    if policy=='retry-input-v2':
+                        trials=review['entry_attempts'][name]
+                        if not trials or trials[-1]!={'raw':raw,'correct':True}:
+                            raise ValueError('Input correction final entry mismatch')
+                        for index,trial in enumerate(trials):
+                            try:parse_field(trial['raw'],expected);correct=True
+                            except ValueError:correct=False
+                            if trial['correct'] is not correct or correct!=(index==len(trials)-1):
+                                raise ValueError('Input correction validity mismatch')
+                            manual.append((review['stage'],name,trial['raw']))
+                    else:manual.append((review['stage'],name,raw))
         if manual!=[(e['stage'],e['field'],e['raw']) for e in events if e['event']=='manual_entry']:
             raise ValueError('Manual entry events mismatch')
     return {'schema_version':1,'provenance':config['provenance'],'audit':'PASS',
+            'input_policy':policy,'input_corrections':sum(len(r.get('input_corrections',[])) for r in rows),
             'completed_measured':sum(r['status']=='complete' and r['phase']=='measured' for r in rows),
             'invalid_attempts':sum(r['status']=='invalid' for r in rows),
             'aborted_attempts':sum(r['status']=='aborted' for r in rows),
@@ -470,9 +562,10 @@ def main():
     parser.add_argument('--study',type=Path,default=ROOT/'work/full-operations')
     parser.add_argument('--provenance',choices=PROVENANCES,help='init 필수: 실제 사람 기록 또는 개발자 가상 검증')
     parser.add_argument('--raw-dir',type=Path,default=ROOT/'data/raw')
+    parser.add_argument('--input-policy',choices=INPUT_POLICIES,default='legacy-v1',help='init only; v2 requires a NEW study folder')
     args=parser.parse_args();study=args.study.resolve()
     try:
-        if args.command=='init':initialize(study,args.raw_dir,args.provenance)
+        if args.command=='init':initialize(study,args.raw_dir,args.provenance,args.input_policy)
         else:
             if not (study/'protocol.json').is_file():raise ValueError('먼저 init으로 절차를 고정하세요')
             with lock(study):

@@ -1,0 +1,56 @@
+{
+  "checked_date_utc": "2026-11-02",
+  "source": "Codex executed checks; not applicant work",
+  "pytest": {
+    "command": "python -m pytest -q",
+    "passed": 156
+  },
+  "build": "PASS",
+  "verify": "PASS",
+  "oulad_report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+  "subscription_report_sha256": "8cab630e444e6677fe019dda8f2db0732a222b4baefdb01aa20ace6c953d6e1e",
+  "subscription_repeat_identical": true,
+  "subscription_provenance": "100_percent_synthetic",
+  "operations_v2": {
+    "audit": "PASS",
+    "stages": 12,
+    "fields": 84,
+    "identical_outputs": true,
+    "human_measured_rounds": 0
+  },
+  "public_assets": {
+    "url": "https://learning-journey-lab.onrender.com",
+    "matched_assets": 18,
+    "paths": [
+      "app.js",
+      "catalog.js",
+      "data/ednet_report.json",
+      "data/experiment-readiness.json",
+      "data/operations.json",
+      "data/release.json",
+      "data/report.json",
+      "experiment-view.js",
+      "extension-contract.js",
+      "external.css",
+      "external.html",
+      "external.js",
+      "index.html",
+      "operations-practice.css",
+      "operations-practice.html",
+      "operations-practice.js",
+      "report-contract.js",
+      "style.css"
+    ]
+  },
+  "review": {
+    "separate_reviewer": true,
+    "important_findings": 2,
+    "fixed_findings": 2,
+    "regression_cases_failed_before_fix": 4
+  },
+  "independent_applicant_sql": "not submitted",
+  "limitations": [
+    "No actual CLASS101 experiment, renewal outcome or new human timing comparison.",
+    "No independent SQL completion inferred from prepared task."
+  ]
+}

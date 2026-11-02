@@ -6,6 +6,8 @@
 
 [공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md) · [보완 결과와 남은 확인](docs/extension-summary.md)
 
+[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자 독립 SQL 과제를 구분합니다. 코드 준비와 실제 사람 수행을 같은 완료로 표시하지 않습니다.
+
 ![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 
 ## 문제와 판단
@@ -182,6 +184,8 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 - 같은 품질 규칙 3개의 검토표 기록·대조는 지원자 1명이 수동 A와 자동 채움 B로 각 3회 수행했습니다. 작업 구간 중앙값은 A 40.27초, B 14.20초이며 관측 차이는 26.06초입니다. [측정 결과와 한계](docs/human-comparison-results.md).
 - 이 1인 반복 측정은 학습·순서·중간 코드 실습의 영향을 분리하지 못합니다. 전체 OULAD의 수동 운영·일괄 실행 비교는 별도 1인 실측을 수행했지만, 손계산·독립 코드 작성 비교와 실제 서비스 사용자 실험·인터뷰는 수행하지 않았으며, 일반적인 자동화 절감률이나 회사 생산성 개선을 주장하지 않습니다.
 - 실행 전 필요한 데이터와 무작위 실험 계획: [experiment-plan.md](docs/experiment-plan.md).
+- 다음 학습 안내는 [대안 비교](docs/product-decision.md)에 따른 조건부 실험 후보입니다. 실제 진입 마찰을 관찰한 결과는 아닙니다. [구독 연결 SQL](docs/subscription-bridge.md)은 100% 생성 장부의 분모·결제자 연결 검증이며 갱신 성과가 아닙니다.
+- 전체 운영 비교의 과도한 재시작 부담은 [새 입력 방식](docs/full-operations-v2.md)으로 수정했습니다. 기존 사람 실측을 변경하지 않았으며 새 방식의 사람 시간 절감은 미측정입니다.
 
 ## 설명 자료와 참고
 

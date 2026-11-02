@@ -1,0 +1,259 @@
+{
+  "provenance": "100_percent_synthetic",
+  "as_of": "2025-01-10T00:00:00+00:00",
+  "watermark": "2025-01-10T00:00:00+00:00",
+  "cycles": [
+    {
+      "cycle_id": "c1",
+      "subscription_id": "s1",
+      "payer_id": "p1",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    },
+    {
+      "cycle_id": "c2",
+      "subscription_id": "s2",
+      "payer_id": "p2",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    },
+    {
+      "cycle_id": "c3",
+      "subscription_id": "s3",
+      "payer_id": "p3",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    },
+    {
+      "cycle_id": "c4",
+      "subscription_id": "s4",
+      "payer_id": "p4",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-02-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    },
+    {
+      "cycle_id": "c5",
+      "subscription_id": "s5",
+      "payer_id": "p5",
+      "plan_type": "group",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    },
+    {
+      "cycle_id": "c6",
+      "subscription_id": "s6",
+      "payer_id": "p6",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": "2024-12-20T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c7",
+      "subscription_id": "s7",
+      "payer_id": "p7",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": "2024-12-20T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c8",
+      "subscription_id": "s8",
+      "payer_id": "p8",
+      "plan_type": "individual",
+      "started_at": "2024-01-01T00:00:00+00:00",
+      "renewal_due_at": "2025-01-01T00:00:00+00:00",
+      "cancel_requested_at": null
+    }
+  ],
+  "members": [
+    {
+      "cycle_id": "c1",
+      "learner_id": "l1a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c2",
+      "learner_id": "l2a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c3",
+      "learner_id": "l3a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c4",
+      "learner_id": "l4a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c5",
+      "learner_id": "l5a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c5",
+      "learner_id": "l5b",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c6",
+      "learner_id": "l6a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c7",
+      "learner_id": "l7a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    },
+    {
+      "cycle_id": "c8",
+      "learner_id": "l8a",
+      "valid_from": "2024-01-01T00:00:00+00:00",
+      "valid_to": "2025-03-01T00:00:00+00:00"
+    }
+  ],
+  "learning": [
+    {
+      "event_id": "learn1",
+      "cycle_id": "c1",
+      "learner_id": "l1a",
+      "occurred_at": "2024-01-01T12:00:00+00:00",
+      "ingested_at": "2024-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn2",
+      "cycle_id": "c1",
+      "learner_id": "l1a",
+      "occurred_at": "2024-01-02T12:00:00+00:00",
+      "ingested_at": "2024-01-02T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn3",
+      "cycle_id": "c2",
+      "learner_id": "l2a",
+      "occurred_at": "2024-01-01T12:00:00+00:00",
+      "ingested_at": "2024-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn4",
+      "cycle_id": "c3",
+      "learner_id": "l3a",
+      "occurred_at": "2024-01-01T12:00:00+00:00",
+      "ingested_at": "2024-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn5",
+      "cycle_id": "c5",
+      "learner_id": "l5a",
+      "occurred_at": "2024-01-01T12:00:00+00:00",
+      "ingested_at": "2024-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn6",
+      "cycle_id": "c5",
+      "learner_id": "l5b",
+      "occurred_at": "2024-01-02T12:00:00+00:00",
+      "ingested_at": "2024-01-02T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn7",
+      "cycle_id": "c7",
+      "learner_id": "l7a",
+      "occurred_at": "2024-01-01T12:00:00+00:00",
+      "ingested_at": "2024-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "learn8",
+      "cycle_id": "c8",
+      "learner_id": "l8a",
+      "occurred_at": "2024-01-02T12:00:00+00:00",
+      "ingested_at": "2024-01-02T12:00:00+00:00"
+    }
+  ],
+  "billing": [
+    {
+      "event_id": "pay1",
+      "transaction_id": "t1",
+      "cycle_id": "c1",
+      "kind": "settled",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay2",
+      "transaction_id": "t2",
+      "cycle_id": "c2",
+      "kind": "failed",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay3",
+      "transaction_id": "t3",
+      "cycle_id": "c3",
+      "kind": "settled",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "refund3",
+      "transaction_id": "t3",
+      "cycle_id": "c3",
+      "kind": "refunded",
+      "occurred_at": "2025-01-03T12:00:00+00:00",
+      "ingested_at": "2025-01-03T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay5",
+      "transaction_id": "t5",
+      "cycle_id": "c5",
+      "kind": "settled",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay6",
+      "transaction_id": "t6",
+      "cycle_id": "c6",
+      "kind": "settled",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay8",
+      "transaction_id": "t8",
+      "cycle_id": "c8",
+      "kind": "settled",
+      "occurred_at": "2025-01-09T12:00:00+00:00",
+      "ingested_at": "2025-01-09T12:00:00+00:00"
+    },
+    {
+      "event_id": "pay5",
+      "transaction_id": "t5",
+      "cycle_id": "c5",
+      "kind": "settled",
+      "occurred_at": "2025-01-01T12:00:00+00:00",
+      "ingested_at": "2025-01-01T12:00:00+00:00"
+    }
+  ]
+}

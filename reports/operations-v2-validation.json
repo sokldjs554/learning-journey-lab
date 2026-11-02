@@ -1,0 +1,59 @@
+{
+  "provenance": "developer_automated_real_OULAD_not_human",
+  "input_policy": "retry-input-v2",
+  "human_measured_rounds": 0,
+  "reference_report_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+  "review_fields": 84,
+  "stages_per_condition": 12,
+  "conditions": [
+    {
+      "condition": "A",
+      "status": "complete",
+      "invalid_inputs": 1,
+      "corrections": 3
+    },
+    {
+      "condition": "B",
+      "status": "complete",
+      "invalid_inputs": 0,
+      "corrections": 1
+    }
+  ],
+  "identical_outputs": true,
+  "audit": "PASS",
+  "all_stage_hashes_match_calibration": true,
+  "code_sha256": {
+    "requirements.txt": "e07eb61e2b1422c0c0018bb72ba3bc4eeec0623c53519df64aead329c68b0ae7",
+    "scripts/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/accessibility_preview.py": "0416c0593f3ce07b06db5320e3770afb8080cb5a2b2d378e62a134e5c3991444",
+    "scripts/analyze.py": "3d962aa24e5eaf908d8e59ca87a87d93af9f5c884a7abfd40a846ae601c7ba65",
+    "scripts/build.py": "bbb6240a1e6d43ed107d93f0f0c1208220bcd73d86143d4b280594583359fa4d",
+    "scripts/check_experiment.py": "a3901c4f77b3c2cb39f047ebc0794767a717b433e974b3adbd336f96f55fc9e2",
+    "scripts/check_operations_v2.py": "b8d500aa1d492bf3cb109864cd211ba57be4b2848fe8c5ffc3b3aff998eb5dcd",
+    "scripts/check_subscription.py": "9a82579eccc0a18aba69cfe1a1cc1c06affbf12d20f8614becdb62a43fbc0197",
+    "scripts/crosscheck.py": "7ff6e9f9b81d5d6eede6fac4a06826c2ac9487110b1455f1ead391e45607d261",
+    "scripts/document.py": "752369f1f749bf0b2ba9043180150f399500e71669abf5ae4cd1633a169e6760",
+    "scripts/download.py": "6b54f9726fdbce4d511ae6c2c18e20731be64375b4f34de79dfc4ff1070a5293",
+    "scripts/download_ednet.py": "bd6191339174476a91ab47715acb750bd725e261fda77c7ba8e577b2591006c6",
+    "scripts/evidence_extensions.py": "3b6905339617e730b02ea7faa5db500b96164c2d954cba00e545ad7d0cd3f8e0",
+    "scripts/full_operations.py": "23e57c03d36fa12acf582bb7dcd00d087f8a1d55494e40b5c3cdc1cf7f39fefc",
+    "scripts/import_practice.py": "0f076aeacfd24f52b0cd585e0d092841e553196ffa1d768942cab47f39c227e6",
+    "scripts/verify.py": "d41a8543c583e00ab504e6721876ba20bd64db314633107fee3e0f4860d039a8",
+    "sql/dimensions.sql": "7c7bf82462217a3a481b8fd13f9af690170d3c16e6a7455175eb4f73d87ca1f8",
+    "sql/ednet.sql": "209fc7a452b8f95eb82825f7cf7b83c16eb095ff2143f07919c177871b62b519",
+    "sql/faults.sql": "4b1b09e318271e16687ebee8fc9499145c94ba3e86b1d04bfa24a3f1166dbeb5",
+    "sql/marts.sql": "b281dedf40b74797ece0ba7e59431317cad580f6b2ce3a1effeb682d92b48d10",
+    "sql/quality.sql": "0165f0d7062e79c1ca4b466eb8465623fefca8e9ed2b901504f42a586fa1c45c",
+    "sql/subscription_bridge.sql": "f4a58b0cb4f6feafe6542e47e975ece98cc5ecd5c4be0d195d170110a8dae530",
+    "src/journey/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/journey/ednet.py": "7b7c2c3fe5e85e47f73601620b16939064a8acec8e5500c479447bd842ff378b",
+    "src/journey/ednet_integrity.py": "ac3feb77cccba7f7622dbd4cce056926cd9f4c18893d8b338884db55b58aec14",
+    "src/journey/experiment_readiness.py": "a8fb17b1e1a2b7537ba7c1e482ecb976a2f809087c7f0e3b218964c8c66d1b45",
+    "src/journey/faults.py": "8459745be9b9823b93e01f30df9e4c8a7666a3758e7843818d890cc429ae2231",
+    "src/journey/pipeline.py": "f07df2a3be2621f17416d2cb6d051f785c0996ee7ebaa1051fa7138d1f1f67e2",
+    "src/journey/statistics.py": "df176e97853c778f8f5e1e8fca24739542e01f9d71759a93b103a4e9fe59e1f7",
+    "src/journey/subscription_bridge.py": "682369918a1bdb46377539681d19ae0dbb284f01d05e2f58de12e1807a7b5549",
+    "src/journey/tracker.py": "8d0b15fdbe28a58ddd0d391ca0d371dc330ab990ad8778c07265a6a246055bb3"
+  },
+  "interpretation": "Automated inputs test corrections and equality only; no human time saving or comprehension claim."
+}
