@@ -120,7 +120,7 @@ npm install --prefix work/a11y axe-core@4.11.0
 python tests/accessibility_check.py --url http://localhost:8766
 ```
 
-위 자동 검사는 실제 스크린 리더 사용을 대신하지 않습니다. 별도로 지원자가 Safari·Android·VoiceOver의 지정 과제를 직접 확인하고 결과를 전달했습니다([범위와 한계](docs/device-check-results.md)). 모든 OS·브라우저·접근성 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
+위 자동 검사는 실제 스크린 리더 사용을 대신하지 않습니다. 별도로 지원자가 Safari·VoiceOver의 지정 읽기·탐색·오류 안내, Safari 확대와 Android 회전·확대·터치를 확인하고 결과를 전달했습니다([사람 확인·자동 검사 구분](docs/accessibility-human-results.md)). 모든 OS·브라우저·접근성 인증을 의미하지 않습니다. 전체 분석은 `python scripts/analyze.py`, 손계산 가능한 생성 실습은 테스트 또는 데모로 확인할 수 있습니다. 출처 해시: [manifest](data/manifest.json).
 
 [전체 OULAD 수동 운영·일괄 실행 비교 절차](docs/full-operations-protocol.md)도 준비했습니다. 두 방식은 같은 12단계를 계산하고 84개 항목과 통계 요약을 확인합니다. 지원자 1명이 본 측정 6회와 무효 시도 5회를 수행한 감사 출력을 전달했습니다. 무효 시도를 포함한 관측 경과 합계는 A 5,019.92초/B 616.49초입니다. 시도 사이 간격·실제 검토 깊이는 별도 한계이며 일반적인 절감률로 해석하지 않습니다. [실측 결과·실패 원인·검증 범위](docs/full-operations-human-results.md). 기존 3개 규칙 실측·100초 재실행 기록과 구분합니다.
 

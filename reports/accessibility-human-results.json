@@ -1,0 +1,244 @@
+{
+  "updated_date_kst": "2026-11-02",
+  "source": "Applicant reports in conversation; not direct Codex observation or recorded audio.",
+  "review": {
+    "skip_link_reported_location": "학습 지표 검토",
+    "detail_tabs_read_and_switched": true,
+    "detail_focus_outline_seen": true,
+    "SQL_expanded_and_read": true,
+    "empty_search_announcement_and_return": true,
+    "reported_blocking": false,
+    "outside_recorded_human_scope": [
+      "review status filter",
+      "source link destination"
+    ]
+  },
+  "analysis": {
+    "scope": "BBB 2014J",
+    "reported_numerator_corrected": 1164,
+    "reported_denominator": 1470,
+    "reported_rate_percent": 79.2,
+    "first_table_row": [
+      0,
+      527,
+      207,
+      39.3
+    ],
+    "column_meaning_reported": [
+      "수강 건",
+      "다음 주 활동"
+    ],
+    "empty_search_return": true,
+    "method_expanded_and_read": true,
+    "blocking_reported": false,
+    "corrections": [
+      "1997 initially reported as numerator; public eligible count distinguished, user later reported 1164.",
+      "100건 later acknowledged as writing mistake; do not infer a VoiceOver software defect."
+    ]
+  },
+  "runs": {
+    "issue_to_detail_navigation_reported": true
+  },
+  "plan": {
+    "baseline": 0.3,
+    "mde": 0.05,
+    "per_arm_corrected": 1377,
+    "first_recruitment_row": [
+      50,
+      56,
+      71
+    ],
+    "blocking_reported": false,
+    "guidance": "Codex corrected order: expand required-sample details before locating controls; guided VO reading navigation for non-focusable output text.",
+    "corrections": [
+      "1337 initially reported, then user explicitly reported 그룹당 1377명.",
+      "Statistical assumptions and baseline value initially repeated instead of sample output; not counted as sample reading success until final answer."
+    ]
+  },
+  "synthetic_lab": {
+    "reported_fraction_and_gate": [
+      [
+        "truth",
+        6,
+        10,
+        "PASS"
+      ],
+      [
+        "observed",
+        4,
+        10,
+        "BLOCK"
+      ],
+      [
+        "clean",
+        4,
+        10,
+        "BLOCK"
+      ],
+      [
+        "late",
+        5,
+        10,
+        "BLOCK"
+      ],
+      [
+        "replay",
+        6,
+        10,
+        "PASS"
+      ]
+    ],
+    "public_data_match": true,
+    "synthetic_provenance_label_read": true,
+    "blocking_reported": false
+  },
+  "scope_limit": "No overall WCAG conformance or all-screen completion claim.",
+  "external_definition_reading": {
+    "source": "Applicant reports, not direct audio observation",
+    "definitions": {
+      "submit": [
+        [
+          1688,
+          31,
+          "1.8%"
+        ],
+        [
+          342,
+          135,
+          "39.5%"
+        ]
+      ],
+      "entry": [
+        [
+          1683,
+          36,
+          "2.1%"
+        ],
+        [
+          354,
+          142,
+          "40.1%"
+        ]
+      ],
+      "ui": [
+        [
+          1683,
+          35,
+          "2.1%"
+        ],
+        [
+          365,
+          149,
+          "40.8%"
+        ]
+      ]
+    },
+    "selection_name_read": true,
+    "keyboard_blocking_reported": false,
+    "entry_first_row_label_transcribed": "일"
+  },
+  "external_navigation_reading": {
+    "source": "Applicant self-report",
+    "section_links_and_content_read": [
+      "로그 품질",
+      "유료 이용권",
+      "관찰 범위",
+      "출처·재현"
+    ],
+    "citation_reported": "Choi et al., EdNet: A Large-Scale Hierarchical Dataset in Education",
+    "license_reported": "CC BY-NC 4.0",
+    "official_repository_open_and_return": true,
+    "blocking_reported": false,
+    "agreed_external_task_bundle": "complete"
+  },
+  "practice_error_reading": {
+    "source": "Applicant self-report, intentionally blank developer-test practice; not a human timing measurement",
+    "first_input_name_reported": "event_exact_repeat",
+    "field_name_full_announcement": "Not fully transcribed; do not claim exact complete accessible name verified.",
+    "error_reported": "event_exact_repeat · 건수: 누락. 기준값 787170.",
+    "history_verdict_corrected": "무효",
+    "initial_verdict_description": "정상판정; clarified through actual verdict-cell reading",
+    "repeat_practice_returns_ready": true,
+    "blocking_reported": false
+  },
+  "safari_native_zoom": {
+    "source": "Applicant self-report; browser zoom setting and pixels not directly observed by Codex",
+    "requested_views": [
+      "review",
+      "analysis",
+      "runs",
+      "plan",
+      "lab",
+      "external",
+      "practice-ready"
+    ],
+    "reported_200_percent": "All seven views seen; text larger, no other issue reported.",
+    "reported_400_percent": "Initially described as barely visible; clarified that enlargement reduces content visible at once, and scrolling permits reading and operating controls.",
+    "returned_to_100_percent": true,
+    "interpretation": "No blocking clipping/overlap reported; not independent confirmation of native Safari zoom implementation or universal WCAG conformance."
+  },
+  "android_followup": {
+    "source": "Applicant self-report using previously discussed Android phone; exact current model/browser version not reconfirmed",
+    "requested_views": [
+      "analysis",
+      "external",
+      "practice-ready"
+    ],
+    "portrait_and_landscape_clipping_or_overlap_reported": false,
+    "pinch_zoom_reading_and_operation": true,
+    "table_last_column_reachable": true,
+    "lab_drag_out_before_release_cancels_selection": true,
+    "lab_normal_tap_changes_stage": true,
+    "blocking_reported": false,
+    "talkback_tested": false
+  },
+  "local_error_retry": {
+    "source": "Applicant reports and main-error screenshot; not direct Codex audio observation",
+    "setup_history": [
+      "Initial missing script/path and Safari connection errors did not count as application error tests.",
+      "Server startup text and normal-page screenshot did not establish application error/retry.",
+      "Fresh loopback port 8768 produced the main application error screen, visually confirmed from applicant screenshot."
+    ],
+    "main": {
+      "error_spoken": "근거 파일 불러오기 실패",
+      "announcement": "automatic, applicant-reported",
+      "keyboard_retry": "successful, applicant-reported",
+      "first_spoken_after_recovery": "학습 지표 검토",
+      "status": "confirmed within reported scope"
+    },
+    "practice": {
+      "visual_evidence": "Applicant screenshot shows the practice page in ready state.",
+      "latest_report": "After hearing the message the page recovered automatically; earlier button-press description was corrected.",
+      "reported_error_phrase": "근거 파일 불러오기 실패",
+      "reported_post_recovery_phrase": "같은 검토 표, 두 가지 기록 방법",
+      "interpretation": "Recovery view and applicant automatic-recovery report retained. Error phrase belongs to the main page; no confirmed practice-specific error announcement or keyboard-triggered focus-restoration evidence. Not proof of an implemented automatic retry feature."
+    },
+    "external": {
+      "source": "Latest explicit applicant report supersedes earlier copied server-startup messages.",
+      "error_spoken": "보조 근거 확인 실패",
+      "keyboard_retry": "Applicant reports successful demo access in response to keyboard-retry question.",
+      "first_spoken_after_recovery": "보조 데이터 검증",
+      "status": "confirmed within reported scope"
+    },
+    "human_keyboard_retry_scope": [
+      "main",
+      "external"
+    ],
+    "automated_retry_scope": [
+      "main",
+      "practice",
+      "external",
+      "plan"
+    ]
+  },
+  "status": "closed",
+  "closure": "Applicant requested no further follow-up. Evidence records only supported observations; closure is not a conformance pass.",
+  "coverage_boundary": [
+    "Guided applicant QA, not independent usability testing or an accessibility certification.",
+    "No claim of whole-site human verification of every state, control, language or assistive-technology combination.",
+    "Practice automatic-recovery report is not evidence of keyboard retry, focus restoration, or a software automatic-retry feature.",
+    "Plan failure/retry is supported by developer browser tests, not a separate completed human VoiceOver report.",
+    "Exact current macOS/VoiceOver/browser versions and zoom pixels were not independently captured.",
+    "No physical-device or VoiceOver recording by Codex; screenshots with personal browser chrome are not published."
+  ]
+}

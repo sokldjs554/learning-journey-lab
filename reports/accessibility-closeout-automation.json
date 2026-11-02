@@ -1,0 +1,115 @@
+{
+  "checked_at_utc": "2026-11-02T07:27:08.621816+00:00",
+  "source_commit": "b24fbd47e9fba051199b6d99c59749b3cbce4fa3",
+  "source": "Developer browser automation; no participant audio",
+  "public_flow_regressions": {
+    "human_observation": false,
+    "results": [
+      {
+        "task": "retry_focus",
+        "path": "/",
+        "target": "page-title",
+        "focus": "page-title",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "retry_focus",
+        "path": "/external.html",
+        "target": "external-title",
+        "focus": "external-title",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "retry_focus",
+        "path": "/?view=plan",
+        "target": "experiment-checks",
+        "focus": "experiment-checks",
+        "failure_retry_focus": true,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/?view=review",
+        "selector": "#rule-search",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/external.html",
+        "selector": "#event-definition",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "input boundary contrast",
+        "path": "/operations-practice.html",
+        "selector": "#context-notes",
+        "colors": {
+          "border": "rgb(123, 139, 144)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "ratio": 3.536567166474101,
+        "pass": true
+      },
+      {
+        "task": "detail panel visible keyboard focus",
+        "observed": {
+          "id": "detail-content",
+          "outline": "solid",
+          "width": "3px"
+        },
+        "pass": true
+      },
+      {
+        "task": "named focusable SQL regions",
+        "count": 6,
+        "pass": true
+      }
+    ]
+  },
+  "practice_regressions": {
+    "environment": "local ephemeral HTTP server, Chromium, axe-core 4.11",
+    "command": "python tests/practice_accessibility_check.py -q",
+    "passed": 7,
+    "log_sha256": "6a28b744d186fbbaa8cce47fdde95a6505ce7731a23798338d4bc11f4874817e"
+  },
+  "assets_sha256": {
+    "app.js": "95c18c19fd2ff8ad45d617efd482ead636bbd6f573388afbdfe7d30569c8323e",
+    "catalog.js": "af27646a1927307978079bddc41b0f18366dc6c69791f38a1d4feb70d138c93a",
+    "data/ednet_report.json": "965a834908dd4ab2f9634b33035f7f83ae6273695338454b631a3eda8c0f92c2",
+    "data/experiment-readiness.json": "828ec997f576c4871b75f6a279c498d8ae83787c77a575521a545f9e008d6673",
+    "data/operations.json": "f0d54459d76fa41ea9caf28484dc566cdac62ae9c1864f10f2512e0477de17e1",
+    "data/release.json": "654f8cba6ed231f715ebf6c112fe2baca08351db6f881d0aa61924b5b988eeea",
+    "data/report.json": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db",
+    "experiment-view.js": "86bf657dfd19138f2b81b6d19cae2ec07e0f5fdf5000b318a3f4b37432902f6a",
+    "extension-contract.js": "3067166bf5ceeee5fa4c6795b1d767333fbd49e92de06b739ba587aaf54f4e3b",
+    "external.css": "d456ad8cf234f0250d04989d4c6092b365bdafb346dbc00f074d78448de79bf5",
+    "external.html": "e2921569da97628b0e1a9cc2ffe867f945879f624a02a0741e4dd30049fc8c7b",
+    "external.js": "7f73515caaf63148ab67a677755fc0790139313485006e1f517567c1434fa697",
+    "index.html": "096ffe1ab642ac099e03c57b8604ab5845ae184796124ca6478d67876faa931a",
+    "operations-practice.css": "ea17c25d35055dc6baefe35f1592923a70aac2a04c095ef271c19e2f50a48ee6",
+    "operations-practice.html": "3872126eefb4ac3b4619444efdf8f17139ad43499c7ca902866b16df710134b8",
+    "operations-practice.js": "b9baa30064d195dfb107d09a2a45e0ce63ea4c95a125f4d459702bda04a63f48",
+    "report-contract.js": "e3c477724e476df86f2ad59e86d60c301495f957a3ec90241a55c3001fc16f66",
+    "style.css": "3a06fe8fa0e6d3d4159889e2222f0a7a0f988435b9491c13eceaf70a87ef52cb"
+  },
+  "verification": {
+    "pytest_passed": 139,
+    "build": "pass",
+    "verify": "pass",
+    "reported_OULAD_EdNet_sample_and_synthetic_values_match": true,
+    "wcag_unique_criteria_retained": 55,
+    "analysis_sha256": "675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db"
+  }
+}

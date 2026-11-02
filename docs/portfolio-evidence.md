@@ -51,3 +51,8 @@ def test_three_identical_rows_count_two_excess(db):
 ## 전체 계산의 수동 운영·일괄 실행 실측
 
 [사람 실측 결과](full-operations-human-results.md) · [구조화 근거](../reports/full-operations-human-results.json). 지원자 1명, 완료 6회·무효 5회, 모든 관측 시도를 보존했다. 손계산·독립 개발 경험이나 일반적인 생산성 개선으로 바꾸어 쓰지 않는다. Codex의 도구 구현·진행 안내와 지원자의 실제 실행·출력 전달을 분리한다.
+
+
+## 실제 기기·접근성 확인 근거
+
+[지원자 직접 보고](accessibility-human-results.md) · [구조화 기록](../reports/accessibility-human-results.json) · [별도 자동 회귀](../reports/accessibility-closeout-automation.json). 주요 읽기·탐색·확대·터치·메인/EdNet 재시도 확인을 기록했다. 실습의 자동 복구 보고는 키보드 재시도 증거로 사용하지 않는다. 안내받은 QA와 독립적 이해도 평가·전체 접근성 인증을 구분한다.
