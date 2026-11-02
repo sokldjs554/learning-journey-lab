@@ -8,6 +8,7 @@
 - v2 입력 수정, 오타/값 오류 보존, 중단, 오류 이력 제거 탐지, 강제 종료 복구, 중도 정책 편집 거절을 기존 v1 회귀와 함께 검사했다. 별도 리뷰의 두 발견을 네 실패 사례로 재현한 뒤 수정했다.
 - 실제 OULAD를 사용하는 자동 입력 A/B 검증은 [새 보고서](../reports/operations-v2-validation.json)를 따른다. 사람 측정·이해도 검증으로 해석하지 않는다.
 - 이번 보완은 분석 UI 자산을 변경하지 않는다. 기존 사람 접근성 확인을 다시 수행한 것으로 기록하지 않는다.
+- 공개 코드 `966fbcabb511a07b9bdededd859b4917e394cfdd`: [품질 CI41416308854](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41416308854), [공개 원본 재현 CI41416308943](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41416308943) 성공. Render `dep-dbk4utrm8hqs738eb7l0` live, 공개 자산18개와 로컬 바이트 일치. 후속 문서 커밋은 코드·분석값을 변경하지 않는다.
 
 ## 2026-11-02 실제 기기·VoiceOver 기록 정리
 

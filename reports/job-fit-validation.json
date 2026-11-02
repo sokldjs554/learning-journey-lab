@@ -52,5 +52,20 @@
   "limitations": [
     "No actual CLASS101 experiment, renewal outcome or new human timing comparison.",
     "No independent SQL completion inferred from prepared task."
-  ]
+  ],
+  "published_code_verification": {
+    "commit": "966fbcabb511a07b9bdededd859b4917e394cfdd",
+    "quality_ci": {
+      "run_id": 41416308854,
+      "conclusion": "success"
+    },
+    "full_public_data_reproduction": {
+      "run_id": 41416308943,
+      "conclusion": "success"
+    },
+    "render_deploy": {
+      "id": "dep-dbk4utrm8hqs738eb7l0",
+      "status": "live"
+    }
+  }
 }

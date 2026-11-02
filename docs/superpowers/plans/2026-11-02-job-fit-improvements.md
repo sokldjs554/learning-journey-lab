@@ -46,7 +46,7 @@ Retain existing analysis and add decision evidence rather than a churn model/new
 ### Task 4 — closeout
 - [x] Update README, evidence map, learning log and scope-specific completion document.
 - [x] Run full pytest, existing build/verify, repeated new report generation, review diff and obtain fresh code review.
-- [ ] Publish authorized repository updates and verify CI. Record unfinished human submission/new measurements explicitly.
+- [x] Publish authorized repository updates and verify CI. Record unfinished human submission/new measurements explicitly.
 
 ## Progress / rulings
 - Existing isolated worktree validation/full-review at 06baabd, public base 3b9e995; identical trees. Clean before work.
@@ -57,4 +57,4 @@ Retain existing analysis and add decision evidence rather than a churn model/new
 - Task 2: synthetic subscription contract/tests/report complete. Repeat report SHA256 8cab630e444e6677fe019dda8f2db0732a222b4baefdb01aa20ace6c953d6e1e.
 - Task 3: v2 implemented. Final real OULAD automated A/B: 12 stages, 84 fields, identical hashes, audit PASS; 0 human measured rounds.
 - Final fresh review found interrupted-record audit and mid-study policy-change problems; four RED regression cases became GREEN after fixes. Full suite 156 passed.
-- Task 4: local full suite/build/verify and 18 deployed asset byte comparisons passed; publication/CI pending. No product UI assets changed.
+- Task 4: local full suite/build/verify and 18 deployed asset byte comparisons passed; code published as 966fbcabb511a07b9bdededd859b4917e394cfdd. Quality CI41416308854 and full reproduction CI41416308943 succeeded; Render dep-dbk4utrm8hqs738eb7l0 live. No product UI assets changed.
