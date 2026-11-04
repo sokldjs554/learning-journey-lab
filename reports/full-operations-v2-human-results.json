@@ -1,0 +1,87 @@
+{
+  "recorded_kst": "2026-11-05",
+  "status": "agreed_six_round_human_measurement_complete",
+  "provenance": "human_self_reported",
+  "source": "Applicant pasted final local audit output in conversation; transcribed by Codex without changing reported values",
+  "source_summary": "reports/full-operations-v2-human-summary.json",
+  "completion_criteria": {
+    "completed_measured": 6,
+    "next": null,
+    "reported_audit": "PASS",
+    "input_policy": "retry-input-v2"
+  },
+  "implementation_reference": {
+    "instructed_zip_commit": "53afb3fff20b43ea206225008d2ce42f0a037cc8",
+    "applicant_confirmed": [
+      "v2 code present",
+      "raw file present",
+      "required packages available",
+      "initialization fixed protocol"
+    ],
+    "full_protocol_received": false,
+    "source_fingerprint_independently_verified": false
+  },
+  "practice": {
+    "complete": 2,
+    "aborted": 1,
+    "invalid_inputs": 2,
+    "included_in_measured_totals": false
+  },
+  "measured": {
+    "complete": 6,
+    "aborted": 1,
+    "invalid": 0,
+    "invalid_inputs": 1,
+    "condition_aggregates": {
+      "A": {
+        "attempts": 4,
+        "completed": 3,
+        "aborted": 1,
+        "invalid": 0,
+        "invalid_inputs": 1,
+        "all_attempts_totals": {
+          "elapsed_seconds": 1426.6248578179948,
+          "pause_seconds": 0.0,
+          "machine_seconds": 318.0159042150117,
+          "unpaused_seconds": 1426.6248578179948,
+          "non_machine_unpaused_seconds": 1108.608953602983
+        }
+      },
+      "B": {
+        "attempts": 3,
+        "completed": 3,
+        "aborted": 0,
+        "invalid": 0,
+        "invalid_inputs": 0,
+        "all_attempts_totals": {
+          "elapsed_seconds": 356.5683027240011,
+          "pause_seconds": 0.0,
+          "machine_seconds": 255.3064865240085,
+          "unpaused_seconds": 356.5683027240011,
+          "non_machine_unpaused_seconds": 101.26181619999261
+        }
+      }
+    }
+  },
+  "codex_checks": {
+    "sequence_and_counts_match": true,
+    "within_attempt_time_arithmetic_matches": true,
+    "fsum_and_decimal_totals_match": true,
+    "scope": "Summary arithmetic and schedule; not reexecution of audit_study on full original events/protocol"
+  },
+  "attribution": {
+    "applicant": "Direct practice/measurement execution and relayed audit summaries",
+    "codex": "Prior environment and procedure guidance; code implementation; summary validation, documentation and commit"
+  },
+  "limits": [
+    "One participant, same fixed data and repeated task; prior v1 and practice experience confound learning/order comparisons.",
+    "All measured attempts, including the A interruption, are included; practice is separate. Interrupt causes are not present in the summary.",
+    "Zero logged pause time does not independently prove absence of unlogged interruption or external help; these were not separately reported for v2.",
+    "Automated fill and reviewed confirmation do not independently establish equal review depth or understanding.",
+    "No original protocol, full events or source fingerprints received; PASS is the applicant-relayed local audit result.",
+    "Non-machine time includes input/review/waiting overhead; not measured focused labor.",
+    "No causal v1-versus-v2 speedup, general company productivity or independent full-project authorship claim."
+  ],
+  "additional_measurement_required_for_agreed_completion": false,
+  "independent_implementation": "Separate user-selected full-project exercise; earlier applicant SQL/hand calculation/judgment remains complete. Measurement does not substitute for implementation."
+}

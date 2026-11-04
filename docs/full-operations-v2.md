@@ -1,6 +1,6 @@
 # 전체 운영 비교: 입력 수정 방식 v2
 
-Codex가 기존 실측에서 발견한 도구 문제를 수정했다. **새 사람 실측은 아직 없다.** 기존 [실측](full-operations-human-results.md)의 완료 6회·무효 5회·시간은 그대로 보존한다. v2로 기존 시도를 다시 계산하거나 절감률을 만들어내지 않는다.
+Codex가 기존 실측에서 발견한 도구 문제를 수정했다. **2026-11-05 지원자의 v2 본 측정 6회·next null·로컬 감사 PASS 출력을 수신해 사람 실측 수행을 종료했다.** [v2 결과·중단 포함 합계·검증 범위](full-operations-v2-human-results.md). 기존 [v1 실측](full-operations-human-results.md)의 완료 6회·무효 5회·시간은 별도 보존하며 v2 결과로 바꾸지 않는다.
 
 ## 무엇이 달라졌는가
 
@@ -33,7 +33,7 @@ python scripts/full_operations.py run --study work/full-operations-v2
 python scripts/full_operations.py audit --study work/full-operations-v2
 ```
 
-일반 기본값은 기존 호환성을 위해 `legacy-v1`이다. 정책은 init 시 고정되고 run 시 프로토콜에서 읽는다. 기존 폴더면 덮어쓰지 않고 종료한다. 연습 A/B 이후 본 측정 ABBAAB의 순서이며 새 측정을 원할 때만 수행한다. 이번 보완에서 지원자에게 재측정을 수행했다고 기록하지 않았다.
+일반 기본값은 기존 호환성을 위해 `legacy-v1`이다. 정책은 init 시 고정되고 run 시 프로토콜에서 읽는다. 기존 폴더면 덮어쓰지 않고 종료한다. 연습 A/B 이후 본 측정 ABBAAB의 순서이며 새 측정을 원할 때만 수행한다. 2026-11-02 개발 보완 당시에는 사람 실측이 없었고, 이후 별도 요청에 따른 v2 실측은 위 결과 문서에 기록했다. 아래 명령은 재현 참고용이며 완료한 참여자에게 추가 회차를 요구하는 안내가 아니다.
 
 ## 개발 검증
 

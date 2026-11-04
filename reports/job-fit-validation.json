@@ -92,9 +92,16 @@
     ],
     "limits_preserved": [
       "Not wholly unaided implementation",
-      "No new human measurement for operations v2",
+      "At 2026-11-04 closeout no new v2 human measurement; subsequent requested measurement completed as recorded in followup_2026_11_05.",
       "No CLASS101 production experiment or business outcome"
     ],
     "documentation_work_by": "Codex"
+  },
+  "followup_2026_11_05": {
+    "operations_v2_human_measurement": "agreed_six_round_human_measurement_complete",
+    "evidence": "reports/full-operations-v2-human-results.json",
+    "original_developer_validation_unchanged": true,
+    "independent_full_project_implementation": "Separately requested including UI/deployment; not completed by this measurement",
+    "prior_applicant_sql_exercise": "remains complete"
   }
 }
