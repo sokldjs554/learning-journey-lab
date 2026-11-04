@@ -1,0 +1,168 @@
+{
+  "recorded_kst": "2026-11-04",
+  "status": "three_step_exercise_complete",
+  "source": "Applicant submissions in conversation; code and fixture transcribed to repository by Codex",
+  "question": "Compare a first-week activity threshold of at least two days with at least three days.",
+  "submitted_sql": "evidence/applicant/activity-threshold.sql",
+  "sql_sha256": "35e1661b5d873c216192d6d3fe1601d06773aa0d02bf2acd0161e9da344d04cd",
+  "submitted_fixture": "evidence/applicant/activity-threshold-fixture.csv",
+  "fixture_provenance": "Applicant-submitted fictional 8-row example; not real learners",
+  "reference_help_reported": "Learning Journey Lab 프로젝트",
+  "prediction_received_before_result": {
+    "population": "감소",
+    "return_rate": "증가할 것 같다",
+    "reason": "활동 기준이 높아질수록 해당 조건을 충족하는 수강 건은 줄어들지만, 첫 주에 더 자주 활동한 학습자일수록 다음 주에도 활동할 가능성이 높기 때문이다"
+  },
+  "submitted_real_data_output": [
+    [
+      "1일",
+      5565,
+      3835,
+      68.9
+    ],
+    [
+      "2일",
+      4803,
+      3992,
+      83.1
+    ],
+    [
+      "3일 이상",
+      13154,
+      12476,
+      94.8
+    ]
+  ],
+  "submitted_hand_calculation": [
+    [
+      "1일",
+      2,
+      1,
+      50.0
+    ],
+    [
+      "2일",
+      2,
+      1,
+      50.0
+    ],
+    [
+      "3일 이상",
+      3,
+      2,
+      66.7
+    ]
+  ],
+  "submitted_fixture_output": [
+    [
+      "1일",
+      2,
+      1,
+      50.0
+    ],
+    [
+      "2일",
+      2,
+      1,
+      50.0
+    ],
+    [
+      "3일 이상",
+      3,
+      2,
+      66.7
+    ]
+  ],
+  "submitted_threshold_comparison": {
+    "two_or_more": {
+      "n": 17957,
+      "returned": 16468,
+      "rate_pct": 91.7
+    },
+    "three_or_more": {
+      "n": 13154,
+      "returned": 12476,
+      "rate_pct": 94.8
+    },
+    "excluded_enrollments": 4803,
+    "difference_pp": 3.1,
+    "excluded_percent_approx": 26.7
+  },
+  "judgment": {
+    "choice_text_as_submitted": "3일 이상 기준을 사용 / 보류",
+    "reason_as_submitted": "3일 이상 기준은 재방문율이 더 높지만, 기존 대상의 약 26.7%가 제외된다. 제외되는 2일 활동군에서도 3,992건이 다음 주에 활동했기 때문에 재방문율만 보고 기준을 높이는 것은 적절하지 않다고 판단했다.",
+    "limit_as_submitted": "첫 주 활동일을 3일 이상으로 늘리는 것이 실제로 재방문율을 높이는지는 알 수 없다. 학습 의지나 강좌 특성 등 다른 요인이 영향을 미쳤을 가능성이 있기 때문이다.",
+    "next_validation_as_submitted": "강좌별·개설기별로 동일한 경향이 나타나는지 확인하고, 활동 기록의 누락 여부를 검증해야 한다. 이후 실제 사용자 데이터를 바탕으로 대상 감소에 따른 영향을 분석하고, 필요하다면 A/B 테스트로 활동 유도 정책의 효과를 확인해야 한다.",
+    "codex_interpretation": "Rationale supports holding a threshold increase based only on the higher observed rate. Choice field retained both options; interpretation is not a verbatim selected option."
+  },
+  "codex_verification": {
+    "source_mart": "Previously reproduced OULAD calibration mart; no applicant device access",
+    "checks": {
+      "actual": {
+        "matches_submitted_output": true,
+        "rows": [
+          [
+            "1일",
+            5565,
+            3835,
+            68.9
+          ],
+          [
+            "2일",
+            4803,
+            3992,
+            83.1
+          ],
+          [
+            "3일 이상",
+            13154,
+            12476,
+            94.8
+          ]
+        ]
+      },
+      "fixture": {
+        "matches_submitted_output": true,
+        "rows": [
+          [
+            "1일",
+            2,
+            1,
+            50.0
+          ],
+          [
+            "2일",
+            2,
+            1,
+            50.0
+          ],
+          [
+            "3일 이상",
+            3,
+            2,
+            66.7
+          ]
+        ]
+      }
+    },
+    "hand_calculation_matches_fixture_sql": true,
+    "threshold_arithmetic_matches": true,
+    "difference_pp_unrounded": 3.1377052824543172,
+    "excluded_percent_unrounded": 26.74722949267695,
+    "matches_existing_report_totals": true
+  },
+  "assistance_scope": [
+    "Codex chose the question and three-step protocol.",
+    "Prior two-group SQL example, denominator explanation and environment guidance were provided by Codex.",
+    "Applicant submitted the three-group SQL before Codex supplied its fixture execution wrapper.",
+    "Codex reviewed SQL, explained pooling counts rather than averaging rates, and supplied a conclusion template.",
+    "Applicant supplied forecast, query, fictional rows, hand calculations, run outputs and final rationale.",
+    "Codex preserved files, reran calculations and committed the evidence."
+  ],
+  "limits": [
+    "Not proof of wholly unaided authorship or whole-project independent implementation.",
+    "No direct observation of applicant local execution; outputs were relayed in conversation.",
+    "No company intervention, causal uplift or renewal result.",
+    "No fabricated bug/fix cycle: the submitted query and example passed the reviewed checks without a logic correction."
+  ]
+}

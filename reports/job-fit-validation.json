@@ -48,7 +48,7 @@
     "fixed_findings": 2,
     "regression_cases_failed_before_fix": 4
   },
-  "independent_applicant_sql": "not submitted",
+  "independent_applicant_sql": "At 2026-11-02 validation: not submitted. Subsequent assisted threshold-analysis submission is recorded in applicant_followup_2026_11_04.",
   "limitations": [
     "No actual CLASS101 experiment, renewal outcome or new human timing comparison.",
     "No independent SQL completion inferred from prepared task."
@@ -71,6 +71,12 @@
   "applicant_followup_2026_11_04": {
     "guided_practice": "closed; unfiltered and filtered terminal output received",
     "independent_sql": "not established; full solution and filter provided by Codex",
-    "evidence": "reports/guided-sql-practice.json"
+    "evidence": "reports/guided-sql-practice.json",
+    "threshold_analysis": {
+      "status": "three_step_exercise_complete",
+      "sql_and_decision_submitted": true,
+      "evidence": "reports/applicant-threshold-analysis.json",
+      "scope": "Prior instruction and execution help disclosed; not wholly unaided authorship or full-project independence"
+    }
   }
 }

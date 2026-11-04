@@ -1,5 +1,9 @@
 # 검증 기록
 
+## 2026-11-04 지원자 기준 비교 제출물 대조
+
+Codex가 [제출 SQL](../evidence/applicant/activity-threshold.sql)을 기존 재현 OULAD 분석표와 지원자의 가상 8행에 각각 실행했다. 실제 출력 3행·가상 출력 3행·손계산이 일치했고, 2일 이상/3일 이상 비교의 분모·분자·대상 감소 4,803건(26.7%)·비율 차이 3.1%p를 확인했다. [원문·역할·결과](../reports/applicant-threshold-analysis.json). 기존 보고서·UI·README 등의 일관성 검사도 통과했다. 지원자가 제출한 실행 출력과 Codex의 재실행은 구분하며, 이번 논리 수정이나 새 실패 사례를 만들어내지 않았다.
+
 ## 2026-11-02 직무 적합성 보완
 
 - 전체 pytest **156 passed**, 기존 build/verify 통과. OULAD 집계 SHA256 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db` 유지.

@@ -109,5 +109,12 @@
     "status": "closed",
     "evidence": "reports/guided-sql-practice.json",
     "independent_authorship_established": false
+  },
+  "threshold_analysis_exercise": {
+    "status": "three_step_exercise_complete",
+    "reported_kst": "2026-11-04",
+    "evidence": "reports/applicant-threshold-analysis.json",
+    "submitted_sql": "evidence/applicant/activity-threshold.sql",
+    "scope": "Applicant-submitted query, prediction, fixture, hand calculation, outputs and rationale after prior guided example; question and execution support by Codex"
   }
 }

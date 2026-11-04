@@ -6,7 +6,7 @@
 
 [공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md) · [보완 결과와 남은 확인](docs/extension-summary.md)
 
-[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자의 안내 SQL 실행·필터 수정 결과를 구분합니다. 안내 실습을 독립 작성으로 표현하지 않습니다.
+[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자가 제출한 기준 비교 SQL·손계산·판단을 구분합니다. [세 단계 실습과 도움 범위](docs/applicant-threshold-analysis.md)를 함께 기록하며 전체 프로젝트의 독립 구현으로 확대하지 않습니다.
 
 ![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 
