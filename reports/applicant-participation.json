@@ -165,5 +165,17 @@
     "codex_real_gate": "REVIEW",
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "full_quality_submission": {
+    "status": "full_20_rule_quality_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-full-quality.json",
+    "submitted_files": [
+      "evidence/applicant/quality_full.sql",
+      "evidence/applicant/run_quality_full.py"
+    ],
+    "codex_tests_passed": 51,
+    "codex_real_gate": "REVIEW",
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }

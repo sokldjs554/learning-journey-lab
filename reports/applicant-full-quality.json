@@ -1,0 +1,164 @@
+{
+  "recorded_kst": "2026-11-05",
+  "status": "full_20_rule_quality_submission_and_functional_review_complete",
+  "provenance": "Applicant-uploaded SQL and Python; Codex-authored tests and executions",
+  "submissions": [
+    {
+      "path": "evidence/applicant/quality_full.sql",
+      "sha256": "5c9b383c6db414b6a63320a9b7de0b37f20079bd00906f6d6427fd4f8ec957bd",
+      "upload_byte_identical": true
+    },
+    {
+      "path": "evidence/applicant/run_quality_full.py",
+      "sha256": "80ecddc43f94bd934b8421fb0a0c31bdfbd90a592dedc1becc0e8f3e8b53bb22",
+      "upload_byte_identical": true
+    }
+  ],
+  "logic_changes_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "reference_scope": "No extra reference/help statement accompanied these uploads; not proof of wholly unaided authorship.",
+  "codex_tests": {
+    "path": "tests/test_applicant_full_quality.py",
+    "passed": 51
+  },
+  "codex_real_data": {
+    "source": "Actual cached OULAD verified and loaded through earlier applicant modules into a temporary DB",
+    "runs": [
+      {
+        "exit_code": 0,
+        "stdout": "scope=full_quality_20  gate=REVIEW\nregistration_missing_date [review]: 45\nevent_exact_repeat [review]: 787170\nevent_unknown_student [block]: 0\nevent_required_null [block]: 0\nevent_nonpositive_click [block]: 0\nevent_daily_key_repeat [review]: 2195960\nevent_unknown_site [block]: 0\nregistration_inverted_dates [block]: 0\nregistration_key_repeat [block]: 0\nsite_key_repeat [block]: 0\ncourse_key_repeat [block]: 0\nevent_before_registration [review]: 0\nevent_after_withdrawal [review]: 29440\nevent_after_course [review]: 4374\nregistration_required_null [block]: 0\nsite_required_null [block]: 0\ncourse_required_null [block]: 0\ncourse_invalid_length [block]: 0\nregistration_unknown_course [block]: 0\nsite_unknown_course [block]: 0\nJSON 저장: <temporary quality.json>\n",
+        "stderr": ""
+      },
+      {
+        "exit_code": 0,
+        "stdout": "scope=full_quality_20  gate=REVIEW\nregistration_missing_date [review]: 45\nevent_exact_repeat [review]: 787170\nevent_unknown_student [block]: 0\nevent_required_null [block]: 0\nevent_nonpositive_click [block]: 0\nevent_daily_key_repeat [review]: 2195960\nevent_unknown_site [block]: 0\nregistration_inverted_dates [block]: 0\nregistration_key_repeat [block]: 0\nsite_key_repeat [block]: 0\ncourse_key_repeat [block]: 0\nevent_before_registration [review]: 0\nevent_after_withdrawal [review]: 29440\nevent_after_course [review]: 4374\nregistration_required_null [block]: 0\nsite_required_null [block]: 0\ncourse_required_null [block]: 0\ncourse_invalid_length [block]: 0\nregistration_unknown_course [block]: 0\nsite_unknown_course [block]: 0\nJSON 저장: <temporary quality.json>\n",
+        "stderr": ""
+      }
+    ],
+    "report": {
+      "scope": "full_quality_20",
+      "gate": "REVIEW",
+      "checks": [
+        {
+          "rule_id": "registration_missing_date",
+          "severity": "review",
+          "issue_count": 45
+        },
+        {
+          "rule_id": "event_exact_repeat",
+          "severity": "review",
+          "issue_count": 787170
+        },
+        {
+          "rule_id": "event_unknown_student",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "event_required_null",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "event_nonpositive_click",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "event_daily_key_repeat",
+          "severity": "review",
+          "issue_count": 2195960
+        },
+        {
+          "rule_id": "event_unknown_site",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "registration_inverted_dates",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "registration_key_repeat",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "site_key_repeat",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "course_key_repeat",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "event_before_registration",
+          "severity": "review",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "event_after_withdrawal",
+          "severity": "review",
+          "issue_count": 29440
+        },
+        {
+          "rule_id": "event_after_course",
+          "severity": "review",
+          "issue_count": 4374
+        },
+        {
+          "rule_id": "registration_required_null",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "site_required_null",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "course_required_null",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "course_invalid_length",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "registration_unknown_course",
+          "severity": "block",
+          "issue_count": 0
+        },
+        {
+          "rule_id": "site_unknown_course",
+          "severity": "block",
+          "issue_count": 0
+        }
+      ]
+    },
+    "matches_existing_20_rule_report": true,
+    "identical_json_bytes": true,
+    "json_sha256": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
+    "source_inputs_and_db_content_mtime_unchanged": true
+  },
+  "important_boundary_checks": [
+    "Registration date and withdrawal equality are not violations; course duration equality is outside the course.",
+    "NULL dates are not replaced with zero.",
+    "EXISTS prevents duplicated registration/course rows from multiplying temporal violation counts.",
+    "Duplicate and missing dimension keys still trigger their own BLOCK rules.",
+    "Known rule IDs cannot lower their severity in SQL output; runner rejects the result."
+  ],
+  "limits": [
+    "Completion is the specified 20-rule source quality module, not all remaining statistics/UI/deployment work.",
+    "Counts for repeated source rows do not establish event ingestion errors.",
+    "Temporal EXISTS results with conflicting dimension keys are descriptive; BLOCK rules prevent treating the dimension as trustworthy.",
+    "Real-data comparison uses the existing stored quality report; independently hand-checkable tests are separately attributed to Codex.",
+    "No applicant local execution or design explanation is inferred from Codex runs."
+  ]
+}

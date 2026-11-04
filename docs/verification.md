@@ -1,5 +1,11 @@
 # 검증 기록
 
+## 2026-11-05 지원자 전체 20규칙 SQL·실행 코드 검토
+
+`quality_full.sql`, `run_quality_full.py` 업로드 바이트를 그대로 보존했다. Codex의 손계산 가능한 날짜·키·NULL·중복·상태·오류 검사 **51개 통과**. 실제 OULAD에서 20개 규칙·severity·건수가 기존 보고서와 모두 같았고 REVIEW / 종료0이었다. 두 번 실행한 JSON 바이트가 같으며 원본·SQL·Python·DB의 해시와 수정 시각을 보존했다. [원본·결과·역할](applicant-full-quality.md).
+
+전체 pytest **274 passed**, build/verify 통과. 문서 수치·링크·JSON·원본 보존을 확인했다. 기존 생산 코드·데모·분석 결과·과거 제출물·v2 사람 실측은 변경하지 않았다. 완료 상태는 전체 원본 품질 모듈이며 후속 분석표 요구사항을 구현 완료로 세지 않는다.
+
 ## 2026-11-05 지원자 품질 실행·판정·저장 코드 검토
 
 `run_quality.py` 제출 원본을 수정 없이 보존했다. SHA-256 `d39c27e61401cf65d0729f3e4abb2daf4c4c6092176174db0f306d178d6bebe4`. Codex의 정상 판정·BLOCK 우선·종료 코드·잘못된 결과·읽기 전용·출력 보호·저장 실패 등 **25개 검사 통과**. 앞선 지원자 검증/적재/SQL 모듈과 연결해 실제 OULAD에서 REVIEW / 45·787,170·0, 2회 출력 JSON 바이트 일치를 확인했다. 원본·manifest·SQL·DB의 내용과 수정 시각은 유지됐다. [결과와 역할](applicant-quality-runner.md).

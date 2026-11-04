@@ -111,3 +111,7 @@
 ## 품질 판정·JSON 저장 Python 제출·검토 (2026-11-05 KST)
 
 지원자가 `run_quality.py`를 제출했다. 앞선 품질 SQL의 결과 계약을 확인하고 PASS/REVIEW/BLOCK을 판정하며 JSON 저장과 종료 코드를 구분한다. 원본 수정 없이 Codex의 25개 검사 및 실제 OULAD 연결·2회 실행을 통과했다. 실제 결과는 REVIEW / 45·787,170·0이며 출력 JSON 바이트가 같았다. [원본·출처·역할·범위](applicant-quality-runner.md). 테스트 작성·실행은 Codex의 작업이고 이번 첨부에 지원자의 실행 출력이나 설계 설명이 있었다고 기록하지 않는다. 세 규칙의 실행 연결 모듈 제출·기능 검토 완료를 기록한다.
+
+## 전체 품질 20규칙 SQL·Python 제출·검토 (2026-11-05 KST)
+
+지원자가 `quality_full.sql`, `run_quality_full.py`를 제출했다. 원본을 수정하지 않고 Codex의 51개 검사와 실제 OULAD 연결·2회 실행을 통과했다. 20개 ID·severity·건수가 기존 보고서와 일치하고 판정은 REVIEW였다. 중복 차원 행에 의한 날짜 위반 건수 증가 방지, 날짜 경계·NULL·잘못된 결과·BLOCK 판정도 확인했다. [원본·범위·역할](applicant-full-quality.md). 전체 품질 계약 모듈의 제출·기능 검토를 완료했으며 통계·UI·배포까지 완료한 것으로 표시하지 않는다. 테스트·재실행은 Codex의 작업이다.
