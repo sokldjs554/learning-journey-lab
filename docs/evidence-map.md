@@ -1,6 +1,6 @@
 # 주장과 근거 파일
 
-2026-11-02 직무 보완: [제품 대안과 선택 조건](product-decision.md), [생성 구독 연결 SQL](subscription-bridge.md), [전체 운영 입력 방식 v2](full-operations-v2.md). 모두 Codex 보완이며 실제 서비스 가설 검증·갱신 성과·지원자의 새 독립 작성·새 사람 실측으로 표현하지 않는다. [독립 SQL 과제](independent-sql-task.md)는 실제 답안 수신 후에만 참여 근거로 갱신한다.
+2026-11-02 직무 보완: [제품 대안과 선택 조건](product-decision.md), [생성 구독 연결 SQL](subscription-bridge.md), [전체 운영 입력 방식 v2](full-operations-v2.md). 모두 Codex 보완이며 실제 서비스 가설 검증·갱신 성과·지원자의 새 독립 작성·새 사람 실측으로 표현하지 않는다. 2026-11-04 [안내 SQL 실습](independent-sql-task.md)의 실행·필터 적용 결과를 수신했다. 예제와 수정 조건은 Codex 제공이며 독립 작성으로 확대하지 않는다.
 
 자소서와 제출용 포트폴리오 작성 전에 **지원자가 실제로 실행·이해한 범위**와 아래 측정 사실을 대조한다. 이 문서는 자소서 문장이 아니다.
 

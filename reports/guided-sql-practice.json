@@ -1,0 +1,51 @@
+{
+  "updated_kst": "2026-11-04",
+  "source": "Applicant pasted terminal outputs during Codex-guided practice; not direct device observation",
+  "status": "guided_practice_closed",
+  "sql_and_filter_supplied_by": "Codex",
+  "input_path_reported": "work/full-operations/calibration/work/enrollment_mart.csv",
+  "reported_all_enrollments": 29671,
+  "reported_unfiltered_result_rows": 44,
+  "filtered_scope": {
+    "code_module": "BBB",
+    "code_presentation": "2014J"
+  },
+  "reported_filtered_rows": [
+    {
+      "activity_group": "1일",
+      "denominator": 484,
+      "numerator": 330,
+      "return_rate_pct": 68.2
+    },
+    {
+      "activity_group": "2일 이상",
+      "denominator": 986,
+      "numerator": 834,
+      "return_rate_pct": 84.6
+    }
+  ],
+  "verification": {
+    "filtered_rows_match_committed_report": true,
+    "reported_all_enrollments_match": true,
+    "filtered_denominator_sum": 1470,
+    "filtered_numerator_sum": 1164,
+    "filtered_rate_pct": 79.2
+  },
+  "participation_scope": [
+    "Provided SQL executed and result relayed",
+    "Provided cohort filter applied and filtered result relayed"
+  ],
+  "assistance": [
+    "Complete SQL and execution block supplied",
+    "CSV path and environment troubleshooting guidance supplied",
+    "Denominator-filter error explained by Codex",
+    "Expected filtered rows supplied before run"
+  ],
+  "independent_authorship_established": false,
+  "independent_explanation_established": false,
+  "raw_query_file_received": false,
+  "notes": [
+    "No new human v2 operations measurement or CLASS101 service experiment.",
+    "This concludes the agreed guided exercise, not a certification of independent SQL skill."
+  ]
+}

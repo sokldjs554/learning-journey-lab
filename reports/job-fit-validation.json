@@ -67,5 +67,10 @@
       "id": "dep-dbk4utrm8hqs738eb7l0",
       "status": "live"
     }
+  },
+  "applicant_followup_2026_11_04": {
+    "guided_practice": "closed; unfiltered and filtered terminal output received",
+    "independent_sql": "not established; full solution and filter provided by Codex",
+    "evidence": "reports/guided-sql-practice.json"
   }
 }

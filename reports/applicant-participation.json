@@ -1,5 +1,5 @@
 {
-  "as_of_kst": "2026-10-31",
+  "as_of_kst": "2026-11-04",
   "user_commit": "4996ef674df442ccfe40e590fe94a024a6a1da3b",
   "actor": "sokldjs554",
   "file": "tests/test_user_repeat.py",
@@ -104,5 +104,10 @@
     "manual_analysis_comparator": false,
     "automation_savings_measured": false,
     "results_doc": "docs/local-rerun-results.md"
+  },
+  "guided_sql_practice": {
+    "status": "closed",
+    "evidence": "reports/guided-sql-practice.json",
+    "independent_authorship_established": false
   }
 }
