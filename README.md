@@ -6,7 +6,7 @@
 
 [공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md) · [보완 결과와 남은 확인](docs/extension-summary.md)
 
-[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자가 제출한 기준 비교 SQL·손계산·판단을 구분합니다. [세 단계 실습과 도움 범위](docs/applicant-threshold-analysis.md)를 함께 기록하며 전체 프로젝트의 독립 구현으로 확대하지 않습니다.
+[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자가 제출한 기준 비교 SQL·손계산·판단을 구분합니다. [세 단계 실습과 도움 범위](docs/applicant-threshold-analysis.md)를 함께 기록합니다. 지원자의 SQL 제출·실행·손계산 대조·판단 실습은 완료했으며 추가 필수 실습은 없습니다. 구현·안내·검증을 담당한 Codex의 역할은 [참여 기록](docs/participation.md)에서 구분합니다.
 
 ![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 
@@ -197,7 +197,7 @@ docs/                  데이터 계약·의사결정·실험·학습·면접 �
 
 README를 쓰기 전에 [Great Expectations](https://github.com/fivetran/great_expectations), [Evidently](https://github.com/evidentlyai/evidently), [Jaffle Shop DuckDB](https://github.com/dbt-labs/jaffle_shop_duckdb), [Student Cohort Retention](https://github.com/zakiyyah-ai/student_cohort_retention)의 실제 README를 읽었습니다. 문제·빠른 실행·화면·데이터 조건·검증 증거의 구성을 참고했습니다. `sk family`는 정확한 주소를 확인하지 못해 사용하지 않았습니다.
 
-Codex가 조사·코드·테스트·문서 초안을 작성했습니다. 숫자는 실제 코드 실행과 독립 대조로 확인했으며, 지원자가 직접 수행한 경험으로 소급하지 않습니다. [직접 참여 체크리스트](docs/interview-guide.md#참여-구분-체크리스트)를 완료한 범위만 본인의 경험으로 설명하세요.
+Codex가 조사·분석 파이프라인·테스트·데모·문서를 구현하고 검증했습니다. 지원자는 기준 비교 SQL·가상 자료·손계산·실행 출력·판단을 제출했으며, 로컬 재현·비교 실측·실제 기기 확인과 별도 참여자 응답 전달에 직접 참여했습니다. [완료한 실습 설명](docs/interview-guide.md#완료한-기준-비교-실습-설명)과 [역할별 근거](docs/participation.md)를 기준으로 활용하세요. 전체 프로젝트의 독립 구현이나 실제 회사 성과로 확대하지 않습니다.
 
 코드: [MIT](LICENSE). OULAD와 그 변환·집계: CC BY 4.0. 생성 실습은 코드의 MIT 조건을 따릅니다.
 

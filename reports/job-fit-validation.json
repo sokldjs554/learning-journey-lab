@@ -70,7 +70,7 @@
   },
   "applicant_followup_2026_11_04": {
     "guided_practice": "closed; unfiltered and filtered terminal output received",
-    "independent_sql": "not established; full solution and filter provided by Codex",
+    "independent_sql": "Earlier cohort-query practice used a complete Codex example; subsequent applicant-submitted threshold SQL and judgment are recorded separately below.",
     "evidence": "reports/guided-sql-practice.json",
     "threshold_analysis": {
       "status": "three_step_exercise_complete",
@@ -78,5 +78,23 @@
       "evidence": "reports/applicant-threshold-analysis.json",
       "scope": "Prior instruction and execution help disclosed; not wholly unaided authorship or full-project independence"
     }
+  },
+  "participation_closeout_2026_11_04": {
+    "status": "agreed_three_step_exercise_complete",
+    "additional_required_exercises": false,
+    "additional_required_human_timing": false,
+    "decision_context": "Activity-threshold sensitivity and justification review; not an optimal targeting policy or causal intervention estimate.",
+    "context_attribution": "Codex clarified this scope after the exercise; policy purpose/cost was not fixed in the original task. This is not an applicant omission.",
+    "applicant_evidence": "docs/applicant-threshold-analysis.md",
+    "roles_and_claims": [
+      "docs/participation.md",
+      "docs/evidence-map.md"
+    ],
+    "limits_preserved": [
+      "Not wholly unaided implementation",
+      "No new human measurement for operations v2",
+      "No CLASS101 production experiment or business outcome"
+    ],
+    "documentation_work_by": "Codex"
   }
 }
