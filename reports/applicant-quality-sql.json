@@ -1,0 +1,47 @@
+{
+  "recorded_kst": "2026-11-05",
+  "provenance": "Applicant-uploaded SQL; Codex-authored tests and execution",
+  "status": "three_rule_sql_submission_and_functional_review_complete",
+  "submitted_file": "evidence/applicant/quality.sql",
+  "submitted_sha256": "fe26c8b53f7ba60363c39a90e7636e097b9195d971684d09dbc9f9d16e62f586",
+  "submission_byte_identical": true,
+  "logic_changes_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "reference_scope": "No additional reference/help statement accompanied the SQL upload; not evidence of wholly unaided authorship.",
+  "codex_tests": {
+    "file": "tests/test_applicant_quality.py",
+    "passed": 16,
+    "scope": "Hand-checkable empty, repeats/excess, all six grouping columns, duplicated registrations, NULL/date boundaries and nonmutation/repeatability"
+  },
+  "codex_real_data": {
+    "source": "Actual cached OULAD CSVs verified and loaded by the two earlier applicant submissions into a temporary database",
+    "quality_rows": [
+      {
+        "rule_id": "registration_missing_date",
+        "issue_count": 45
+      },
+      {
+        "rule_id": "event_exact_repeat",
+        "issue_count": 787170
+      },
+      {
+        "rule_id": "event_unknown_student",
+        "issue_count": 0
+      }
+    ],
+    "matches_existing_quality_report": true,
+    "comparison_reference": "reports/report.json quality.checks; not a newly independent full-source implementation",
+    "identical_sql_executions": 2,
+    "database_read_only": true,
+    "raw_content_and_mtime_unchanged": true,
+    "database_mtime_unchanged": true
+  },
+  "limits": [
+    "This submission implements the specified first three quality rules; the full original contract has additional rules.",
+    "Exact-repeat excess is a count of identical source rows, not proof of erroneous event reception.",
+    "The unknown-student rule excludes NULL id_student by specification; required-key NULLs need a separate rule.",
+    "No applicant local execution or explanation is inferred from Codex execution.",
+    "Earlier applicant activity-threshold SQL and completed v2 human measurement remain separate completed evidence."
+  ]
+}

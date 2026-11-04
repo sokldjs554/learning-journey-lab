@@ -143,5 +143,18 @@
     "codex_real_tables_compared": 7,
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "quality_sql_submission": {
+    "status": "three_rule_sql_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-quality-sql.json",
+    "submitted_file": "evidence/applicant/quality.sql",
+    "codex_tests_passed": 16,
+    "real_rule_counts": [
+      45,
+      787170,
+      0
+    ],
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }

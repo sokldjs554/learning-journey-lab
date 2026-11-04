@@ -101,9 +101,10 @@
     "operations_v2_human_measurement": "agreed_six_round_human_measurement_complete",
     "evidence": "reports/full-operations-v2-human-results.json",
     "original_developer_validation_unchanged": true,
-    "independent_full_project_implementation": "In progress: source-validation and DuckDB-loading Python modules submitted and reviewed; UI/deployment and remaining implementation not marked complete.",
+    "independent_full_project_implementation": "In progress: source-validation, DuckDB-loading and first three quality-SQL rules submitted and reviewed; full quality/statistics/UI/deployment implementation not marked complete.",
     "prior_applicant_sql_exercise": "remains complete",
     "source_validator_evidence": "reports/applicant-source-validation.json",
-    "source_loader_evidence": "reports/applicant-source-loading.json"
+    "source_loader_evidence": "reports/applicant-source-loading.json",
+    "quality_sql_evidence": "reports/applicant-quality-sql.json"
   }
 }
