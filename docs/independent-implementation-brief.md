@@ -1,6 +1,6 @@
 # UI·배포 포함 직접 구현: 범위와 제출 기준
 
-사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 첫 모듈의 코드 제출·기능 검토는 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
+사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증에 이어 [DuckDB 적재 모듈](applicant-source-loading.md)의 제출·기능 검토도 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
 
 ## 구현 범위
 
@@ -32,3 +32,17 @@
 입력은 기존 OULAD `data/manifest.json` 파일 경로와 원본 CSV 폴더 경로다. 원본 CSV를 수정하지 않고 manifest에 기재된 7개 파일의 존재와 SHA-256을 확인한다. 모든 파일이 맞으면 각 파일의 검사 결과를 출력하고 종료 코드 0, 파일이 없거나 해시가 다르면 해당 파일과 원인을 출력하고 0이 아닌 종료 코드로 끝낸다. 원본 전체를 메모리에 한 번에 올리지 않고 읽는다. 임의 다운로드·해시 갱신·생성 자료 대체는 하지 않는다.
 
 지원자가 함수·명령행 인자·출력 형식을 정한다. 우선 작성한 파일과 사용한 참고 자료를 제출한다. 막힌 부분은 작성한 곳까지 제출할 수 있다. Codex는 제출 전 구현 정답을 제공하지 않고 제출 후 별도 임시 파일로 정상·누락·불일치 동작을 검사한다. 이 작은 첫 모듈만으로 전체 구현 완료라고 하지 않으며, 위 표에 따라 누적한다.
+
+## 다음 제출: 품질 SQL의 첫 세 규칙
+
+원본 검증·DuckDB 적재 모듈을 제출했고 기능 검토를 통과했다. 다음에는 적재된 테이블을 읽는 `quality.sql`을 직접 작성한다. 기존 활동 기준 비교 SQL을 다시 작성하는 과제가 아니라 원본 행의 품질을 검사하는 연결 단계다.
+
+출력은 `rule_id`, `issue_count` 두 열의 세 행이다. 원본과 DB 값을 수정하지 않는다. 아래 정의를 구현하고 사용한 참고 자료를 함께 보낸다.
+
+| rule_id | 셀 대상 |
+|---|---|
+| registration_missing_date | studentRegistration에서 date_registration이 NULL인 행 |
+| event_exact_repeat | studentVle의 code_module·code_presentation·id_student·id_site·date·sum_click이 모두 같은 행 중 첫 행을 제외한 초과 행. 같은 행 3개면 2개로 셈 |
+| event_unknown_student | studentVle의 id_student가 NULL이 아닌 행 중 code_module·code_presentation·id_student 조합이 studentRegistration에 없는 활동 행. 등록의 중복 행이 검사 건수를 늘리지 않도록 함 |
+
+SQL은 기존 전용 DB의 테이블 이름을 그대로 사용한다. 파일과 참고 자료를 제출하면 Codex가 손계산 가능한 별도 예시와 실제 자료로 검토한다. 이 세 규칙은 전체 품질 검사 구성의 첫 부분이며 모든 품질 검사를 완료했다고 표시하지 않는다.

@@ -1,5 +1,11 @@
 # 검증 기록
 
+## 2026-11-05 지원자 DuckDB 적재 제출본 검토
+
+업로드한 `load_sources.py`를 수정 없이 보존했다. SHA-256 `0340895c88d713ee3497911e487bdafd48d3c584da71b098c7c9c71d9965d417`. Codex의 **11개 적재 검사 통과**: 검증 실패 시 신규/기존 DB 보존, 정상 7테이블·NULL 처리, 재실행 행 수 유지, 적재 후반 오류의 전체 롤백과 연결 실패. 실제 7 CSV를 임시 DB에 적재하고 Python csv.reader로 헤더 제외 행 수를 따로 세어 모두 일치했다. 원본 해시·수정 시각 유지. [출처·검사·문구 개선점](applicant-source-loading.md).
+
+전체 pytest **182 passed**, build/verify 통과. 제출 바이트·문서 수치·상대 파일 링크·JSON을 확인했다. 기존 생산 코드·데모·분석 결과·지원자 SQL·첫 검증 모듈·v2 실측은 보존했다. 새 검토 테스트와 실행은 Codex의 작업이며 지원자 실행으로 소급하지 않는다.
+
 ## 2026-11-05 지원자 원본 검증 Python 제출본 검토
 
 업로드한 `validate_sources.py`를 바이트 그대로 보존하고 SHA-256 `2bbaf17052cd73575edce5de3f5200d6d6bc07934cb3b25730301e4263665444`를 기록했다. Codex가 추가한 정상·누락·동일 크기 변조·manifest 오류·읽기 단위 등 **15개 검사 통과**. 실제 OULAD 7 CSV에 실행해 성공 7/실패 0/종료 코드 0이며 실행 전후 파일 해시·수정 시각이 같았다. [검사와 역할](applicant-source-validation.md), [결과 JSON](../reports/applicant-source-validation.json). 지원자가 로컬 실행한 것으로 소급하지 않는다.

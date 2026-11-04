@@ -134,5 +134,14 @@
     "codex_real_csvs_checked": 7,
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "source_loader_submission": {
+    "status": "submitted_code_and_functional_review_complete",
+    "evidence": "reports/applicant-source-loading.json",
+    "submitted_file": "evidence/applicant/load_sources.py",
+    "codex_tests_passed": 11,
+    "codex_real_tables_compared": 7,
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }

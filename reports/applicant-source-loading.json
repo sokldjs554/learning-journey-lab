@@ -1,0 +1,65 @@
+{
+  "recorded_kst": "2026-11-05",
+  "provenance": "Applicant-uploaded loader; Codex review tests and real-data execution",
+  "status": "submitted_code_and_functional_review_complete",
+  "submitted_file": "evidence/applicant/load_sources.py",
+  "submitted_sha256": "0340895c88d713ee3497911e487bdafd48d3c584da71b098c7c9c71d9965d417",
+  "submission_byte_identical": true,
+  "validator_dependency": "evidence/applicant/validate_sources.py",
+  "validator_sha256": "2bbaf17052cd73575edce5de3f5200d6d6bc07934cb3b25730301e4263665444",
+  "logic_changes_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "reference_scope": "No additional reference or help statement accompanied this upload; no claim of exclusive unaided authorship.",
+  "codex_tests": {
+    "file": "tests/test_applicant_load_sources.py",
+    "passed": 11,
+    "scope": "Synthetic files in temporary folders; database non-creation/preservation, atomic rollback, repeat replacement, path quoting, NULL conversion and connection failure"
+  },
+  "codex_real_data": {
+    "exit_code": 0,
+    "stdout": "OK   assessments.csv: 8211 bytes / SHA-256 일치\nOK   courses.csv: 526 bytes / SHA-256 일치\nOK   studentAssessment.csv: 5690483 bytes / SHA-256 일치\nOK   studentInfo.csv: 3462763 bytes / SHA-256 일치\nOK   studentRegistration.csv: 1132550 bytes / SHA-256 일치\nOK   studentVle.csv: 453836331 bytes / SHA-256 일치\nOK   vle.csv: 270612 bytes / SHA-256 일치\n검사 완료: 성공 7건 / 실패 0건\nDuckDB 적재 완료: <temporary database>\nassessments: 206행\ncourses: 22행\nstudentAssessment: 173,912행\nstudentInfo: 32,593행\nstudentRegistration: 32,593행\nstudentVle: 10,655,280행\nvle: 6,364행\n총 7개 테이블 적재 성공\n",
+    "stderr": "",
+    "row_counts": {
+      "assessments": {
+        "duckdb_rows": 206,
+        "independent_csv_rows": 206
+      },
+      "courses": {
+        "duckdb_rows": 22,
+        "independent_csv_rows": 22
+      },
+      "studentAssessment": {
+        "duckdb_rows": 173912,
+        "independent_csv_rows": 173912
+      },
+      "studentInfo": {
+        "duckdb_rows": 32593,
+        "independent_csv_rows": 32593
+      },
+      "studentRegistration": {
+        "duckdb_rows": 32593,
+        "independent_csv_rows": 32593
+      },
+      "studentVle": {
+        "duckdb_rows": 10655280,
+        "independent_csv_rows": 10655280
+      },
+      "vle": {
+        "duckdb_rows": 6364,
+        "independent_csv_rows": 6364
+      }
+    },
+    "independent_count_method": "Python csv.reader over all source rows excluding each header; no production SQL imports",
+    "raw_content_and_mtime_unchanged": true,
+    "database_scope": "Temporary isolated database; removed after review"
+  },
+  "limits": [
+    "Provided manifest agreement is not semantic log quality validation.",
+    "DuckDB type inference and NULL conventions need explicit field contracts before downstream analysis.",
+    "CREATE OR REPLACE intentionally replaces the seven named tables on a successful run; use a dedicated database.",
+    "Connection errors share a rollback label even if no connection/transaction was established; nonzero exit behavior is correct.",
+    "No applicant local execution or authorship observation is inferred from Codex test results.",
+    "This is the second implementation module, not completion of UI/deployment or the full project."
+  ]
+}
