@@ -156,5 +156,14 @@
     ],
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "quality_runner_submission": {
+    "status": "quality_runner_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-quality-runner.json",
+    "submitted_file": "evidence/applicant/run_quality.py",
+    "codex_tests_passed": 25,
+    "codex_real_gate": "REVIEW",
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }

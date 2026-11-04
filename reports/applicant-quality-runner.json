@@ -1,0 +1,61 @@
+{
+  "recorded_kst": "2026-11-05",
+  "status": "quality_runner_submission_and_functional_review_complete",
+  "provenance": "Applicant-uploaded Python runner; Codex-authored tests and executions",
+  "submitted_file": "evidence/applicant/run_quality.py",
+  "submitted_sha256": "d39c27e61401cf65d0729f3e4abb2daf4c4c6092176174db0f306d178d6bebe4",
+  "submission_byte_identical": true,
+  "logic_changes_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "reference_scope": "No additional reference/help statement accompanied this upload; not proof of wholly unaided authorship.",
+  "codex_tests": {
+    "file": "tests/test_applicant_run_quality.py",
+    "passed": 25,
+    "scope": "Gates/exit codes, result contract, read-only DB, invalid SQL and missing inputs, output alias protection, preservation of old reports and temporary-file cleanup"
+  },
+  "codex_real_data": {
+    "source": "Actual cached OULAD, verified/loaded by earlier applicant submissions; submitted quality SQL and runner used unchanged",
+    "runs": [
+      {
+        "exit_code": 0,
+        "stdout": "scope=first_three_rules  gate=REVIEW\nregistration_missing_date: 45\nevent_exact_repeat: 787170\nevent_unknown_student: 0\nJSON 저장: <temporary result.json>\n",
+        "stderr": ""
+      },
+      {
+        "exit_code": 0,
+        "stdout": "scope=first_three_rules  gate=REVIEW\nregistration_missing_date: 45\nevent_exact_repeat: 787170\nevent_unknown_student: 0\nJSON 저장: <temporary result.json>\n",
+        "stderr": ""
+      }
+    ],
+    "report": {
+      "scope": "first_three_rules",
+      "gate": "REVIEW",
+      "checks": [
+        {
+          "rule_id": "registration_missing_date",
+          "issue_count": 45
+        },
+        {
+          "rule_id": "event_exact_repeat",
+          "issue_count": 787170
+        },
+        {
+          "rule_id": "event_unknown_student",
+          "issue_count": 0
+        }
+      ]
+    },
+    "identical_report_bytes": true,
+    "database_content_and_mtime_unchanged": true,
+    "input_content_and_mtime_unchanged": true,
+    "quality_report_sha256": "a7ac2f03a6ca0dd1dc3941f41e6b86f6854d37bcc2c91217cee2148254133feb"
+  },
+  "limits": [
+    "Report explicitly covers first_three_rules only, not the full quality contract.",
+    "An old output is preserved on a failed run; callers must check the current command exit status before treating it as a new report.",
+    "REVIEW and PASS exit 0, while BLOCK exits 2 even though a valid report is saved; execution errors exit 1.",
+    "No local execution or design explanation by the applicant is inferred from Codex runs.",
+    "Existing applicant SQL, validation/loading submissions and v2 human measurement remain completed evidence; remaining full-project work is separate."
+  ]
+}

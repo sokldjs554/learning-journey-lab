@@ -1,6 +1,6 @@
 # UI·배포 포함 직접 구현: 범위와 제출 기준
 
-사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)에 이어 [품질 SQL 첫 세 규칙](applicant-quality-sql.md)의 제출·기능 검토도 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
+사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)·[품질 SQL 첫 세 규칙](applicant-quality-sql.md)·[판정/JSON 저장 연결](applicant-quality-runner.md)의 제출·기능 검토를 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
 
 ## 구현 범위
 
@@ -47,9 +47,9 @@
 
 SQL은 기존 전용 DB의 테이블 이름을 그대로 사용한다. 파일과 참고 자료를 제출하면 Codex가 손계산 가능한 별도 예시와 실제 자료로 검토한다. 이 세 규칙은 전체 품질 검사 구성의 첫 부분이며 모든 품질 검사를 완료했다고 표시하지 않는다.
 
-## 다음 제출: 품질 SQL 실행·결과 저장 연결
+## 제출 완료: 품질 SQL 실행·결과 저장 연결
 
-첫 세 품질 규칙은 제출·기능 검토를 완료했다. 다음 `run_quality.py`는 그 SQL을 다시 작성하지 않고 재사용하는 Python 연결 코드다. 입력 인자는 `--db`(앞서 만든 전용 DB), `--sql`(제출한 quality.sql), `--output`(결과 JSON 경로)이다.
+첫 세 품질 규칙과 아래 `run_quality.py`의 제출·기능 검토를 완료했다. 아래는 제출 전에 고정한 요구사항이다. `run_quality.py`는 그 SQL을 다시 작성하지 않고 재사용하는 Python 연결 코드다. 입력 인자는 `--db`(앞서 만든 전용 DB), `--sql`(제출한 quality.sql), `--output`(결과 JSON 경로)이다.
 
 - 기존 DB를 읽기 전용으로 열고 SQL을 실행한다. 없는 DB를 새로 만들지 않는다.
 - 결과의 열은 `rule_id`, `issue_count`이며, 위 세 rule_id가 한 번씩 있고 건수는 0 이상의 정수인지 확인한다. 누락·중복·잘못된 결과는 실행 실패로 처리한다.
@@ -58,3 +58,7 @@ SQL은 기존 전용 DB의 테이블 이름을 그대로 사용한다. 파일과
 - 성공한 검사 결과는 콘솔에도 판정과 건수를 출력한다. PASS/REVIEW는 종료 코드 0, BLOCK은 2, 파일·DB·SQL·결과 형식 오류는 1로 끝내며 오류를 성공처럼 저장하지 않는다.
 
 이 요구사항은 실행 연결 부분이며 품질 SQL·원본·DB를 고치는 과제가 아니다. 작성한 파일과 사용한 참고 자료를 제출하면 Codex가 검사·실행·실패 상태를 검토한다.
+
+## 다음 제출: 기존 전체 품질 계약으로 확장
+
+세 규칙 실행 연결은 제출·검토를 마쳤다. 다음에는 [기존 20규칙의 정의와 실행 계약](applicant-full-quality-spec.md)을 따라 `quality_full.sql`, `run_quality_full.py`를 제출한다. 기존 코드 재사용이 가능하며 첫 세 규칙과 판정 코드를 처음부터 다시 작성하는 과제가 아니다. 원래 전체 품질 범위의 남은 17규칙을 한 번에 정리했고, 이미 제출된 원본은 별도 보존한다.
