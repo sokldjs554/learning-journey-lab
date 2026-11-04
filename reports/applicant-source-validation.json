@@ -1,0 +1,29 @@
+{
+  "recorded_kst": "2026-11-05",
+  "provenance": "Applicant-uploaded source; Codex review and executions",
+  "submitted_file": "evidence/applicant/validate_sources.py",
+  "submitted_sha256": "2bbaf17052cd73575edce5de3f5200d6d6bc07934cb3b25730301e4263665444",
+  "submission_byte_identical": true,
+  "reference_supplied": "https://github.com/sokldjs554/learning-journey-lab/blob/main/docs/independent-implementation-brief.md?utm_source=chatgpt.com",
+  "reference_scope": "Provided link recorded; no claim that it was the only reference or that no other help was used.",
+  "applicant_local_execution_received": false,
+  "review_tests": {
+    "file": "tests/test_applicant_validate_sources.py",
+    "author": "Codex",
+    "passed": 15
+  },
+  "real_OULAD_execution": {
+    "executor": "Codex",
+    "exit_code": 0,
+    "stdout": "OK   assessments.csv: 8211 bytes / SHA-256 일치\nOK   courses.csv: 526 bytes / SHA-256 일치\nOK   studentAssessment.csv: 5690483 bytes / SHA-256 일치\nOK   studentInfo.csv: 3462763 bytes / SHA-256 일치\nOK   studentRegistration.csv: 1132550 bytes / SHA-256 일치\nOK   studentVle.csv: 453836331 bytes / SHA-256 일치\nOK   vle.csv: 270612 bytes / SHA-256 일치\n검사 완료: 성공 7건 / 실패 0건\n",
+    "stderr": "",
+    "files_checked": 7,
+    "raw_content_and_mtime_unchanged": true
+  },
+  "conclusion": "Submitted source-validation module meets stated first-module requirements in reviewed cases; no logic modification made.",
+  "limits": [
+    "No direct observation of authorship or applicant local execution.",
+    "Hash agreement verifies a supplied manifest snapshot, not semantic correctness of CSV data or authenticity of the manifest.",
+    "The full UI/deployment independent implementation remains a separate broader task; earlier SQL and v2 human measurement remain complete."
+  ]
+}

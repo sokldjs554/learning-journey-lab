@@ -1,5 +1,11 @@
 # 검증 기록
 
+## 2026-11-05 지원자 원본 검증 Python 제출본 검토
+
+업로드한 `validate_sources.py`를 바이트 그대로 보존하고 SHA-256 `2bbaf17052cd73575edce5de3f5200d6d6bc07934cb3b25730301e4263665444`를 기록했다. Codex가 추가한 정상·누락·동일 크기 변조·manifest 오류·읽기 단위 등 **15개 검사 통과**. 실제 OULAD 7 CSV에 실행해 성공 7/실패 0/종료 코드 0이며 실행 전후 파일 해시·수정 시각이 같았다. [검사와 역할](applicant-source-validation.md), [결과 JSON](../reports/applicant-source-validation.json). 지원자가 로컬 실행한 것으로 소급하지 않는다.
+
+전체 pytest **171 passed**, build/verify 통과. 문서 링크·JSON·제출 파일 보존을 확인했다. 기존 생산 코드·web·분석 결과·제출 SQL·v2 사람 실측은 변경하지 않았다. 첫 모듈 제출·기능 검토를 완료했으며 전체 독립 구현의 나머지 기능은 이번 검토에서 완료 표시하지 않는다.
+
 ## 2026-11-05 v2 사람 실측 요약 검산·문서 갱신
 
 지원자가 보낸 최종 요약의 본 측정 6회·next null·로컬 감사 PASS를 확인해 합의한 실측 수행을 종료했다. [수신 요약과 결과](full-operations-v2-human-results.md)를 보존하고 순서·개수·시도별 시간 분해, `math.fsum`/`Decimal` 합계 일치, 문서의 A 1,426.62초/B 356.57초를 대조했다. 중단 시도를 제외하지 않았으며 원본 전체 이벤트 감사를 수행한 것으로 표현하지 않는다.

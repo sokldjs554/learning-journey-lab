@@ -95,3 +95,7 @@
 ## 별도 선택한 직접 구현 범위
 
 사용자는 UI·배포까지 포함한 전체 프로젝트 직접 구현을 선택했다. [고정 요구사항·역할·첫 제출](independent-implementation-brief.md)을 준비했다. 이 문서는 Codex의 과제 안내이며 새 구현의 코드 제출·완료 근거가 아니다. 기존 직접 제출 SQL은 재사용 가능한 완료 근거로 유지한다.
+
+## 원본 검증 Python 코드 제출·검토 (2026-11-05 KST)
+
+지원자가 `validate_sources.py`와 직접 구현 요구사항 링크를 보냈다. 제출본은 [원본 그대로](../evidence/applicant/validate_sources.py) 보존했으며 Codex가 만든 정상·실패·읽기 방식 검사 15개 및 실제 OULAD 7 CSV 검사를 통과했다. [코드 동작·출처·역할](applicant-source-validation.md). 코드 제출과 Codex 실행 검증을 구분하고, 이번 지원자 로컬 실행 출력이나 설계 설명을 받았다고 쓰지 않는다. 첫 모듈의 제출·기능 검토 완료를 기록하며 전체 구현 완료로 확대하지 않는다.

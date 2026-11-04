@@ -101,7 +101,8 @@
     "operations_v2_human_measurement": "agreed_six_round_human_measurement_complete",
     "evidence": "reports/full-operations-v2-human-results.json",
     "original_developer_validation_unchanged": true,
-    "independent_full_project_implementation": "Separately requested including UI/deployment; not completed by this measurement",
-    "prior_applicant_sql_exercise": "remains complete"
+    "independent_full_project_implementation": "In progress: first source-validation Python module submitted and reviewed; UI/deployment and remaining implementation not marked complete.",
+    "prior_applicant_sql_exercise": "remains complete",
+    "source_validator_evidence": "reports/applicant-source-validation.json"
   }
 }
