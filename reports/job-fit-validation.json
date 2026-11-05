@@ -101,7 +101,7 @@
     "operations_v2_human_measurement": "agreed_six_round_human_measurement_complete",
     "evidence": "reports/full-operations-v2-human-results.json",
     "original_developer_validation_unchanged": true,
-    "independent_full_project_implementation": "In progress: source validation/loading, full quality SQL/runner/reporting, enrollment mart and overall/cohort activity aggregation submitted and reviewed; subsequent statistical inference/sensitivity/operations/UI/deployment not marked complete.",
+    "independent_full_project_implementation": "Not complete and not a required task for the current handoff. Source validation/loading, full quality SQL/runner/reporting, enrollment mart and activity aggregation submissions are complete; remaining existing production features are attributed to Codex.",
     "prior_applicant_sql_exercise": "remains complete",
     "source_validator_evidence": "reports/applicant-source-validation.json",
     "source_loader_evidence": "reports/applicant-source-loading.json",
@@ -110,5 +110,24 @@
     "full_quality_evidence": "reports/applicant-full-quality.json",
     "mart_evidence": "reports/applicant-mart.json",
     "aggregate_evidence": "reports/applicant-aggregate.json"
+  },
+  "current_handoff_2026_11_05": {
+    "recorded_kst": "2026-11-05",
+    "status": "evidence_handoff_ready_with_explicit_roles",
+    "evidence": "docs/project-handoff.md",
+    "additional_required_implementation": false,
+    "additional_required_human_measurement": false,
+    "additional_required_accessibility_exercise": false,
+    "full_project_independent_authorship_claim": false,
+    "applicant_completed_submission_scope": [
+      "source_validation",
+      "source_loading",
+      "full_quality_checks_and_runner",
+      "enrollment_mart_and_export",
+      "activity_aggregation_and_export"
+    ],
+    "existing_remaining_features_implemented_by": "Codex; existing production statistics/operations/EdNet/synthetic scenarios/UI/deployment",
+    "meaning": "Existing project features and applicant-submitted modules are documented separately. Further full reimplementation is not required for the current handoff; it is not marked completed.",
+    "writing_scope": "Evidence summary only; application essay and submission portfolio remain separate writing work."
   }
 }

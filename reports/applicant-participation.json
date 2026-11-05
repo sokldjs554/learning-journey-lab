@@ -201,5 +201,24 @@
     "codex_real_rows_compared_per_policy": 69,
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "current_handoff_2026_11_05": {
+    "recorded_kst": "2026-11-05",
+    "status": "evidence_handoff_ready_with_explicit_roles",
+    "evidence": "docs/project-handoff.md",
+    "additional_required_implementation": false,
+    "additional_required_human_measurement": false,
+    "additional_required_accessibility_exercise": false,
+    "full_project_independent_authorship_claim": false,
+    "applicant_completed_submission_scope": [
+      "source_validation",
+      "source_loading",
+      "full_quality_checks_and_runner",
+      "enrollment_mart_and_export",
+      "activity_aggregation_and_export"
+    ],
+    "existing_remaining_features_implemented_by": "Codex; existing production statistics/operations/EdNet/synthetic scenarios/UI/deployment",
+    "meaning": "Existing project features and applicant-submitted modules are documented separately. Further full reimplementation is not required for the current handoff; it is not marked completed.",
+    "writing_scope": "Evidence summary only; application essay and submission portfolio remain separate writing work."
   }
 }
