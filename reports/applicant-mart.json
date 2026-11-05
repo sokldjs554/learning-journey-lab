@@ -1,0 +1,110 @@
+{
+  "recorded_kst": "2026-11-05",
+  "status": "mart_submission_and_functional_review_complete",
+  "provenance": "Applicant-uploaded SQL and Python; Codex-authored tests and executions",
+  "submissions": [
+    {
+      "path": "evidence/applicant/build_mart.sql",
+      "sha256": "aacb3312b896513aedc27e5f7d0b56611743eac1a9ee57e56f38af08aa7c5d02",
+      "upload_byte_identical": true
+    },
+    {
+      "path": "evidence/applicant/build_mart.py",
+      "sha256": "f0427e45526221f808b47b45e1fe8386b9b5e7898e059db13dc405a72cae35e2",
+      "upload_byte_identical": true
+    }
+  ],
+  "logic_changes_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "codex_tests": {
+    "path": "tests/test_applicant_mart.py",
+    "passed": 43
+  },
+  "codex_real_data": {
+    "source": "Actual cached OULAD verified and loaded through earlier applicant modules into a temporary DB",
+    "policies": [
+      {
+        "strict": false,
+        "independent_pandas_comparison": {
+          "rows": 29671,
+          "fields": [
+            "w1_days",
+            "w2_active",
+            "later_active"
+          ],
+          "mismatched_rows": 0
+        },
+        "runs": [
+          {
+            "exit_code": 0,
+            "stdout": "quality_gate=REVIEW  strict=False\neligible_enrollments=29671\nfirst_week_active_enrollments=23522\nnext_week_active_among_first_week_active=20303\nCSV 저장: <temporary mart.csv>\n",
+            "stderr": ""
+          },
+          {
+            "exit_code": 0,
+            "stdout": "quality_gate=REVIEW  strict=False\neligible_enrollments=29671\nfirst_week_active_enrollments=23522\nnext_week_active_among_first_week_active=20303\nCSV 저장: <temporary mart.csv>\n",
+            "stderr": ""
+          }
+        ],
+        "totals": {
+          "eligible": 29671,
+          "w1": 23522,
+          "w2_among_w1": 20303
+        },
+        "csv_sha256": "9ddfd5f15dd8502c935752c574dedf4fa38a9f22f4584e07f8577a7e90ad7b92",
+        "repeat_byte_identical": true,
+        "production_sql_comparison": {
+          "rows": 29671,
+          "columns": 12,
+          "mismatched_rows": 0
+        }
+      },
+      {
+        "strict": true,
+        "independent_pandas_comparison": {
+          "rows": 29671,
+          "fields": [
+            "w1_days",
+            "w2_active",
+            "later_active"
+          ],
+          "mismatched_rows": 0
+        },
+        "runs": [
+          {
+            "exit_code": 0,
+            "stdout": "quality_gate=REVIEW  strict=True\neligible_enrollments=29671\nfirst_week_active_enrollments=23430\nnext_week_active_among_first_week_active=20210\nCSV 저장: <temporary mart.csv>\n",
+            "stderr": ""
+          },
+          {
+            "exit_code": 0,
+            "stdout": "quality_gate=REVIEW  strict=True\neligible_enrollments=29671\nfirst_week_active_enrollments=23430\nnext_week_active_among_first_week_active=20210\nCSV 저장: <temporary mart.csv>\n",
+            "stderr": ""
+          }
+        ],
+        "totals": {
+          "eligible": 29671,
+          "w1": 23430,
+          "w2_among_w1": 20210
+        },
+        "csv_sha256": "b958830aa2a143ce84393bbdb6697e997e71183a6574ac926681ac01431d32aa",
+        "repeat_byte_identical": true,
+        "production_sql_comparison": {
+          "rows": 29671,
+          "columns": 12,
+          "mismatched_rows": 0
+        }
+      }
+    ],
+    "db_content_and_mtime_unchanged": true
+  },
+  "source_and_submission_content_and_mtime_unchanged": true,
+  "limits": [
+    "Real-data 12-column comparison uses existing production SQL; hand-checkable synthetic cases are separate Codex tests.",
+    "No learner-level CSV is published.",
+    "Strict policy comparison is a sensitivity analysis, not ground truth about post-withdrawal activity.",
+    "Completion covers the specified mart module, not subsequent statistics/UI/deployment.",
+    "No applicant local execution or unaided authorship is inferred from Codex execution."
+  ]
+}

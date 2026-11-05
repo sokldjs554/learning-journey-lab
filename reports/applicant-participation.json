@@ -177,5 +177,17 @@
     "codex_real_gate": "REVIEW",
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "mart_submission": {
+    "status": "mart_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-mart.json",
+    "submitted_files": [
+      "evidence/applicant/build_mart.sql",
+      "evidence/applicant/build_mart.py"
+    ],
+    "codex_tests_passed": 43,
+    "codex_real_gate": "REVIEW",
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }

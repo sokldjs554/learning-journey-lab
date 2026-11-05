@@ -1,6 +1,6 @@
 # UI·배포 포함 직접 구현: 범위와 제출 기준
 
-사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)·[전체 품질 20규칙과 판정/JSON 저장](applicant-full-quality.md)의 제출·기능 검토를 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
+사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)·[전체 품질 20규칙과 판정/JSON 저장](applicant-full-quality.md)·[수강 건별 분석표](applicant-mart.md)의 제출·기능 검토를 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
 
 ## 구현 범위
 
@@ -63,6 +63,6 @@ SQL은 기존 전용 DB의 테이블 이름을 그대로 사용한다. 파일과
 
 세 규칙 실행 연결은 제출·검토를 마쳤다. [기존 20규칙의 정의와 실행 계약](applicant-full-quality-spec.md)에 따른 `quality_full.sql`, `run_quality_full.py`를 수신했고 [51개 검사와 실제 결과 대조](applicant-full-quality.md)를 통과했다. 기존 코드 재사용이 가능하며 첫 세 규칙과 판정 코드를 처음부터 다시 작성하는 과제가 아니다. 원래 전체 품질 범위의 남은 17규칙을 한 번에 정리했고, 이미 제출된 원본은 별도 보존한다.
 
-## 다음 제출: 수강 건별 분석표
+## 제출 완료: 수강 건별 분석표
 
-전체 20규칙 품질 계약의 제출·기능 검토를 완료했다. 다음은 [수강 건별 분석표의 대상·시간·출력·실행 계약](applicant-mart-spec.md)에 따른 `build_mart.sql`, `build_mart.py`다. 기존 검증·적재·품질 코드와 앞서 제출한 활동 기준 비교 SQL을 재사용하며, 완료한 실측이나 SQL 과제를 다시 수행하는 단계가 아니다.
+[사전에 정한 분석표 계약](applicant-mart-spec.md)에 따른 `build_mart.sql`, `build_mart.py`를 수신했고 [43개 검사·실제 자료 대조](applicant-mart.md)를 통과했다. 기본/strict 모두 기존 SQL의 12열, 독립 pandas 활동 지표 3열이 일치하고 반복 CSV가 동일했다. 검증·적재·품질·분석표 모듈의 제출·기능 검토를 완료했다. 전체 구현의 후속 통계·운영·UI·배포는 위 표의 기존 범위이며, 이미 완료한 실측이나 SQL 과제를 다시 수행하는 단계가 아니다.
