@@ -1,6 +1,6 @@
 # UI·배포 포함 직접 구현: 범위와 제출 기준
 
-사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)·[전체 품질 20규칙과 판정/JSON 저장](applicant-full-quality.md)·[수강 건별 분석표](applicant-mart.md)의 제출·기능 검토를 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
+사용자가 2026-11-04 후속 요청에서 선택한 범위는 핵심 분석만이 아니라 UI·배포를 포함한 프로젝트 전체 직접 구현이다. 2026-11-05 첫 원본 검증 Python 파일을 수신했고, [제출 원본과 기능 검토](applicant-source-validation.md)를 보존했다. 원본 검증·[DuckDB 적재](applicant-source-loading.md)·[전체 품질 20규칙과 판정/JSON 저장](applicant-full-quality.md)·[수강 건별 분석표](applicant-mart.md)·[활동 그룹 집계](applicant-aggregate.md)의 제출·기능 검토를 완료했으며 전체 구현은 진행 중이다. 기존 [직접 제출 SQL·손계산·판단](applicant-threshold-analysis.md)은 완료한 본인 작업이며 재사용할 수 있다. [v2 사람 실측](full-operations-v2-human-results.md)도 종료했다. 이 문서는 새 구현을 위한 요구사항이며 지원자가 수행한 기록이나 정답 코드는 아니다.
 
 ## 구현 범위
 
@@ -67,6 +67,6 @@ SQL은 기존 전용 DB의 테이블 이름을 그대로 사용한다. 파일과
 
 [사전에 정한 분석표 계약](applicant-mart-spec.md)에 따른 `build_mart.sql`, `build_mart.py`를 수신했고 [43개 검사·실제 자료 대조](applicant-mart.md)를 통과했다. 기본/strict 모두 기존 SQL의 12열, 독립 pandas 활동 지표 3열이 일치하고 반복 CSV가 동일했다. 검증·적재·품질·분석표 모듈의 제출·기능 검토를 완료했다. 전체 구현의 후속 통계·운영·UI·배포는 위 표의 기존 범위이며, 이미 완료한 실측이나 SQL 과제를 다시 수행하는 단계가 아니다.
 
-## 다음 제출: 전체·개설기별 활동 집계
+## 제출 완료: 전체·개설기별 활동 집계
 
-[입력·출력·실행·검토 기준](applicant-aggregate-spec.md)에 따라 `aggregate.sql`, `run_aggregate.py`를 작성한다. 이미 제출한 세 활동 그룹 SQL을 재사용해 범위별 집계와 JSON 저장을 연결한다. Codex가 준비한 69행 대조 자료는 구현 요구사항의 참고값이며 지원자 제출·구현 완료로 세지 않는다. 이번 단계에 신뢰구간이나 새 사람 실측을 추가하지 않는다.
+[사전 계약](applicant-aggregate-spec.md)에 따른 `aggregate.sql`, `run_aggregate.py`를 수신했다. [52개 검사·실제 기본/strict 각각 69행 대조](applicant-aggregate.md)를 수정 없이 통과했고 반복 JSON도 일치했다. 입력 검증·범위별 집계·Python 자체 대조·JSON 저장의 제출·기능 검토를 완료했다. 제출 전 대조 자료와 실제 제출 코드의 검증 결과를 구분한다. 기존 전체 구현의 신뢰구간·시기 분리·콘텐츠/클릭 민감도·운영·UI·배포 범위는 후속 작업이며 이번 단계에 새 사람 실측을 추가하지 않는다.

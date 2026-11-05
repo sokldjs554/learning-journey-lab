@@ -11,7 +11,7 @@
 | 지원자 | 세 집단 SQL·예상·가상 자료·손계산·실행 출력·대상 감소와 인과 한계를 고려한 판단 제출 | [기준 비교 실습](applicant-threshold-analysis.md) |
 | 지원자 | 안내받은 로컬 분석·독립 대조 실행, Actions 확인, 제공 테스트 추가·커밋 | 아래 직접 수행 기록과 연결된 실행·커밋 |
 | 지원자 | 비교 실측, 실제 장치·VoiceOver 확인, 별도 데모 참여자 동의·응답 전달 | [전체 운영 실측](full-operations-human-results.md), [접근성 확인](accessibility-human-results.md), [사용성 검토](usability-results.md) |
-| 지원자 | 원본 검증·적재·품질 20규칙·분석표 SQL/Python 제출 | [모듈별 제출·기능 검토](independent-implementation-brief.md) |
+| 지원자 | 원본 검증·적재·품질 20규칙·분석표·활동 집계 SQL/Python 제출 | [모듈별 제출·기능 검토](independent-implementation-brief.md) |
 | Codex | 공고·자료 조사, 분석 파이프라인·통계·품질 검사·데모 구현, 자동 테스트·독립 계산 대조·배포 | [검증 기록](verification.md) |
 | Codex | 실습 안내·제출 SQL 검토와 재실행·기록 저장, 피드백에 따른 UI 문구와 운영 도구 v2 수정 | [기준 비교 역할](applicant-threshold-analysis.md), [운영 v2](full-operations-v2.md) |
 
@@ -120,3 +120,7 @@
 ## 수강 건별 분석표 SQL·Python 제출·검토 (2026-11-05 KST)
 
 지원자가 `build_mart.sql`, `build_mart.py`를 제출했다. 원본 수정 없이 Codex의 43개 검사와 실제 OULAD 대조를 통과했다. 기본 정책은 29,671 / 23,522 / 20,303건, strict는 같은 적격 29,671건에서 23,430 / 20,210건이다. 두 정책 모두 기존 SQL 12열 및 독립 pandas 활동 지표 3열과 일치하고 반복 CSV가 같았다. [제출 원본·검사·역할](applicant-mart.md). 테스트 작성·실행과 문서화는 Codex의 작업이며 지원자의 로컬 실행을 대신 기록하지 않는다. 분석표 모듈의 제출·기능 검토 완료를 전체 통계·UI·배포 구현 완료로 확대하지 않는다.
+
+## 전체·개설기별 활동 집계 SQL·Python 제출·검토 (2026-11-05 KST)
+
+지원자가 `aggregate.sql`, `run_aggregate.py`를 제출했다. 제출 원본 수정 없이 Codex의 52개 검사와 실제 기본/strict 정책별 69행 대조를 통과했다. 빈 그룹을 유지하고 Python 자체 집계로 SQL의 각 행을 검증하며 반복 JSON이 동일했다. [원본·검사·역할](applicant-aggregate.md). 검토용 테스트 작성·실제 실행·문서화·커밋은 Codex의 작업이다. 이번 첨부에 지원자 로컬 실행 출력이나 별도 설명이 있었다고 기록하지 않는다. 활동 그룹의 기술 집계 모듈 제출·기능 검토 완료이며 신뢰구간이나 전체 UI·배포 완료로 확대하지 않는다.

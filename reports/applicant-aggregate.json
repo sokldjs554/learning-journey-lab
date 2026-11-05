@@ -1,0 +1,207 @@
+{
+  "recorded_kst": "2026-11-05",
+  "status": "activity_aggregation_submission_and_functional_review_complete",
+  "provenance": "Applicant-uploaded SQL and Python; Codex-authored tests and executions",
+  "submissions": [
+    {
+      "path": "evidence/applicant/aggregate.sql",
+      "sha256": "dc48735500508b25404c41782b8ced5cb136eff7179c615c7408b7aaf864494f",
+      "upload_byte_identical": true
+    },
+    {
+      "path": "evidence/applicant/run_aggregate.py",
+      "sha256": "5605fbabb1fc6f33f2fa84a6b894bc89f68a72e2936f2e5d4b153c33c8dd04c4",
+      "upload_byte_identical": true
+    }
+  ],
+  "logic_changed_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "codex_tests": {
+    "path": "tests/test_applicant_aggregate.py",
+    "passed": 52
+  },
+  "codex_real_data": {
+    "policies": [
+      {
+        "policy": "base",
+        "overall": {
+          "eligible": 29671,
+          "w1_active": 23522,
+          "w2_returned": 20303,
+          "return_rate_pct": 86.3
+        },
+        "rows_compared": 69,
+        "independent_python_csv_mismatched_rows": 0,
+        "prior_base_reference_matches": true,
+        "repeated_json_byte_identical": true,
+        "input_sha256": "9ddfd5f15dd8502c935752c574dedf4fa38a9f22f4584e07f8577a7e90ad7b92",
+        "output_sha256": "1d119371aeb67e0fa29c8dc40481dc3888059930a00d2e525b2ea6b1008899c2",
+        "runs": [
+          {
+            "exit_code": 0,
+            "stdout": "eligible=29671  w1_active=23522 w2_returned=20303  return_rate_pct=86.3\nrows=69  json=<temporary aggregation.json>\n",
+            "stderr": ""
+          },
+          {
+            "exit_code": 0,
+            "stdout": "eligible=29671  w1_active=23522 w2_returned=20303  return_rate_pct=86.3\nrows=69  json=<temporary aggregation.json>\n",
+            "stderr": ""
+          }
+        ],
+        "overall_groups": [
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "1일",
+            "denominator": 5565,
+            "numerator": 3835,
+            "return_rate_pct": 68.9
+          },
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "2일",
+            "denominator": 4803,
+            "numerator": 3992,
+            "return_rate_pct": 83.1
+          },
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "3일 이상",
+            "denominator": 13154,
+            "numerator": 12476,
+            "return_rate_pct": 94.8
+          }
+        ],
+        "bbb_2014j": [
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "1일",
+            "denominator": 484,
+            "numerator": 330,
+            "return_rate_pct": 68.2
+          },
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "2일",
+            "denominator": 435,
+            "numerator": 340,
+            "return_rate_pct": 78.2
+          },
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "3일 이상",
+            "denominator": 551,
+            "numerator": 494,
+            "return_rate_pct": 89.7
+          }
+        ]
+      },
+      {
+        "policy": "strict",
+        "overall": {
+          "eligible": 29671,
+          "w1_active": 23430,
+          "w2_returned": 20210,
+          "return_rate_pct": 86.3
+        },
+        "rows_compared": 69,
+        "independent_python_csv_mismatched_rows": 0,
+        "prior_base_reference_matches": null,
+        "repeated_json_byte_identical": true,
+        "input_sha256": "b958830aa2a143ce84393bbdb6697e997e71183a6574ac926681ac01431d32aa",
+        "output_sha256": "fab54ad777ce530fa308c9dbf83fa0304e573dfeb60bda577aae020d9bde784c",
+        "runs": [
+          {
+            "exit_code": 0,
+            "stdout": "eligible=29671  w1_active=23430 w2_returned=20210  return_rate_pct=86.3\nrows=69  json=<temporary aggregation.json>\n",
+            "stderr": ""
+          },
+          {
+            "exit_code": 0,
+            "stdout": "eligible=29671  w1_active=23430 w2_returned=20210  return_rate_pct=86.3\nrows=69  json=<temporary aggregation.json>\n",
+            "stderr": ""
+          }
+        ],
+        "overall_groups": [
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "1일",
+            "denominator": 5537,
+            "numerator": 3806,
+            "return_rate_pct": 68.7
+          },
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "2일",
+            "denominator": 4776,
+            "numerator": 3964,
+            "return_rate_pct": 83.0
+          },
+          {
+            "scope": "overall",
+            "code_module": null,
+            "code_presentation": null,
+            "activity_group": "3일 이상",
+            "denominator": 13117,
+            "numerator": 12440,
+            "return_rate_pct": 94.8
+          }
+        ],
+        "bbb_2014j": [
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "1일",
+            "denominator": 484,
+            "numerator": 326,
+            "return_rate_pct": 67.4
+          },
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "2일",
+            "denominator": 432,
+            "numerator": 336,
+            "return_rate_pct": 77.8
+          },
+          {
+            "scope": "cohort",
+            "code_module": "BBB",
+            "code_presentation": "2014J",
+            "activity_group": "3일 이상",
+            "denominator": 551,
+            "numerator": 492,
+            "return_rate_pct": 89.3
+          }
+        ]
+      }
+    ]
+  },
+  "inputs_content_and_mtime_unchanged": true,
+  "limits": [
+    "Completion covers descriptive activity aggregation, not confidence intervals or subsequent UI/deployment.",
+    "Codex real-data runs are separate from applicant local execution.",
+    "CSV shape/integrity checks do not establish raw event completeness or source quality.",
+    "Input hash changes when CSV row order or serialization changes; aggregate values stay the same.",
+    "No extra reference/help statement accompanied these files; unaided authorship is not certified."
+  ],
+  "local_full_suite_passed": 369
+}

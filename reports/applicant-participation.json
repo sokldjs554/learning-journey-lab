@@ -189,5 +189,17 @@
     "codex_real_gate": "REVIEW",
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
+  },
+  "aggregate_submission": {
+    "status": "activity_aggregation_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-aggregate.json",
+    "submitted_files": [
+      "evidence/applicant/aggregate.sql",
+      "evidence/applicant/run_aggregate.py"
+    ],
+    "codex_tests_passed": 52,
+    "codex_real_rows_compared_per_policy": 69,
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
   }
 }
