@@ -6,7 +6,7 @@
 
 [공개 데모](https://learning-journey-lab.onrender.com) · [분석 결과](reports/findings.md) · [면접 설명·직접 실습](docs/interview-guide.md) · [검증 기록](docs/verification.md) · [화면·근거 모음](docs/portfolio-evidence.md) · [보완 결과와 남은 확인](docs/extension-summary.md)
 
-[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자가 제출한 기준 비교 SQL·손계산·판단을 구분합니다. [세 단계 실습과 도움 범위](docs/applicant-threshold-analysis.md)를 함께 기록합니다. 지원자의 SQL 제출·실행·손계산 대조·판단 실습은 완료했으며 추가 필수 실습은 없습니다. 구현·안내·검증을 담당한 Codex의 역할은 [참여 기록](docs/participation.md)에서 구분합니다. 이후 별도로 선택한 전체 직접 구현에서는 [원본 검증 Python](docs/applicant-source-validation.md)·[DuckDB 적재 Python](docs/applicant-source-loading.md)·[전체 품질 20규칙·판정/JSON 저장](docs/applicant-full-quality.md)·[수강 건별 분석표와 CSV 생성](docs/applicant-mart.md)의 제출·기능 검토까지 완료했습니다.
+[직무 적합성 보완](docs/job-fit-improvements.md): 제품 가설·대안의 선택 조건, 학습/갱신을 연결하는 생성 SQL 계약, 실측 도구의 입력 수정 v2, 지원자가 제출한 기준 비교 SQL·손계산·판단을 구분합니다. [세 단계 실습과 도움 범위](docs/applicant-threshold-analysis.md)를 함께 기록합니다. 지원자의 SQL 제출·실행·손계산 대조·판단 실습은 완료했으며 추가 필수 실습은 없습니다. 구현·안내·검증을 담당한 Codex의 역할은 [참여 기록](docs/participation.md)에서 구분합니다. 이후 별도로 선택한 전체 직접 구현에서는 [원본 검증 Python](docs/applicant-source-validation.md)·[DuckDB 적재 Python](docs/applicant-source-loading.md)·[전체 품질 20규칙·판정/JSON 저장](docs/applicant-full-quality.md)·[수강 건별 분석표와 CSV 생성](docs/applicant-mart.md)의 제출·기능 검토까지 완료했습니다. 다음 직접 구현은 [전체·개설기별 활동 집계](docs/applicant-aggregate-spec.md)입니다.
 
 ![데스크톱 판단 요약](reports/screenshots/deployed-extension-desktop-cover.png)
 

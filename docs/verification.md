@@ -1,5 +1,11 @@
 # 검증 기록
 
+## 2026-11-05 다음 집계 모듈의 계약·대조 자료와 상태 문서 정리
+
+[전체·개설기별 활동 집계 계약](applicant-aggregate-spec.md)을 준비했다. 새 `aggregate.sql`, `run_aggregate.py`의 제출·구현 완료 기록이 아니다. Codex가 기존 기본 정책 분석표를 Python csv/정수 합계/Decimal 반올림으로 계산한 69행을 저장했고, 기존 지원자 활동 기준 SQL을 전체와 22개 개설기에 각각 실행해 모든 행이 일치함을 확인했다. [대조 자료](../reports/applicant-aggregate-reference.json)의 출처 표시와 입력 해시를 보존했다.
+
+실제 기기·VoiceOver를 아직 미실시라고 적었던 초기 요약을 후속 자기 보고 QA 완료 기록에 맞춰 수정했다. 신규 사용자 검토·추가 실측을 필수 과제로 표현하지 않도록 정리하고, 후속 제출 코드와 초기 Codex 생산 코드의 역할을 구분했다. 문서 링크·JSON·합계·diff 검사 및 build/verify 통과. 생산 코드와 분석 수치는 변경하지 않았다. 이번은 문서·기준값 정리로 전체 pytest를 재실행하지 않았다. 직전 분석표 커밋 `4649376219e0070c9b47afc7e0c774281691b1e4`는 [CI 41946842831](https://github.com/sokldjs554/learning-journey-lab/actions/runs/41946842831) 성공을 확인했다.
+
 ## 2026-11-05 지원자 수강 건별 분석표 SQL·Python 검토
 
 `build_mart.sql`, `build_mart.py`를 수정 없이 보존했다. Codex의 43개 손계산·경계·키·strict·차단·저장 실패 검사를 통과했다. 실제 OULAD의 기본 정책은 29,671 / 23,522 / 20,303건, strict는 29,671 / 23,430 / 20,210건이다. 두 정책에서 기존 SQL 29,671행 × 12열과 독립 pandas 활동 지표 3열의 불일치가 각각 0행이며, 각 정책 2회 CSV 바이트가 같았다. 입력 원본·제출 파일·DB의 내용과 수정 시각을 보존했다. [검사·원본·역할](applicant-mart.md).

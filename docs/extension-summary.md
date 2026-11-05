@@ -1,6 +1,8 @@
 # 보완 결과와 남은 직접 확인
 
-2026-10-30 KST. [저장소](https://github.com/sokldjs554/learning-journey-lab) · [데모](https://learning-journey-lab.onrender.com) · [화면과 원본 근거](portfolio-evidence.md). 최신 커밋/CI/배포의 고정 근거는 [검증 기록](verification.md)과 `reports/extension-deployment.json`, `reports/extension-ci.json`을 따른다.
+2026-10-30 구현 기록, 2026-11-05 후속 완료 상태 반영. [저장소](https://github.com/sokldjs554/learning-journey-lab) · [데모](https://learning-journey-lab.onrender.com) · [화면과 원본 근거](portfolio-evidence.md). 최신 커밋/CI/배포의 고정 근거는 [검증 기록](verification.md)과 `reports/extension-deployment.json`, `reports/extension-ci.json`을 따른다.
+
+현재 후속 상태: [기준 비교 SQL·판단](applicant-threshold-analysis.md), [v2 사람 실측](full-operations-v2-human-results.md), [실제 기기·VoiceOver QA](accessibility-human-results.md)는 각 합의 범위에서 완료했다. 별도로 선택한 전체 직접 구현은 원본 검증·적재·품질 20규칙·[분석표 생성](applicant-mart.md)까지 제출·기능 검토를 완료했고, [전체 범위](independent-implementation-brief.md)에 따라 진행 중이다. 아래 초기 수치와 실행 기록은 당시의 기록이며 최신 상태를 대체하지 않는다.
 
 ## 1. 공고 대비 보완
 
@@ -38,7 +40,7 @@ EdNet KT4 CC BY-NC 4.0, 공식 사용자 파일의 사전 해시 표본 **2,048�
 
 ## 6. 지원자의 직접 참여
 
-기존 결과 읽기·369건 해석·개설기 반례·손계산·Actions 수동 실행은 대화/실행 기록으로 확인했다. 사용자는 제공 예제를 테스트 파일로 추가하고 **4996ef6으로 직접 커밋**했다. Codex가 브랜치 CI 성공과 최신 코드 통합 후 115개 테스트 통과를 확인했다. 예제 설계·검증 도움과 파일 추가·커밋의 직접 수행을 구분한다. 조사·추가 분석·UI·코드·검증·배포는 Codex 작업이다. [참여 기록](participation.md), [작은 코드 작성 단계](portfolio-evidence.md#직접-코드-작성-안내).
+기존 결과 읽기·369건 해석·개설기 반례·손계산·Actions 수동 실행은 대화/실행 기록으로 확인했다. 사용자는 제공 예제를 테스트 파일로 추가하고 **4996ef6으로 직접 커밋**했다. Codex가 브랜치 CI 성공과 최신 코드 통합 후 115개 테스트 통과를 확인했다. 예제 설계·검증 도움과 파일 추가·커밋의 직접 수행을 구분한다. 초기 생산 파이프라인·추가 분석·UI·검증·배포는 Codex 작업이다. 이후 지원자가 제출한 검증·적재·품질·분석표 코드는 별도 근거로 보존했고, 그 코드의 테스트 작성·실행은 Codex 작업으로 구분한다. [참여 기록](participation.md), [작은 코드 작성 단계](portfolio-evidence.md#직접-코드-작성-안내).
 
 ## 7. UI 변경
 
@@ -56,9 +58,9 @@ EdNet KT4 CC BY-NC 4.0, 공식 사용자 파일의 사전 해시 표본 **2,048�
 
 - 실제 CLASS101의 관측·구독·매출 정보와 무작위 처치가 없어 인과효과·사업 성과는 확인하지 못했다.
 - EdNet의 관측 종료·신규 가입·실제 달력일을 복원할 수 없다. 실제 데이터 확보로 이 한계가 해소되지는 않는다.
-- 직접 테스트 추가·커밋 및 실측 6회·전체 JSON 제출을 확인했다. 별도 1인 사용성 검토·재검토 응답도 받았으나, 독립적인 새 참여자 검토와 일반화 가능한 추가 비교는 필요하다. 이전의 안내받은 실습을 새 사용성 평가로 재분류하지 않았다.
-- 이후 공개 데모를 Chromium 141·Firefox 142·WebKit 26의 PC/모바일 화면 크기로 검증했다. [최신 엔진별 근거](../reports/usability-browser-engines.json). 실제 모바일 기기·Apple Safari·스크린 리더 사용자 검증은 미실시다. WebKit을 실제 Safari 검사로 바꾸어 부르지 않으며 axe 자동 탐지 위반 0은 완전한 접근성 보장이 아니다.
+- 직접 테스트 추가·커밋 및 실측 6회·전체 JSON 제출을 확인했다. 별도 1인 사용성 검토·재검토 응답도 받았다. 일반화 가능한 추가 비교는 연구의 한계로 남기며, 이미 완료한 참여자 검토나 실측을 반복하는 필수 과제로 취급하지 않는다. 이전의 안내받은 실습을 새 사용성 평가로 재분류하지 않았다.
+- 이후 공개 데모를 Chromium 141·Firefox 142·WebKit 26의 PC/모바일 화면 크기로 검증했다. [최신 엔진별 근거](../reports/usability-browser-engines.json). 초기 자동 검사 이후 지원자가 실제 Safari·Android·VoiceOver의 지정 과제를 수행하고 결과를 전달했으며 [후속 QA 정리](accessibility-human-results.md)를 완료했다. 자기 보고와 Codex 자동 검사를 구분한다. WebKit을 실제 Safari 검사로 바꾸어 부르지 않으며, 이 결과와 axe 자동 탐지 위반 0은 모든 기기·상태의 접근성 인증이 아니다.
 
 ## 12. 사실대로 활용할 범위
 
-구현 사실로는 “두 실제 공개 학습 자료에서 데이터·이벤트 정의에 따라 판단이 달라지는 범위를 분석하고, 독립 계산과 재현 검사를 구축했다”를 사용할 수 있다. 본인 경험으로는 **“Codex의 안내를 받아 분모·처리 민감도·반대 근거를 확인하고 전체 분석을 Actions에서 직접 재현했다”**가 현재 확인된 범위다. 분석·코드 전체의 독립 작성, 자동화의 인과적인 시간 절감, 리텐션·매출 개선은 주장하지 않는다. 이후 Codex가 제공한 과제로 지원자가 별도 참여자 1명의 동의를 확인하고 응답·재검토 내용을 수집·전달한 사실은 [직접 참여 기록](participation.md)에 포함한다. 과제 설계와 UI 코드 수정은 Codex의 도움이다. 제공 예제의 테스트 추가·커밋은 직접 수행에 추가할 수 있으며, 독립 설계로 표현하지 않는다. 안내에 따른 1인·각 3회 검토표 기록 측정과 원본 제출도 직접 수행한 사실에 포함할 수 있다.
+구현 사실로는 “두 실제 공개 학습 자료에서 데이터·이벤트 정의에 따라 판단이 달라지는 범위를 분석하고, 독립 계산과 재현 검사를 구축했다”를 사용할 수 있다. 본인 경험으로는 **“Codex의 안내를 받아 분모·처리 민감도·반대 근거를 확인하고 전체 분석을 Actions에서 직접 재현했다”**는 초기 확인 범위다. 이후 [기준 비교 SQL·손계산·판단](applicant-threshold-analysis.md)과 [직접 구현 제출물](independent-implementation-brief.md)이 추가됐으며 최신 본인 수행 근거는 [참여 기록](participation.md)을 따른다. 분석·코드 전체의 독립 작성, 자동화의 인과적인 시간 절감, 리텐션·매출 개선은 주장하지 않는다. 이후 Codex가 제공한 과제로 지원자가 별도 참여자 1명의 동의를 확인하고 응답·재검토 내용을 수집·전달한 사실은 [직접 참여 기록](participation.md)에 포함한다. 과제 설계와 UI 코드 수정은 Codex의 도움이다. 제공 예제의 테스트 추가·커밋은 직접 수행에 추가할 수 있으며, 독립 설계로 표현하지 않는다. 안내에 따른 1인·각 3회 검토표 기록 측정과 원본 제출도 직접 수행한 사실에 포함할 수 있다.

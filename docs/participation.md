@@ -11,6 +11,7 @@
 | 지원자 | 세 집단 SQL·예상·가상 자료·손계산·실행 출력·대상 감소와 인과 한계를 고려한 판단 제출 | [기준 비교 실습](applicant-threshold-analysis.md) |
 | 지원자 | 안내받은 로컬 분석·독립 대조 실행, Actions 확인, 제공 테스트 추가·커밋 | 아래 직접 수행 기록과 연결된 실행·커밋 |
 | 지원자 | 비교 실측, 실제 장치·VoiceOver 확인, 별도 데모 참여자 동의·응답 전달 | [전체 운영 실측](full-operations-human-results.md), [접근성 확인](accessibility-human-results.md), [사용성 검토](usability-results.md) |
+| 지원자 | 원본 검증·적재·품질 20규칙·분석표 SQL/Python 제출 | [모듈별 제출·기능 검토](independent-implementation-brief.md) |
 | Codex | 공고·자료 조사, 분석 파이프라인·통계·품질 검사·데모 구현, 자동 테스트·독립 계산 대조·배포 | [검증 기록](verification.md) |
 | Codex | 실습 안내·제출 SQL 검토와 재실행·기록 저장, 피드백에 따른 UI 문구와 운영 도구 v2 수정 | [기준 비교 역할](applicant-threshold-analysis.md), [운영 v2](full-operations-v2.md) |
 

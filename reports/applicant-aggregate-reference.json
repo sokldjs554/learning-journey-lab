@@ -1,0 +1,639 @@
+{
+  "prepared_by": "Codex",
+  "status": "reference_only_not_applicant_submission",
+  "policy": "base",
+  "source": "Existing reproduced OULAD enrollment mart; learner-level rows are not published",
+  "calculation": "Python csv and integer counts, Decimal half-up rounding; no applicant aggregate implementation exists yet",
+  "schema_version": 1,
+  "scope": "descriptive_activity_groups",
+  "input_sha256": "d5cee98deac510e2598c8fe0b0d9844d995a3798e95a17c05f868bf9821b5b8c",
+  "overall": {
+    "eligible": 29671,
+    "w1_active": 23522,
+    "w2_returned": 20303,
+    "return_rate_pct": 86.3
+  },
+  "rows": [
+    {
+      "scope": "overall",
+      "code_module": null,
+      "code_presentation": null,
+      "activity_group": "1일",
+      "denominator": 5565,
+      "numerator": 3835,
+      "return_rate_pct": 68.9
+    },
+    {
+      "scope": "overall",
+      "code_module": null,
+      "code_presentation": null,
+      "activity_group": "2일",
+      "denominator": 4803,
+      "numerator": 3992,
+      "return_rate_pct": 83.1
+    },
+    {
+      "scope": "overall",
+      "code_module": null,
+      "code_presentation": null,
+      "activity_group": "3일 이상",
+      "denominator": 13154,
+      "numerator": 12476,
+      "return_rate_pct": 94.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 62,
+      "numerator": 49,
+      "return_rate_pct": 79.0
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 56,
+      "numerator": 50,
+      "return_rate_pct": 89.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 219,
+      "numerator": 213,
+      "return_rate_pct": 97.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 58,
+      "numerator": 41,
+      "return_rate_pct": 70.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 57,
+      "numerator": 51,
+      "return_rate_pct": 89.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "AAA",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 185,
+      "numerator": 182,
+      "return_rate_pct": 98.4
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013B",
+      "activity_group": "1일",
+      "denominator": 348,
+      "numerator": 240,
+      "return_rate_pct": 69.0
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013B",
+      "activity_group": "2일",
+      "denominator": 296,
+      "numerator": 245,
+      "return_rate_pct": 82.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013B",
+      "activity_group": "3일 이상",
+      "denominator": 595,
+      "numerator": 560,
+      "return_rate_pct": 94.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 434,
+      "numerator": 275,
+      "return_rate_pct": 63.4
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 305,
+      "numerator": 243,
+      "return_rate_pct": 79.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 618,
+      "numerator": 566,
+      "return_rate_pct": 91.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 319,
+      "numerator": 239,
+      "return_rate_pct": 74.9
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 223,
+      "numerator": 191,
+      "return_rate_pct": 85.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 414,
+      "numerator": 397,
+      "return_rate_pct": 95.9
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 484,
+      "numerator": 330,
+      "return_rate_pct": 68.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 435,
+      "numerator": 340,
+      "return_rate_pct": 78.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "BBB",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 551,
+      "numerator": 494,
+      "return_rate_pct": 89.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 370,
+      "numerator": 272,
+      "return_rate_pct": 73.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 318,
+      "numerator": 273,
+      "return_rate_pct": 85.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 685,
+      "numerator": 645,
+      "return_rate_pct": 94.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 468,
+      "numerator": 335,
+      "return_rate_pct": 71.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 414,
+      "numerator": 357,
+      "return_rate_pct": 86.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "CCC",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 913,
+      "numerator": 854,
+      "return_rate_pct": 93.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013B",
+      "activity_group": "1일",
+      "denominator": 186,
+      "numerator": 124,
+      "return_rate_pct": 66.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013B",
+      "activity_group": "2일",
+      "denominator": 178,
+      "numerator": 142,
+      "return_rate_pct": 79.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013B",
+      "activity_group": "3일 이상",
+      "denominator": 669,
+      "numerator": 640,
+      "return_rate_pct": 95.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 285,
+      "numerator": 198,
+      "return_rate_pct": 69.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 278,
+      "numerator": 240,
+      "return_rate_pct": 86.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 873,
+      "numerator": 843,
+      "return_rate_pct": 96.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 182,
+      "numerator": 125,
+      "return_rate_pct": 68.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 171,
+      "numerator": 146,
+      "return_rate_pct": 85.4
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 565,
+      "numerator": 543,
+      "return_rate_pct": 96.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 261,
+      "numerator": 177,
+      "return_rate_pct": 67.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 275,
+      "numerator": 224,
+      "return_rate_pct": 81.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "DDD",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 873,
+      "numerator": 817,
+      "return_rate_pct": 93.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 187,
+      "numerator": 141,
+      "return_rate_pct": 75.4
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 176,
+      "numerator": 149,
+      "return_rate_pct": 84.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 440,
+      "numerator": 421,
+      "return_rate_pct": 95.7
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 138,
+      "numerator": 97,
+      "return_rate_pct": 70.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 99,
+      "numerator": 84,
+      "return_rate_pct": 84.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 283,
+      "numerator": 267,
+      "return_rate_pct": 94.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 212,
+      "numerator": 144,
+      "return_rate_pct": 67.9
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 183,
+      "numerator": 158,
+      "return_rate_pct": 86.3
+    },
+    {
+      "scope": "cohort",
+      "code_module": "EEE",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 514,
+      "numerator": 494,
+      "return_rate_pct": 96.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013B",
+      "activity_group": "1일",
+      "denominator": 200,
+      "numerator": 149,
+      "return_rate_pct": 74.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013B",
+      "activity_group": "2일",
+      "denominator": 208,
+      "numerator": 179,
+      "return_rate_pct": 86.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013B",
+      "activity_group": "3일 이상",
+      "denominator": 920,
+      "numerator": 900,
+      "return_rate_pct": 97.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 264,
+      "numerator": 193,
+      "return_rate_pct": 73.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 296,
+      "numerator": 262,
+      "return_rate_pct": 88.5
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 1274,
+      "numerator": 1224,
+      "return_rate_pct": 96.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 201,
+      "numerator": 142,
+      "return_rate_pct": 70.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 189,
+      "numerator": 158,
+      "return_rate_pct": 83.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 775,
+      "numerator": 741,
+      "return_rate_pct": 95.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 272,
+      "numerator": 188,
+      "return_rate_pct": 69.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 248,
+      "numerator": 199,
+      "return_rate_pct": 80.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "FFF",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 1307,
+      "numerator": 1249,
+      "return_rate_pct": 95.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2013J",
+      "activity_group": "1일",
+      "denominator": 254,
+      "numerator": 150,
+      "return_rate_pct": 59.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2013J",
+      "activity_group": "2일",
+      "denominator": 142,
+      "numerator": 108,
+      "return_rate_pct": 76.1
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2013J",
+      "activity_group": "3일 이상",
+      "denominator": 139,
+      "numerator": 126,
+      "return_rate_pct": 90.6
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014B",
+      "activity_group": "1일",
+      "denominator": 232,
+      "numerator": 134,
+      "return_rate_pct": 57.8
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014B",
+      "activity_group": "2일",
+      "denominator": 134,
+      "numerator": 99,
+      "return_rate_pct": 73.9
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014B",
+      "activity_group": "3일 이상",
+      "denominator": 162,
+      "numerator": 140,
+      "return_rate_pct": 86.4
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014J",
+      "activity_group": "1일",
+      "denominator": 148,
+      "numerator": 92,
+      "return_rate_pct": 62.2
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014J",
+      "activity_group": "2일",
+      "denominator": 122,
+      "numerator": 94,
+      "return_rate_pct": 77.0
+    },
+    {
+      "scope": "cohort",
+      "code_module": "GGG",
+      "code_presentation": "2014J",
+      "activity_group": "3일 이상",
+      "denominator": 180,
+      "numerator": 160,
+      "return_rate_pct": 88.9
+    }
+  ]
+}
