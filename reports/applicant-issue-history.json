@@ -1,0 +1,80 @@
+{
+  "recorded_kst": "2026-11-06",
+  "status": "reviewed_needs_integrity_fix",
+  "provenance": "Applicant-uploaded code; Codex tests, actual artifact checks and controlled reproduction",
+  "submission": {
+    "path": "evidence/applicant/update_issues.py",
+    "sha256": "76bc4343ab87f46c154774f82c2ee80f7cb9f1831e21079e235080a1a45cfaa0",
+    "upload_byte_identical": true
+  },
+  "logic_changed_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "codex_tests": {
+    "path": "tests/test_applicant_issue_history.py",
+    "passed": 34,
+    "unresolved_regressions": 1,
+    "regression_marking": "strict xfail to preserve a known open defect; not counted as passing",
+    "initial_execution": "34 passed, 1 failed before marking"
+  },
+  "codex_real_artifacts": {
+    "source": "Existing actual OULAD pipeline run artifacts; no new human timing or source analysis",
+    "observations": [
+      {
+        "run_id": "20261106T093320489392Z-e04ac3320c",
+        "exit_code": 0,
+        "stdout": "UPDATED: run_id=20261106T093320489392Z-e04ac3320c, quality_gate=REVIEW, changed_rules=20, open=5, resolved=0\nhistory=<history.json>\n",
+        "stderr": "",
+        "open_rules": {
+          "registration_missing_date": 45,
+          "event_exact_repeat": 787170,
+          "event_daily_key_repeat": 2195960,
+          "event_after_withdrawal": 29440,
+          "event_after_course": 4374
+        },
+        "resolved_rules": 0
+      },
+      {
+        "run_id": "20261106T093407670640Z-85ecdf1640",
+        "exit_code": 0,
+        "stdout": "UPDATED: run_id=20261106T093407670640Z-85ecdf1640, quality_gate=REVIEW, changed_rules=0, open=5, resolved=0\nhistory=<history.json>\n",
+        "stderr": "",
+        "open_rules": {
+          "registration_missing_date": 45,
+          "event_exact_repeat": 787170,
+          "event_daily_key_repeat": 2195960,
+          "event_after_withdrawal": 29440,
+          "event_after_course": 4374
+        },
+        "resolved_rules": 0
+      }
+    ],
+    "same_run_skip_content_mtime_preserved": true,
+    "same_values_new_run_no_duplicate_change_events": true
+  },
+  "finding": {
+    "id": "quality_artifact_hash_not_checked",
+    "status": "open",
+    "evidence_type": "Controlled mutation of a copied real result, not an actual raw-data issue or user incident",
+    "rule_id": "registration_missing_date",
+    "original_count": 45,
+    "modified_copy_count": 0,
+    "recorded_quality_sha256": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
+    "modified_copy_sha256": "b22d506751f0b4d66ca4d2d4a1013089d67bccf51cb89ef9f6ac461496228431",
+    "expected_exit_code": 1,
+    "actual_exit_code": 0,
+    "expected_history_change": false,
+    "actual_status": "resolved",
+    "original_inputs_unchanged": true
+  },
+  "limits": [
+    "Quality BLOCK and later pipeline failure can have no final artifact hashes; preserve valid quality-stage acceptance for these cases.",
+    "Current history updates are serial and use ingestion order; concurrent writers and chronological replay are not certified.",
+    "Original applicant code is preserved; this review is not module acceptance or proof of applicant local execution."
+  ],
+  "local_full_suite": {
+    "passed": 479,
+    "xfailed_known_open_defect": 1,
+    "all_requirements_passed": false
+  },
+  "build_and_report_consistency_passed": true
+}

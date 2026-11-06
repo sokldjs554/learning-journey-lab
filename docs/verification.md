@@ -263,3 +263,10 @@ Codex가 `docs/applicant-pipeline-spec.md`에 다음 제출 파일 `run_pipeline
 지원자의 `run_pipeline.py` 원본을 보존했다. Codex 작성37개 검사, 실제 OULAD 전체2회 실행, 최종 전체 회귀445개 검사가 통과했다. 초기 생성 테스트2개는 CRLF/LF 혼용으로 품질 단계 전에 적재가 중단됐으며 테스트 자료만 수정했다. [검토·수정 이력·역할](applicant-pipeline.md), [기계 판독 근거](../reports/applicant-pipeline.json).
 
 실제2회 결과는 REVIEW/29,671/23,522/20,303이고 통계7묶음이 기존 근거와 같았다. 새 DB 바이너리 해시는 달랐지만 분석 값은 일치했다. 원본·제출 코드·이전 실행의 결과/로그 내용과 수정 시각을 보존했다. `scripts/build.py`, `scripts/verify.py`, `git diff --check`도 통과했다. 보고서 SHA-256은 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`로 유지됐다. UI나 배포 기능을 변경하지 않았으며 이번에 브라우저 검사를 새로 수행했다고 기록하지 않는다.
+
+
+## 2026-11-06 이슈 이력 제출 검토: 수정 필요
+
+`update_issues.py`를 원형 보존해 검토했다. 전용 검사34개는 통과했지만 기록된 quality.json 해시를 대조하지 않아 변경된 결과가 기존 문제를 잘못 resolved 처리하는 회귀1개가 실패했다. 해당 검사는 strict xfail로 명시했으며 성공으로 세지 않는다. 최종 전체 회귀479 passed /1 xfailed, 빌드·보고서 일치·diff 검사는 통과했다. [재현·수정 위치·범위](applicant-issue-history.md).
+
+실제 기존 OULAD 실행 결과2개의5개 open 규칙과 동일 실행 중복 처리 보존을 확인했다. 결함은 실제 결과의 별도 복사본에서45→0으로 변경해 재현했으며 실제 원본이나 기존 실행 결과는 수정하지 않았다. Codex가 검사를 작성·실행했고 지원자 코드 로직은 수정하지 않았다. 이번 단계는 검토 및 수정 요청이며 이슈 이력 기능의 완료로 기록하지 않는다.

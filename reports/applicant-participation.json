@@ -225,7 +225,7 @@
     "recorded_kst": "2026-11-06",
     "status": "applicant_selected_full_implementation_in_progress",
     "plan": "docs/applicant-completion-plan.md",
-    "current_contract": "docs/applicant-completion-plan.md",
+    "current_contract": "docs/applicant-issue-history.md",
     "remaining_scope": [
       "operations_integration",
       "ednet",
@@ -235,7 +235,7 @@
     ],
     "existing_module_reviews_remain_complete": true,
     "statistics_submission_received": true,
-    "codex_work_this_stage": "Preserved uploaded pipeline unchanged; authored 37 checks, ran complete actual OULAD pipeline twice, reconciled outputs and documented roles.",
+    "codex_work_this_stage": "Preserved issue-history upload unchanged; wrote tests, connected actual pipeline artifacts and reproduced one integrity defect on a copy.",
     "additional_human_measurement_required": false,
     "new_features_added_to_completion_criteria": false,
     "scope_boundary": "Complete after the six agreed areas are implemented, integrated, tested and publicly deployed; fix actual discovered errors without adding new feature or human-study requirements.",
@@ -253,8 +253,10 @@
     ],
     "statistics_evidence": "reports/applicant-statistics.json",
     "pipeline_submission_received": true,
-    "current_preparation": "Pipeline orchestration reviewed; agreed issue history, independent crosscheck and comparison-tool integration remain.",
-    "pipeline_evidence": "reports/applicant-pipeline.json"
+    "current_preparation": "Issue history reviewed: 34 checks pass; recorded quality artifact hash mismatch can falsely resolve an issue and needs correction.",
+    "pipeline_evidence": "reports/applicant-pipeline.json",
+    "issue_history_submission_received": true,
+    "issue_history_evidence": "reports/applicant-issue-history.json"
   },
   "statistics_submission": {
     "status": "statistics_and_sensitivity_submission_and_functional_review_complete",
@@ -275,6 +277,17 @@
       "evidence/applicant/run_pipeline.py"
     ],
     "codex_tests_passed": 37,
+    "logic_changed_by_codex": false,
+    "applicant_local_execution_output_received": false
+  },
+  "issue_history_submission": {
+    "status": "reviewed_needs_integrity_fix",
+    "evidence": "reports/applicant-issue-history.json",
+    "submitted_files": [
+      "evidence/applicant/update_issues.py"
+    ],
+    "codex_tests_passed": 34,
+    "unresolved_regressions": 1,
     "logic_changed_by_codex": false,
     "applicant_local_execution_output_received": false
   }
