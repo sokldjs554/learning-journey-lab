@@ -1,0 +1,181 @@
+{
+  "recorded_kst": "2026-11-06",
+  "status": "pipeline_orchestration_submission_and_functional_review_complete",
+  "provenance": "Applicant uploaded run_pipeline.py; Codex authored tests, executed generated and actual data checks, and wrote documentation.",
+  "submission": {
+    "path": "evidence/applicant/run_pipeline.py",
+    "sha256": "ec501c0e0b132c31cef156c5fb509b087efc1ca1448a9577c2eaf2b313eaa723",
+    "upload_byte_identical": true
+  },
+  "logic_changed_by_codex": false,
+  "applicant_local_execution_output_received": false,
+  "codex_tests": {
+    "path": "tests/test_applicant_pipeline.py",
+    "passed": 37,
+    "coverage": [
+      "actual subprocesses with hand-checkable generated CSVs",
+      "separate fresh runs; preserve previous artifacts, logs, and mtimes",
+      "PASS and REVIEW proceed; BLOCK stops",
+      "manifest exit 2 maps to pipeline error 1",
+      "dependency and input failures",
+      "controlled child failures, missing outputs, invalid JSON and inconsistent gate",
+      "controlled KeyboardInterrupt; no invented child exit code",
+      "input/output path collision and symlink checks",
+      "overall counts, rate units, input hash, required sections and group reconciliation",
+      "atomic record failure preserves previous record; no false SUCCESS"
+    ]
+  },
+  "codex_real_data": {
+    "recorded_kst": "2026-11-06",
+    "provenance": "Codex executed uploaded applicant pipeline against cached actual OULAD; not applicant local execution",
+    "runs": [
+      {
+        "run_id": "20261106T093320489392Z-e04ac3320c",
+        "exit_code": 0,
+        "status": "success",
+        "quality_gate": "REVIEW",
+        "overall": {
+          "eligible": 29671,
+          "w1_active": 23522,
+          "w2_returned": 20303
+        },
+        "elapsed_seconds": 47.018274,
+        "stages": [
+          {
+            "name": "validate_sources",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "load_sources",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "quality",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "mart_base",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "mart_strict",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "aggregate",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "statistics",
+            "status": "success",
+            "exit_code": 0
+          }
+        ],
+        "artifact_sha256": {
+          "oulad.duckdb": "369da797728510f4592fba76019f026af6740c839d078fe4043b351edb083d54",
+          "quality.json": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
+          "enrollment_mart.csv": "9ddfd5f15dd8502c935752c574dedf4fa38a9f22f4584e07f8577a7e90ad7b92",
+          "enrollment_mart_strict.csv": "b958830aa2a143ce84393bbdb6697e997e71183a6574ac926681ac01431d32aa",
+          "activity-groups.json": "1d119371aeb67e0fa29c8dc40481dc3888059930a00d2e525b2ea6b1008899c2",
+          "statistics.json": "072f2ce817a6f7cf58cb500705d7fee83d36d0725055a6cd377c9edaacd96e4e"
+        }
+      },
+      {
+        "run_id": "20261106T093407670640Z-85ecdf1640",
+        "exit_code": 0,
+        "status": "success",
+        "quality_gate": "REVIEW",
+        "overall": {
+          "eligible": 29671,
+          "w1_active": 23522,
+          "w2_returned": 20303
+        },
+        "elapsed_seconds": 43.69304,
+        "stages": [
+          {
+            "name": "validate_sources",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "load_sources",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "quality",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "mart_base",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "mart_strict",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "aggregate",
+            "status": "success",
+            "exit_code": 0
+          },
+          {
+            "name": "statistics",
+            "status": "success",
+            "exit_code": 0
+          }
+        ],
+        "artifact_sha256": {
+          "oulad.duckdb": "3cbd7156635abf5869a04d2af93b04e9eb0c1291ce69897e2ca7bc7afd20274b",
+          "quality.json": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
+          "enrollment_mart.csv": "9ddfd5f15dd8502c935752c574dedf4fa38a9f22f4584e07f8577a7e90ad7b92",
+          "enrollment_mart_strict.csv": "b958830aa2a143ce84393bbdb6697e997e71183a6574ac926681ac01431d32aa",
+          "activity-groups.json": "1d119371aeb67e0fa29c8dc40481dc3888059930a00d2e525b2ea6b1008899c2",
+          "statistics.json": "b634657d0da4990678881c142ccc7a0dbeeab47ef13431a23d542ed9b25fba6a"
+        }
+      }
+    ],
+    "statistics_reference": "reports/applicant-statistics-reference.json",
+    "statistics_sections_compared_per_run": [
+      "overall",
+      "cohorts",
+      "temporal",
+      "first_day_strata",
+      "click_sensitivity",
+      "transition",
+      "strict_sensitivity"
+    ],
+    "analysis_fields_repeat_equal": true,
+    "first_run_all_outputs_logs_mtime_preserved": true,
+    "raw_manifest_submissions_content_mtime_preserved": true,
+    "artifact_hashes_verified": true,
+    "input_csv_rows": 10655280,
+    "notes": [
+      "Elapsed times describe this Codex machine, not human time saved.",
+      "New run IDs and database binary hashes can differ while analysis values agree."
+    ]
+  },
+  "review_test_correction": {
+    "initial_result": "35 passed, 2 failed",
+    "cause": "Codex-generated CSV used CRLF for initial rows but LF for appended rows; DuckDB dialect detection stopped at loading, before intended quality case.",
+    "change": "Used csv.writer with newline=\"\" for appended fixture rows; applicant code unchanged.",
+    "rerun": "37 passed"
+  },
+  "limits": [
+    "This closes the pipeline execution portion of agreed operations scope, not issue history, independent crosscheck or comparison-tool integration.",
+    "Actual-data comparison reproduces existing reference; generated cases provide hand-checkable separate expectations.",
+    "KeyboardInterrupt and write failures were controlled developer tests, not another human measurement or physical power-loss test.",
+    "No applicant local execution, new user study, company operation, or productivity benefit is inferred from Codex runs."
+  ],
+  "local_full_suite_passed": 445,
+  "build_and_report_consistency_passed": true
+}

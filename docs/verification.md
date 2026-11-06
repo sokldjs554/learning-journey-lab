@@ -249,3 +249,17 @@ axe-core 4.11, WCAG 2 A/AA·2.1 AA·2.2 AA 자동 규칙, 1440/390/320px.
 실패 이력: 배포 직후 첫 CI는 이전 app.js, 두 번째 CI와 로컬 검사는 이전 external.js 때문에 실패했다. external.js의 응답 해시는 이전 커밋과 같았고, HTTP응답은 `s-maxage=300`, 이전 Last-Modified와 캐시 HIT를 보였다. 요청 no-cache와 쿼리 문자열만으로는 바뀌지 않았다. 캐시 갱신 후 코드 추가 변경 없이 최신18개 파일 일치와 같은 검사를 확인했다. 배포 live 표시만으로 공개 파일 전파 완료를 판단하지 않는다. 이 기록은 다음 배포에서 검사를 시작하기 전 파일 일치를 먼저 확인할 근거다.
 
 후속 문서 커밋은 코드·web·분석 결과를 바꾸지 않는다. 이 개발 검사 당시 Safari확대·VoiceOver새 과제 응답은 없었으며, 자동검사 성공을 전체 접근성 인증이나 사람의 수행으로 표현하지 않는다.
+
+
+## 2026-11-06 운영 연결 작성 기준
+
+Codex가 `docs/applicant-pipeline-spec.md`에 다음 제출 파일 `run_pipeline.py`의 실행 순서와 실패·결과 기록 계약을 정리했다. 기존 제출 6개 CLI의 실제 인자와 종료 코드를 소스에서 대조했다. manifest 오류의 종료2와 품질 BLOCK의 종료2를 구분하고, 새 DuckDB 파일의 바이트 해시와 분석 값의 재현성을 구분했다.
+
+문서·참여 기록만 변경했다. 두 JSON 기록을 파싱해 문서 경로와 `pipeline_submission_received:false`를 확인했고, `scripts/build.py`, `scripts/verify.py`, `git diff --check`가 통과했다. 분석 보고서 SHA-256은 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`로 유지된다. 이는 실행 연결 코드의 제출·구현·테스트 완료가 아니며, 기존 408개 테스트 결과를 이번 문서 변경에서 재실행한 것으로 기록하지 않는다.
+
+
+## 2026-11-06 제출 운영 실행부 검토
+
+지원자의 `run_pipeline.py` 원본을 보존했다. Codex 작성37개 검사, 실제 OULAD 전체2회 실행, 최종 전체 회귀445개 검사가 통과했다. 초기 생성 테스트2개는 CRLF/LF 혼용으로 품질 단계 전에 적재가 중단됐으며 테스트 자료만 수정했다. [검토·수정 이력·역할](applicant-pipeline.md), [기계 판독 근거](../reports/applicant-pipeline.json).
+
+실제2회 결과는 REVIEW/29,671/23,522/20,303이고 통계7묶음이 기존 근거와 같았다. 새 DB 바이너리 해시는 달랐지만 분석 값은 일치했다. 원본·제출 코드·이전 실행의 결과/로그 내용과 수정 시각을 보존했다. `scripts/build.py`, `scripts/verify.py`, `git diff --check`도 통과했다. 보고서 SHA-256은 `675dfa6fa3126da0ba74b5a4b4c4222afff4d950297703f3314788f9135a30db`로 유지됐다. UI나 배포 기능을 변경하지 않았으며 이번에 브라우저 검사를 새로 수행했다고 기록하지 않는다.
