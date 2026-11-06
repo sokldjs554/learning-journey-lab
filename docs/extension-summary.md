@@ -2,7 +2,7 @@
 
 2026-10-30 구현 기록, 2026-11-05 후속 완료 상태 반영. [저장소](https://github.com/sokldjs554/learning-journey-lab) · [데모](https://learning-journey-lab.onrender.com) · [화면과 원본 근거](portfolio-evidence.md). 최신 커밋/CI/배포의 고정 근거는 [검증 기록](verification.md)과 `reports/extension-deployment.json`, `reports/extension-ci.json`을 따른다.
 
-현재 후속 상태: [기준 비교 SQL·판단](applicant-threshold-analysis.md), [v2 사람 실측](full-operations-v2-human-results.md), [실제 기기·VoiceOver QA](accessibility-human-results.md)는 각 합의 범위에서 완료했다. 별도로 선택한 전체 직접 구현은 원본 검증·적재·품질 20규칙·[분석표 생성](applicant-mart.md)·[전체/개설기별 집계](applicant-aggregate.md)까지 제출·기능 검토를 완료했고, [현재 결과·기여 정리](project-handoff.md)에 따라 지원 자료 준비로 연결한다. 이전 전체 직접 재구현 범위는 현재 필수 보완 목록으로 사용하지 않는다. 아래 초기 수치와 실행 기록은 당시의 기록이며 최신 상태를 대체하지 않는다.
+현재 후속 상태: [기준 비교 SQL·판단](applicant-threshold-analysis.md), [v2 사람 실측](full-operations-v2-human-results.md), [실제 기기·VoiceOver QA](accessibility-human-results.md)는 각 합의 범위에서 완료했다. 별도로 선택한 전체 직접 구현은 원본 검증·적재·품질 20규칙·[분석표 생성](applicant-mart.md)·[전체/개설기별 집계](applicant-aggregate.md)까지 제출·기능 검토를 완료했고, [현재 결과·기여 정리](project-handoff.md)에 따라 지원 자료 준비로 연결한다. 당시 지원 준비에는 전체 재구현을 필수로 두지 않았다. 이후 2026-11-06 사용자가 선택한 직접 구현은 [현재 계획](applicant-completion-plan.md)에 따라 진행한다. 아래 초기 수치와 실행 기록은 당시의 기록이며 최신 상태를 대체하지 않는다.
 
 ## 1. 공고 대비 보완
 

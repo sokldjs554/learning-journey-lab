@@ -1,6 +1,6 @@
 # 주장과 근거 파일
 
-현재 완료 상태와 표현 범위는 [종합 정리](project-handoff.md)를 우선한다. 아래 근거의 역할·날짜를 유지하며, 지원자에게 전체 프로젝트 재구현을 필수 과제로 요구하지 않는다.
+기존 완료 상태와 표현 범위는 [종합 정리](project-handoff.md), 2026-11-06 사용자가 선택한 후속 구현은 [현재 완료 계획](applicant-completion-plan.md)을 따른다. 아래 근거의 역할·날짜를 유지하고 후속 작성 안내를 실제 제출·완료 근거로 세지 않는다.
 
 2026-11-02 직무 보완: [제품 대안과 선택 조건](product-decision.md), [생성 구독 연결 SQL](subscription-bridge.md), [전체 운영 입력 방식 v2](full-operations-v2.md). 당시 구현은 Codex의 작업이며 실제 서비스 가설 검증·갱신 성과·지원자의 독립 작성으로 표현하지 않는다. 이후 2026-11-05 별도 v2 사람 실측은 [완료 결과](full-operations-v2-human-results.md)로 구분한다. 2026-11-04 [안내 SQL 실습](independent-sql-task.md)의 실행·필터 적용 결과를 수신했다. 예제와 수정 조건은 Codex 제공이며 독립 작성으로 확대하지 않는다.
 

@@ -129,5 +129,25 @@
     "existing_remaining_features_implemented_by": "Codex; existing production statistics/operations/EdNet/synthetic scenarios/UI/deployment",
     "meaning": "Existing project features and applicant-submitted modules are documented separately. Further full reimplementation is not required for the current handoff; it is not marked completed.",
     "writing_scope": "Evidence summary only; application essay and submission portfolio remain separate writing work."
+  },
+  "active_implementation_2026_11_06": {
+    "recorded_kst": "2026-11-06",
+    "status": "applicant_selected_full_implementation_in_progress",
+    "plan": "docs/applicant-completion-plan.md",
+    "current_contract": "docs/applicant-statistics-spec.md",
+    "remaining_scope": [
+      "statistics_and_sensitivity",
+      "operations_integration",
+      "ednet",
+      "synthetic_scenarios",
+      "ui",
+      "ci_and_deployment"
+    ],
+    "existing_module_reviews_remain_complete": true,
+    "statistics_submission_received": false,
+    "codex_work_this_stage": "Requirements and existing report reference only; no new applicant code or completion inferred",
+    "additional_human_measurement_required": false,
+    "new_features_added_to_completion_criteria": false,
+    "scope_boundary": "Complete after the six agreed areas are implemented, integrated, tested and publicly deployed; fix actual discovered errors without adding new feature or human-study requirements."
   }
 }
