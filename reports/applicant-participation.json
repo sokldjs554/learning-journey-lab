@@ -225,9 +225,8 @@
     "recorded_kst": "2026-11-06",
     "status": "applicant_selected_full_implementation_in_progress",
     "plan": "docs/applicant-completion-plan.md",
-    "current_contract": "docs/applicant-statistics-spec.md",
+    "current_contract": "docs/applicant-completion-plan.md",
     "remaining_scope": [
-      "statistics_and_sensitivity",
       "operations_integration",
       "ednet",
       "synthetic_scenarios",
@@ -235,10 +234,34 @@
       "ci_and_deployment"
     ],
     "existing_module_reviews_remain_complete": true,
-    "statistics_submission_received": false,
-    "codex_work_this_stage": "Requirements and existing report reference only; no new applicant code or completion inferred",
+    "statistics_submission_received": true,
+    "codex_work_this_stage": "Preserved uploaded code, authored and executed tests, reproduced seven statistics sections twice, updated evidence; usage command not treated as applicant execution output.",
     "additional_human_measurement_required": false,
     "new_features_added_to_completion_criteria": false,
-    "scope_boundary": "Complete after the six agreed areas are implemented, integrated, tested and publicly deployed; fix actual discovered errors without adding new feature or human-study requirements."
+    "scope_boundary": "Complete after the six agreed areas are implemented, integrated, tested and publicly deployed; fix actual discovered errors without adding new feature or human-study requirements.",
+    "agreed_scope": [
+      "statistics_and_sensitivity",
+      "operations_integration",
+      "ednet",
+      "synthetic_scenarios",
+      "ui",
+      "ci_and_deployment"
+    ],
+    "completed_since_resume": [
+      "statistics_and_sensitivity_submission_and_functional_review"
+    ],
+    "statistics_evidence": "reports/applicant-statistics.json"
+  },
+  "statistics_submission": {
+    "status": "statistics_and_sensitivity_submission_and_functional_review_complete",
+    "evidence": "reports/applicant-statistics.json",
+    "submitted_files": [
+      "evidence/applicant/learning_stats.py",
+      "evidence/applicant/run_statistics.py"
+    ],
+    "codex_tests_passed": 39,
+    "logic_changed_by_codex": false,
+    "applicant_usage_command_received": true,
+    "applicant_local_execution_output_received": false
   }
 }

@@ -1,0 +1,224 @@
+{
+  "recorded_kst": "2026-11-06",
+  "status": "statistics_and_sensitivity_submission_and_functional_review_complete",
+  "provenance": "Applicant-uploaded Python and usage command; Codex-authored tests and actual data executions",
+  "submissions": [
+    {
+      "path": "evidence/applicant/learning_stats.py",
+      "sha256": "268444086f960e7b1330d1808d7e4c4b6c15e3200cdbd1e4b9bbcc847ba69668",
+      "upload_byte_identical": true
+    },
+    {
+      "path": "evidence/applicant/run_statistics.py",
+      "sha256": "fe4fbf4374807add2dd1abfe518e39aef0a007a876190e90d42f95a672246da4",
+      "upload_byte_identical": true
+    }
+  ],
+  "logic_changed_by_codex": false,
+  "applicant_usage_command_received": true,
+  "applicant_local_execution_output_received": false,
+  "references_with_this_submission": [],
+  "codex_tests": {
+    "path": "tests/test_applicant_statistics.py",
+    "passed": 39
+  },
+  "applicant_command": "python run_statistics.py --mart ./enrollment_mart.csv --strict-mart ./enrollment_mart_strict.csv --db ./oulad.duckdb --output ./statistics.json",
+  "codex_real_data": {
+    "source": "Actual cached OULAD verified and loaded by applicant modules; base and strict CSVs rebuilt with submitted build_mart",
+    "runs": [
+      {
+        "exit_code": 0,
+        "stdout": "eligible=29671  w1_active=23522 w2_returned=20303  return_rate=0.8631493920584984\ncohorts=22  strict_w1=23430  strict_w2=20210\nJSON 저장: <temporary statistics.json>\n",
+        "stderr": ""
+      },
+      {
+        "exit_code": 0,
+        "stdout": "eligible=29671  w1_active=23522 w2_returned=20303  return_rate=0.8631493920584984\ncohorts=22  strict_w1=23430  strict_w2=20210\nJSON 저장: <temporary statistics.json>\n",
+        "stderr": ""
+      }
+    ],
+    "reference": "reports/applicant-statistics-reference.json",
+    "comparison_type": "Existing production report fields; separate literal-resampling and hand-checkable tests are Codex checks",
+    "compared_sections": [
+      "overall",
+      "cohorts",
+      "temporal",
+      "first_day_strata",
+      "click_sensitivity",
+      "transition",
+      "strict_sensitivity"
+    ],
+    "value_comparisons_across_two_runs": 3402,
+    "mismatches": 0,
+    "absolute_float_tolerance": 1e-12,
+    "maximum_absolute_float_delta": 0.0,
+    "repeated_json_byte_identical": true,
+    "output_sha256": "7fd9121efcd265d96d2e1b437eaf4ee803ecd0832f259a5c17553abbd766cd7d",
+    "input_sha256": {
+      "mart": "9ddfd5f15dd8502c935752c574dedf4fa38a9f22f4584e07f8577a7e90ad7b92",
+      "strict_mart": "b958830aa2a143ce84393bbdb6697e997e71183a6574ac926681ac01431d32aa",
+      "db": "d4ed1519d85c9f6f48a8f5886a1f013637165d0647f94ca54ab0a4f11e43e47d"
+    },
+    "overall": {
+      "eligible": 29671,
+      "w1_active": 23522,
+      "w2_returned": 20303,
+      "return_rate": 0.8631493920584984,
+      "unique_learners": 26540,
+      "days": [
+        {
+          "days": 0,
+          "n": 6149,
+          "returned": 2677,
+          "rate": 0.4353553423320865
+        },
+        {
+          "days": 1,
+          "n": 5565,
+          "returned": 3835,
+          "rate": 0.6891284815813118
+        },
+        {
+          "days": 2,
+          "n": 4803,
+          "returned": 3992,
+          "rate": 0.8311471996668749
+        },
+        {
+          "days": 3,
+          "n": 3940,
+          "returned": 3523,
+          "rate": 0.8941624365482234
+        },
+        {
+          "days": 4,
+          "n": 3121,
+          "returned": 2953,
+          "rate": 0.9461710990067286
+        },
+        {
+          "days": 5,
+          "n": 2550,
+          "returned": 2489,
+          "rate": 0.976078431372549
+        },
+        {
+          "days": 6,
+          "n": 1932,
+          "returned": 1905,
+          "rate": 0.9860248447204969
+        },
+        {
+          "days": 7,
+          "n": 1611,
+          "returned": 1606,
+          "rate": 0.9968963376784605
+        }
+      ],
+      "repeat_comparison": {
+        "control": {
+          "n": 5565,
+          "returned": 3835,
+          "rate": 0.6891284815813118
+        },
+        "exposed": {
+          "n": 17957,
+          "returned": 16468,
+          "rate": 0.9170796903714429
+        },
+        "difference": 0.2279512087901311,
+        "ci": [
+          0.2145358968639205,
+          0.24027130105130357
+        ],
+        "clusters": 21327,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      },
+      "content_comparison": {
+        "control": {
+          "n": 6032,
+          "returned": 5137,
+          "rate": 0.8516246684350133
+        },
+        "exposed": {
+          "n": 17490,
+          "returned": 15166,
+          "rate": 0.8671240708976558
+        },
+        "difference": 0.015499402462642475,
+        "ci": [
+          0.005176572438958749,
+          0.025788995773120358
+        ],
+        "clusters": 21327,
+        "bootstrap_draws": 1000,
+        "valid_draws": 1000
+      }
+    },
+    "temporal_counts": [
+      {
+        "id": "discovery",
+        "eligible": 12487,
+        "w1_active": 9902,
+        "w2_returned": 8630
+      },
+      {
+        "id": "holdout",
+        "eligible": 15435,
+        "w1_active": 12285,
+        "w2_returned": 10568
+      }
+    ],
+    "cohort_count": 22,
+    "negative_content_cohorts": 9,
+    "strict_sensitivity": {
+      "w1_active": 23430,
+      "w2_returned": 20210,
+      "changed_w1_enrollments": 127,
+      "changed_w2_enrollments": 134
+    },
+    "click_sensitivity": [
+      {
+        "threshold": 10,
+        "raw_qualified": 14637,
+        "exact_qualified": 14268,
+        "max_qualified": 13599,
+        "raw_vs_exact_changed": 369,
+        "raw_vs_max_changed": 1038
+      },
+      {
+        "threshold": 20,
+        "raw_qualified": 9516,
+        "exact_qualified": 9160,
+        "max_qualified": 8224,
+        "raw_vs_exact_changed": 356,
+        "raw_vs_max_changed": 1292
+      },
+      {
+        "threshold": 50,
+        "raw_qualified": 3222,
+        "exact_qualified": 3084,
+        "max_qualified": 2438,
+        "raw_vs_exact_changed": 138,
+        "raw_vs_max_changed": 784
+      }
+    ],
+    "inputs_content_mtime_unchanged": true
+  },
+  "raw_and_submissions_content_mtime_unchanged": true,
+  "limits": [
+    "Usage instructions are not applicant execution evidence.",
+    "Intervals describe observational association, not causal effects or CLASS101 performance.",
+    "Reference agreement is reproduction, not independent raw-data statistical validation; separate small tests exercise resampling directly.",
+    "Submitted statistics module review does not complete operations/EdNet/synthetic scenarios/UI/deployment.",
+    "File paths from the usage example are not assumed to exist on the applicant device."
+  ],
+  "review_test_correction": {
+    "initial_result": "38 passed, 1 failed",
+    "cause": "Codex test expected ValueError for input change, while the existing QualityRunError extends Exception",
+    "change": "Corrected only the expected test exception; applicant code unchanged",
+    "rerun": "39 passed"
+  },
+  "local_full_suite_passed": 408
+}
