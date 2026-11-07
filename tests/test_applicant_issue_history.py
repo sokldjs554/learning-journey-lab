@@ -1,4 +1,4 @@
-"""Codex-written review of applicant submission; includes a documented integrity defect."""
+"""Codex-written review of applicant submission; covers the applicant-provided integrity fix."""
 import hashlib
 import importlib
 import json
@@ -152,7 +152,6 @@ def test_atomic_failure_keeps_old_history(tmp_path,monkeypatch):
     assert h.read_text()=='{"old":true}' and not list(tmp_path.glob('.issue_history-*.tmp'))
 
 
-@pytest.mark.xfail(strict=True, reason="Open submission defect: recorded quality artifact hash is not checked; see docs/applicant-issue-history.md")
 def test_recorded_quality_hash_mismatch_must_not_resolve(tmp_path):
     h=tmp_path/'history.json';d=fixture_run(tmp_path,'r1',{'registration_missing_date':2,'event_exact_repeat':1})
     assert invoke(d,h).returncode==0
@@ -165,5 +164,16 @@ def test_recorded_quality_hash_mismatch_must_not_resolve(tmp_path):
     before=h.read_bytes(),h.stat().st_mtime_ns
     result=invoke(next_run,h)
     assert result.returncode==1, 'Changed quality artifact was accepted and existing issue resolved'
+    assert before==(h.read_bytes(),h.stat().st_mtime_ns)
+    assert issue(h)['status']=='open'
+
+
+@pytest.mark.parametrize('artifacts',[[], {}, {'quality.json':None}, {'quality.json':{}}])
+def test_invalid_artifact_metadata_preserves_history(tmp_path,artifacts):
+    h=tmp_path/'history.json';first=fixture_run(tmp_path,'first',{'registration_missing_date':2})
+    assert invoke(first,h).returncode==0
+    d=fixture_run(tmp_path,'next');p=d/'run_record.json';record=json.loads(p.read_text());record['artifacts']=artifacts;p.write_text(json.dumps(record))
+    before=h.read_bytes(),h.stat().st_mtime_ns
+    result=invoke(d,h);assert result.returncode==1
     assert before==(h.read_bytes(),h.stat().st_mtime_ns)
     assert issue(h)['status']=='open'

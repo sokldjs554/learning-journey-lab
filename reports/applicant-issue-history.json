@@ -1,29 +1,31 @@
 {
-  "recorded_kst": "2026-11-06",
-  "status": "reviewed_needs_integrity_fix",
-  "provenance": "Applicant-uploaded code; Codex tests, actual artifact checks and controlled reproduction",
+  "recorded_kst": "2026-11-07",
+  "status": "issue_history_submission_and_functional_review_complete",
+  "provenance": "Original applicant upload plus applicant-provided correction snippet dated 2026-11-07; Codex inserted exactly that snippet, authored tests and executed checks.",
   "submission": {
     "path": "evidence/applicant/update_issues.py",
-    "sha256": "76bc4343ab87f46c154774f82c2ee80f7cb9f1831e21079e235080a1a45cfaa0",
-    "upload_byte_identical": true
+    "sha256": "b556b16c88de5cc5729d4fbcebd9f6ef3c559e299a022f3590a1253c8c064847",
+    "upload_byte_identical": false,
+    "base_upload_sha256": "76bc4343ab87f46c154774f82c2ee80f7cb9f1831e21079e235080a1a45cfaa0",
+    "revision_source": "Applicant pasted correction block in chat; not a new corrected full-file upload",
+    "applied_by": "Codex mechanically inserted the provided block without other implementation changes",
+    "patch": "evidence/applicant/update_issues-user-fix.patch"
   },
   "logic_changed_by_codex": false,
   "applicant_local_execution_output_received": false,
   "codex_tests": {
     "path": "tests/test_applicant_issue_history.py",
-    "passed": 34,
-    "unresolved_regressions": 1,
-    "regression_marking": "strict xfail to preserve a known open defect; not counted as passing",
-    "initial_execution": "34 passed, 1 failed before marking"
+    "passed": 39,
+    "unresolved_regressions": 0,
+    "previous_defect_regression": "passes; strict xfail marker removed",
+    "additional_fix_coverage": "Invalid artifacts shape, missing quality entry, null quality entry, missing hash all preserve existing history"
   },
   "codex_real_artifacts": {
-    "source": "Existing actual OULAD pipeline run artifacts; no new human timing or source analysis",
+    "source": "Previously generated actual OULAD pipeline results; revised history updater executed on both",
     "observations": [
       {
         "run_id": "20261106T093320489392Z-e04ac3320c",
         "exit_code": 0,
-        "stdout": "UPDATED: run_id=20261106T093320489392Z-e04ac3320c, quality_gate=REVIEW, changed_rules=20, open=5, resolved=0\nhistory=<history.json>\n",
-        "stderr": "",
         "open_rules": {
           "registration_missing_date": 45,
           "event_exact_repeat": 787170,
@@ -36,8 +38,6 @@
       {
         "run_id": "20261106T093407670640Z-85ecdf1640",
         "exit_code": 0,
-        "stdout": "UPDATED: run_id=20261106T093407670640Z-85ecdf1640, quality_gate=REVIEW, changed_rules=0, open=5, resolved=0\nhistory=<history.json>\n",
-        "stderr": "",
         "open_rules": {
           "registration_missing_date": 45,
           "event_exact_repeat": 787170,
@@ -49,32 +49,67 @@
       }
     ],
     "same_run_skip_content_mtime_preserved": true,
-    "same_values_new_run_no_duplicate_change_events": true
+    "same_values_new_run_no_duplicate_change_events": true,
+    "input_artifacts_unchanged": true
   },
   "finding": {
     "id": "quality_artifact_hash_not_checked",
-    "status": "open",
-    "evidence_type": "Controlled mutation of a copied real result, not an actual raw-data issue or user incident",
-    "rule_id": "registration_missing_date",
-    "original_count": 45,
-    "modified_copy_count": 0,
-    "recorded_quality_sha256": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
-    "modified_copy_sha256": "b22d506751f0b4d66ca4d2d4a1013089d67bccf51cb89ef9f6ac461496228431",
+    "status": "resolved",
+    "corrected_by": "Applicant-provided snippet",
+    "retest_kst": "2026-11-07",
     "expected_exit_code": 1,
-    "actual_exit_code": 0,
-    "expected_history_change": false,
-    "actual_status": "resolved",
-    "original_inputs_unchanged": true
+    "actual_exit_code": 1,
+    "history_content_mtime_unchanged": true,
+    "registration_missing_date_status": "open",
+    "registration_missing_date_count": 45,
+    "controlled_modified_copy_rejected": true
   },
   "limits": [
-    "Quality BLOCK and later pipeline failure can have no final artifact hashes; preserve valid quality-stage acceptance for these cases.",
+    "Quality BLOCK and later pipeline failure can have null artifacts; valid quality-stage results remain accepted without claiming hash verification against the run record.",
     "Current history updates are serial and use ingestion order; concurrent writers and chronological replay are not certified.",
-    "Original applicant code is preserved; this review is not module acceptance or proof of applicant local execution."
+    "Applicant provided original file and correction snippet; Codex applied the snippet and executed checks. No applicant local execution output inferred.",
+    "This completes issue-history functional review, not the remaining independent crosscheck, comparison-tool integration or full project."
   ],
-  "local_full_suite": {
-    "passed": 479,
-    "xfailed_known_open_defect": 1,
-    "all_requirements_passed": false
+  "build_and_report_consistency_passed": true,
+  "previous_review": {
+    "recorded_kst": "2026-11-06",
+    "status": "reviewed_needs_integrity_fix",
+    "submission": {
+      "path": "evidence/applicant/update_issues.py",
+      "sha256": "76bc4343ab87f46c154774f82c2ee80f7cb9f1831e21079e235080a1a45cfaa0",
+      "upload_byte_identical": true
+    },
+    "codex_tests": {
+      "path": "tests/test_applicant_issue_history.py",
+      "passed": 34,
+      "unresolved_regressions": 1,
+      "regression_marking": "strict xfail to preserve a known open defect; not counted as passing",
+      "initial_execution": "34 passed, 1 failed before marking"
+    },
+    "finding": {
+      "id": "quality_artifact_hash_not_checked",
+      "status": "open",
+      "evidence_type": "Controlled mutation of a copied real result, not an actual raw-data issue or user incident",
+      "rule_id": "registration_missing_date",
+      "original_count": 45,
+      "modified_copy_count": 0,
+      "recorded_quality_sha256": "9cbaf2d11adae577640cd9813f88f606c6783e91ab9c225151dc970a40613673",
+      "modified_copy_sha256": "b22d506751f0b4d66ca4d2d4a1013089d67bccf51cb89ef9f6ac461496228431",
+      "expected_exit_code": 1,
+      "actual_exit_code": 0,
+      "expected_history_change": false,
+      "actual_status": "resolved",
+      "original_inputs_unchanged": true
+    },
+    "local_full_suite": {
+      "passed": 479,
+      "xfailed_known_open_defect": 1,
+      "all_requirements_passed": false
+    }
   },
-  "build_and_report_consistency_passed": true
+  "local_full_suite": {
+    "passed": 484,
+    "xfailed_known_open_defect": 0,
+    "issue_history_contract_passed": true
+  }
 }

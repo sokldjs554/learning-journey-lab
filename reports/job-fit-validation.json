@@ -134,7 +134,7 @@
     "recorded_kst": "2026-11-06",
     "status": "applicant_selected_full_implementation_in_progress",
     "plan": "docs/applicant-completion-plan.md",
-    "current_contract": "docs/applicant-issue-history.md",
+    "current_contract": "docs/applicant-completion-plan.md",
     "remaining_scope": [
       "operations_integration",
       "ednet",
@@ -144,7 +144,7 @@
     ],
     "existing_module_reviews_remain_complete": true,
     "statistics_submission_received": true,
-    "codex_work_this_stage": "Preserved issue-history upload unchanged; wrote tests, connected actual pipeline artifacts and reproduced one integrity defect on a copy.",
+    "codex_work_this_stage": "Inserted exactly the applicant-provided patch, authored related tests and reran actual-artifact checks; no other implementation logic changed.",
     "additional_human_measurement_required": false,
     "new_features_added_to_completion_criteria": false,
     "scope_boundary": "Complete after the six agreed areas are implemented, integrated, tested and publicly deployed; fix actual discovered errors without adding new feature or human-study requirements.",
@@ -158,11 +158,12 @@
     ],
     "completed_since_resume": [
       "statistics_and_sensitivity_submission_and_functional_review",
-      "pipeline_orchestration_submission_and_functional_review"
+      "pipeline_orchestration_submission_and_functional_review",
+      "issue_history_submission_and_functional_review"
     ],
     "statistics_evidence": "reports/applicant-statistics.json",
     "pipeline_submission_received": true,
-    "current_preparation": "Issue history reviewed: 34 checks pass; recorded quality artifact hash mismatch can falsely resolve an issue and needs correction.",
+    "current_preparation": "Issue history functional review complete after applicant-provided correction; independent crosscheck and comparison-tool integration remain.",
     "pipeline_evidence": "reports/applicant-pipeline.json",
     "issue_history_submission_received": true,
     "issue_history_evidence": "reports/applicant-issue-history.json"
@@ -190,14 +191,17 @@
     "applicant_local_execution_output_received": false
   },
   "issue_history_submission": {
-    "status": "reviewed_needs_integrity_fix",
+    "status": "issue_history_submission_and_functional_review_complete",
     "evidence": "reports/applicant-issue-history.json",
     "submitted_files": [
       "evidence/applicant/update_issues.py"
     ],
-    "codex_tests_passed": 34,
-    "unresolved_regressions": 1,
+    "codex_tests_passed": 39,
+    "unresolved_regressions": 0,
     "logic_changed_by_codex": false,
-    "applicant_local_execution_output_received": false
+    "applicant_local_execution_output_received": false,
+    "correction_source": "Applicant chat snippet; Codex applied mechanically",
+    "corrected_full_file_upload_received": false,
+    "reviewed_code_sha256": "b556b16c88de5cc5729d4fbcebd9f6ef3c559e299a022f3590a1253c8c064847"
   }
 }

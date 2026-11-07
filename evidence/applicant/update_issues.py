@@ -287,6 +287,19 @@ def run(run_dir: Path, history_path: Path) -> int:
     checks = validate_quality_report(quality, record, quality_step)
     quality_hash = digest_file(quality_path)
 
+    artifacts = record.get("artifacts")
+    if artifacts is not None:
+        if not isinstance(artifacts, dict):
+            raise IssueHistoryError("artifacts 형식 오류")
+
+        quality_artifact = artifacts.get("quality.json")
+        if not isinstance(quality_artifact, dict):
+            raise IssueHistoryError("quality.json 메타데이터 누락")
+
+        expected_hash = quality_artifact.get("sha256")
+        if expected_hash != quality_hash:
+            raise IssueHistoryError("quality.json SHA-256 불일치")
+
     history = (read_json(history_path) if history_path.exists()
                else new_history(manifest_hash))
     prior = validate_existing_history(history, manifest_hash) if history["processed_runs"] else {}
